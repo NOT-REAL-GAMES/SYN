@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeSceneResTrsnHelper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeSceneResTrsnHelper.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\assets\shaders\Mirror.psh">
+      <Filter>assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\assets\shaders\Mirror.vsh">
+      <Filter>assets\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="assets">
+      <UniqueIdentifier>{A7DEE7EF-25AE-3A62-8448-E5ACAB0D0463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\shaders">
+      <UniqueIdentifier>{CD355AD9-3570-3C3A-959B-260BC3E7561E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

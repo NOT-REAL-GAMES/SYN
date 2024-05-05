@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D9F1F8DE-F305-38C7-A48D-2F37C0930C7E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeCCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeCXXCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeRCCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeCCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeCXXCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeRCCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeCCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeCXXCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeRCCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeCCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeCXXCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeRCCompiler.cmake;C:\SYN\CMakeFiles\3.28.0-rc5\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
+      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Samples\Asteroids\Asteroids.vcxproj">
+      <Project>{747B4A3A-9B0B-3177-923E-D25B6F07AD29}</Project>
+      <Name>Asteroids</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Samples\Atmosphere\Atmosphere.vcxproj">
+      <Project>{CC29713D-A7F7-33AE-A37A-DDAF5E4C5480}</Project>
+      <Name>Atmosphere</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\Archiver\Diligent-Archiver-shared.vcxproj">
+      <Project>{086A78B3-42FA-3E48-A6E3-E28160CD29E4}</Project>
+      <Name>Diligent-Archiver-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\Archiver\Diligent-Archiver-static.vcxproj">
+      <Project>{0D165FDE-4882-37DF-B3C8-95C851867A63}</Project>
+      <Name>Diligent-Archiver-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\AssetLoader\Diligent-AssetLoader.vcxproj">
+      <Project>{BA0A1C18-556E-3622-9848-DA591A3ADDF9}</Project>
+      <Name>Diligent-AssetLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
+      <Project>{C45E8F1E-8240-3415-9753-149169905F7C}</Project>
+      <Name>Diligent-BasicPlatform</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Common\Diligent-Common.vcxproj">
+      <Project>{499C6F0D-1DF9-3C5B-8C40-C55EF20EF37F}</Project>
+      <Name>Diligent-Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
+      <Project>{4AA14C03-C9C4-3E15-A53B-831B311E57DD}</Project>
+      <Name>Diligent-GraphicsAccessories</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
+      <Project>{A1D7B5B9-3941-39E3-A7DD-2A9976779AD3}</Project>
+      <Name>Diligent-GraphicsEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-shared.vcxproj">
+      <Project>{D11850B4-1DB5-3E7E-B86F-4F0089C7575E}</Project>
+      <Name>Diligent-GraphicsEngineD3D11-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-static.vcxproj">
+      <Project>{005643FA-45BD-3D20-999B-45CE3F911F4D}</Project>
+      <Name>Diligent-GraphicsEngineD3D11-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-shared.vcxproj">
+      <Project>{A83D8CC7-5947-32C2-A09A-DD942F446C20}</Project>
+      <Name>Diligent-GraphicsEngineD3D12-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-static.vcxproj">
+      <Project>{0C5989BC-7507-3509-B6BF-9DC77FB3BC0D}</Project>
+      <Name>Diligent-GraphicsEngineD3D12-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\Diligent-GraphicsEngineD3DBase.vcxproj">
+      <Project>{368A8241-0CDF-3863-B569-25D8ECD8941D}</Project>
+      <Name>Diligent-GraphicsEngineD3DBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\Diligent-GraphicsEngineNextGenBase.vcxproj">
+      <Project>{F35B4C68-4DA4-3B38-9B90-E0976F7F32E4}</Project>
+      <Name>Diligent-GraphicsEngineNextGenBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-shared.vcxproj">
+      <Project>{244269EF-3865-3E31-8FF0-4A92C61FE001}</Project>
+      <Name>Diligent-GraphicsEngineOpenGL-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-static.vcxproj">
+      <Project>{003F99DA-882A-36F6-8AD9-7B9936352C22}</Project>
+      <Name>Diligent-GraphicsEngineOpenGL-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-shared.vcxproj">
+      <Project>{1260420E-4251-3E06-A0DB-8550E267698C}</Project>
+      <Name>Diligent-GraphicsEngineVk-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-static.vcxproj">
+      <Project>{E840F05D-D8E0-3317-A140-8379D16097CE}</Project>
+      <Name>Diligent-GraphicsEngineVk-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsTools\Diligent-GraphicsTools.vcxproj">
+      <Project>{F19CF7C2-5D88-3BEE-89CB-A328B096AA57}</Project>
+      <Name>Diligent-GraphicsTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
+      <Project>{8B65DAD8-5DB0-33B1-B291-81B00D2E9160}</Project>
+      <Name>Diligent-HLSL2GLSLConverterLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\Imgui\Diligent-Imgui.vcxproj">
+      <Project>{66E8E84A-D03A-3283-B2B8-6FC8BDA1071E}</Project>
+      <Name>Diligent-Imgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\NativeApp\Diligent-NativeAppBase.vcxproj">
+      <Project>{230282DC-7E8C-34AA-9DDE-8ECD912D1C27}</Project>
+      <Name>Diligent-NativeAppBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
+      <Project>{70F70D5B-046D-3F92-B50C-F6648BCAF009}</Project>
+      <Name>Diligent-Primitives</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\RenderStateNotation\Diligent-RenderStateNotation.vcxproj">
+      <Project>{31A3C01A-58F4-344B-B43E-34224D043757}</Project>
+      <Name>Diligent-RenderStateNotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\RenderStatePackager\Diligent-RenderStatePackager.vcxproj">
+      <Project>{251879CA-9CC3-3BB8-BD98-CCA6F664EB93}</Project>
+      <Name>Diligent-RenderStatePackager</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\RenderStatePackager\Diligent-RenderStatePackagerLib.vcxproj">
+      <Project>{A72B71EF-AB8A-31DF-96D8-A2FAB86F1B59}</Project>
+      <Name>Diligent-RenderStatePackagerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\SampleBase\Diligent-SampleBase.vcxproj">
+      <Project>{FC02A902-246E-3A48-802A-FF32304017E5}</Project>
+      <Name>Diligent-SampleBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\ShaderTools\Diligent-ShaderTools.vcxproj">
+      <Project>{222F6E82-FA1A-3607-9A5C-B5534789B8F3}</Project>
+      <Name>Diligent-ShaderTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\TextureLoader\Diligent-TextureLoader.vcxproj">
+      <Project>{C02CB8F7-F4D8-3FDF-981E-973CA1893244}</Project>
+      <Name>Diligent-TextureLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
+      <Project>{D850516C-9C4E-33DE-AF85-1A8E18AFF64E}</Project>
+      <Name>Diligent-Win32Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\DiligentCore-ValidateFormatting.vcxproj">
+      <Project>{8F894515-9595-3702-BAE4-F6441484FC8E}</Project>
+      <Name>DiligentCore-ValidateFormatting</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\DiligentCore-static.vcxproj">
+      <Project>{3CA5AE36-3EB2-3900-AACA-616FB377D087}</Project>
+      <Name>DiligentCore-static</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentFX\DiligentFX.vcxproj">
+      <Project>{F255B76D-76F5-3742-8428-E28C4954A3C6}</Project>
+      <Name>DiligentFX</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentFX\DiligentFX-ValidateFormatting.vcxproj">
+      <Project>{352BD4D5-35A1-3AE1-992F-5007B94D0051}</Project>
+      <Name>DiligentFX-ValidateFormatting</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\DiligentSamples-ValidateFormatting.vcxproj">
+      <Project>{992C99E2-7F68-360A-8CFF-55C9F8010D62}</Project>
+      <Name>DiligentSamples-ValidateFormatting</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\DiligentTools-ValidateFormatting.vcxproj">
+      <Project>{1E08932F-2107-3DFA-A513-BA2F67011F53}</Project>
+      <Name>DiligentTools-ValidateFormatting</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\DiligentTools-static.vcxproj">
+      <Project>{4F7F6990-9FDF-37E3-9DA6-31A8D5FABAAC}</Project>
+      <Name>DiligentTools-static</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Samples\GLFWDemo\GLFWDemo.vcxproj">
+      <Project>{EA2EC327-4F48-3936-8A9A-3970B66057CD}</Project>
+      <Name>GLFWDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Samples\GLTFViewer\GLTFViewer.vcxproj">
+      <Project>{35D6CDF6-0A2F-312E-A842-40C300FB9244}</Project>
+      <Name>GLTFViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
+      <Project>{DF0FBAD1-DFAA-31AC-A0C8-35427C6456BE}</Project>
+      <Name>GenericCodeGen</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\UnityPlugin\GhostCubePlugin\PluginSource\GhostCubePlugin-shared.vcxproj">
+      <Project>{BADF0FA5-8EEB-3705-8CF8-CFCF63C90A47}</Project>
+      <Name>GhostCubePlugin-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\UnityPlugin\GhostCubeScene\GhostCubeScene.vcxproj">
+      <Project>{A3290019-3D6D-364A-96C3-50ED2A5B1CCA}</Project>
+      <Name>GhostCubeScene</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\hlsl\HLSL.vcxproj">
+      <Project>{40BD2F72-F298-3BD6-892F-C0DD7F03DEDB}</Project>
+      <Name>HLSL</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\HLSL2GLSLConverter\HLSL2GLSLConverter.vcxproj">
+      <Project>{D8106C10-3639-3874-B08A-485EDE68D674}</Project>
+      <Name>HLSL2GLSLConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Samples\ImguiDemo\ImguiDemo.vcxproj">
+      <Project>{787A3AFE-DC41-3D00-A77A-6C7492CA3FE8}</Project>
+      <Name>ImguiDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libjpeg-9e\LibJpeg.vcxproj">
+      <Project>{B13B3C53-4AB5-353D-B406-4588E3F8250A}</Project>
+      <Name>LibJpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libtiff\LibTiff.vcxproj">
+      <Project>{130E5CF2-35C0-3CD2-BFDE-B385EF844B09}</Project>
+      <Name>LibTiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
+      <Project>{471C3269-4B35-3E26-B01E-F4FF19B95E0A}</Project>
+      <Name>MachineIndependent</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Samples\NuklearDemo\NuklearDemo.vcxproj">
+      <Project>{E6AE9A3E-5155-3856-A889-EE92ED9AA04C}</Project>
+      <Name>NuklearDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
+      <Project>{01C86EC7-29C5-32C0-80E7-605EA4DEFBA2}</Project>
+      <Name>OGLCompiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
+      <Project>{DD35CE09-2BFB-3483-A854-2A688563BC1B}</Project>
+      <Name>OSDependent</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
+      <Project>{6090D81E-A3D4-3A05-AE1C-F21679C37E22}</Project>
+      <Name>SPIRV</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\SPIRV-Tools-diff.vcxproj">
+      <Project>{4BF87B7F-AE84-39BC-A21E-AEC648C3C271}</Project>
+      <Name>SPIRV-Tools-diff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
+      <Project>{08CE441A-9555-3E0A-AEE7-373DDBF83123}</Project>
+      <Name>SPIRV-Tools-opt</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
+      <Project>{D10B50A1-E032-3ED4-B545-3DC6B2D4792C}</Project>
+      <Name>SPIRV-Tools-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Samples\Shadows\Shadows.vcxproj">
+      <Project>{CE81D64E-42D1-3F2A-AA3F-3EC5D9698D88}</Project>
+      <Name>Shadows</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial00_HelloWin32\Tutorial00_HelloWin32.vcxproj">
+      <Project>{58029746-95CA-3B30-B1EA-CA95773E388B}</Project>
+      <Name>Tutorial00_HelloWin32</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial01_HelloTriangle\Tutorial01_HelloTriangle.vcxproj">
+      <Project>{73626A69-0E0A-34EC-B05F-61748C722EE8}</Project>
+      <Name>Tutorial01_HelloTriangle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial02_Cube\Tutorial02_Cube.vcxproj">
+      <Project>{FD6B4DA3-C0C0-3627-AD60-824402425896}</Project>
+      <Name>Tutorial02_Cube</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial03_Texturing\Tutorial03_Texturing.vcxproj">
+      <Project>{11E7180A-ECBD-398D-BAF2-D372460A8241}</Project>
+      <Name>Tutorial03_Texturing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial03_Texturing-C\Tutorial03_Texturing-C.vcxproj">
+      <Project>{306744D0-3065-36BA-9EDA-BE90BAE12D2A}</Project>
+      <Name>Tutorial03_Texturing-C</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial03_Texturing-DotNet\Tutorial03_Texturing-DotNet.csproj">
+      <Project>{567309E8-DB7C-332A-BECB-5737B1A9813A}</Project>
+      <Name>Tutorial03_Texturing-DotNet</Name>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial04_Instancing\Tutorial04_Instancing.vcxproj">
+      <Project>{E6E455A7-76A1-3483-85D8-D1A0A388B513}</Project>
+      <Name>Tutorial04_Instancing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial05_TextureArray\Tutorial05_TextureArray.vcxproj">
+      <Project>{A320658B-7026-33C9-984E-A9F7341F56FD}</Project>
+      <Name>Tutorial05_TextureArray</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial06_Multithreading\Tutorial06_Multithreading.vcxproj">
+      <Project>{F855590F-A07A-3505-9C5C-3834DA535C66}</Project>
+      <Name>Tutorial06_Multithreading</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\Tutorial07_GeometryShader.vcxproj">
+      <Project>{42B112B2-846F-3EFF-8A37-35640C976255}</Project>
+      <Name>Tutorial07_GeometryShader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial08_Tessellation\Tutorial08_Tessellation.vcxproj">
+      <Project>{3F535445-9FD6-3ADD-A09C-84AE103CAFB9}</Project>
+      <Name>Tutorial08_Tessellation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial09_Quads\Tutorial09_Quads.vcxproj">
+      <Project>{8895BF7D-67AF-3E3A-A0D1-5AFBC1534E12}</Project>
+      <Name>Tutorial09_Quads</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial10_DataStreaming\Tutorial10_DataStreaming.vcxproj">
+      <Project>{66D3F19F-BA73-333C-9D51-4B169D55F89A}</Project>
+      <Name>Tutorial10_DataStreaming</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial11_ResourceUpdates\Tutorial11_ResourceUpdates.vcxproj">
+      <Project>{01EEE617-1714-3F25-B48A-BBE3B63E75E7}</Project>
+      <Name>Tutorial11_ResourceUpdates</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial12_RenderTarget\Tutorial12_RenderTarget.vcxproj">
+      <Project>{78C80268-7BF8-396A-B240-651ECE078F2F}</Project>
+      <Name>Tutorial12_RenderTarget</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial13_ShadowMap\Tutorial13_ShadowMap.vcxproj">
+      <Project>{3165B261-CF6A-3718-96EB-FF07DDC53BD1}</Project>
+      <Name>Tutorial13_ShadowMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial14_ComputeShader\Tutorial14_ComputeShader.vcxproj">
+      <Project>{465232BE-5570-3E45-835F-64DE089B467D}</Project>
+      <Name>Tutorial14_ComputeShader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial15_MultipleWindows\Tutorial15_MultipleWindows.vcxproj">
+      <Project>{42A27DD1-0996-3F98-AE97-918C3538FC4D}</Project>
+      <Name>Tutorial15_MultipleWindows</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial16_BindlessResources\Tutorial16_BindlessResources.vcxproj">
+      <Project>{9F17B0CD-8B08-3942-B73A-46B6DE7DC935}</Project>
+      <Name>Tutorial16_BindlessResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial17_MSAA\Tutorial17_MSAA.vcxproj">
+      <Project>{AB9164E9-747A-3E44-AFD9-95A2F4756638}</Project>
+      <Name>Tutorial17_MSAA</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial18_Queries\Tutorial18_Queries.vcxproj">
+      <Project>{C725873B-1C5E-3BAD-BFCA-63147E8BD9B3}</Project>
+      <Name>Tutorial18_Queries</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial19_RenderPasses\Tutorial19_RenderPasses.vcxproj">
+      <Project>{A22A9C8B-BF9F-3AA8-B019-3ABD57EDC260}</Project>
+      <Name>Tutorial19_RenderPasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial20_MeshShader\Tutorial20_MeshShader.vcxproj">
+      <Project>{5B1CFA44-3DC0-3B64-81B7-2619ECEF50A8}</Project>
+      <Name>Tutorial20_MeshShader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial21_RayTracing\Tutorial21_RayTracing.vcxproj">
+      <Project>{22E97249-3A35-3EF9-A194-DD595E25D35F}</Project>
+      <Name>Tutorial21_RayTracing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial22_HybridRendering\Tutorial22_HybridRendering.vcxproj">
+      <Project>{38D7E649-0B04-39EA-8A43-68672758FF9E}</Project>
+      <Name>Tutorial22_HybridRendering</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial23_CommandQueues\Tutorial23_CommandQueues.vcxproj">
+      <Project>{F2137A6F-907D-350D-8658-73CD32A97555}</Project>
+      <Name>Tutorial23_CommandQueues</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial24_VRS\Tutorial24_VRS.vcxproj">
+      <Project>{E7F82630-2CB9-3C39-BFD1-1DE9FD6DBBC1}</Project>
+      <Name>Tutorial24_VRS</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial25_StatePackager\Tutorial25_StatePackager.vcxproj">
+      <Project>{7F6DA0C0-AC78-3446-A2A0-60B2F944E368}</Project>
+      <Name>Tutorial25_StatePackager</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\Tutorials\Tutorial26_StateCache\Tutorial26_StateCache.vcxproj">
+      <Project>{FFAFCA7C-8278-3873-AEF2-49B403ED0E64}</Project>
+      <Name>Tutorial26_StateCache</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\UnityPlugin\UnityEmulator\UnityEmulator.vcxproj">
+      <Project>{4478B4D4-99D1-36DB-BFD2-2A03B7B6A3E7}</Project>
+      <Name>UnityEmulator</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\ZLib.vcxproj">
+      <Project>{826D9D0E-FFED-3144-A39B-EDE89DF7ECB6}</Project>
+      <Name>ZLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glew\glew-static.vcxproj">
+      <Project>{227857EF-6692-31BE-BDE2-13065C0D1AA4}</Project>
+      <Name>glew-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentSamples\ThirdParty\glfw\src\glfw.vcxproj">
+      <Project>{1C46D8E6-CB95-3C85-8E88-269CF8DA2DA6}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
+      <Project>{FAD1B065-759D-3EDE-837F-936EDE77F988}</Project>
+      <Name>glslang</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang-default-resource-limits.vcxproj">
+      <Project>{AF51C553-2EE0-3456-8C50-76BA4ECCED2D}</Project>
+      <Name>glslang-default-resource-limits</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libpng\png_static.vcxproj">
+      <Project>{5AEB0121-EF8E-3FA8-8EC0-1C77542BF6C3}</Project>
+      <Name>png_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
+      <Project>{B466C176-4FF0-31B9-B40B-7F944DFB96F2}</Project>
+      <Name>spirv-cross-core</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\spirv-tools-pkg-config.vcxproj">
+      <Project>{0D7549AB-8DAB-3A72-A137-A444C1C2AAFA}</Project>
+      <Name>spirv-tools-pkg-config</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\spirv-tools-shared-pkg-config.vcxproj">
+      <Project>{09DCEA88-4358-3896-97C3-39DC5FF69059}</Project>
+      <Name>spirv-tools-shared-pkg-config</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\xxHash\cmake_unofficial\xxhash.vcxproj">
+      <Project>{E23D36E9-2121-3A65-8A90-8C4A2E75DFFB}</Project>
+      <Name>xxhash</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\src\Win32\WinMain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32\Win32AppBase.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\AppBase.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\NativeAppBase.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\CommandLineParser.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

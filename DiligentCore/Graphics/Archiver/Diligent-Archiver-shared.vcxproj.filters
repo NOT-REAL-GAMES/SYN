@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\DLLMain.cpp">
+      <Filter>dll</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\Archiver.def">
+      <Filter>dll</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="dll">
+      <UniqueIdentifier>{4A48D6AE-359A-3557-8F33-16F28C62892A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\adler32.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\compress.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\crc32.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\deflate.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\gzclose.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\gzlib.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\gzread.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\gzwrite.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\infback.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\inffast.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\inflate.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\inftrees.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\trees.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\uncompr.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\zutil.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\crc32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\deflate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\gzguts.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\inffast.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\inffixed.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\inflate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\inftrees.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\trees.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\zconf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\zlib.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\zlib\zutil.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

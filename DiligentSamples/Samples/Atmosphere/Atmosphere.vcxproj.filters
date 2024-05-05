@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\src\AtmosphereSample.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\src\Terrain\EarthHemisphere.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\src\Terrain\ElevationDataSource.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\src\AtmosphereSample.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\src\Terrain\EarthHemisphere.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\src\Terrain\ElevationDataSource.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Mask.png">
+      <Filter>Assets\Terrain</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\Snow_NM.jpg">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\HeightMap.tif">
+      <Filter>Assets\Terrain</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\cliff_DM.dds">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\cliff_NM.dds">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\grass_DM.dds">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\grass_NM.dds">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\grassDark_DM.dds">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\gravel_DM.dds">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\gravel_NM.dds">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\Terrain\Tiles\snow_DM.dds">
+      <Filter>Assets\Terrain\Tiles</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\render_states\RenderStates.json">
+      <Filter>Assets\render_states</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\shaders\terrain\GenerateNormalMapPS.fx">
+      <Filter>Assets\shaders\terrain</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\shaders\terrain\HemispherePS.fx">
+      <Filter>Assets\shaders\terrain</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\shaders\terrain\HemisphereVS.fx">
+      <Filter>Assets\shaders\terrain</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\shaders\terrain\HemisphereZOnlyVS.fx">
+      <Filter>Assets\shaders\terrain</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\shaders\terrain\ScreenSizeQuadVS.fx">
+      <Filter>Assets\shaders\terrain</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\shaders\terrain\TerrainShadersCommon.fxh">
+      <Filter>Assets\shaders\terrain</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Atmosphere\assets\shaders\HostSharedTerrainStructs.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\PostProcess\EpipolarLightScattering\public\EpipolarLightScatteringStructures.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\PostProcess\EpipolarLightScattering\public\EpipolarLightScatteringFunctions.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMappingStructures.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\Common\public\BasicStructures.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\Common\public\Shadows.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{14A8850F-2512-3592-8373-98197E3AFECB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Terrain">
+      <UniqueIdentifier>{7DC774CE-F1F4-3DF1-B7E3-DF89C37A56E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Terrain\Tiles">
+      <UniqueIdentifier>{A8B4680E-F070-377E-ACB7-4D15146AF600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\render_states">
+      <UniqueIdentifier>{94CA23F5-8B47-3FD4-84CF-6D86E9421951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\shaders">
+      <UniqueIdentifier>{09CD9A94-B43F-3B27-9120-D7BBCDF5FC9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\shaders\terrain">
+      <UniqueIdentifier>{00A6364F-A2CB-3478-829F-58A5491595F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{5601946D-ED87-37DE-9A3C-817FD733F510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\src\GLTFViewer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\src\GLTFViewer.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_baseColor.jpg">
+      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_baseColor1.png">
+      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_emissive.jpg">
+      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_normal.png">
+      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_roughnessMetallic.jpg">
+      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan.jpg">
+      <Filter>Assets\models\CesiumMan</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor1.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor2.png">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor3.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor4.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal1.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal2.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal3.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal4.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic1.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic2.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic3.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic4.jpg">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\Spheres_BaseColor.png">
+      <Filter>Assets\models\MetalRoughSpheres</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\Spheres_MetalRough.png">
+      <Filter>Assets\models\MetalRoughSpheres</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_BaseColor.png">
+      <Filter>Assets\models\NormalTangentTest</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_Normal.png">
+      <Filter>Assets\models\NormalTangentTest</Filter>
+    </Image>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_OcclusionRoughnessMetallic.png">
+      <Filter>Assets\models\NormalTangentTest</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes.bin">
+      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes.gltf">
+      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan.gltf">
+      <Filter>Assets\models\CesiumMan</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan0.bin">
+      <Filter>Assets\models\CesiumMan</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\DamagedHelmet\DamagedHelmet.gltf">
+      <Filter>Assets\models\DamagedHelmet</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet.bin">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet.gltf">
+      <Filter>Assets\models\FlightHelmet</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\MetalRoughSpheres.gltf">
+      <Filter>Assets\models\MetalRoughSpheres</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\MetalRoughSpheres0.bin">
+      <Filter>Assets\models\MetalRoughSpheres</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest.gltf">
+      <Filter>Assets\models\NormalTangentTest</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest0.bin">
+      <Filter>Assets\models\NormalTangentTest</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\textures\papermill.ktx">
+      <Filter>Assets\textures</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\render_states\RenderStates.json">
+      <Filter>Assets\render_states</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\shaders\BoundBox.vsh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\shaders\BoundBox.psh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\shaders\env_map.vsh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\GLTFViewer\assets\shaders\env_map.psh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMappingStructures.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMapping.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\Common\public\BasicStructures.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\Common\public\ShaderUtilities.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{14A8850F-2512-3592-8373-98197E3AFECB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models">
+      <UniqueIdentifier>{A0D64A52-A206-3282-9905-798A28E0C809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\BoomBoxWithAxes">
+      <UniqueIdentifier>{421C0022-81E5-3203-B5D4-EEED6337BA25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\CesiumMan">
+      <UniqueIdentifier>{68C6E1A1-0671-303C-9B1E-7BE56B7C1489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\DamagedHelmet">
+      <UniqueIdentifier>{0044BF22-F2C6-3713-8AE6-C841DF9A0631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\FlightHelmet">
+      <UniqueIdentifier>{768C4094-2FC8-307C-95AF-48FB31CE1863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\MetalRoughSpheres">
+      <UniqueIdentifier>{0928BFB6-F2EB-3A15-ADE8-1E611AA11B43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\NormalTangentTest">
+      <UniqueIdentifier>{711CAEB8-C6FB-335C-9E39-B278FFD59D04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\render_states">
+      <UniqueIdentifier>{94CA23F5-8B47-3FD4-84CF-6D86E9421951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\shaders">
+      <UniqueIdentifier>{09CD9A94-B43F-3B27-9120-D7BBCDF5FC9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\textures">
+      <UniqueIdentifier>{E0158C66-14DF-38B6-833D-01C48B35FDC1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{5601946D-ED87-37DE-9A3C-817FD733F510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

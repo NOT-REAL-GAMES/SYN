@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\src\ImGuiDiligentRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\src\ImGuiImplDiligent.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\src\ImGuiUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\src\ImGuiImplWin32.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imGuIZMO.quat\imGuIZMO.cpp">
+      <Filter>imGuIZMO.quat</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imgui.cpp">
+      <Filter>dear_imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imgui_draw.cpp">
+      <Filter>dear_imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imgui_tables.cpp">
+      <Filter>dear_imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imgui_widgets.cpp">
+      <Filter>dear_imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\misc\cpp\imgui_stdlib.cpp">
+      <Filter>dear_imgui\misc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>dear_imgui\backends</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface\ImGuiDiligentRenderer.hpp">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface\ImGuiImplDiligent.hpp">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface\ImGuiUtils.hpp">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface\ImGuiImplWin32.hpp">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imGuIZMO.quat\imGuIZMO.h">
+      <Filter>imGuIZMO.quat</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imconfig.h">
+      <Filter>dear_imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imgui_internal.h">
+      <Filter>dear_imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imstb_rectpack.h">
+      <Filter>dear_imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imstb_textedit.h">
+      <Filter>dear_imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imstb_truetype.h">
+      <Filter>dear_imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\misc\cpp\imgui_stdlib.h">
+      <Filter>dear_imgui\misc\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\backends\imgui_impl_win32.h">
+      <Filter>dear_imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui\imgui.h">
+      <Filter>dear_imgui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="dear_imgui">
+      <UniqueIdentifier>{302B5661-65FC-37D3-97A7-BE87718BDF65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dear_imgui\backends">
+      <UniqueIdentifier>{163AB8A4-C63B-3598-BE03-8E639383D86F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dear_imgui\misc">
+      <UniqueIdentifier>{02C90C68-F702-3FC2-886D-E3DCEB467875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dear_imgui\misc\cpp">
+      <UniqueIdentifier>{A2F97087-6649-34A4-A1FF-811F308FD70F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imGuIZMO.quat">
+      <UniqueIdentifier>{11363ACD-583C-3A1E-BD66-8B833F940038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

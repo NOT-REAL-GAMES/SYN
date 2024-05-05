@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\src\Tutorial23_CommandQueues.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\src\Buildings.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\src\Terrain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\src\Profiler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\src\Tutorial23_CommandQueues.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\src\Buildings.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\src\Terrain.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\src\Profiler.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\Sand.jpg">
+      <Filter>assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\Structures.fxh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\GenerateTerrain.csh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\DrawBuilding.vsh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\DrawBuilding.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\DrawTerrain.vsh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\DrawTerrain.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\PostProcess.vsh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\PostProcess.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial23_CommandQueues\assets\DownSample.psh">
+      <Filter>assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="assets">
+      <UniqueIdentifier>{A7DEE7EF-25AE-3A62-8448-E5ACAB0D0463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{5601946D-ED87-37DE-9A3C-817FD733F510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\src\Tutorial13_ShadowMap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Common\src\TexturedCube.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\src\Tutorial13_ShadowMap.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Common\src\TexturedCube.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\DGLogo.png">
+      <Filter>assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\cube.vsh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\cube.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\cube_shadow.vsh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\plane.vsh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\plane.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\shadow_map_vis.vsh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\shadow_map_vis.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial13_ShadowMap\assets\structures.fxh">
+      <Filter>assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="assets">
+      <UniqueIdentifier>{A7DEE7EF-25AE-3A62-8448-E5ACAB0D0463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{5601946D-ED87-37DE-9A3C-817FD733F510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

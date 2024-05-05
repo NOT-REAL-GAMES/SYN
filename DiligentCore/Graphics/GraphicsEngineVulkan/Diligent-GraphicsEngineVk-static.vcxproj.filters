@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\BufferVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\BufferViewVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\BottomLevelASVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\CommandPoolManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\CommandQueueVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\DescriptorPoolManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\DeviceContextVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\DeviceMemoryVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\DeviceObjectArchiveVk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\EngineFactoryVk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\FenceVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\FramebufferVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\FramebufferCache.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\GenerateMipsVkHelper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\PipelineLayoutVk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\PipelineStateVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\PipelineResourceSignatureVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\PipelineStateCacheVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\QueryManagerVk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\QueryVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\RenderDeviceVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\RenderPassVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\RenderPassCache.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\SamplerVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\DearchiverVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\ShaderVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\ShaderResourceBindingVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\ShaderResourceCacheVk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\ShaderVariableManagerVk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\ShaderBindingTableVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\SwapChainVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\TextureVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\TextureViewVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\TopLevelASVkImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanDynamicHeap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanTypeConversions.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUploadHeap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUtilities\VulkanCommandBuffer.cpp">
+      <Filter>src\Vulkan Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUtilities\VulkanCommandBufferPool.cpp">
+      <Filter>src\Vulkan Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUtilities\VulkanDebug.cpp">
+      <Filter>src\Vulkan Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUtilities\VulkanInstance.cpp">
+      <Filter>src\Vulkan Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUtilities\VulkanLogicalDevice.cpp">
+      <Filter>src\Vulkan Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUtilities\VulkanMemoryManager.cpp">
+      <Filter>src\Vulkan Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUtilities\VulkanPhysicalDevice.cpp">
+      <Filter>src\Vulkan Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\src\VulkanUtilities\VulkanSyncObjectManager.cpp">
+      <Filter>src\Vulkan Utilities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\BufferVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\BufferViewVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\BottomLevelASVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\CommandQueueVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\DeviceContextVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\DeviceMemoryVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\EngineFactoryVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\FenceVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\FramebufferVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\PipelineStateVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\PipelineStateCacheVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\QueryVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\RenderDeviceVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\RenderPassVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\SamplerVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\ShaderVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\ShaderResourceBindingVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\ShaderBindingTableVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\SwapChainVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\TextureVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\TextureViewVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface\TopLevelASVk.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\BufferVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\BufferViewVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\BottomLevelASVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\CommandListVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\CommandPoolManager.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\CommandQueueVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\DescriptorPoolManager.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\DeviceContextVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\DeviceMemoryVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\DeviceObjectArchiveVk.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\EngineVkImplTraits.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\FenceVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\FramebufferVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\FramebufferCache.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\GenerateMipsVkHelper.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\ManagedVulkanObject.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\pch.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\PipelineLayoutVk.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\PipelineStateVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\PipelineResourceSignatureVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\PipelineResourceAttribsVk.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\PipelineStateCacheVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\QueryManagerVk.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\QueryVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\RenderDeviceVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\RenderPassVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\RenderPassCache.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\SamplerVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\DearchiverVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\ShaderVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\ShaderResourceBindingVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\ShaderResourceCacheVk.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\ShaderVariableManagerVk.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\ShaderBindingTableVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\SwapChainVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\TextureVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\TextureViewVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\TopLevelASVkImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanDynamicHeap.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanErrors.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanTypeConversions.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUploadHeap.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanCommandBuffer.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanCommandBufferPool.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanDebug.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanInstance.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanLogicalDevice.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanMemoryManager.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanObjectWrappers.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanPhysicalDevice.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanSyncObjectManager.hpp">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\include\VulkanUtilities\VulkanHeaders.h">
+      <Filter>include\Vulkan Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Vulkan Utilities">
+      <UniqueIdentifier>{F75EA621-B7E9-3AD4-A9D1-6474FF487904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Vulkan Utilities">
+      <UniqueIdentifier>{975110C8-6026-3EB3-A0FB-E43BE6AD712C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

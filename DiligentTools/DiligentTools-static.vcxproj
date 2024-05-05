@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4F7F6990-9FDF-37E3-9DA6-31A8D5FABAAC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>DiligentTools-static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\CMakeFiles\97a68d220557060af35860bb490e6845\DiligentTools.lib.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Combining libraries...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+lib.exe /OUT:"Debug/DiligentTools.lib" C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/Debug/LibJpeg.lib C:/SYN/DiligentTools/ThirdParty/libtiff/Debug/LibTiff.lib C:/SYN/DiligentTools/ThirdParty/Debug/ZLib.lib C:/SYN/DiligentTools/ThirdParty/libpng/Debug/libpng16_staticd.lib C:/SYN/DiligentTools/TextureLoader/Debug/Diligent-TextureLoader.lib C:/SYN/DiligentTools/AssetLoader/Debug/Diligent-AssetLoader.lib C:/SYN/DiligentTools/Imgui/Debug/Diligent-Imgui.lib C:/SYN/DiligentTools/RenderStateNotation/Debug/Diligent-RenderStateNotation.lib
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentTools\ThirdParty\libjpeg-9e\Debug\LibJpeg.lib;C:\SYN\DiligentTools\ThirdParty\libtiff\Debug\LibTiff.lib;C:\SYN\DiligentTools\ThirdParty\Debug\ZLib.lib;C:\SYN\DiligentTools\ThirdParty\libpng\Debug\libpng16_staticd.lib;C:\SYN\DiligentTools\TextureLoader\Debug\Diligent-TextureLoader.lib;C:\SYN\DiligentTools\AssetLoader\Debug\Diligent-AssetLoader.lib;C:\SYN\DiligentTools\Imgui\Debug\Diligent-Imgui.lib;C:\SYN\DiligentTools\RenderStateNotation\Debug\Diligent-RenderStateNotation.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentTools\Debug\DiligentTools.lib</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Combining libraries...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+lib.exe /OUT:"Release/DiligentTools.lib" C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/Release/LibJpeg.lib C:/SYN/DiligentTools/ThirdParty/libtiff/Release/LibTiff.lib C:/SYN/DiligentTools/ThirdParty/Release/ZLib.lib C:/SYN/DiligentTools/ThirdParty/libpng/Release/libpng16_static.lib C:/SYN/DiligentTools/TextureLoader/Release/Diligent-TextureLoader.lib C:/SYN/DiligentTools/AssetLoader/Release/Diligent-AssetLoader.lib C:/SYN/DiligentTools/Imgui/Release/Diligent-Imgui.lib C:/SYN/DiligentTools/RenderStateNotation/Release/Diligent-RenderStateNotation.lib
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentTools\ThirdParty\libjpeg-9e\Release\LibJpeg.lib;C:\SYN\DiligentTools\ThirdParty\libtiff\Release\LibTiff.lib;C:\SYN\DiligentTools\ThirdParty\Release\ZLib.lib;C:\SYN\DiligentTools\ThirdParty\libpng\Release\libpng16_static.lib;C:\SYN\DiligentTools\TextureLoader\Release\Diligent-TextureLoader.lib;C:\SYN\DiligentTools\AssetLoader\Release\Diligent-AssetLoader.lib;C:\SYN\DiligentTools\Imgui\Release\Diligent-Imgui.lib;C:\SYN\DiligentTools\RenderStateNotation\Release\Diligent-RenderStateNotation.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentTools\Release\DiligentTools.lib</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Combining libraries...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+lib.exe /OUT:"MinSizeRel/DiligentTools.lib" C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/MinSizeRel/LibJpeg.lib C:/SYN/DiligentTools/ThirdParty/libtiff/MinSizeRel/LibTiff.lib C:/SYN/DiligentTools/ThirdParty/MinSizeRel/ZLib.lib C:/SYN/DiligentTools/ThirdParty/libpng/MinSizeRel/libpng16_static.lib C:/SYN/DiligentTools/TextureLoader/MinSizeRel/Diligent-TextureLoader.lib C:/SYN/DiligentTools/AssetLoader/MinSizeRel/Diligent-AssetLoader.lib C:/SYN/DiligentTools/Imgui/MinSizeRel/Diligent-Imgui.lib C:/SYN/DiligentTools/RenderStateNotation/MinSizeRel/Diligent-RenderStateNotation.lib
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentTools\ThirdParty\libjpeg-9e\MinSizeRel\LibJpeg.lib;C:\SYN\DiligentTools\ThirdParty\libtiff\MinSizeRel\LibTiff.lib;C:\SYN\DiligentTools\ThirdParty\MinSizeRel\ZLib.lib;C:\SYN\DiligentTools\ThirdParty\libpng\MinSizeRel\libpng16_static.lib;C:\SYN\DiligentTools\TextureLoader\MinSizeRel\Diligent-TextureLoader.lib;C:\SYN\DiligentTools\AssetLoader\MinSizeRel\Diligent-AssetLoader.lib;C:\SYN\DiligentTools\Imgui\MinSizeRel\Diligent-Imgui.lib;C:\SYN\DiligentTools\RenderStateNotation\MinSizeRel\Diligent-RenderStateNotation.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentTools\MinSizeRel\DiligentTools.lib</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Combining libraries...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+lib.exe /OUT:"RelWithDebInfo/DiligentTools.lib" C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/RelWithDebInfo/LibJpeg.lib C:/SYN/DiligentTools/ThirdParty/libtiff/RelWithDebInfo/LibTiff.lib C:/SYN/DiligentTools/ThirdParty/RelWithDebInfo/ZLib.lib C:/SYN/DiligentTools/ThirdParty/libpng/RelWithDebInfo/libpng16_static.lib C:/SYN/DiligentTools/TextureLoader/RelWithDebInfo/Diligent-TextureLoader.lib C:/SYN/DiligentTools/AssetLoader/RelWithDebInfo/Diligent-AssetLoader.lib C:/SYN/DiligentTools/Imgui/RelWithDebInfo/Diligent-Imgui.lib C:/SYN/DiligentTools/RenderStateNotation/RelWithDebInfo/Diligent-RenderStateNotation.lib
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentTools\ThirdParty\libjpeg-9e\RelWithDebInfo\LibJpeg.lib;C:\SYN\DiligentTools\ThirdParty\libtiff\RelWithDebInfo\LibTiff.lib;C:\SYN\DiligentTools\ThirdParty\RelWithDebInfo\ZLib.lib;C:\SYN\DiligentTools\ThirdParty\libpng\RelWithDebInfo\libpng16_static.lib;C:\SYN\DiligentTools\TextureLoader\RelWithDebInfo\Diligent-TextureLoader.lib;C:\SYN\DiligentTools\AssetLoader\RelWithDebInfo\Diligent-AssetLoader.lib;C:\SYN\DiligentTools\Imgui\RelWithDebInfo\Diligent-Imgui.lib;C:\SYN\DiligentTools\RenderStateNotation\RelWithDebInfo\Diligent-RenderStateNotation.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentTools\RelWithDebInfo\DiligentTools.lib</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\CMakeFiles\a3c7b170f614a5202a31bb6cadd159e8\DiligentTools-static.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentTools\Debug\DiligentTools.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentTools\CMakeFiles\DiligentTools-static</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentTools\Release\DiligentTools.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentTools\CMakeFiles\DiligentTools-static</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentTools\MinSizeRel\DiligentTools.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentTools\CMakeFiles\DiligentTools-static</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentTools\RelWithDebInfo\DiligentTools.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentTools\CMakeFiles\DiligentTools-static</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentTools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentTools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentTools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentTools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentTools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentTools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentTools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentTools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\SYN\DiligentTools\CMakeFiles\DiligentTools-static">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
+      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\AssetLoader\Diligent-AssetLoader.vcxproj">
+      <Project>{BA0A1C18-556E-3622-9848-DA591A3ADDF9}</Project>
+      <Name>Diligent-AssetLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\Imgui\Diligent-Imgui.vcxproj">
+      <Project>{66E8E84A-D03A-3283-B2B8-6FC8BDA1071E}</Project>
+      <Name>Diligent-Imgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\RenderStateNotation\Diligent-RenderStateNotation.vcxproj">
+      <Project>{31A3C01A-58F4-344B-B43E-34224D043757}</Project>
+      <Name>Diligent-RenderStateNotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\TextureLoader\Diligent-TextureLoader.vcxproj">
+      <Project>{C02CB8F7-F4D8-3FDF-981E-973CA1893244}</Project>
+      <Name>Diligent-TextureLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libjpeg-9e\LibJpeg.vcxproj">
+      <Project>{B13B3C53-4AB5-353D-B406-4588E3F8250A}</Project>
+      <Name>LibJpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libtiff\LibTiff.vcxproj">
+      <Project>{130E5CF2-35C0-3CD2-BFDE-B385EF844B09}</Project>
+      <Name>LibTiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\ZLib.vcxproj">
+      <Project>{826D9D0E-FFED-3144-A39B-EDE89DF7ECB6}</Project>
+      <Name>ZLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libpng\png_static.vcxproj">
+      <Project>{5AEB0121-EF8E-3FA8-8EC0-1C77542BF6C3}</Project>
+      <Name>png_static</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\CMakeFiles\97a68d220557060af35860bb490e6845\DiligentTools.lib.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\a3c7b170f614a5202a31bb6cadd159e8\DiligentTools-static.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\SYN\DiligentTools\CMakeFiles\DiligentTools-static" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{810ABB14-8FFA-37DD-9E48-E8A29BD9F288}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

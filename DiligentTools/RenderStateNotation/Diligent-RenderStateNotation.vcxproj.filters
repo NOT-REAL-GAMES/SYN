@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\src\RenderStateNotationLoaderImpl.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\src\RenderStateNotationParserImpl.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\include\RenderStateNotationLoaderImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\include\RenderStateNotationParserImpl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\include\pch.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface\RenderStateNotationLoader.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface\RenderStateNotationParser.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\BlendStateParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\DepthStencilStateParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\GraphicsTypesParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\InputLayoutParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\PipelineResourceSignatureParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\PipelineStateParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\RasterizerStateParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\RenderPassParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\ShaderParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\ShaderResourceVariableParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\SamplerParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\ArchiverFactoryParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentTools\RenderStateNotation\parser_headers\generated\CommonParser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\CMakeFiles\0288bc98e874a19414d5667a06a4b282\BlendStateParser.hpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\scripts\cxx_builder.py">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\scripts\cxx_config.py">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\scripts\cxx_generator.py">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\scripts\cxx_parser.py">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\scripts\cxx_template.py">
+      <Filter>scripts</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{810ABB14-8FFA-37DD-9E48-E8A29BD9F288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generated">
+      <UniqueIdentifier>{9213C280-F878-3D80-AAE2-2CBFB8412A43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{A01C05D4-0558-3F6B-8E98-653713B12007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{B2E819CD-A4D2-3287-9F2D-87AD0F3B7D35}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

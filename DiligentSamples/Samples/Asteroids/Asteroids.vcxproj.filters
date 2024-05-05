@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\asteroids_d3d11.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\asteroids_d3d12.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\asteroids_DE.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\camera.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\DDSTextureLoader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\mesh.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\simplexnoise1234.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\simulation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\texture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\WinWrapper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\asteroids_d3d11.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\asteroids_d3d12.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\asteroids_DE.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\camera.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\dds.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\DDSTextureLoader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\descriptor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\mesh.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\noise.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\settings.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\simplexnoise1234.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\simulation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\subset_d3d12.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\texture.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\upload_heap.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\util.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\font.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\gui.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\intel_clear_bd_50_usascii.inl">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\sprite.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\src\stb_font_consolas_bold_50_usascii.inl">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\SDK\Include\d3dx12.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\common_defines.h">
+      <Filter>shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\shader_common.h">
+      <Filter>shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\asteroid_ps.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\asteroid_ps_d3d11.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\asteroid_ps_diligent.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\font_ps.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\skybox_ps.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\sprite_ps.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\asteroid_vs.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\asteroid_vs_diligent.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\skybox_vs.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\DiligentSamples\Samples\Asteroids\CompiledShaders\sprite_vs.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\asteroid_ps.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\asteroid_ps_d3d11.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\asteroid_ps_diligent.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\font_ps.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\skybox_ps.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\sprite_ps.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\asteroid_vs.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\asteroid_vs_diligent.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\skybox_vs.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\CMakeFiles\02bf2c34632264ee709bed8dec58ff2b\sprite_vs.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\asteroid_ps.psh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\asteroid_ps_d3d11.psh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\asteroid_ps_diligent.psh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\font_ps.psh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\skybox_ps.psh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\sprite_ps.psh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\asteroid_vs.vsh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\asteroid_vs_diligent.vsh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\skybox_vs.vsh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\shaders\sprite_vs.vsh">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\media\DiligentD3D11.dds">
+      <Filter>media</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\media\DiligentD3D12.dds">
+      <Filter>media</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\media\DiligentGL.dds">
+      <Filter>media</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\media\directx11.dds">
+      <Filter>media</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\media\directx12.dds">
+      <Filter>media</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\assets\media\starbox_1024.dds">
+      <Filter>media</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Asteroids\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{810ABB14-8FFA-37DD-9E48-E8A29BD9F288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{456CE5AC-380E-3415-98C2-B9688BA7DCD8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{F1976774-8E2D-3CC8-9D9D-D67C79B134CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generated">
+      <UniqueIdentifier>{9213C280-F878-3D80-AAE2-2CBFB8412A43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="media">
+      <UniqueIdentifier>{712F8A31-74D9-39D0-8A53-8F23F412D393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{4AC2964A-1FBC-39CE-95E6-A2BB680AF9BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPython/Support.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPython3.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/CHANGES.md
+C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/CMakeLists.txt
+C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/ChooseMSVCCRT.cmake
+C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/build_info.h.tmpl
+C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/parse_version.cmake

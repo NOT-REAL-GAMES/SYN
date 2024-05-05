@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\src\ShadowsSample.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\src\ShadowsSample.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\Powerplant.sdkmesh">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\basket_map.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\command_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\con_edge.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\container_grn_num.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\container_gry_num.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\container_hab_num.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\container_orn_num.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crane_light.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crane_wheel.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crn_clamp_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crn_pan_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crn_pan_c.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crn_pan_d.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crn_pan_e.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crn_pan_f.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crn_pan_g.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\crn_pan_i.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\ele_bot.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\ele_floor.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\ele_support.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\ele_track_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\fan_blde.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\fan_housing_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\fan_hub.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\gr_trans_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\gravel_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\gravel_c.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\grt_sm_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\grt_sm_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\hill_mound_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\hz_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\mav_a_ring.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\mav_b_body.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\mav_b_lit.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\mav_b_lit_NRM.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\pad_big_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\pad_pan_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\pipe_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\pipe_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\pipe_d.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\pipe_e.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\rail.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\re_bar_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\re_bar_trans.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\red_girder_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\ring_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\road_end.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\road_end_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\road_end_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\road_loop_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\road_st_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\sm_pan_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\tank_side.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\tank_top.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\test_ground_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\tow_rib_ a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\tow_rib_c.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\trench_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\trench_end.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\trench_surround.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\truss_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\truss_end.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\tw_tex_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\walkway_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\wall_tex_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\wall_tex_b.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\wheel_house.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\Powerplant\yellow_girder_a.dds">
+      <Filter>Assets\Powerplant</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\render_states\RenderStates.json">
+      <Filter>Assets\render_states</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\shaders\MeshVS.vsh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Samples\Shadows\assets\shaders\MeshPS.psh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\Common\public\BasicStructures.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentFX\Shaders\Common\public\Shadows.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{14A8850F-2512-3592-8373-98197E3AFECB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Powerplant">
+      <UniqueIdentifier>{9EA14665-399E-3E8B-9005-869D916ADD98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\render_states">
+      <UniqueIdentifier>{94CA23F5-8B47-3FD4-84CF-6D86E9421951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\shaders">
+      <UniqueIdentifier>{09CD9A94-B43F-3B27-9120-D7BBCDF5FC9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{5601946D-ED87-37DE-9A3C-817FD733F510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

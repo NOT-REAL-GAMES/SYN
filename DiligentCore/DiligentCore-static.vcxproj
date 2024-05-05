@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3CA5AE36-3EB2-3900-AACA-616FB377D087}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>DiligentCore-static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\CMakeFiles\97a68d220557060af35860bb490e6845\DiligentCore.lib.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Combining libraries...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+lib.exe /OUT:"Debug/DiligentCore.lib" C:/SYN/DiligentCore/Primitives/Debug/Diligent-Primitives.lib C:/SYN/DiligentCore/Platforms/Basic/Debug/Diligent-BasicPlatform.lib C:/SYN/DiligentCore/Platforms/Win32/Debug/Diligent-Win32Platform.lib C:/SYN/DiligentCore/Common/Debug/Diligent-Common.lib C:/SYN/DiligentCore/Graphics/GraphicsAccessories/Debug/Diligent-GraphicsAccessories.lib C:/SYN/DiligentCore/Graphics/GraphicsEngine/Debug/Diligent-GraphicsEngine.lib C:/SYN/DiligentCore/Graphics/HLSL2GLSLConverterLib/Debug/Diligent-HLSL2GLSLConverterLib.lib C:/SYN/DiligentCore/Graphics/ShaderTools/Debug/Diligent-ShaderTools.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineNextGenBase/Debug/Diligent-GraphicsEngineNextGenBase.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3DBase/Debug/Diligent-GraphicsEngineD3DBase.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D11/Debug/Diligent-GraphicsEngineD3D11-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D12/Debug/Diligent-GraphicsEngineD3D12-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineVulkan/Debug/Diligent-GraphicsEngineVk-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineOpenGL/Debug/Diligent-GraphicsEngineOpenGL-static.lib C:/SYN/DiligentCore/Graphics/Archiver/Debug/Diligent-Archiver-static.lib C:/SYN/DiligentCore/Graphics/GraphicsTools/Debug/Diligent-GraphicsTools.lib
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\Primitives\Debug\Diligent-Primitives.lib;C:\SYN\DiligentCore\Platforms\Basic\Debug\Diligent-BasicPlatform.lib;C:\SYN\DiligentCore\Platforms\Win32\Debug\Diligent-Win32Platform.lib;C:\SYN\DiligentCore\Common\Debug\Diligent-Common.lib;C:\SYN\DiligentCore\Graphics\GraphicsAccessories\Debug\Diligent-GraphicsAccessories.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngine\Debug\Diligent-GraphicsEngine.lib;C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\Debug\Diligent-HLSL2GLSLConverterLib.lib;C:\SYN\DiligentCore\Graphics\ShaderTools\Debug\Diligent-ShaderTools.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\Debug\Diligent-GraphicsEngineNextGenBase.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\Debug\Diligent-GraphicsEngineD3DBase.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Debug\Diligent-GraphicsEngineD3D11-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Debug\Diligent-GraphicsEngineD3D12-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Debug\Diligent-GraphicsEngineVk-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Debug\Diligent-GraphicsEngineOpenGL-static.lib;C:\SYN\DiligentCore\Graphics\Archiver\Debug\Diligent-Archiver-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsTools\Debug\Diligent-GraphicsTools.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\Debug\DiligentCore.lib</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Combining libraries...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+lib.exe /OUT:"Release/DiligentCore.lib" C:/SYN/DiligentCore/Primitives/Release/Diligent-Primitives.lib C:/SYN/DiligentCore/Platforms/Basic/Release/Diligent-BasicPlatform.lib C:/SYN/DiligentCore/Platforms/Win32/Release/Diligent-Win32Platform.lib C:/SYN/DiligentCore/Common/Release/Diligent-Common.lib C:/SYN/DiligentCore/Graphics/GraphicsAccessories/Release/Diligent-GraphicsAccessories.lib C:/SYN/DiligentCore/Graphics/GraphicsEngine/Release/Diligent-GraphicsEngine.lib C:/SYN/DiligentCore/Graphics/HLSL2GLSLConverterLib/Release/Diligent-HLSL2GLSLConverterLib.lib C:/SYN/DiligentCore/Graphics/ShaderTools/Release/Diligent-ShaderTools.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineNextGenBase/Release/Diligent-GraphicsEngineNextGenBase.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3DBase/Release/Diligent-GraphicsEngineD3DBase.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D11/Release/Diligent-GraphicsEngineD3D11-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D12/Release/Diligent-GraphicsEngineD3D12-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineVulkan/Release/Diligent-GraphicsEngineVk-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineOpenGL/Release/Diligent-GraphicsEngineOpenGL-static.lib C:/SYN/DiligentCore/Graphics/Archiver/Release/Diligent-Archiver-static.lib C:/SYN/DiligentCore/Graphics/GraphicsTools/Release/Diligent-GraphicsTools.lib
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\Primitives\Release\Diligent-Primitives.lib;C:\SYN\DiligentCore\Platforms\Basic\Release\Diligent-BasicPlatform.lib;C:\SYN\DiligentCore\Platforms\Win32\Release\Diligent-Win32Platform.lib;C:\SYN\DiligentCore\Common\Release\Diligent-Common.lib;C:\SYN\DiligentCore\Graphics\GraphicsAccessories\Release\Diligent-GraphicsAccessories.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngine\Release\Diligent-GraphicsEngine.lib;C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\Release\Diligent-HLSL2GLSLConverterLib.lib;C:\SYN\DiligentCore\Graphics\ShaderTools\Release\Diligent-ShaderTools.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\Release\Diligent-GraphicsEngineNextGenBase.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\Release\Diligent-GraphicsEngineD3DBase.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Release\Diligent-GraphicsEngineD3D11-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Release\Diligent-GraphicsEngineD3D12-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Release\Diligent-GraphicsEngineVk-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Release\Diligent-GraphicsEngineOpenGL-static.lib;C:\SYN\DiligentCore\Graphics\Archiver\Release\Diligent-Archiver-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsTools\Release\Diligent-GraphicsTools.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\Release\DiligentCore.lib</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Combining libraries...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+lib.exe /OUT:"MinSizeRel/DiligentCore.lib" C:/SYN/DiligentCore/Primitives/MinSizeRel/Diligent-Primitives.lib C:/SYN/DiligentCore/Platforms/Basic/MinSizeRel/Diligent-BasicPlatform.lib C:/SYN/DiligentCore/Platforms/Win32/MinSizeRel/Diligent-Win32Platform.lib C:/SYN/DiligentCore/Common/MinSizeRel/Diligent-Common.lib C:/SYN/DiligentCore/Graphics/GraphicsAccessories/MinSizeRel/Diligent-GraphicsAccessories.lib C:/SYN/DiligentCore/Graphics/GraphicsEngine/MinSizeRel/Diligent-GraphicsEngine.lib C:/SYN/DiligentCore/Graphics/HLSL2GLSLConverterLib/MinSizeRel/Diligent-HLSL2GLSLConverterLib.lib C:/SYN/DiligentCore/Graphics/ShaderTools/MinSizeRel/Diligent-ShaderTools.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineNextGenBase/MinSizeRel/Diligent-GraphicsEngineNextGenBase.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3DBase/MinSizeRel/Diligent-GraphicsEngineD3DBase.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D11/MinSizeRel/Diligent-GraphicsEngineD3D11-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D12/MinSizeRel/Diligent-GraphicsEngineD3D12-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineVulkan/MinSizeRel/Diligent-GraphicsEngineVk-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineOpenGL/MinSizeRel/Diligent-GraphicsEngineOpenGL-static.lib C:/SYN/DiligentCore/Graphics/Archiver/MinSizeRel/Diligent-Archiver-static.lib C:/SYN/DiligentCore/Graphics/GraphicsTools/MinSizeRel/Diligent-GraphicsTools.lib
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\Primitives\MinSizeRel\Diligent-Primitives.lib;C:\SYN\DiligentCore\Platforms\Basic\MinSizeRel\Diligent-BasicPlatform.lib;C:\SYN\DiligentCore\Platforms\Win32\MinSizeRel\Diligent-Win32Platform.lib;C:\SYN\DiligentCore\Common\MinSizeRel\Diligent-Common.lib;C:\SYN\DiligentCore\Graphics\GraphicsAccessories\MinSizeRel\Diligent-GraphicsAccessories.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngine\MinSizeRel\Diligent-GraphicsEngine.lib;C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\MinSizeRel\Diligent-HLSL2GLSLConverterLib.lib;C:\SYN\DiligentCore\Graphics\ShaderTools\MinSizeRel\Diligent-ShaderTools.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\MinSizeRel\Diligent-GraphicsEngineNextGenBase.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\MinSizeRel\Diligent-GraphicsEngineD3DBase.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\MinSizeRel\Diligent-GraphicsEngineD3D11-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\MinSizeRel\Diligent-GraphicsEngineD3D12-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\MinSizeRel\Diligent-GraphicsEngineVk-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\MinSizeRel\Diligent-GraphicsEngineOpenGL-static.lib;C:\SYN\DiligentCore\Graphics\Archiver\MinSizeRel\Diligent-Archiver-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsTools\MinSizeRel\Diligent-GraphicsTools.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\MinSizeRel\DiligentCore.lib</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Combining libraries...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+lib.exe /OUT:"RelWithDebInfo/DiligentCore.lib" C:/SYN/DiligentCore/Primitives/RelWithDebInfo/Diligent-Primitives.lib C:/SYN/DiligentCore/Platforms/Basic/RelWithDebInfo/Diligent-BasicPlatform.lib C:/SYN/DiligentCore/Platforms/Win32/RelWithDebInfo/Diligent-Win32Platform.lib C:/SYN/DiligentCore/Common/RelWithDebInfo/Diligent-Common.lib C:/SYN/DiligentCore/Graphics/GraphicsAccessories/RelWithDebInfo/Diligent-GraphicsAccessories.lib C:/SYN/DiligentCore/Graphics/GraphicsEngine/RelWithDebInfo/Diligent-GraphicsEngine.lib C:/SYN/DiligentCore/Graphics/HLSL2GLSLConverterLib/RelWithDebInfo/Diligent-HLSL2GLSLConverterLib.lib C:/SYN/DiligentCore/Graphics/ShaderTools/RelWithDebInfo/Diligent-ShaderTools.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineNextGenBase/RelWithDebInfo/Diligent-GraphicsEngineNextGenBase.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3DBase/RelWithDebInfo/Diligent-GraphicsEngineD3DBase.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D11/RelWithDebInfo/Diligent-GraphicsEngineD3D11-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D12/RelWithDebInfo/Diligent-GraphicsEngineD3D12-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineVulkan/RelWithDebInfo/Diligent-GraphicsEngineVk-static.lib C:/SYN/DiligentCore/Graphics/GraphicsEngineOpenGL/RelWithDebInfo/Diligent-GraphicsEngineOpenGL-static.lib C:/SYN/DiligentCore/Graphics/Archiver/RelWithDebInfo/Diligent-Archiver-static.lib C:/SYN/DiligentCore/Graphics/GraphicsTools/RelWithDebInfo/Diligent-GraphicsTools.lib
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\Primitives\RelWithDebInfo\Diligent-Primitives.lib;C:\SYN\DiligentCore\Platforms\Basic\RelWithDebInfo\Diligent-BasicPlatform.lib;C:\SYN\DiligentCore\Platforms\Win32\RelWithDebInfo\Diligent-Win32Platform.lib;C:\SYN\DiligentCore\Common\RelWithDebInfo\Diligent-Common.lib;C:\SYN\DiligentCore\Graphics\GraphicsAccessories\RelWithDebInfo\Diligent-GraphicsAccessories.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngine\RelWithDebInfo\Diligent-GraphicsEngine.lib;C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\RelWithDebInfo\Diligent-HLSL2GLSLConverterLib.lib;C:\SYN\DiligentCore\Graphics\ShaderTools\RelWithDebInfo\Diligent-ShaderTools.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\RelWithDebInfo\Diligent-GraphicsEngineNextGenBase.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\RelWithDebInfo\Diligent-GraphicsEngineD3DBase.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\RelWithDebInfo\Diligent-GraphicsEngineD3D11-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\RelWithDebInfo\Diligent-GraphicsEngineD3D12-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\RelWithDebInfo\Diligent-GraphicsEngineVk-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\RelWithDebInfo\Diligent-GraphicsEngineOpenGL-static.lib;C:\SYN\DiligentCore\Graphics\Archiver\RelWithDebInfo\Diligent-Archiver-static.lib;C:\SYN\DiligentCore\Graphics\GraphicsTools\RelWithDebInfo\Diligent-GraphicsTools.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\RelWithDebInfo\DiligentCore.lib</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\CMakeFiles\f73ea003d8c4a0948e61bb4cb0b1f387\DiligentCore-static.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\Debug\DiligentCore.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\CMakeFiles\DiligentCore-static</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\Release\DiligentCore.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\CMakeFiles\DiligentCore-static</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\MinSizeRel\DiligentCore.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\CMakeFiles\DiligentCore-static</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\RelWithDebInfo\DiligentCore.lib;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\CMakeFiles\DiligentCore-static</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\SYN\DiligentCore\CMakeFiles\DiligentCore-static">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
+      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\Archiver\Diligent-Archiver-static.vcxproj">
+      <Project>{0D165FDE-4882-37DF-B3C8-95C851867A63}</Project>
+      <Name>Diligent-Archiver-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
+      <Project>{C45E8F1E-8240-3415-9753-149169905F7C}</Project>
+      <Name>Diligent-BasicPlatform</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Common\Diligent-Common.vcxproj">
+      <Project>{499C6F0D-1DF9-3C5B-8C40-C55EF20EF37F}</Project>
+      <Name>Diligent-Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
+      <Project>{4AA14C03-C9C4-3E15-A53B-831B311E57DD}</Project>
+      <Name>Diligent-GraphicsAccessories</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
+      <Project>{A1D7B5B9-3941-39E3-A7DD-2A9976779AD3}</Project>
+      <Name>Diligent-GraphicsEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-static.vcxproj">
+      <Project>{005643FA-45BD-3D20-999B-45CE3F911F4D}</Project>
+      <Name>Diligent-GraphicsEngineD3D11-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-static.vcxproj">
+      <Project>{0C5989BC-7507-3509-B6BF-9DC77FB3BC0D}</Project>
+      <Name>Diligent-GraphicsEngineD3D12-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\Diligent-GraphicsEngineD3DBase.vcxproj">
+      <Project>{368A8241-0CDF-3863-B569-25D8ECD8941D}</Project>
+      <Name>Diligent-GraphicsEngineD3DBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\Diligent-GraphicsEngineNextGenBase.vcxproj">
+      <Project>{F35B4C68-4DA4-3B38-9B90-E0976F7F32E4}</Project>
+      <Name>Diligent-GraphicsEngineNextGenBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-static.vcxproj">
+      <Project>{003F99DA-882A-36F6-8AD9-7B9936352C22}</Project>
+      <Name>Diligent-GraphicsEngineOpenGL-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-static.vcxproj">
+      <Project>{E840F05D-D8E0-3317-A140-8379D16097CE}</Project>
+      <Name>Diligent-GraphicsEngineVk-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsTools\Diligent-GraphicsTools.vcxproj">
+      <Project>{F19CF7C2-5D88-3BEE-89CB-A328B096AA57}</Project>
+      <Name>Diligent-GraphicsTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
+      <Project>{8B65DAD8-5DB0-33B1-B291-81B00D2E9160}</Project>
+      <Name>Diligent-HLSL2GLSLConverterLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
+      <Project>{70F70D5B-046D-3F92-B50C-F6648BCAF009}</Project>
+      <Name>Diligent-Primitives</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\ShaderTools\Diligent-ShaderTools.vcxproj">
+      <Project>{222F6E82-FA1A-3607-9A5C-B5534789B8F3}</Project>
+      <Name>Diligent-ShaderTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
+      <Project>{D850516C-9C4E-33DE-AF85-1A8E18AFF64E}</Project>
+      <Name>Diligent-Win32Platform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
