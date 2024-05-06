@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\SYN\CMakeFiles\8c76e96e33c0e4699453c25b853ecb8f\DebugInfo.h.rule">
+    <CustomBuild Include="C:\SYN\diligent\CMakeFiles\e3cf55d2b461cf01fc0cabc12a9b68c5\DebugInfo.h.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\CMakeFiles\dee921cd4809f590863f3e58caf8d617\spirv-tools-header-DebugInfo.rule">
+    <CustomBuild Include="C:\SYN\diligent\CMakeFiles\024702eea54c44ec5f9366f559ae280e\spirv-tools-header-DebugInfo.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\spirv-tools-header-DebugInfo" />
+    <None Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\spirv-tools-header-DebugInfo" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{810ABB14-8FFA-37DD-9E48-E8A29BD9F288}</UniqueIdentifier>
+      <UniqueIdentifier>{31E031F4-A9A0-3070-8BC2-628051A0108A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

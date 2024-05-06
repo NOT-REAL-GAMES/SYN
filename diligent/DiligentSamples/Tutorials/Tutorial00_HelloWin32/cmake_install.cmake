@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial00_HelloWin32
+# Install script for directory: C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial00_HelloWin32
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

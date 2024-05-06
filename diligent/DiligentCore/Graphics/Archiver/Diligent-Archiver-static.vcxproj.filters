@@ -1,97 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\ArchiverImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\ArchiverImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\ArchiverFactory.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\ArchiverFactory.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\SerializationDeviceImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\SerializationDeviceImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\SerializedShaderImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\SerializedShaderImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\SerializedPipelineStateImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\SerializedPipelineStateImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\SerializedResourceSignatureImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\SerializedResourceSignatureImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\SerializedRenderPassImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\SerializedRenderPassImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\Archiver_D3D11.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\Archiver_D3D11.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\Archiver_D3D12.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\Archiver_D3D12.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\Archiver_Vk.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\Archiver_Vk.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\Archiver_GL.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\Archiver_GL.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\src\Archiver_Inc.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\src\Archiver_Inc.hpp">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface\Archiver.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface\Archiver.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface\ArchiverFactory.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface\ArchiverFactory.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface\ArchiverFactoryLoader.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface\ArchiverFactoryLoader.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface\SerializationDevice.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface\SerializationDevice.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface\SerializedPipelineState.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface\SerializedPipelineState.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface\SerializedShader.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface\SerializedShader.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\include\ArchiverImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\include\ArchiverImpl.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\include\SerializationDeviceImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\include\SerializationDeviceImpl.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\include\SerializedShaderImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\include\SerializedShaderImpl.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\include\SerializedPipelineStateImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\include\SerializedPipelineStateImpl.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\include\SerializedRenderPassImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\include\SerializedRenderPassImpl.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\include\SerializedResourceSignatureImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\include\SerializedResourceSignatureImpl.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\include\SerializationEngineImplTraits.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\include\SerializationEngineImplTraits.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\readme.md" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="interface">
-      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+      <UniqueIdentifier>{44D225D2-E624-34AB-A967-D14ECE824400}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

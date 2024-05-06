@@ -1,84 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\png.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\png.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngerror.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngerror.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngget.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngget.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngmem.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngmem.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngpread.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngpread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngread.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngrio.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngrio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngrtran.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngrtran.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngrutil.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngrutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngset.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngset.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngtrans.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngtrans.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngwio.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngwio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngwrite.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngwrite.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngwtran.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngwtran.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngwutil.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngwutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\png.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\png.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngconf.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\DiligentTools\ThirdParty\libpng\pnglibconf.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pnglibconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngpriv.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngpriv.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngdebug.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngdebug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pnginfo.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pnginfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\pngstruct.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\pngstruct.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libpng\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{FDCC4B13-A9C8-35BE-AD0C-211075E24539}</UniqueIdentifier>
+      <UniqueIdentifier>{55A24A3A-8659-329D-A4EF-0CD32A725DBD}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{DAB4CE85-E5CC-3DD9-9049-63421A35BB73}</UniqueIdentifier>
+      <UniqueIdentifier>{881516AD-7FEC-30C9-AC77-848FD6E9A1F9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

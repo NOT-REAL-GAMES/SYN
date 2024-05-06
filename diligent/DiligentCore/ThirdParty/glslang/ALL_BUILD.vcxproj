@@ -25,7 +25,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D9F1F8DE-F305-38C7-A48D-2F37C0930C7E}</ProjectGuid>
+    <ProjectGuid>{887F6BA3-E4CC-31EB-9379-1966D3C8F64C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\CMakeLists.txt">
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/glslang/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\CHANGES.md;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\ChooseMSVCCRT.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\build_info.h.tmpl;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\parse_version.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CHANGES.md;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\ChooseMSVCCRT.cmake;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\build_info.h.tmpl;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\parse_version.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/glslang/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\CHANGES.md;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\ChooseMSVCCRT.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\build_info.h.tmpl;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\parse_version.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CHANGES.md;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\ChooseMSVCCRT.cmake;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\build_info.h.tmpl;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\parse_version.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/glslang/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\CHANGES.md;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\ChooseMSVCCRT.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\build_info.h.tmpl;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\parse_version.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CHANGES.md;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\ChooseMSVCCRT.cmake;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\build_info.h.tmpl;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\parse_version.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/glslang/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,50 +159,50 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\CHANGES.md;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\ChooseMSVCCRT.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\build_info.h.tmpl;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\parse_version.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CHANGES.md;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\ChooseMSVCCRT.cmake;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\build_info.h.tmpl;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\parse_version.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
-      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">
+      <Project>{B6D7D6D3-B917-38B8-B8E3-A9C02E33AA85}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
-      <Project>{DF0FBAD1-DFAA-31AC-A0C8-35427C6456BE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
+      <Project>{A6E8BCAE-9344-3100-B197-400560E1F820}</Project>
       <Name>GenericCodeGen</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\hlsl\HLSL.vcxproj">
-      <Project>{40BD2F72-F298-3BD6-892F-C0DD7F03DEDB}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\hlsl\HLSL.vcxproj">
+      <Project>{1D976139-B5C8-33F2-8C7F-7979EEB00583}</Project>
       <Name>HLSL</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
-      <Project>{471C3269-4B35-3E26-B01E-F4FF19B95E0A}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
+      <Project>{35D7936D-2AC0-379B-8201-2B29EF68D777}</Project>
       <Name>MachineIndependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
-      <Project>{01C86EC7-29C5-32C0-80E7-605EA4DEFBA2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
+      <Project>{D30CF4EA-8943-3101-9431-BBEBEA243263}</Project>
       <Name>OGLCompiler</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
-      <Project>{DD35CE09-2BFB-3483-A854-2A688563BC1B}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
+      <Project>{A5EA77F5-9AD9-31E0-A89E-489C6A386F92}</Project>
       <Name>OSDependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
-      <Project>{6090D81E-A3D4-3A05-AE1C-F21679C37E22}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
+      <Project>{CD1F8E91-7C28-3687-8FB2-6A823B57D11E}</Project>
       <Name>SPIRV</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
-      <Project>{FAD1B065-759D-3EDE-837F-936EDE77F988}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
+      <Project>{5E2933FF-D7C0-38FB-BB53-9C093DB7DB61}</Project>
       <Name>glslang</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang-default-resource-limits.vcxproj">
-      <Project>{AF51C553-2EE0-3456-8C50-76BA4ECCED2D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\glslang-default-resource-limits.vcxproj">
+      <Project>{8213A3FE-3BCA-37E2-B5CF-A813E55B53CC}</Project>
       <Name>glslang-default-resource-limits</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,5 +10,5 @@ C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/GNUInstallDirs.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/ThirdParty/glfw/CMake/glfw3Config.cmake.in
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/ThirdParty/glfw/CMakeLists.txt
+C:/SYN/diligent/DiligentSamples/ThirdParty/glfw/CMake/glfw3Config.cmake.in
+C:/SYN/diligent/DiligentSamples/ThirdParty/glfw/CMakeLists.txt

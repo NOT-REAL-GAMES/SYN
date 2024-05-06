@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\SYN\CMakeFiles\b0b71da21d4f4ac7ff762158be17eba8\update_mappings.rule">
+    <CustomBuild Include="C:\SYN\diligent\CMakeFiles\29cafd34eef260cfc808262704c3c0f7\update_mappings.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\ThirdParty\glfw\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\ThirdParty\glfw\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\ThirdParty\glfw\src\mappings.h.in">
+    <None Include="C:\SYN\diligent\DiligentSamples\ThirdParty\glfw\src\mappings.h.in">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\ThirdParty\glfw\CMake\GenerateMappings.cmake" />
-    <None Include="C:\SYN\DiligentSamples\ThirdParty\glfw\src\CMakeFiles\update_mappings" />
+    <None Include="C:\SYN\diligent\DiligentSamples\ThirdParty\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\SYN\diligent\DiligentSamples\ThirdParty\glfw\src\CMakeFiles\update_mappings" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{810ABB14-8FFA-37DD-9E48-E8A29BD9F288}</UniqueIdentifier>
+      <UniqueIdentifier>{31E031F4-A9A0-3070-8BC2-628051A0108A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{FDCC4B13-A9C8-35BE-AD0C-211075E24539}</UniqueIdentifier>
+      <UniqueIdentifier>{55A24A3A-8659-329D-A4EF-0CD32A725DBD}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

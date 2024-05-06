@@ -1,183 +1,183 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jaricom.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jaricom.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcapimin.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcapimin.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcapistd.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcapistd.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcarith.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcarith.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jccoefct.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jccoefct.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jccolor.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jccolor.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcdctmgr.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcdctmgr.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jchuff.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jchuff.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcinit.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcinit.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcmainct.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcmainct.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcmarker.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcmarker.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcmaster.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcmaster.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcomapi.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcomapi.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcparam.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcparam.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcprepct.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcprepct.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jcsample.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jcsample.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jctrans.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jctrans.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdapimin.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdapimin.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdapistd.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdapistd.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdarith.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdarith.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdatadst.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdatadst.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdatasrc.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdatasrc.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdcoefct.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdcoefct.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdcolor.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdcolor.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jddctmgr.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jddctmgr.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdhuff.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdhuff.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdinput.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdinput.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdmainct.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdmainct.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdmarker.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdmarker.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdmaster.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdmaster.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdmerge.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdmerge.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdpostct.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdpostct.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdsample.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdsample.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdtrans.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdtrans.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jerror.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jerror.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jfdctflt.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jfdctflt.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jfdctfst.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jfdctfst.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jfdctint.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jfdctint.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jidctflt.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jidctflt.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jidctfst.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jidctfst.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jidctint.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jidctint.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jmemmgr.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jmemmgr.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jmemnobs.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jmemnobs.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jquant1.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jquant1.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jquant2.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jquant2.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jutils.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jutils.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jconfig.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jconfig.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jdct.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jdct.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jerror.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jerror.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jinclude.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jinclude.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jmemsys.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jmemsys.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jmorecfg.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jmorecfg.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jpegint.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jpegint.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jpeglib.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jpeglib.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\jversion.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\jversion.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libjpeg-9e\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

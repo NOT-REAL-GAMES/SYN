@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial00_HelloWin32\src\Tutorial00_HelloWin32.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial00_HelloWin32\src\Tutorial00_HelloWin32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial00_HelloWin32\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial00_HelloWin32\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{DAB4CE85-E5CC-3DD9-9049-63421A35BB73}</UniqueIdentifier>
+      <UniqueIdentifier>{881516AD-7FEC-30C9-AC77-848FD6E9A1F9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,0 +1,61 @@
+#include "Structures.fxh"
+#include "Utils.fxh"
+
+ConstantBuffer<GlobalConstants> g_Constants;
+
+Texture2D g_GBuffer_Color;
+Texture2D g_GBuffer_Normal;
+Texture2D g_GBuffer_Depth;
+Texture2D g_RayTracedTex;
+
+struct PSInput 
+{ 
+    float4 Pos : SV_POSITION; 
+    float2 UV  : TEX_COORD; 
+};
+
+float4 main(in PSInput PSIn) : SV_Target
+{
+    float2 Dim;
+    g_GBuffer_Color.GetDimensions(Dim.x, Dim.y);
+
+    float2 ScreenUV = float2(PSIn.UV.x, 1.0 - PSIn.UV.y);
+
+    // Read G-Buffer and ray-tracing data
+    int3   TexelPos = int3(ScreenUV * Dim, 0);
+    float4 Color    = g_GBuffer_Color.Load(TexelPos);
+    float3 Normal   = g_GBuffer_Normal.Load(TexelPos).xyz;
+    float  Depth    = g_GBuffer_Depth.Load(TexelPos).x;
+    float4 RTColor  = g_RayTracedTex.Load(TexelPos);
+    
+    // Reconstruct world position
+    float3 WPos = ScreenPosToWorldPos(PSIn.Pos.xy / Dim, Depth, g_Constants.ViewProjInv);
+    
+    // Compute Fresnel term
+    float3 ViewRayDir = normalize(WPos.xyz - g_Constants.CameraPos.xyz);
+    float  R = 0.0;
+    if (Depth < 1.0)
+    {
+        // Schlick's approximation for Fresnel term
+        float NdotV = dot(Normal, -ViewRayDir);
+        float R0 = 0.04;
+        R = lerp(R0, 1.0, pow(1 - NdotV, 5.0));
+    }
+    else
+    {
+        // Background
+        Color = GetSkyColor(ViewRayDir, g_Constants.LightDir.xyz);
+    }
+
+    switch (g_Constants.DrawMode)
+    {
+        case RENDER_MODE_SHADED:           return lerp(Color * RTColor.a, RTColor, R);
+        case RENDER_MODE_G_BUFFER_COLOR:   return Color;
+        case RENDER_MODE_G_BUFFER_NORMAL:  return float4(abs(Normal.xyz), 1.0);
+        case RENDER_MODE_DIFFUSE_LIGHTING: return Color * RTColor.a;
+        case RENDER_MODE_REFLECTIONS:      return RTColor;
+        case RENDER_MODE_FRESNEL_TERM:     return float4(R, R, R, 1.0);
+    }
+
+    return Color;
+}

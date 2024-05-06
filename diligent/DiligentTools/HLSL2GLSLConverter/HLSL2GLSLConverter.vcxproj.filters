@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\HLSL2GLSLConverter\src\HLSL2GLSLConverterApp.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\HLSL2GLSLConverter\src\HLSL2GLSLConverterApp.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\HLSL2GLSLConverter\src\HLSL2GLSLConverterAppWin32.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\HLSL2GLSLConverter\src\HLSL2GLSLConverterAppWin32.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\HLSL2GLSLConverter\src\HLSL2GLSLConverterApp.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\HLSL2GLSLConverter\src\HLSL2GLSLConverterApp.h">
       <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\HLSL2GLSLConverter\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentTools\HLSL2GLSLConverter\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">
-      <UniqueIdentifier>{B2E819CD-A4D2-3287-9F2D-87AD0F3B7D35}</UniqueIdentifier>
+      <UniqueIdentifier>{796AFCA7-68F5-366B-8AAE-2D38E089B051}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

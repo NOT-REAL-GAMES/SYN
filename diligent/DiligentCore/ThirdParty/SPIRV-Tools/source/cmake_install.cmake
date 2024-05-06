@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source
+# Install script for directory: C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,31 +34,31 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/opt/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/opt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/fuzz/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/fuzz/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/link/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/link/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/lint/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/lint/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/diff/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/diff/cmake_install.cmake")
 endif()
 

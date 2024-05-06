@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{251879CA-9CC3-3BB8-BD98-CCA6F664EB93}</ProjectGuid>
+    <ProjectGuid>{5F67089C-E2D9-38D5-8BE1-AEB3AE819E58}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentTools\RenderStatePackager\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentTools\RenderStatePackager\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Diligent-RenderStatePackager.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Diligent-RenderStatePackager</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentTools\RenderStatePackager\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentTools\RenderStatePackager\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Diligent-RenderStatePackager.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Diligent-RenderStatePackager</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentTools\RenderStatePackager\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentTools\RenderStatePackager\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Diligent-RenderStatePackager.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Diligent-RenderStatePackager</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentTools\RenderStatePackager\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentTools\RenderStatePackager\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Diligent-RenderStatePackager.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Diligent-RenderStatePackager</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -107,10 +107,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;DEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_DEVELOPMENT;DILIGENT_DEBUG;ARCHIVER_SUPPORTED=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -123,8 +123,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SYN/DiligentTools/RenderStatePackager/Debug/Diligent-RenderStatePackager.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/SYN/DiligentTools/RenderStatePackager/Debug/Diligent-RenderStatePackager.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SYN/diligent/DiligentTools/RenderStatePackager/Debug/Diligent-RenderStatePackager.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SYN/diligent/DiligentTools/RenderStatePackager/Debug/Diligent-RenderStatePackager.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -133,7 +133,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -159,10 +159,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;ARCHIVER_SUPPORTED=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -175,10 +175,10 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SYN/DiligentTools/RenderStatePackager/Release/Diligent-RenderStatePackager.lib</ImportLibrary>
+      <ImportLibrary>C:/SYN/diligent/DiligentTools/RenderStatePackager/Release/Diligent-RenderStatePackager.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>C:/SYN/DiligentTools/RenderStatePackager/Release/Diligent-RenderStatePackager.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/SYN/diligent/DiligentTools/RenderStatePackager/Release/Diligent-RenderStatePackager.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -187,7 +187,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -211,10 +211,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;ARCHIVER_SUPPORTED=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -227,10 +227,10 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SYN/DiligentTools/RenderStatePackager/MinSizeRel/Diligent-RenderStatePackager.lib</ImportLibrary>
+      <ImportLibrary>C:/SYN/diligent/DiligentTools/RenderStatePackager/MinSizeRel/Diligent-RenderStatePackager.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>C:/SYN/DiligentTools/RenderStatePackager/MinSizeRel/Diligent-RenderStatePackager.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/SYN/diligent/DiligentTools/RenderStatePackager/MinSizeRel/Diligent-RenderStatePackager.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -239,7 +239,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
@@ -264,10 +264,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;ARCHIVER_SUPPORTED=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\args;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\Archiver\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\RenderStatePackager\include;C:\SYN\diligent\DiligentTools\ThirdParty\args;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\Archiver\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -280,10 +280,10 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SYN/DiligentTools/RenderStatePackager/RelWithDebInfo/Diligent-RenderStatePackager.lib</ImportLibrary>
+      <ImportLibrary>C:/SYN/diligent/DiligentTools/RenderStatePackager/RelWithDebInfo/Diligent-RenderStatePackager.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>C:/SYN/DiligentTools/RenderStatePackager/RelWithDebInfo/Diligent-RenderStatePackager.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/SYN/diligent/DiligentTools/RenderStatePackager/RelWithDebInfo/Diligent-RenderStatePackager.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -291,11 +291,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\CMakeLists.txt">
+    <CustomBuild Include="C:\SYN\diligent\DiligentTools\RenderStatePackager\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/RenderStatePackager/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SYN/diligent/DiligentTools/RenderStatePackager/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentTools/RenderStatePackager/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentTools/RenderStatePackager/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -304,11 +304,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentTools\RenderStatePackager\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentTools\RenderStatePackager\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/RenderStatePackager/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentTools/RenderStatePackager/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentTools/RenderStatePackager/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentTools/RenderStatePackager/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -317,11 +317,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentTools\RenderStatePackager\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentTools\RenderStatePackager\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/RenderStatePackager/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentTools/RenderStatePackager/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentTools/RenderStatePackager/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentTools/RenderStatePackager/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -330,11 +330,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentTools\RenderStatePackager\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentTools\RenderStatePackager\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/RenderStatePackager/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentTools/RenderStatePackager/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentTools/RenderStatePackager/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentTools/RenderStatePackager/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -343,136 +343,136 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentTools\RenderStatePackager\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentTools\RenderStatePackager\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\src\main.cpp" />
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\RenderStatePackager\README.md">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\RenderStatePackager\src\main.cpp" />
+    <None Include="C:\SYN\diligent\DiligentTools\RenderStatePackager\README.md">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
-      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">
+      <Project>{B6D7D6D3-B917-38B8-B8E3-A9C02E33AA85}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\Archiver\Diligent-Archiver-static.vcxproj">
-      <Project>{0D165FDE-4882-37DF-B3C8-95C851867A63}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\Diligent-Archiver-static.vcxproj">
+      <Project>{6FC59737-F14C-3FDA-AD83-C2EC20954DF0}</Project>
       <Name>Diligent-Archiver-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
-      <Project>{C45E8F1E-8240-3415-9753-149169905F7C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
+      <Project>{A1A780F6-E035-31AA-A86D-F5DC3ED9A432}</Project>
       <Name>Diligent-BasicPlatform</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Common\Diligent-Common.vcxproj">
-      <Project>{499C6F0D-1DF9-3C5B-8C40-C55EF20EF37F}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Common\Diligent-Common.vcxproj">
+      <Project>{1464DB5C-F5E0-3EEB-A8A7-0936923C73C5}</Project>
       <Name>Diligent-Common</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
-      <Project>{4AA14C03-C9C4-3E15-A53B-831B311E57DD}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
+      <Project>{CCD4E758-271F-362E-8CEC-484648267EEB}</Project>
       <Name>Diligent-GraphicsAccessories</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
-      <Project>{A1D7B5B9-3941-39E3-A7DD-2A9976779AD3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
+      <Project>{3612E2FA-58BA-378D-A5EA-4E0F7BDC84B5}</Project>
       <Name>Diligent-GraphicsEngine</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-static.vcxproj">
-      <Project>{005643FA-45BD-3D20-999B-45CE3F911F4D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-static.vcxproj">
+      <Project>{C6C33609-429F-3338-AE5D-E82ED42F5E10}</Project>
       <Name>Diligent-GraphicsEngineD3D11-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-static.vcxproj">
-      <Project>{0C5989BC-7507-3509-B6BF-9DC77FB3BC0D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-static.vcxproj">
+      <Project>{49C552FE-6E92-3375-8A8D-A352DA7E6DB3}</Project>
       <Name>Diligent-GraphicsEngineD3D12-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\Diligent-GraphicsEngineD3DBase.vcxproj">
-      <Project>{368A8241-0CDF-3863-B569-25D8ECD8941D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\Diligent-GraphicsEngineD3DBase.vcxproj">
+      <Project>{99BA352B-09BD-3E32-9A1C-B9D298189263}</Project>
       <Name>Diligent-GraphicsEngineD3DBase</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\Diligent-GraphicsEngineNextGenBase.vcxproj">
-      <Project>{F35B4C68-4DA4-3B38-9B90-E0976F7F32E4}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineNextGenBase\Diligent-GraphicsEngineNextGenBase.vcxproj">
+      <Project>{1145B703-7B02-30E3-A513-9663DBE641D6}</Project>
       <Name>Diligent-GraphicsEngineNextGenBase</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-static.vcxproj">
-      <Project>{003F99DA-882A-36F6-8AD9-7B9936352C22}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-static.vcxproj">
+      <Project>{6EFDB3CA-3ED2-3C51-BF93-9FAC664FB866}</Project>
       <Name>Diligent-GraphicsEngineOpenGL-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-static.vcxproj">
-      <Project>{E840F05D-D8E0-3317-A140-8379D16097CE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-static.vcxproj">
+      <Project>{778E0167-A04D-3FFB-86C1-2426BEEBE7F8}</Project>
       <Name>Diligent-GraphicsEngineVk-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsTools\Diligent-GraphicsTools.vcxproj">
-      <Project>{F19CF7C2-5D88-3BEE-89CB-A328B096AA57}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\Diligent-GraphicsTools.vcxproj">
+      <Project>{E59E59A0-4286-3B03-8D16-75F2FA4FB40E}</Project>
       <Name>Diligent-GraphicsTools</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
-      <Project>{8B65DAD8-5DB0-33B1-B291-81B00D2E9160}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
+      <Project>{8A548531-1C0B-3F76-B964-673FBD6FCD8D}</Project>
       <Name>Diligent-HLSL2GLSLConverterLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
-      <Project>{70F70D5B-046D-3F92-B50C-F6648BCAF009}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
+      <Project>{8E1149B8-D59B-356E-B5B4-5519579BBFE7}</Project>
       <Name>Diligent-Primitives</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\RenderStateNotation\Diligent-RenderStateNotation.vcxproj">
-      <Project>{31A3C01A-58F4-344B-B43E-34224D043757}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\RenderStateNotation\Diligent-RenderStateNotation.vcxproj">
+      <Project>{A47C2AB8-ACAD-345A-9552-C87DC8F765B7}</Project>
       <Name>Diligent-RenderStateNotation</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\RenderStatePackager\Diligent-RenderStatePackagerLib.vcxproj">
-      <Project>{A72B71EF-AB8A-31DF-96D8-A2FAB86F1B59}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\RenderStatePackager\Diligent-RenderStatePackagerLib.vcxproj">
+      <Project>{C6532D0F-D0B4-31AA-BAF7-82365E5DA99A}</Project>
       <Name>Diligent-RenderStatePackagerLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\ShaderTools\Diligent-ShaderTools.vcxproj">
-      <Project>{222F6E82-FA1A-3607-9A5C-B5534789B8F3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\Diligent-ShaderTools.vcxproj">
+      <Project>{34C49E1C-A1DC-315C-B114-F57230053EB8}</Project>
       <Name>Diligent-ShaderTools</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
-      <Project>{D850516C-9C4E-33DE-AF85-1A8E18AFF64E}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
+      <Project>{DB186C91-086B-316F-BA76-07008423EFAB}</Project>
       <Name>Diligent-Win32Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
-      <Project>{DF0FBAD1-DFAA-31AC-A0C8-35427C6456BE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
+      <Project>{A6E8BCAE-9344-3100-B197-400560E1F820}</Project>
       <Name>GenericCodeGen</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
-      <Project>{471C3269-4B35-3E26-B01E-F4FF19B95E0A}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
+      <Project>{35D7936D-2AC0-379B-8201-2B29EF68D777}</Project>
       <Name>MachineIndependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
-      <Project>{01C86EC7-29C5-32C0-80E7-605EA4DEFBA2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
+      <Project>{D30CF4EA-8943-3101-9431-BBEBEA243263}</Project>
       <Name>OGLCompiler</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
-      <Project>{DD35CE09-2BFB-3483-A854-2A688563BC1B}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
+      <Project>{A5EA77F5-9AD9-31E0-A89E-489C6A386F92}</Project>
       <Name>OSDependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
-      <Project>{6090D81E-A3D4-3A05-AE1C-F21679C37E22}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
+      <Project>{CD1F8E91-7C28-3687-8FB2-6A823B57D11E}</Project>
       <Name>SPIRV</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
-      <Project>{08CE441A-9555-3E0A-AEE7-373DDBF83123}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
+      <Project>{D083F047-5AD4-331E-8643-B5D0CFA5663A}</Project>
       <Name>SPIRV-Tools-opt</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
-      <Project>{D10B50A1-E032-3ED4-B545-3DC6B2D4792C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
+      <Project>{254CC700-E03F-311A-98AF-157C819B6172}</Project>
       <Name>SPIRV-Tools-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glew\glew-static.vcxproj">
-      <Project>{227857EF-6692-31BE-BDE2-13065C0D1AA4}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glew\glew-static.vcxproj">
+      <Project>{BA928301-E4D0-3397-BB1D-028F6C35D007}</Project>
       <Name>glew-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
-      <Project>{FAD1B065-759D-3EDE-837F-936EDE77F988}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
+      <Project>{5E2933FF-D7C0-38FB-BB53-9C093DB7DB61}</Project>
       <Name>glslang</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
-      <Project>{B466C176-4FF0-31B9-B40B-7F944DFB96F2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
+      <Project>{3F7890C6-002D-3586-A692-A7E1DEEB354D}</Project>
       <Name>spirv-cross-core</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\xxHash\cmake_unofficial\xxhash.vcxproj">
-      <Project>{E23D36E9-2121-3A65-8A90-8C4A2E75DFFB}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\xxHash\cmake_unofficial\xxhash.vcxproj">
+      <Project>{AE11262B-DE47-37DE-9C6B-88AB2DE8F9F0}</Project>
       <Name>xxhash</Name>
     </ProjectReference>
   </ItemGroup>

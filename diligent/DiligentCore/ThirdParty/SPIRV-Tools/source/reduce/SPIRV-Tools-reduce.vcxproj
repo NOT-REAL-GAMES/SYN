@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C5B67048-3A66-36C6-A033-D9AE5F3EFAB9}</ProjectGuid>
+    <ProjectGuid>{E9981746-F8B7-39CE-8029-C273FBD8C2DD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SPIRV-Tools-reduce.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SPIRV-Tools-reduce</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SPIRV-Tools-reduce.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SPIRV-Tools-reduce</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">SPIRV-Tools-reduce.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">SPIRV-Tools-reduce</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">SPIRV-Tools-reduce.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">SPIRV-Tools-reduce</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -99,10 +99,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,7 +115,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4800;4819</DisableSpecificWarnings>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
@@ -136,10 +136,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -152,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4800;4819</DisableSpecificWarnings>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
@@ -173,10 +173,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -189,7 +189,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4800;4819</DisableSpecificWarnings>
@@ -209,10 +209,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -224,11 +224,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeLists.txt">
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -237,11 +237,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -250,11 +250,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,11 +263,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/reduce/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -276,42 +276,42 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\change_operand_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\change_operand_to_undef_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\conditional_branch_to_simple_conditional_branch_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\conditional_branch_to_simple_conditional_branch_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\merge_blocks_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\merge_blocks_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_const_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_undef_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_dominating_id_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reducer.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_pass.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_util.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_block_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_block_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_function_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_function_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_instruction_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_selection_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_selection_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_struct_member_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_unused_instruction_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_unused_struct_member_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\simple_conditional_branch_to_branch_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\simple_conditional_branch_to_branch_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_construct_to_block_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_construct_to_block_reduction_opportunity_finder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_loop_to_selection_reduction_opportunity.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_loop_to_selection_reduction_opportunity_finder.h" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\change_operand_reduction_opportunity.cpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\change_operand_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\change_operand_to_undef_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\conditional_branch_to_simple_conditional_branch_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\conditional_branch_to_simple_conditional_branch_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\merge_blocks_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\merge_blocks_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_const_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_undef_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_dominating_id_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reducer.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_pass.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_util.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_block_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_block_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_function_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_function_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_instruction_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_selection_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_selection_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_struct_member_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_unused_instruction_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_unused_struct_member_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\simple_conditional_branch_to_branch_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\simple_conditional_branch_to_branch_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_construct_to_block_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_construct_to_block_reduction_opportunity_finder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_loop_to_selection_reduction_opportunity.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_loop_to_selection_reduction_opportunity_finder.h" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\change_operand_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -337,7 +337,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\change_operand_to_undef_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\change_operand_to_undef_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -363,7 +363,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\conditional_branch_to_simple_conditional_branch_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\conditional_branch_to_simple_conditional_branch_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -389,7 +389,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\conditional_branch_to_simple_conditional_branch_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\conditional_branch_to_simple_conditional_branch_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -415,7 +415,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\merge_blocks_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\merge_blocks_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -441,7 +441,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\merge_blocks_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\merge_blocks_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -467,7 +467,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_const_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_const_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -493,7 +493,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_undef_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_undef_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -519,7 +519,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_dominating_id_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\operand_to_dominating_id_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -545,7 +545,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reducer.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reducer.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -571,7 +571,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -597,7 +597,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -623,7 +623,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_pass.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_pass.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -649,7 +649,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_util.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\reduction_util.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -675,7 +675,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_block_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_block_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -701,7 +701,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_block_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_block_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -727,7 +727,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_function_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_function_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -753,7 +753,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_function_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_function_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -779,7 +779,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_instruction_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_instruction_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -805,7 +805,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_selection_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_selection_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -831,7 +831,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_selection_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_selection_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -857,7 +857,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_struct_member_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_struct_member_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -883,7 +883,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_unused_instruction_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_unused_instruction_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -909,7 +909,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_unused_struct_member_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\remove_unused_struct_member_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -935,7 +935,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\simple_conditional_branch_to_branch_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\simple_conditional_branch_to_branch_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -961,7 +961,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\simple_conditional_branch_to_branch_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\simple_conditional_branch_to_branch_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -987,7 +987,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_construct_to_block_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_construct_to_block_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -1013,7 +1013,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_construct_to_block_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_construct_to_block_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -1039,7 +1039,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_loop_to_selection_reduction_opportunity.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_loop_to_selection_reduction_opportunity.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -1065,7 +1065,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_loop_to_selection_reduction_opportunity_finder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\structured_loop_to_selection_reduction_opportunity_finder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -1091,7 +1091,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(IntDir)\pch_source_reduce.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\pch_source_reduce.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\reduce\pch_source_reduce.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /Zm300</AdditionalOptions>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch_source_reduce.h</PrecompiledHeaderFile>
@@ -1115,18 +1115,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
-      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">
+      <Project>{B6D7D6D3-B917-38B8-B8E3-A9C02E33AA85}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
-      <Project>{08CE441A-9555-3E0A-AEE7-373DDBF83123}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
+      <Project>{D083F047-5AD4-331E-8643-B5D0CFA5663A}</Project>
       <Name>SPIRV-Tools-opt</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
-      <Project>{D10B50A1-E032-3ED4-B545-3DC6B2D4792C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
+      <Project>{254CC700-E03F-311A-98AF-157C819B6172}</Project>
       <Name>SPIRV-Tools-static</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeScene.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeSceneResTrsnHelper.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeSceneResTrsnHelper.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeScene.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeScene.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeSceneResTrsnHelper.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\GhostCubeScene\src\GhostCubeSceneResTrsnHelper.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\GhostCubeScene\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\assets\shaders\Mirror.psh">
+    <None Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\GhostCubeScene\assets\shaders\Mirror.psh">
       <Filter>assets\shaders</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\GhostCubeScene\assets\shaders\Mirror.vsh">
+    <None Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\GhostCubeScene\assets\shaders\Mirror.vsh">
       <Filter>assets\shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="assets">
-      <UniqueIdentifier>{A7DEE7EF-25AE-3A62-8448-E5ACAB0D0463}</UniqueIdentifier>
+      <UniqueIdentifier>{89F09546-BD89-3275-9E12-469D3A0AC566}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\shaders">
-      <UniqueIdentifier>{CD355AD9-3570-3C3A-959B-260BC3E7561E}</UniqueIdentifier>
+      <UniqueIdentifier>{3ADE640A-76E8-31FB-B0A9-C84552EF0286}</UniqueIdentifier>
     </Filter>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6090D81E-A3D4-3A05-AE1C-F21679C37E22}</ProjectGuid>
+    <ProjectGuid>{CD1F8E91-7C28-3687-8FB2-6A823B57D11E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SPIRV.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SPIRVd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SPIRV.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SPIRV</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">SPIRV.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">SPIRV</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">SPIRV.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">SPIRV</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -97,10 +97,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_HAS_EXCEPTIONS=0;ENABLE_HLSL;GLSLANG_OSINCLUDE_WIN32;ENABLE_OPT=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -113,7 +113,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>
@@ -133,10 +133,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;ENABLE_HLSL;GLSLANG_OSINCLUDE_WIN32;ENABLE_OPT=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -149,7 +149,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>
@@ -169,10 +169,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;ENABLE_HLSL;GLSLANG_OSINCLUDE_WIN32;ENABLE_OPT=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -185,7 +185,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -204,10 +204,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;ENABLE_HLSL;GLSLANG_OSINCLUDE_WIN32;ENABLE_OPT=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -219,11 +219,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\CMakeLists.txt">
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/SPIRV/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/glslang/SPIRV/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/glslang/SPIRV/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/glslang/SPIRV/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -232,11 +232,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/SPIRV/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/glslang/SPIRV/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/glslang/SPIRV/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/glslang/SPIRV/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -245,11 +245,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/SPIRV/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/glslang/SPIRV/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/glslang/SPIRV/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/glslang/SPIRV/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -258,11 +258,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/SPIRV/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/glslang/SPIRV/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/glslang/SPIRV/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/glslang/SPIRV/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -271,68 +271,68 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\GlslangToSpv.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\InReadableOrder.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\Logger.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\SpvBuilder.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\SpvPostProcess.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\doc.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\SpvTools.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\disassemble.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\CInterface\spirv_c_interface.cpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\bitutils.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\spirv.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.std.450.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.EXT.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.KHR.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\GlslangToSpv.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\hex_float.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\Logger.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\SpvBuilder.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\spvIR.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\doc.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\SpvTools.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\disassemble.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.AMD.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.NV.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.ARM.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\NonSemanticDebugPrintf.h" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\NonSemanticShaderDebugInfo100.h" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\GlslangToSpv.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\InReadableOrder.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\Logger.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SpvBuilder.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SpvPostProcess.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\doc.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SpvTools.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\disassemble.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\CInterface\spirv_c_interface.cpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\bitutils.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\spirv.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.std.450.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.EXT.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.KHR.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\GlslangToSpv.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\hex_float.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\Logger.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SpvBuilder.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\spvIR.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\doc.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SpvTools.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\disassemble.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.AMD.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.NV.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\GLSL.ext.ARM.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\NonSemanticDebugPrintf.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\NonSemanticShaderDebugInfo100.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
-      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">
+      <Project>{B6D7D6D3-B917-38B8-B8E3-A9C02E33AA85}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
-      <Project>{DF0FBAD1-DFAA-31AC-A0C8-35427C6456BE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
+      <Project>{A6E8BCAE-9344-3100-B197-400560E1F820}</Project>
       <Name>GenericCodeGen</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
-      <Project>{471C3269-4B35-3E26-B01E-F4FF19B95E0A}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
+      <Project>{35D7936D-2AC0-379B-8201-2B29EF68D777}</Project>
       <Name>MachineIndependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
-      <Project>{01C86EC7-29C5-32C0-80E7-605EA4DEFBA2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
+      <Project>{D30CF4EA-8943-3101-9431-BBEBEA243263}</Project>
       <Name>OGLCompiler</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
-      <Project>{DD35CE09-2BFB-3483-A854-2A688563BC1B}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
+      <Project>{A5EA77F5-9AD9-31E0-A89E-489C6A386F92}</Project>
       <Name>OSDependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
-      <Project>{08CE441A-9555-3E0A-AEE7-373DDBF83123}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
+      <Project>{D083F047-5AD4-331E-8643-B5D0CFA5663A}</Project>
       <Name>SPIRV-Tools-opt</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
-      <Project>{D10B50A1-E032-3ED4-B545-3DC6B2D4792C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
+      <Project>{254CC700-E03F-311A-98AF-157C819B6172}</Project>
       <Name>SPIRV-Tools-static</Name>
     </ProjectReference>
   </ItemGroup>

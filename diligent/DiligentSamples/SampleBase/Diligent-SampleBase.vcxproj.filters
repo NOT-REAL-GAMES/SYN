@@ -1,76 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\SampleAppWin32.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\SampleAppWin32.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\InputControllerWin32.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\InputControllerWin32.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\SampleApp.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\SampleApp.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\FirstPersonCamera.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\FirstPersonCamera.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\SampleBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\SampleBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include\SampleApp.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\SampleBase\include\SampleApp.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include\Win32\InputControllerWin32.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\SampleBase\include\Win32\InputControllerWin32.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include\FirstPersonCamera.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\SampleBase\include\FirstPersonCamera.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include\TrackballCamera.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\SampleBase\include\TrackballCamera.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include\InputController.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\SampleBase\include\InputController.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include\SampleBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\SampleBase\include\SampleBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.h">
       <Filter>resources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\SampleBase\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\directx11-logo.bmp">
+    <None Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\directx11-logo.bmp">
       <Filter>resources</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\directx12-logo.bmp">
+    <None Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\directx12-logo.bmp">
       <Filter>resources</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\vulkan-logo.bmp">
+    <None Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\vulkan-logo.bmp">
       <Filter>resources</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\opengl-logo.bmp">
+    <None Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\opengl-logo.bmp">
       <Filter>resources</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+    <ResourceCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
       <Filter>resources</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="resources">
-      <UniqueIdentifier>{5601946D-ED87-37DE-9A3C-817FD733F510}</UniqueIdentifier>
+      <UniqueIdentifier>{E5B93933-25F0-3CE0-981E-158162FE03FC}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

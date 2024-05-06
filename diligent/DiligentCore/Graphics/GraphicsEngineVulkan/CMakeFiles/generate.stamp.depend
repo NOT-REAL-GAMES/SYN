@@ -2,4 +2,4 @@
 C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/FindVulkan.cmake
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/Graphics/GraphicsEngineVulkan/CMakeLists.txt
+C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineVulkan/CMakeLists.txt

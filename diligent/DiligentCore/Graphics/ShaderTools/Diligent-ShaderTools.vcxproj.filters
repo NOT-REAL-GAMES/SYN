@@ -1,95 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\ShaderToolsCommon.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\ShaderToolsCommon.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\GLSLUtils.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\GLSLUtils.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\HLSLUtils.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\HLSLUtils.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\DXBCUtils.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\DXBCUtils.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\DXCompiler.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\DXCompiler.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\SPIRVShaderResources.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\SPIRVShaderResources.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\SPIRVTools.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\SPIRVTools.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\GLSLangUtils.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\GLSLangUtils.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\GPUOpenShaderUtils\DXBCChecksum.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\GPUOpenShaderUtils\DXBCChecksum.cpp">
       <Filter>ThirdParty\DXBCChecksum</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\ShaderToolsCommon.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\ShaderToolsCommon.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\GLSLUtils.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\GLSLUtils.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLUtils.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLUtils.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\DXBCUtils.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\DXBCUtils.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\ResourceBindingMap.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\ResourceBindingMap.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\DXCompiler.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\DXCompiler.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\DXCompilerBaseWin32.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\DXCompilerBaseWin32.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\SPIRVShaderResources.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\SPIRVShaderResources.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\SPIRVTools.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\SPIRVTools.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\GLSLangUtils.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\GLSLangUtils.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\GPUOpenShaderUtils\DXBCChecksum.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\GPUOpenShaderUtils\DXBCChecksum.h">
       <Filter>ThirdParty\DXBCChecksum</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions.fxh">
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions.fxh">
       <Filter>include</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh">
+    <None Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh">
       <Filter>generated</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ThirdParty">
-      <UniqueIdentifier>{C0D6D353-0BDB-345F-B63A-0DF49DBE7097}</UniqueIdentifier>
+      <UniqueIdentifier>{2980CC5B-52D6-38BA-8B95-3D82820CB6BE}</UniqueIdentifier>
     </Filter>
     <Filter Include="ThirdParty\DXBCChecksum">
-      <UniqueIdentifier>{21515A67-AE43-3EDE-AB47-E01F480A14F3}</UniqueIdentifier>
+      <UniqueIdentifier>{5952871E-0AF6-3127-8B01-931C2277C8D9}</UniqueIdentifier>
     </Filter>
     <Filter Include="generated">
-      <UniqueIdentifier>{9213C280-F878-3D80-AAE2-2CBFB8412A43}</UniqueIdentifier>
+      <UniqueIdentifier>{7C5B30F8-B181-3035-A398-769450D3F8AD}</UniqueIdentifier>
     </Filter>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

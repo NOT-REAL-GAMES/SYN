@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Samples
+# Install script for directory: C:/SYN/diligent/DiligentSamples/Samples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,13 +34,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/SYN/DiligentSamples/Samples/Atmosphere/cmake_install.cmake")
-  include("C:/SYN/DiligentSamples/Samples/GLTFViewer/cmake_install.cmake")
-  include("C:/SYN/DiligentSamples/Samples/Shadows/cmake_install.cmake")
-  include("C:/SYN/DiligentSamples/Samples/ImguiDemo/cmake_install.cmake")
-  include("C:/SYN/DiligentSamples/Samples/NuklearDemo/cmake_install.cmake")
-  include("C:/SYN/DiligentSamples/Samples/GLFWDemo/cmake_install.cmake")
-  include("C:/SYN/DiligentSamples/Samples/Asteroids/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/Samples/Atmosphere/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/Samples/Shadows/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/Samples/ImguiDemo/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/Samples/NuklearDemo/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/Samples/GLFWDemo/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/Samples/Asteroids/cmake_install.cmake")
 
 endif()
 

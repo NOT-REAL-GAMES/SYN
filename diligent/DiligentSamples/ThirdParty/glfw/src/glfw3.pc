@@ -1,7 +1,7 @@
-prefix=C:/SYN/install
+prefix=C:/SYN/diligent/install
 exec_prefix=${prefix}
-includedir=C:/SYN/install/include
-libdir=C:/SYN/install/lib
+includedir=C:/SYN/diligent/install/include
+libdir=C:/SYN/diligent/install/lib
 
 Name: GLFW
 Description: A multi-platform library for OpenGL, window and input

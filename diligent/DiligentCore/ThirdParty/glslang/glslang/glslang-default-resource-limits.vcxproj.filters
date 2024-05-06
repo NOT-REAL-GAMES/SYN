@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\ResourceLimits\ResourceLimits.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\ResourceLimits\ResourceLimits.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\ResourceLimits\resource_limits_c.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\ResourceLimits\resource_limits_c.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Public\ResourceLimits.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Public\ResourceLimits.h">
       <Filter>Public</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Public\resource_limits_c.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Public\resource_limits_c.h">
       <Filter>Public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Public">
-      <UniqueIdentifier>{F614314B-5A4B-394B-8E46-AC1A9B94C2FC}</UniqueIdentifier>
+      <UniqueIdentifier>{38E5E71E-14DC-3A55-8993-07E6EE5554D9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{DAB4CE85-E5CC-3DD9-9049-63421A35BB73}</UniqueIdentifier>
+      <UniqueIdentifier>{881516AD-7FEC-30C9-AC77-848FD6E9A1F9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

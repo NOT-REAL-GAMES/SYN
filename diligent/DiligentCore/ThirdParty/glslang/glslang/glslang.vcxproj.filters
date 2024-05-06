@@ -1,69 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\CInterface\glslang_c_interface.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\CInterface\glslang_c_interface.cpp">
       <Filter>CInterface</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Public\ShaderLang.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Public\ShaderLang.h">
       <Filter>Public</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\arrays.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\arrays.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\BaseTypes.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\BaseTypes.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\Common.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\Common.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\ConstantUnion.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\ConstantUnion.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\glslang_c_interface.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\glslang_c_interface.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\glslang_c_shader_types.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\glslang_c_shader_types.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\InfoSink.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\InfoSink.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\InitializeGlobals.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\InitializeGlobals.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\intermediate.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\intermediate.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\PoolAlloc.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\PoolAlloc.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\ResourceLimits.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\ResourceLimits.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\ShHandle.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\ShHandle.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\SpirvIntrinsics.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\SpirvIntrinsics.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\Include\Types.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\Include\Types.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CInterface">
-      <UniqueIdentifier>{198D5F84-DEC0-391E-BC72-F5100809B7AF}</UniqueIdentifier>
+      <UniqueIdentifier>{11C195CD-DCF1-3193-9515-F36F95F6DEC5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Include">
-      <UniqueIdentifier>{5E0F31FC-30A7-3763-82C0-37315C20E05D}</UniqueIdentifier>
+      <UniqueIdentifier>{7630A788-E1FA-3996-B352-D7D8AE90086E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Public">
-      <UniqueIdentifier>{F614314B-5A4B-394B-8E46-AC1A9B94C2FC}</UniqueIdentifier>
+      <UniqueIdentifier>{38E5E71E-14DC-3A55-8993-07E6EE5554D9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

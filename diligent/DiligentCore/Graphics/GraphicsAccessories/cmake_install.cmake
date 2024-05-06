@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/Graphics/GraphicsAccessories
+# Install script for directory: C:/SYN/diligent/DiligentCore/Graphics/GraphicsAccessories
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,6 +33,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentCore/Graphics/GraphicsAccessories/" TYPE DIRECTORY FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/Graphics/GraphicsAccessories/interface")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentCore/Graphics/GraphicsAccessories/" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentCore/Graphics/GraphicsAccessories/interface")
 endif()
 

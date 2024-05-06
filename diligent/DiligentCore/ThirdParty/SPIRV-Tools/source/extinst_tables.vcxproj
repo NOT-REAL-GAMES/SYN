@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7404B586-E404-3D00-A5A7-4DD2599789BC}</ProjectGuid>
+    <ProjectGuid>{ABDAF84B-64AA-307B-927C-187F68C1E9C0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,7 +76,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -86,7 +86,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -96,7 +96,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -105,10 +105,10 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SYN\CMakeFiles\8c76e96e33c0e4699453c25b853ecb8f\glsl.std.450.insts.inc.rule">
+    <CustomBuild Include="C:\SYN\diligent\CMakeFiles\e3cf55d2b461cf01fc0cabc12a9b68c5\glsl.std.450.insts.inc.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate info tables for GLSL extended instructions and operands vunified1.</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-glsl-grammar=C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/glsl.std.450.insts.inc --output-language=c++
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-glsl-grammar=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/glsl.std.450.insts.inc --output-language=c++
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -116,12 +116,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate info tables for GLSL extended instructions and operands vunified1.</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-glsl-grammar=C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/glsl.std.450.insts.inc --output-language=c++
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-glsl-grammar=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/glsl.std.450.insts.inc --output-language=c++
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,12 +129,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generate info tables for GLSL extended instructions and operands vunified1.</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-glsl-grammar=C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/glsl.std.450.insts.inc --output-language=c++
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-glsl-grammar=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/glsl.std.450.insts.inc --output-language=c++
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -142,12 +142,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generate info tables for GLSL extended instructions and operands vunified1.</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-glsl-grammar=C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/glsl.std.450.insts.inc --output-language=c++
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-glsl-grammar=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/glsl.std.450.insts.inc --output-language=c++
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -155,16 +155,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SYN\CMakeFiles\8c76e96e33c0e4699453c25b853ecb8f\opencl.std.insts.inc.rule">
+    <CustomBuild Include="C:\SYN\diligent\CMakeFiles\e3cf55d2b461cf01fc0cabc12a9b68c5\opencl.std.insts.inc.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate info tables for OpenCL extended instructions and operands vunified1.</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-opencl-grammar=C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.opencl.std.100.grammar.json --opencl-insts-output=C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/opencl.std.insts.inc
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-opencl-grammar=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.opencl.std.100.grammar.json --opencl-insts-output=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/opencl.std.insts.inc
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -172,12 +172,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.opencl.std.100.grammar.json;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.opencl.std.100.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate info tables for OpenCL extended instructions and operands vunified1.</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-opencl-grammar=C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.opencl.std.100.grammar.json --opencl-insts-output=C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/opencl.std.insts.inc
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-opencl-grammar=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.opencl.std.100.grammar.json --opencl-insts-output=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/opencl.std.insts.inc
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -185,12 +185,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.opencl.std.100.grammar.json;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.opencl.std.100.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generate info tables for OpenCL extended instructions and operands vunified1.</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-opencl-grammar=C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.opencl.std.100.grammar.json --opencl-insts-output=C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/opencl.std.insts.inc
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-opencl-grammar=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.opencl.std.100.grammar.json --opencl-insts-output=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/opencl.std.insts.inc
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -198,12 +198,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.opencl.std.100.grammar.json;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.opencl.std.100.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generate info tables for OpenCL extended instructions and operands vunified1.</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-opencl-grammar=C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.opencl.std.100.grammar.json --opencl-insts-output=C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/opencl.std.insts.inc
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/utils/generate_grammar_tables.py --extinst-opencl-grammar=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Headers/include/spirv/unified1/extinst.opencl.std.100.grammar.json --opencl-insts-output=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/opencl.std.insts.inc
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -211,13 +211,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.opencl.std.100.grammar.json;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\utils\generate_grammar_tables.py;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\spirv.core.grammar.json;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include\spirv\unified1\extinst.opencl.std.100.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SYN\CMakeFiles\dee921cd4809f590863f3e58caf8d617\extinst_tables.rule">
+    <CustomBuild Include="C:\SYN\diligent\CMakeFiles\024702eea54c44ec5f9366f559ae280e\extinst_tables.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -226,8 +226,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
@@ -238,8 +238,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
@@ -250,8 +250,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
@@ -262,18 +262,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc;C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\opencl.std.insts.inc;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\glsl.std.450.insts.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeLists.txt">
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -282,11 +282,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -295,11 +295,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -308,11 +308,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools/source/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -321,83 +321,83 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables">
+    <None Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\CMakeFiles\extinst_tables">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
-      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">
+      <Project>{B6D7D6D3-B917-38B8-B8E3-A9C02E33AA85}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spirv-tools-header-DebugInfo.vcxproj">
-      <Project>{71F690A6-B053-3410-9536-8E6EDED27794}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spirv-tools-header-DebugInfo.vcxproj">
+      <Project>{FAEA2433-7552-32E8-A5C4-720AC3A5C821}</Project>
       <Name>spirv-tools-header-DebugInfo</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spirv-tools-header-NonSemanticShaderDebugInfo100.vcxproj">
-      <Project>{D6E053E0-8AB9-3CD5-912B-3680ED5CD9DF}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spirv-tools-header-NonSemanticShaderDebugInfo100.vcxproj">
+      <Project>{68DE51D3-EFD4-3F79-986E-D6B4DECBC23D}</Project>
       <Name>spirv-tools-header-NonSemanticShaderDebugInfo100</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spirv-tools-header-OpenCLDebugInfo100.vcxproj">
-      <Project>{0D4CCEAE-B6E0-3808-B3A4-1705A40C9AA3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spirv-tools-header-OpenCLDebugInfo100.vcxproj">
+      <Project>{A36E851B-8121-3FA0-9EF5-486B61EA4365}</Project>
       <Name>spirv-tools-header-OpenCLDebugInfo100</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-cldi100.vcxproj">
-      <Project>{1BD47694-B9D6-33AB-88DF-71256B4F9D4A}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-cldi100.vcxproj">
+      <Project>{EE77CAC5-11FC-3415-B1DD-93FF4520D838}</Project>
       <Name>spv-tools-cldi100</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-clspvreflection.vcxproj">
-      <Project>{C29F4BB8-2F8B-3CF8-B9CE-5421577692C0}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-clspvreflection.vcxproj">
+      <Project>{DFF6C346-8005-3647-8350-D7089F29EB7D}</Project>
       <Name>spv-tools-clspvreflection</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-debuginfo.vcxproj">
-      <Project>{11B408A8-0B41-3EBA-87C9-7CA055D1EA48}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-debuginfo.vcxproj">
+      <Project>{D136F183-D298-32A7-ADD8-7AF815D2AA81}</Project>
       <Name>spv-tools-debuginfo</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-shdi100.vcxproj">
-      <Project>{6C8BE44F-FF93-3000-B103-B578D0F36581}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-shdi100.vcxproj">
+      <Project>{641C6C72-DE51-39D4-A4D7-67440B8A3403}</Project>
       <Name>spv-tools-shdi100</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-spv-amd-gs.vcxproj">
-      <Project>{9F286A59-B026-347E-A401-553DB731CE38}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-spv-amd-gs.vcxproj">
+      <Project>{BF47BE0B-644F-3792-A169-5F2713B29AB1}</Project>
       <Name>spv-tools-spv-amd-gs</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-spv-amd-sb.vcxproj">
-      <Project>{764CF6EB-9613-304B-9557-371F9E162087}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-spv-amd-sb.vcxproj">
+      <Project>{7DB66109-0EF5-37E7-9BDE-DB595A31AE51}</Project>
       <Name>spv-tools-spv-amd-sb</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-spv-amd-sevp.vcxproj">
-      <Project>{D5BDE9FF-2E2B-342F-93BA-FB9A6D32D68B}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-spv-amd-sevp.vcxproj">
+      <Project>{46D856B3-6BE8-37BF-8564-1B320317B60D}</Project>
       <Name>spv-tools-spv-amd-sevp</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-spv-amd-stm.vcxproj">
-      <Project>{7B579215-2801-3554-9424-2F61B8DA82F8}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\spv-tools-spv-amd-stm.vcxproj">
+      <Project>{B7624867-52A0-33C8-B51D-DB0C6173CA67}</Project>
       <Name>spv-tools-spv-amd-stm</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

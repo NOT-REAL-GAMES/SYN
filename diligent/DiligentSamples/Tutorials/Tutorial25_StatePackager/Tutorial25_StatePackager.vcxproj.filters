@@ -1,65 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\src\Tutorial25_StatePackager.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\src\Tutorial25_StatePackager.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\src\Tutorial25_StatePackager.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\src\Tutorial25_StatePackager.hpp">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\readme.md" />
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\RenderStates.json">
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\RenderStates.json">
       <Filter>assets</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\StateArchive.bin">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\StateArchive.bin">
       <Filter>generated</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\screen_tri.vsh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\screen_tri.vsh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\g_buffer.psh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\g_buffer.psh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\resolve.psh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\resolve.psh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\path_trace.csh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\path_trace.csh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\structures.fxh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\structures.fxh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\scene.fxh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\scene.fxh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\hash.fxh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial25_StatePackager\assets\hash.fxh">
       <Filter>assets</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+    <ResourceCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
       <Filter>resources</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="assets">
-      <UniqueIdentifier>{A7DEE7EF-25AE-3A62-8448-E5ACAB0D0463}</UniqueIdentifier>
+      <UniqueIdentifier>{89F09546-BD89-3275-9E12-469D3A0AC566}</UniqueIdentifier>
     </Filter>
     <Filter Include="generated">
-      <UniqueIdentifier>{9213C280-F878-3D80-AAE2-2CBFB8412A43}</UniqueIdentifier>
+      <UniqueIdentifier>{7C5B30F8-B181-3035-A398-769450D3F8AD}</UniqueIdentifier>
     </Filter>
     <Filter Include="resources">
-      <UniqueIdentifier>{5601946D-ED87-37DE-9A3C-817FD733F510}</UniqueIdentifier>
+      <UniqueIdentifier>{E5B93933-25F0-3CE0-981E-158162FE03FC}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

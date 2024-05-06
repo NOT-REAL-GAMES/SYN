@@ -1,0 +1,46 @@
+name: Android build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        include:
+          - name: "ARM32"
+            arch: "armeabi-v7a"
+
+          - name: "ARM64"
+            arch: "arm64-v8a"
+
+    name: Linux -> Android-${{ matrix.name }}
+
+    steps:
+    - name: Checkout
+      uses: DiligentGraphics/github-action/checkout@v1
+
+    - name: Create CMake
+      if: success()
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE/DiligentSamples/BuildTools/Scripts/github_actions
+        chmod +x create_cmake.sh
+        ./create_cmake.sh "$GITHUB_WORKSPACE"
+
+    - name: Set up build environment
+      if: success()
+      uses: DiligentGraphics/github-action/setup-build-env@v1
+      with:
+        platform:     Android
+        java-version: 8 # Override Java version
+
+    - name: Build with Gradle
+      if: success()
+      env:
+        ANDROID_ARCH: ${{ matrix.arch }}
+      run: |
+        cd $GITHUB_WORKSPACE/DiligentSamples/Android
+        chmod +x gradlew
+        ./gradlew buildRelease

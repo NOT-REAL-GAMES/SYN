@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\diff.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\diff.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\diff.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\diff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\lcs.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\lcs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{FDCC4B13-A9C8-35BE-AD0C-211075E24539}</UniqueIdentifier>
+      <UniqueIdentifier>{55A24A3A-8659-329D-A4EF-0CD32A725DBD}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{DAB4CE85-E5CC-3DD9-9049-63421A35BB73}</UniqueIdentifier>
+      <UniqueIdentifier>{881516AD-7FEC-30C9-AC77-848FD6E9A1F9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

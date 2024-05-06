@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/UnityPlugin/GhostCubePlugin
+# Install script for directory: C:/SYN/diligent/DiligentSamples/UnityPlugin/GhostCubePlugin
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/SYN/DiligentSamples/UnityPlugin/GhostCubePlugin/PluginSource/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/UnityPlugin/GhostCubePlugin/PluginSource/cmake_install.cmake")
 
 endif()
 

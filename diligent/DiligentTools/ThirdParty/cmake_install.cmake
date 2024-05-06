@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty
+# Install script for directory: C:/SYN/diligent/DiligentTools/ThirdParty
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,109 +33,109 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "libjpeg-readme.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/libjpeg-9e/README")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "libjpeg-readme.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libjpeg-9e/README")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "libtiff-copyright.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/libtiff/COPYRIGHT")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "libtiff-copyright.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libtiff/COPYRIGHT")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "zlib-readme.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/zlib/README")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "zlib-readme.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/zlib/README")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "lpng-license.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/libpng/LICENSE")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "lpng-license.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libpng/LICENSE")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "args-license.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/args/LICENSE")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "args-license.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/args/LICENSE")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "tinygltf-license.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/tinygltf/LICENSE")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "tinygltf-license.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/tinygltf/LICENSE")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "imGuIZMO.quat-license.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/imGuIZMO.quat/license.txt")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "imGuIZMO.quat-license.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/imGuIZMO.quat/license.txt")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "stb-license.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/stb/LICENSE.txt")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "stb-license.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/stb/LICENSE.txt")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "json-license.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/json/LICENSE.MIT")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "json-license.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/json/LICENSE.MIT")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "imgui-license.txt" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/imgui/LICENSE.txt")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentTools" TYPE FILE RENAME "imgui-license.txt" FILES "C:/SYN/diligent/DiligentTools/ThirdParty/imgui/LICENSE.txt")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Debug" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/Debug/LibJpeg.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Debug" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libjpeg-9e/Debug/LibJpeg.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Release" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/Release/LibJpeg.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Release" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libjpeg-9e/Release/LibJpeg.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/MinSizeRel" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/MinSizeRel/LibJpeg.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/MinSizeRel" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libjpeg-9e/MinSizeRel/LibJpeg.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/RelWithDebInfo" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/RelWithDebInfo/LibJpeg.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/RelWithDebInfo" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libjpeg-9e/RelWithDebInfo/LibJpeg.lib")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Debug" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libtiff/Debug/LibTiff.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Debug" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libtiff/Debug/LibTiff.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Release" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libtiff/Release/LibTiff.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Release" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libtiff/Release/LibTiff.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/MinSizeRel" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libtiff/MinSizeRel/LibTiff.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/MinSizeRel" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libtiff/MinSizeRel/LibTiff.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/RelWithDebInfo" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libtiff/RelWithDebInfo/LibTiff.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/RelWithDebInfo" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libtiff/RelWithDebInfo/LibTiff.lib")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Debug" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/Debug/ZLib.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Debug" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/Debug/ZLib.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Release" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/Release/ZLib.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Release" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/Release/ZLib.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/MinSizeRel" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/MinSizeRel/ZLib.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/MinSizeRel" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/MinSizeRel/ZLib.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/RelWithDebInfo" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/RelWithDebInfo/ZLib.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/RelWithDebInfo" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/RelWithDebInfo/ZLib.lib")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Debug" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libpng/Debug/libpng16_staticd.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Debug" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libpng/Debug/libpng16_staticd.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Release" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libpng/Release/libpng16_static.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/Release" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libpng/Release/libpng16_static.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/MinSizeRel" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libpng/MinSizeRel/libpng16_static.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/MinSizeRel" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libpng/MinSizeRel/libpng16_static.lib")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/RelWithDebInfo" TYPE STATIC_LIBRARY FILES "C:/SYN/DiligentTools/ThirdParty/libpng/RelWithDebInfo/libpng16_static.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/DiligentTools/RelWithDebInfo" TYPE STATIC_LIBRARY FILES "C:/SYN/diligent/DiligentTools/ThirdParty/libpng/RelWithDebInfo/libpng16_static.lib")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentTools/ThirdParty/imgui" TYPE FILE FILES
-    "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/imgui/imconfig.h"
-    "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/imgui/imgui.h"
-    "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/imgui/imgui_internal.h"
-    "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/imgui/imstb_rectpack.h"
-    "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/imgui/imstb_textedit.h"
-    "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/imgui/imstb_truetype.h"
+    "C:/SYN/diligent/DiligentTools/ThirdParty/imgui/imconfig.h"
+    "C:/SYN/diligent/DiligentTools/ThirdParty/imgui/imgui.h"
+    "C:/SYN/diligent/DiligentTools/ThirdParty/imgui/imgui_internal.h"
+    "C:/SYN/diligent/DiligentTools/ThirdParty/imgui/imstb_rectpack.h"
+    "C:/SYN/diligent/DiligentTools/ThirdParty/imgui/imstb_textedit.h"
+    "C:/SYN/diligent/DiligentTools/ThirdParty/imgui/imstb_truetype.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/SYN/DiligentTools/ThirdParty/libjpeg-9e/cmake_install.cmake")
-  include("C:/SYN/DiligentTools/ThirdParty/libtiff/cmake_install.cmake")
-  include("C:/SYN/DiligentTools/ThirdParty/libpng/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentTools/ThirdParty/libjpeg-9e/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentTools/ThirdParty/libtiff/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentTools/ThirdParty/libpng/cmake_install.cmake")
 
 endif()
 

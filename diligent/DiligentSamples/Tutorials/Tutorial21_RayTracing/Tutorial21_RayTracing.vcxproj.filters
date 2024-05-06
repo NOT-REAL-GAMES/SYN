@@ -1,94 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Common\src\TexturedCube.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\Tutorials\Common\src\TexturedCube.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.hpp">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Common\src\TexturedCube.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Common\src\TexturedCube.hpp">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\readme.md" />
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo0.png">
+    <Image Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo0.png">
       <Filter>assets</Filter>
     </Image>
-    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo1.png">
+    <Image Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo1.png">
       <Filter>assets</Filter>
     </Image>
-    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo2.png">
+    <Image Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo2.png">
       <Filter>assets</Filter>
     </Image>
-    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo3.png">
+    <Image Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo3.png">
       <Filter>assets</Filter>
     </Image>
-    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\Ground.jpg">
+    <Image Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\Ground.jpg">
       <Filter>assets</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\structures.fxh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\structures.fxh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\RayUtils.fxh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\RayUtils.fxh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\CubePrimaryHit.rchit">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\CubePrimaryHit.rchit">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\GlassPrimaryHit.rchit">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\GlassPrimaryHit.rchit">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\SpherePrimaryHit.rchit">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\SpherePrimaryHit.rchit">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\SphereIntersection.rint">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\SphereIntersection.rint">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\Ground.rchit">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\Ground.rchit">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\RayTrace.rgen">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\RayTrace.rgen">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\PrimaryMiss.rmiss">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\PrimaryMiss.rmiss">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ShadowMiss.rmiss">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ShadowMiss.rmiss">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ImageBlit.psh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ImageBlit.psh">
       <Filter>assets</Filter>
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ImageBlit.vsh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ImageBlit.vsh">
       <Filter>assets</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+    <ResourceCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
       <Filter>resources</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="assets">
-      <UniqueIdentifier>{A7DEE7EF-25AE-3A62-8448-E5ACAB0D0463}</UniqueIdentifier>
+      <UniqueIdentifier>{89F09546-BD89-3275-9E12-469D3A0AC566}</UniqueIdentifier>
     </Filter>
     <Filter Include="resources">
-      <UniqueIdentifier>{5601946D-ED87-37DE-9A3C-817FD733F510}</UniqueIdentifier>
+      <UniqueIdentifier>{E5B93933-25F0-3CE0-981E-158162FE03FC}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

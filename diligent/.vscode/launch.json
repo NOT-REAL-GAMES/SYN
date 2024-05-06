@@ -1,0 +1,768 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Atmosphere",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Samples/Atmosphere/Atmosphere",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Samples/Atmosphere/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "GLTFViewer",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Samples/GLTFViewer/GLTFViewer",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Samples/GLTFViewer/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Shadows",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Samples/Shadows/Shadows",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Samples/Shadows/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "ImguiDemo",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Samples/ImguiDemo/ImguiDemo",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Samples/ImguiDemo/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "NuklearDemo",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Samples/NuklearDemo/NuklearDemo",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Samples/NuklearDemo/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "GLFWDemo",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Samples/GLFWDemo/GLFWDemo",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Samples/GLFWDemo/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "GhostCubeScene",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/UnityPlugin/GhostCubeScene/GhostCubeScene",
+            "args": ["--mode", "gl"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/UnityPlugin/GhostCubeScene/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial00_HelloLinux",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial00_HelloLinux/Tutorial00_HelloLinux",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial00_HelloLinux",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial01_HelloTriangle",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial01_HelloTriangle/Tutorial01_HelloTriangle",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial01_HelloTriangle/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial02_Cube",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial02_Cube/Tutorial02_Cube",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial02_Cube/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial03_Texturing",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial03_Texturing/Tutorial03_Texturing",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial03_Texturing/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial03_Texturing-C",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial03_Texturing-C/Tutorial03_Texturing-C",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial03_Texturing-C/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial04_Instancig",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial04_Instancing/Tutorial04_Instancing",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial04_Instancing/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial05_TextureArray",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial05_TextureArray/Tutorial05_TextureArray",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial05_TextureArray/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial06_Multithreading",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial06_Multithreading/Tutorial06_Multithreading",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial06_Multithreading/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial07_GeometryShader",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Tutorial07_GeometryShader",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial08_Tessellation",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial08_Tessellation/Tutorial08_Tessellation",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial08_Tessellation/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial09_Quads",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial09_Quads/Tutorial09_Quads",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial09_Quads/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial10_DataStreaming",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial10_DataStreaming/Tutorial10_DataStreaming",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial10_DataStreaming/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial11_ResourceUpdates",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial11_ResourceUpdates/Tutorial11_ResourceUpdates",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial11_ResourceUpdates/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial12_RenderTarget",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial12_RenderTarget/Tutorial12_RenderTarget",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial12_RenderTarget/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial13_ShadowMap",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial13_ShadowMap/Tutorial13_ShadowMap",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial13_ShadowMap/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial14_ComputeShader",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial14_ComputeShader/Tutorial14_ComputeShader",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial14_ComputeShader/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial16_BindlessResources",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial16_BindlessResources/Tutorial16_BindlessResources",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial16_BindlessResources/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial17_MSAA",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial17_MSAA/Tutorial17_MSAA",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial17_MSAA/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial18_Queries",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial18_Queries/Tutorial18_Queries",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial18_Queries/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial19_RenderPasses",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial19_RenderPasses/Tutorial19_RenderPasses",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial19_RenderPasses/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial20_MeshShader",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial20_MeshShader/Tutorial20_MeshShader",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial20_MeshShader/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial21_RayTracing",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial21_RayTracing/Tutorial21_RayTracing",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial21_RayTracing/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial22_HybridRendering",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial22_HybridRendering/Tutorial22_HybridRendering",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial22_HybridRendering/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial23_CommandQueues",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial23_CommandQueues/Tutorial23_CommandQueues",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial23_CommandQueues/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial24_VRS",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial24_VRS/Tutorial24_VRS",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial24_VRS/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial25_StatePackager",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial25_StatePackager/Tutorial25_StatePackager",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial25_StatePackager/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Tutorial26_StateCache",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentSamples/Tutorials/Tutorial26_StateCache/Tutorial26_StateCache",
+            "args": ["--mode", "vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentSamples/Tutorials/Tutorial26_StateCache/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "DiligentCoreTest",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentCore/Tests/DiligentCoreTest/DiligentCoreTest",
+            "args": [""],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentCore/Tests/DiligentCoreTest/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "DiligentCoreAPITest",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentCore/Tests/DiligentCoreAPITest/DiligentCoreAPITest",
+            "args": ["--mode=vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentCore/Tests/DiligentCoreAPITest/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "DiligentToolsTest",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentTools/Tests/DiligentToolsTest/DiligentToolsTest",
+            "args": ["--gtest_filter=*.*"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentTools/Tests/DiligentToolsTest/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "DiligentToolsGPUTest",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentTools/Tests/DiligentToolsGPUTest/DiligentToolsGPUTest",
+            "args": ["--mode=vk"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentTools/Tests/DiligentToolsGPUTest/assets",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "HLSL2GLSLConverter",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentTools/HLSL2GLSLConverter/HLSL2GLSLConverter",
+            "args": ["-i", "ConverterTest.fx", "-e", "TestPS", "-t", "ps", "-c"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentTools/HLSL2GLSLConverter/testshaders",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "RenderStatePackager",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/DiligentTools/RenderStatePackager/Diligent-RenderStatePackager",
+            "args": [""],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/DiligentTools/RenderStatePackager",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ]
+}

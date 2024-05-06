@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{42B112B2-846F-3EFF-8A37-35640C976255}</ProjectGuid>
+    <ProjectGuid>{D0654916-25C1-37AB-AF05-89E961EC7B81}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,38 +59,38 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Tutorial07_GeometryShader.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Tutorial07_GeometryShader</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets</LocalDebuggerWorkingDirectory>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\Release\</OutDir>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Tutorial07_GeometryShader.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Tutorial07_GeometryShader</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets</LocalDebuggerWorkingDirectory>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\MinSizeRel\</OutDir>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Tutorial07_GeometryShader.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Tutorial07_GeometryShader</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets</LocalDebuggerWorkingDirectory>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\RelWithDebInfo\</OutDir>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Tutorial07_GeometryShader.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Tutorial07_GeometryShader</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
-    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -111,10 +111,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;DEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_DEVELOPMENT;DILIGENT_DEBUG;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -124,7 +124,7 @@
     <PostBuildEvent>
       <Message>									</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D11/Debug/GraphicsEngineD3D11_64d.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D11/Debug/GraphicsEngineD3D11_64d.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,7 +133,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D12/Debug/GraphicsEngineD3D12_64d.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D12/Debug/GraphicsEngineD3D12_64d.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -142,7 +142,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineOpenGL/Debug/GraphicsEngineOpenGL_64d.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineOpenGL/Debug/GraphicsEngineOpenGL_64d.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -151,7 +151,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineVulkan/Debug/GraphicsEngineVk_64d.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineVulkan/Debug/GraphicsEngineVk_64d.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -160,7 +160,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/Archiver/Debug/Archiver_64d.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/Archiver/Debug/Archiver_64d.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -169,7 +169,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\D3Dcompiler_47.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\D3Dcompiler_47.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -178,7 +178,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxcompiler.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxcompiler.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -187,7 +187,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxil.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxil.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -196,7 +196,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug/spv_dxcompiler.dll"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug/spv_dxcompiler.dll"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -205,7 +205,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -220,8 +220,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug/Tutorial07_GeometryShader.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug/Tutorial07_GeometryShader.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug/Tutorial07_GeometryShader.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Debug/Tutorial07_GeometryShader.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -230,7 +230,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4201;4100;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -256,10 +256,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -269,7 +269,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>									</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D11/Release/GraphicsEngineD3D11_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D11/Release/GraphicsEngineD3D11_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -278,7 +278,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D12/Release/GraphicsEngineD3D12_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D12/Release/GraphicsEngineD3D12_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -287,7 +287,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineOpenGL/Release/GraphicsEngineOpenGL_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineOpenGL/Release/GraphicsEngineOpenGL_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -296,7 +296,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineVulkan/Release/GraphicsEngineVk_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineVulkan/Release/GraphicsEngineVk_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -305,7 +305,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/Archiver/Release/Archiver_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/Archiver/Release/Archiver_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -314,7 +314,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\D3Dcompiler_47.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\D3Dcompiler_47.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -323,7 +323,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxcompiler.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxcompiler.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -332,7 +332,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxil.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxil.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -341,7 +341,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release/spv_dxcompiler.dll"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release/spv_dxcompiler.dll"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -350,7 +350,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -365,10 +365,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release/Tutorial07_GeometryShader.lib</ImportLibrary>
+      <ImportLibrary>C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release/Tutorial07_GeometryShader.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release/Tutorial07_GeometryShader.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/Release/Tutorial07_GeometryShader.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -377,7 +377,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4201;4100;4505;26812;4189</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -401,10 +401,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -414,7 +414,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>									</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D11/MinSizeRel/GraphicsEngineD3D11_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D11/MinSizeRel/GraphicsEngineD3D11_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -423,7 +423,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D12/MinSizeRel/GraphicsEngineD3D12_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D12/MinSizeRel/GraphicsEngineD3D12_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -432,7 +432,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineOpenGL/MinSizeRel/GraphicsEngineOpenGL_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineOpenGL/MinSizeRel/GraphicsEngineOpenGL_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -441,7 +441,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineVulkan/MinSizeRel/GraphicsEngineVk_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineVulkan/MinSizeRel/GraphicsEngineVk_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -450,7 +450,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/Archiver/MinSizeRel/Archiver_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/Archiver/MinSizeRel/Archiver_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -459,7 +459,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\D3Dcompiler_47.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\D3Dcompiler_47.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -468,7 +468,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxcompiler.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxcompiler.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -477,7 +477,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxil.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxil.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -486,7 +486,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel/spv_dxcompiler.dll"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel/spv_dxcompiler.dll"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -495,7 +495,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -510,10 +510,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel/Tutorial07_GeometryShader.lib</ImportLibrary>
+      <ImportLibrary>C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel/Tutorial07_GeometryShader.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel/Tutorial07_GeometryShader.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/MinSizeRel/Tutorial07_GeometryShader.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -522,7 +522,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4201;4100;4505;26812;4189</DisableSpecificWarnings>
@@ -547,10 +547,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\NativeApp\include\Win32;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\imgui;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -560,7 +560,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>									</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D11/RelWithDebInfo/GraphicsEngineD3D11_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D11/RelWithDebInfo/GraphicsEngineD3D11_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -569,7 +569,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineD3D12/RelWithDebInfo/GraphicsEngineD3D12_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D12/RelWithDebInfo/GraphicsEngineD3D12_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -578,7 +578,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineOpenGL/RelWithDebInfo/GraphicsEngineOpenGL_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineOpenGL/RelWithDebInfo/GraphicsEngineOpenGL_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -587,7 +587,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/GraphicsEngineVulkan/RelWithDebInfo/GraphicsEngineVk_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineVulkan/RelWithDebInfo/GraphicsEngineVk_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -596,7 +596,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/DiligentCore/Graphics/Archiver/RelWithDebInfo/Archiver_64r.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/Archiver/RelWithDebInfo/Archiver_64r.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -605,7 +605,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\D3Dcompiler_47.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\D3Dcompiler_47.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -614,7 +614,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxcompiler.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxcompiler.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -623,7 +623,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxil.dll" "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "$(WindowsSdkDir)\bin\10.0.22621.0\x64\dxil.dll" "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -632,7 +632,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo/spv_dxcompiler.dll"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo/spv_dxcompiler.dll"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -641,7 +641,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets "C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/assets "C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -656,10 +656,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo/Tutorial07_GeometryShader.lib</ImportLibrary>
+      <ImportLibrary>C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo/Tutorial07_GeometryShader.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo/Tutorial07_GeometryShader.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/RelWithDebInfo/Tutorial07_GeometryShader.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -667,11 +667,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeLists.txt">
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -680,11 +680,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -693,11 +693,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -706,11 +706,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial07_GeometryShader/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -719,193 +719,193 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src\Tutorial07_GeometryShader.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Common\src\TexturedCube.cpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src\Tutorial07_GeometryShader.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Common\src\TexturedCube.hpp" />
-    <Image Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\DGLogo.png">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src\Tutorial07_GeometryShader.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\Tutorials\Common\src\TexturedCube.cpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\src\Tutorial07_GeometryShader.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Common\src\TexturedCube.hpp" />
+    <Image Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\DGLogo.png">
     </Image>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\cube.vsh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\cube.vsh">
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\cube.psh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\cube.psh">
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\cube.gsh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\cube.gsh">
     </None>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\structures.fxh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\assets\structures.fxh">
     </None>
-    <ResourceCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\Tutorials\Tutorial07_GeometryShader\readme.md" />
+    <ResourceCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc" />
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial07_GeometryShader\readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
-      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">
+      <Project>{B6D7D6D3-B917-38B8-B8E3-A9C02E33AA85}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\Archiver\Diligent-Archiver-shared.vcxproj">
-      <Project>{086A78B3-42FA-3E48-A6E3-E28160CD29E4}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\Diligent-Archiver-shared.vcxproj">
+      <Project>{F22D699D-FC6F-3D4D-9270-63495E0A746C}</Project>
       <Name>Diligent-Archiver-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\Archiver\Diligent-Archiver-static.vcxproj">
-      <Project>{0D165FDE-4882-37DF-B3C8-95C851867A63}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\Diligent-Archiver-static.vcxproj">
+      <Project>{6FC59737-F14C-3FDA-AD83-C2EC20954DF0}</Project>
       <Name>Diligent-Archiver-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
-      <Project>{C45E8F1E-8240-3415-9753-149169905F7C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
+      <Project>{A1A780F6-E035-31AA-A86D-F5DC3ED9A432}</Project>
       <Name>Diligent-BasicPlatform</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Common\Diligent-Common.vcxproj">
-      <Project>{499C6F0D-1DF9-3C5B-8C40-C55EF20EF37F}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Common\Diligent-Common.vcxproj">
+      <Project>{1464DB5C-F5E0-3EEB-A8A7-0936923C73C5}</Project>
       <Name>Diligent-Common</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
-      <Project>{4AA14C03-C9C4-3E15-A53B-831B311E57DD}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
+      <Project>{CCD4E758-271F-362E-8CEC-484648267EEB}</Project>
       <Name>Diligent-GraphicsAccessories</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
-      <Project>{A1D7B5B9-3941-39E3-A7DD-2A9976779AD3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
+      <Project>{3612E2FA-58BA-378D-A5EA-4E0F7BDC84B5}</Project>
       <Name>Diligent-GraphicsEngine</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-shared.vcxproj">
-      <Project>{D11850B4-1DB5-3E7E-B86F-4F0089C7575E}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-shared.vcxproj">
+      <Project>{90B6686D-9A5C-3565-94A9-AA4A8E47C324}</Project>
       <Name>Diligent-GraphicsEngineD3D11-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-static.vcxproj">
-      <Project>{005643FA-45BD-3D20-999B-45CE3F911F4D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-static.vcxproj">
+      <Project>{C6C33609-429F-3338-AE5D-E82ED42F5E10}</Project>
       <Name>Diligent-GraphicsEngineD3D11-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-shared.vcxproj">
-      <Project>{A83D8CC7-5947-32C2-A09A-DD942F446C20}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-shared.vcxproj">
+      <Project>{E64B53AF-2A09-35AC-B34D-96B746FBFC11}</Project>
       <Name>Diligent-GraphicsEngineD3D12-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-static.vcxproj">
-      <Project>{0C5989BC-7507-3509-B6BF-9DC77FB3BC0D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-static.vcxproj">
+      <Project>{49C552FE-6E92-3375-8A8D-A352DA7E6DB3}</Project>
       <Name>Diligent-GraphicsEngineD3D12-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\Diligent-GraphicsEngineD3DBase.vcxproj">
-      <Project>{368A8241-0CDF-3863-B569-25D8ECD8941D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\Diligent-GraphicsEngineD3DBase.vcxproj">
+      <Project>{99BA352B-09BD-3E32-9A1C-B9D298189263}</Project>
       <Name>Diligent-GraphicsEngineD3DBase</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\Diligent-GraphicsEngineNextGenBase.vcxproj">
-      <Project>{F35B4C68-4DA4-3B38-9B90-E0976F7F32E4}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineNextGenBase\Diligent-GraphicsEngineNextGenBase.vcxproj">
+      <Project>{1145B703-7B02-30E3-A513-9663DBE641D6}</Project>
       <Name>Diligent-GraphicsEngineNextGenBase</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-shared.vcxproj">
-      <Project>{244269EF-3865-3E31-8FF0-4A92C61FE001}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-shared.vcxproj">
+      <Project>{D1FD7E3D-D916-38FE-B5F9-C9FE53DF56B3}</Project>
       <Name>Diligent-GraphicsEngineOpenGL-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-static.vcxproj">
-      <Project>{003F99DA-882A-36F6-8AD9-7B9936352C22}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-static.vcxproj">
+      <Project>{6EFDB3CA-3ED2-3C51-BF93-9FAC664FB866}</Project>
       <Name>Diligent-GraphicsEngineOpenGL-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-shared.vcxproj">
-      <Project>{1260420E-4251-3E06-A0DB-8550E267698C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-shared.vcxproj">
+      <Project>{6F4F1046-4947-3B77-BFE2-FC867319E41A}</Project>
       <Name>Diligent-GraphicsEngineVk-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-static.vcxproj">
-      <Project>{E840F05D-D8E0-3317-A140-8379D16097CE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-static.vcxproj">
+      <Project>{778E0167-A04D-3FFB-86C1-2426BEEBE7F8}</Project>
       <Name>Diligent-GraphicsEngineVk-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsTools\Diligent-GraphicsTools.vcxproj">
-      <Project>{F19CF7C2-5D88-3BEE-89CB-A328B096AA57}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\Diligent-GraphicsTools.vcxproj">
+      <Project>{E59E59A0-4286-3B03-8D16-75F2FA4FB40E}</Project>
       <Name>Diligent-GraphicsTools</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
-      <Project>{8B65DAD8-5DB0-33B1-B291-81B00D2E9160}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
+      <Project>{8A548531-1C0B-3F76-B964-673FBD6FCD8D}</Project>
       <Name>Diligent-HLSL2GLSLConverterLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\Imgui\Diligent-Imgui.vcxproj">
-      <Project>{66E8E84A-D03A-3283-B2B8-6FC8BDA1071E}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\Imgui\Diligent-Imgui.vcxproj">
+      <Project>{7547FB36-5DB9-3C8E-B000-DE35C54D6E5A}</Project>
       <Name>Diligent-Imgui</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\NativeApp\Diligent-NativeAppBase.vcxproj">
-      <Project>{230282DC-7E8C-34AA-9DDE-8ECD912D1C27}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\NativeApp\Diligent-NativeAppBase.vcxproj">
+      <Project>{ECCB56C4-441A-3F9A-A028-63BD0F6783BC}</Project>
       <Name>Diligent-NativeAppBase</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
-      <Project>{70F70D5B-046D-3F92-B50C-F6648BCAF009}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
+      <Project>{8E1149B8-D59B-356E-B5B4-5519579BBFE7}</Project>
       <Name>Diligent-Primitives</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentSamples\SampleBase\Diligent-SampleBase.vcxproj">
-      <Project>{FC02A902-246E-3A48-802A-FF32304017E5}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentSamples\SampleBase\Diligent-SampleBase.vcxproj">
+      <Project>{7A012B5F-7A94-3C1E-818C-D6A0385DB86C}</Project>
       <Name>Diligent-SampleBase</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\ShaderTools\Diligent-ShaderTools.vcxproj">
-      <Project>{222F6E82-FA1A-3607-9A5C-B5534789B8F3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\Diligent-ShaderTools.vcxproj">
+      <Project>{34C49E1C-A1DC-315C-B114-F57230053EB8}</Project>
       <Name>Diligent-ShaderTools</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\TextureLoader\Diligent-TextureLoader.vcxproj">
-      <Project>{C02CB8F7-F4D8-3FDF-981E-973CA1893244}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\TextureLoader\Diligent-TextureLoader.vcxproj">
+      <Project>{62CA3078-065E-3E39-9DE4-A5700A31D979}</Project>
       <Name>Diligent-TextureLoader</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
-      <Project>{D850516C-9C4E-33DE-AF85-1A8E18AFF64E}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
+      <Project>{DB186C91-086B-316F-BA76-07008423EFAB}</Project>
       <Name>Diligent-Win32Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
-      <Project>{DF0FBAD1-DFAA-31AC-A0C8-35427C6456BE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
+      <Project>{A6E8BCAE-9344-3100-B197-400560E1F820}</Project>
       <Name>GenericCodeGen</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libjpeg-9e\LibJpeg.vcxproj">
-      <Project>{B13B3C53-4AB5-353D-B406-4588E3F8250A}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\LibJpeg.vcxproj">
+      <Project>{9BFCC3F4-DE8A-3CC5-8D66-00FC9F81469A}</Project>
       <Name>LibJpeg</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libtiff\LibTiff.vcxproj">
-      <Project>{130E5CF2-35C0-3CD2-BFDE-B385EF844B09}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\LibTiff.vcxproj">
+      <Project>{16C46CBC-972D-3D00-AAB9-D78CDE733866}</Project>
       <Name>LibTiff</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
-      <Project>{471C3269-4B35-3E26-B01E-F4FF19B95E0A}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
+      <Project>{35D7936D-2AC0-379B-8201-2B29EF68D777}</Project>
       <Name>MachineIndependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
-      <Project>{01C86EC7-29C5-32C0-80E7-605EA4DEFBA2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
+      <Project>{D30CF4EA-8943-3101-9431-BBEBEA243263}</Project>
       <Name>OGLCompiler</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
-      <Project>{DD35CE09-2BFB-3483-A854-2A688563BC1B}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
+      <Project>{A5EA77F5-9AD9-31E0-A89E-489C6A386F92}</Project>
       <Name>OSDependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
-      <Project>{6090D81E-A3D4-3A05-AE1C-F21679C37E22}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
+      <Project>{CD1F8E91-7C28-3687-8FB2-6A823B57D11E}</Project>
       <Name>SPIRV</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
-      <Project>{08CE441A-9555-3E0A-AEE7-373DDBF83123}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
+      <Project>{D083F047-5AD4-331E-8643-B5D0CFA5663A}</Project>
       <Name>SPIRV-Tools-opt</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
-      <Project>{D10B50A1-E032-3ED4-B545-3DC6B2D4792C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
+      <Project>{254CC700-E03F-311A-98AF-157C819B6172}</Project>
       <Name>SPIRV-Tools-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\ZLib.vcxproj">
-      <Project>{826D9D0E-FFED-3144-A39B-EDE89DF7ECB6}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\ThirdParty\ZLib.vcxproj">
+      <Project>{D11B3EF0-0FAC-38CF-9084-7367C539210A}</Project>
       <Name>ZLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glew\glew-static.vcxproj">
-      <Project>{227857EF-6692-31BE-BDE2-13065C0D1AA4}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glew\glew-static.vcxproj">
+      <Project>{BA928301-E4D0-3397-BB1D-028F6C35D007}</Project>
       <Name>glew-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
-      <Project>{FAD1B065-759D-3EDE-837F-936EDE77F988}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
+      <Project>{5E2933FF-D7C0-38FB-BB53-9C093DB7DB61}</Project>
       <Name>glslang</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentTools\ThirdParty\libpng\png_static.vcxproj">
-      <Project>{5AEB0121-EF8E-3FA8-8EC0-1C77542BF6C3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentTools\ThirdParty\libpng\png_static.vcxproj">
+      <Project>{8D720751-9ADA-3571-BBF2-739CFE1764ED}</Project>
       <Name>png_static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
-      <Project>{B466C176-4FF0-31B9-B40B-7F944DFB96F2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
+      <Project>{3F7890C6-002D-3586-A692-A7E1DEEB354D}</Project>
       <Name>spirv-cross-core</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\xxHash\cmake_unofficial\xxhash.vcxproj">
-      <Project>{E23D36E9-2121-3A65-8A90-8C4A2E75DFFB}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\xxHash\cmake_unofficial\xxhash.vcxproj">
+      <Project>{AE11262B-DE47-37DE-9C6B-88AB2DE8F9F0}</Project>
       <Name>xxhash</Name>
     </ProjectReference>
   </ItemGroup>

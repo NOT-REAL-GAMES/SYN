@@ -1,309 +1,309 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\APIInfo.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\APIInfo.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\BottomLevelASBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\BottomLevelASBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\BufferBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\BufferBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\DearchiverBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\DearchiverBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\DefaultShaderSourceStreamFactory.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\DefaultShaderSourceStreamFactory.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\DeviceContextBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\DeviceContextBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\DeviceMemoryBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\DeviceMemoryBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\DeviceObjectArchive.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\DeviceObjectArchive.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\EngineMemory.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\EngineMemory.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\EngineFactoryBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\EngineFactoryBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\FramebufferBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\FramebufferBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\PipelineResourceSignatureBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\PipelineResourceSignatureBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\PipelineStateBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\PipelineStateBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\PipelineStateCacheBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\PipelineStateCacheBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\PSOSerializer.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\PSOSerializer.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\RenderDeviceBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\RenderDeviceBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\ResourceMappingBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\ResourceMappingBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\RenderPassBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\RenderPassBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\ShaderBindingTableBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\ShaderBindingTableBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\SamplerBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\SamplerBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\ShaderBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\ShaderBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\TextureBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\TextureBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\src\TopLevelASBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\src\TopLevelASBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\APIInfo.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\APIInfo.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\BlendState.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\BlendState.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Buffer.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Buffer.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\BufferView.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\BufferView.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\BottomLevelAS.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\BottomLevelAS.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\CommandList.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\CommandList.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Constants.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Constants.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\CommandQueue.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\CommandQueue.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Dearchiver.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Dearchiver.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\DepthStencilState.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\DepthStencilState.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\DeviceContext.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\DeviceContext.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\DeviceMemory.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\DeviceMemory.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\DeviceObject.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\DeviceObject.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\EngineFactory.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\EngineFactory.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Fence.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Fence.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Framebuffer.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Framebuffer.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\GraphicsTypes.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\GraphicsTypes.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\GraphicsTypesX.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\GraphicsTypesX.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\InputLayout.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\InputLayout.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\PipelineState.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\PipelineState.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\PipelineResourceSignature.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\PipelineResourceSignature.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\PipelineStateCache.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\PipelineStateCache.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Query.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Query.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\RasterizerState.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\RasterizerState.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\RenderDevice.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\RenderDevice.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\RenderPass.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\RenderPass.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\ResourceMapping.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\ResourceMapping.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Sampler.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Sampler.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Shader.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Shader.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\ShaderResourceBinding.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\ShaderResourceBinding.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\ShaderResourceVariable.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\ShaderResourceVariable.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\ShaderBindingTable.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\ShaderBindingTable.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\SwapChain.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\SwapChain.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\Texture.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\Texture.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\TextureView.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\TextureView.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\TopLevelAS.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\TopLevelAS.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface\LoadEngineDll.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface\LoadEngineDll.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\BufferBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\BufferBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\BufferViewBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\BufferViewBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\BottomLevelASBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\BottomLevelASBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\CommandListBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\CommandListBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\DearchiverBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\DearchiverBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\DefaultShaderSourceStreamFactory.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\DefaultShaderSourceStreamFactory.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\Defines.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\Defines.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\DeviceContextBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\DeviceContextBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\DeviceMemoryBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\DeviceMemoryBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\DeviceObjectBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\DeviceObjectBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\DeviceObjectArchive.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\DeviceObjectArchive.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\EngineFactoryBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\EngineFactoryBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\EngineMemory.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\EngineMemory.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\FenceBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\FenceBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\FramebufferBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\FramebufferBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\IndexWrapper.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\IndexWrapper.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\PipelineStateBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\PipelineStateBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\PipelineResourceSignatureBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\PipelineResourceSignatureBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\PipelineStateCacheBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\PipelineStateCacheBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\PrivateConstants.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\PrivateConstants.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\PSOSerializer.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\PSOSerializer.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\QueryBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\QueryBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\RenderDeviceBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\RenderDeviceBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\RenderPassBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\RenderPassBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\ResourceMappingImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\ResourceMappingImpl.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\SamplerBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\SamplerBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\ShaderBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\ShaderBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\ShaderResourceBindingBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\ShaderResourceBindingBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\ShaderResourceCacheCommon.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\ShaderResourceCacheCommon.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\ShaderResourceVariableBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\ShaderResourceVariableBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\ShaderBindingTableBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\ShaderBindingTableBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\StateObjectsRegistry.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\StateObjectsRegistry.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\SwapChainBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\SwapChainBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\TextureBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\TextureBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\TextureViewBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\TextureViewBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\include\TopLevelASBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\TopLevelASBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="interface">
-      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+      <UniqueIdentifier>{44D225D2-E624-34AB-A967-D14ECE824400}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

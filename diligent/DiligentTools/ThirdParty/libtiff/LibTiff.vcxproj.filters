@@ -1,200 +1,200 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_aux.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_aux.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_close.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_close.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_codec.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_codec.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_color.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_color.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_compress.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_compress.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_dir.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_dir.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_dirinfo.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_dirinfo.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_dirread.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_dirread.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_dirwrite.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_dirwrite.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_dumpmode.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_dumpmode.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_error.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_error.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_extension.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_extension.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_fax3.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_fax3.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_fax3sm.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_fax3sm.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_flush.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_flush.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_getimage.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_getimage.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_jbig.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_jbig.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_jpeg.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_jpeg.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_jpeg_12.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_jpeg_12.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_luv.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_luv.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_lzma.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_lzma.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_lzw.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_lzw.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_next.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_next.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_ojpeg.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_ojpeg.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_open.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_open.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_packbits.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_packbits.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_pixarlog.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_pixarlog.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_predict.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_predict.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_print.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_print.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_read.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_read.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_stream.cxx">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_stream.cxx">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_strip.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_strip.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_swab.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_swab.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_thunder.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_thunder.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_tile.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_tile.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_version.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_version.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_warning.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_warning.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_write.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_write.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_zip.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_zip.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_win32.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_win32.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\t4.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\t4.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_config.android.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_config.android.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_config.linux.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_config.linux.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_config.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_config.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_config.vc.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_config.vc.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_config.wince.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_config.wince.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_dir.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_dir.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_fax3.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_fax3.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_predict.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_predict.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiff.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiff.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiffconf.linux.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiffconf.linux.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiffconf.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiffconf.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiffconf.vc.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiffconf.vc.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiffconf.wince.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiffconf.wince.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiffio.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiffio.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiffio.hxx">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiffio.hxx">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiffiop.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiffiop.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tiffvers.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tiffvers.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\uvcode.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\uvcode.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\ThirdParty\libtiff\tif_config.h-vms">
+    <None Include="C:\SYN\diligent\DiligentTools\ThirdParty\libtiff\tif_config.h-vms">
       <Filter>include</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

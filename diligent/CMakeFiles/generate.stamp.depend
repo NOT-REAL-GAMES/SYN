@@ -97,8 +97,8 @@ C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake
-C:/SYN/CMakeFiles/3.28.0-rc5/CMakeCCompiler.cmake
-C:/SYN/CMakeFiles/3.28.0-rc5/CMakeCXXCompiler.cmake
-C:/SYN/CMakeFiles/3.28.0-rc5/CMakeRCCompiler.cmake
-C:/SYN/CMakeFiles/3.28.0-rc5/CMakeSystem.cmake
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/CMakeLists.txt
+C:/SYN/diligent/CMakeFiles/3.28.0-rc5/CMakeCCompiler.cmake
+C:/SYN/diligent/CMakeFiles/3.28.0-rc5/CMakeCXXCompiler.cmake
+C:/SYN/diligent/CMakeFiles/3.28.0-rc5/CMakeRCCompiler.cmake
+C:/SYN/diligent/CMakeFiles/3.28.0-rc5/CMakeSystem.cmake
+C:/SYN/diligent/CMakeLists.txt

@@ -1,81 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\BCTools.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\BCTools.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\DDSLoader.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\DDSLoader.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\JPEGCodec.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\JPEGCodec.c">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\Image.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\Image.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\KTXLoader.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\KTXLoader.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\SGILoader.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\SGILoader.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\PNGCodec.c">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\PNGCodec.c">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\STBImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\STBImpl.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\TextureLoaderImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\TextureLoaderImpl.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\src\TextureUtilities.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\TextureLoader\src\TextureUtilities.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\include\dxgiformat.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\include\dxgiformat.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\include\pch.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\include\pch.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\include\TextureLoaderImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\include\TextureLoaderImpl.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface\JPEGCodec.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\interface\JPEGCodec.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface\PNGCodec.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\interface\PNGCodec.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface\SGILoader.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\interface\SGILoader.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface\BCTools.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\interface\BCTools.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface\Image.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\interface\Image.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface\TextureLoader.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\interface\TextureLoader.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\interface\TextureUtilities.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\TextureLoader\interface\TextureUtilities.h">
       <Filter>interface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\TextureLoader\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentTools\TextureLoader\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="interface">
-      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+      <UniqueIdentifier>{44D225D2-E624-34AB-A967-D14ECE824400}</UniqueIdentifier>
     </Filter>
     <Filter Include="source">
-      <UniqueIdentifier>{B2E819CD-A4D2-3287-9F2D-87AD0F3B7D35}</UniqueIdentifier>
+      <UniqueIdentifier>{796AFCA7-68F5-366B-8AAE-2D38E089B051}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

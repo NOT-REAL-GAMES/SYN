@@ -1,0 +1,43 @@
+#include "Structures.fxh"
+
+// Vulkan and DirectX:
+//   Resource indices are not allowed to vary within the wave by default.
+//   When dynamic indexing is required, we have to use NonUniformResourceIndex() qualifier to avoid undefined behavior.
+// Metal:
+//   NonUniformResourceIndex() qualifier is not needed.
+#ifndef DXCOMPILER
+#    define NonUniformResourceIndex(x) x
+#endif
+
+Texture2D    g_Textures[NUM_TEXTURES];
+SamplerState g_Samplers[NUM_SAMPLERS];
+
+ConstantBuffer<GlobalConstants>   g_Constants;
+StructuredBuffer<MaterialAttribs> g_MaterialAttribs;
+
+struct PSInput
+{
+    float4 Pos  : SV_POSITION;
+    float4 WPos : WORLD_POS; // world-space position
+    float3 Norm : NORMAL;    // world-space normal
+    float2 UV   : TEX_COORD;
+    nointerpolation uint MatId : MATERIAL; // single material ID per triangle
+};
+
+struct PSOutput
+{
+    float4 Color : SV_Target0; // RGBA8 unorm
+    float4 Norm  : SV_Target1; // RGBA16 float
+};
+
+
+void main(in  PSInput  PSIn,
+          out PSOutput PSOut)
+{
+    MaterialAttribs Mtr = g_MaterialAttribs[PSIn.MatId];
+
+    PSOut.Color =
+        Mtr.BaseColorMask * g_Textures[NonUniformResourceIndex(Mtr.BaseColorTexInd)].
+                            Sample(g_Samplers[NonUniformResourceIndex(Mtr.SampInd)], PSIn.UV);
+    PSOut.Norm  = float4(normalize(PSIn.Norm), 0.0);
+}

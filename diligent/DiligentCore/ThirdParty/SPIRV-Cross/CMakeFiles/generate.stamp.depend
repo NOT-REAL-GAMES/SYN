@@ -3,5 +3,5 @@ C:/Program Files/CMake/share/cmake-3.28/Modules/FindGit.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/GNUInstallDirs.cmake
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Cross/CMakeLists.txt
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/SPIRV-Cross/cmake/gitversion.in.h
+C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Cross/CMakeLists.txt
+C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Cross/cmake/gitversion.in.h

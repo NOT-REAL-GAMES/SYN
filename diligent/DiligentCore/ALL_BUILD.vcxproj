@@ -25,7 +25,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D9F1F8DE-F305-38C7-A48D-2F37C0930C7E}</ProjectGuid>
+    <ProjectGuid>{887F6BA3-E4CC-31EB-9379-1966D3C8F64C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\CMakeLists.txt">
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,182 +159,182 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\DiligentCore\BuildUtils.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
-      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">
+      <Project>{B6D7D6D3-B917-38B8-B8E3-A9C02E33AA85}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\Archiver\Diligent-Archiver-shared.vcxproj">
-      <Project>{086A78B3-42FA-3E48-A6E3-E28160CD29E4}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\Diligent-Archiver-shared.vcxproj">
+      <Project>{F22D699D-FC6F-3D4D-9270-63495E0A746C}</Project>
       <Name>Diligent-Archiver-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\Archiver\Diligent-Archiver-static.vcxproj">
-      <Project>{0D165FDE-4882-37DF-B3C8-95C851867A63}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\Archiver\Diligent-Archiver-static.vcxproj">
+      <Project>{6FC59737-F14C-3FDA-AD83-C2EC20954DF0}</Project>
       <Name>Diligent-Archiver-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
-      <Project>{C45E8F1E-8240-3415-9753-149169905F7C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
+      <Project>{A1A780F6-E035-31AA-A86D-F5DC3ED9A432}</Project>
       <Name>Diligent-BasicPlatform</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Common\Diligent-Common.vcxproj">
-      <Project>{499C6F0D-1DF9-3C5B-8C40-C55EF20EF37F}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Common\Diligent-Common.vcxproj">
+      <Project>{1464DB5C-F5E0-3EEB-A8A7-0936923C73C5}</Project>
       <Name>Diligent-Common</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
-      <Project>{4AA14C03-C9C4-3E15-A53B-831B311E57DD}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
+      <Project>{CCD4E758-271F-362E-8CEC-484648267EEB}</Project>
       <Name>Diligent-GraphicsAccessories</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
-      <Project>{A1D7B5B9-3941-39E3-A7DD-2A9976779AD3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
+      <Project>{3612E2FA-58BA-378D-A5EA-4E0F7BDC84B5}</Project>
       <Name>Diligent-GraphicsEngine</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-shared.vcxproj">
-      <Project>{D11850B4-1DB5-3E7E-B86F-4F0089C7575E}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-shared.vcxproj">
+      <Project>{90B6686D-9A5C-3565-94A9-AA4A8E47C324}</Project>
       <Name>Diligent-GraphicsEngineD3D11-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-static.vcxproj">
-      <Project>{005643FA-45BD-3D20-999B-45CE3F911F4D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\Diligent-GraphicsEngineD3D11-static.vcxproj">
+      <Project>{C6C33609-429F-3338-AE5D-E82ED42F5E10}</Project>
       <Name>Diligent-GraphicsEngineD3D11-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-shared.vcxproj">
-      <Project>{A83D8CC7-5947-32C2-A09A-DD942F446C20}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-shared.vcxproj">
+      <Project>{E64B53AF-2A09-35AC-B34D-96B746FBFC11}</Project>
       <Name>Diligent-GraphicsEngineD3D12-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-static.vcxproj">
-      <Project>{0C5989BC-7507-3509-B6BF-9DC77FB3BC0D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\Diligent-GraphicsEngineD3D12-static.vcxproj">
+      <Project>{49C552FE-6E92-3375-8A8D-A352DA7E6DB3}</Project>
       <Name>Diligent-GraphicsEngineD3D12-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineD3DBase\Diligent-GraphicsEngineD3DBase.vcxproj">
-      <Project>{368A8241-0CDF-3863-B569-25D8ECD8941D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\Diligent-GraphicsEngineD3DBase.vcxproj">
+      <Project>{99BA352B-09BD-3E32-9A1C-B9D298189263}</Project>
       <Name>Diligent-GraphicsEngineD3DBase</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineNextGenBase\Diligent-GraphicsEngineNextGenBase.vcxproj">
-      <Project>{F35B4C68-4DA4-3B38-9B90-E0976F7F32E4}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineNextGenBase\Diligent-GraphicsEngineNextGenBase.vcxproj">
+      <Project>{1145B703-7B02-30E3-A513-9663DBE641D6}</Project>
       <Name>Diligent-GraphicsEngineNextGenBase</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-shared.vcxproj">
-      <Project>{244269EF-3865-3E31-8FF0-4A92C61FE001}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-shared.vcxproj">
+      <Project>{D1FD7E3D-D916-38FE-B5F9-C9FE53DF56B3}</Project>
       <Name>Diligent-GraphicsEngineOpenGL-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-static.vcxproj">
-      <Project>{003F99DA-882A-36F6-8AD9-7B9936352C22}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-static.vcxproj">
+      <Project>{6EFDB3CA-3ED2-3C51-BF93-9FAC664FB866}</Project>
       <Name>Diligent-GraphicsEngineOpenGL-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-shared.vcxproj">
-      <Project>{1260420E-4251-3E06-A0DB-8550E267698C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-shared.vcxproj">
+      <Project>{6F4F1046-4947-3B77-BFE2-FC867319E41A}</Project>
       <Name>Diligent-GraphicsEngineVk-shared</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-static.vcxproj">
-      <Project>{E840F05D-D8E0-3317-A140-8379D16097CE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\Diligent-GraphicsEngineVk-static.vcxproj">
+      <Project>{778E0167-A04D-3FFB-86C1-2426BEEBE7F8}</Project>
       <Name>Diligent-GraphicsEngineVk-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsTools\Diligent-GraphicsTools.vcxproj">
-      <Project>{F19CF7C2-5D88-3BEE-89CB-A328B096AA57}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\Diligent-GraphicsTools.vcxproj">
+      <Project>{E59E59A0-4286-3B03-8D16-75F2FA4FB40E}</Project>
       <Name>Diligent-GraphicsTools</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
-      <Project>{8B65DAD8-5DB0-33B1-B291-81B00D2E9160}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
+      <Project>{8A548531-1C0B-3F76-B964-673FBD6FCD8D}</Project>
       <Name>Diligent-HLSL2GLSLConverterLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
-      <Project>{70F70D5B-046D-3F92-B50C-F6648BCAF009}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
+      <Project>{8E1149B8-D59B-356E-B5B4-5519579BBFE7}</Project>
       <Name>Diligent-Primitives</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\ShaderTools\Diligent-ShaderTools.vcxproj">
-      <Project>{222F6E82-FA1A-3607-9A5C-B5534789B8F3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\Diligent-ShaderTools.vcxproj">
+      <Project>{34C49E1C-A1DC-315C-B114-F57230053EB8}</Project>
       <Name>Diligent-ShaderTools</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
-      <Project>{D850516C-9C4E-33DE-AF85-1A8E18AFF64E}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
+      <Project>{DB186C91-086B-316F-BA76-07008423EFAB}</Project>
       <Name>Diligent-Win32Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\DiligentCore-ValidateFormatting.vcxproj">
-      <Project>{8F894515-9595-3702-BAE4-F6441484FC8E}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\DiligentCore-ValidateFormatting.vcxproj">
+      <Project>{3E233D04-9094-3048-BD6E-EBCA535B10C1}</Project>
       <Name>DiligentCore-ValidateFormatting</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\DiligentCore-static.vcxproj">
-      <Project>{3CA5AE36-3EB2-3900-AACA-616FB377D087}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\DiligentCore-static.vcxproj">
+      <Project>{09A58BDF-B060-3731-8B14-64EA99DB9A05}</Project>
       <Name>DiligentCore-static</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
-      <Project>{DF0FBAD1-DFAA-31AC-A0C8-35427C6456BE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
+      <Project>{A6E8BCAE-9344-3100-B197-400560E1F820}</Project>
       <Name>GenericCodeGen</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\hlsl\HLSL.vcxproj">
-      <Project>{40BD2F72-F298-3BD6-892F-C0DD7F03DEDB}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\hlsl\HLSL.vcxproj">
+      <Project>{1D976139-B5C8-33F2-8C7F-7979EEB00583}</Project>
       <Name>HLSL</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
-      <Project>{471C3269-4B35-3E26-B01E-F4FF19B95E0A}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
+      <Project>{35D7936D-2AC0-379B-8201-2B29EF68D777}</Project>
       <Name>MachineIndependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
-      <Project>{01C86EC7-29C5-32C0-80E7-605EA4DEFBA2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
+      <Project>{D30CF4EA-8943-3101-9431-BBEBEA243263}</Project>
       <Name>OGLCompiler</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
-      <Project>{DD35CE09-2BFB-3483-A854-2A688563BC1B}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
+      <Project>{A5EA77F5-9AD9-31E0-A89E-489C6A386F92}</Project>
       <Name>OSDependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
-      <Project>{6090D81E-A3D4-3A05-AE1C-F21679C37E22}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
+      <Project>{CD1F8E91-7C28-3687-8FB2-6A823B57D11E}</Project>
       <Name>SPIRV</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\SPIRV-Tools-diff.vcxproj">
-      <Project>{4BF87B7F-AE84-39BC-A21E-AEC648C3C271}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\diff\SPIRV-Tools-diff.vcxproj">
+      <Project>{96C4D173-DE92-348C-AB12-3494068C468A}</Project>
       <Name>SPIRV-Tools-diff</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
-      <Project>{08CE441A-9555-3E0A-AEE7-373DDBF83123}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
+      <Project>{D083F047-5AD4-331E-8643-B5D0CFA5663A}</Project>
       <Name>SPIRV-Tools-opt</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
-      <Project>{D10B50A1-E032-3ED4-B545-3DC6B2D4792C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
+      <Project>{254CC700-E03F-311A-98AF-157C819B6172}</Project>
       <Name>SPIRV-Tools-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glew\glew-static.vcxproj">
-      <Project>{227857EF-6692-31BE-BDE2-13065C0D1AA4}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glew\glew-static.vcxproj">
+      <Project>{BA928301-E4D0-3397-BB1D-028F6C35D007}</Project>
       <Name>glew-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
-      <Project>{FAD1B065-759D-3EDE-837F-936EDE77F988}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
+      <Project>{5E2933FF-D7C0-38FB-BB53-9C093DB7DB61}</Project>
       <Name>glslang</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang-default-resource-limits.vcxproj">
-      <Project>{AF51C553-2EE0-3456-8C50-76BA4ECCED2D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\glslang-default-resource-limits.vcxproj">
+      <Project>{8213A3FE-3BCA-37E2-B5CF-A813E55B53CC}</Project>
       <Name>glslang-default-resource-limits</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
-      <Project>{B466C176-4FF0-31B9-B40B-7F944DFB96F2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
+      <Project>{3F7890C6-002D-3586-A692-A7E1DEEB354D}</Project>
       <Name>spirv-cross-core</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\spirv-tools-pkg-config.vcxproj">
-      <Project>{0D7549AB-8DAB-3A72-A137-A444C1C2AAFA}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\spirv-tools-pkg-config.vcxproj">
+      <Project>{59DF1111-3565-3769-9D30-49840EE62EC8}</Project>
       <Name>spirv-tools-pkg-config</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\spirv-tools-shared-pkg-config.vcxproj">
-      <Project>{09DCEA88-4358-3896-97C3-39DC5FF69059}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\spirv-tools-shared-pkg-config.vcxproj">
+      <Project>{D0B760D6-1B04-3237-AFC3-ECCC64A8674F}</Project>
       <Name>spirv-tools-shared-pkg-config</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\xxHash\cmake_unofficial\xxhash.vcxproj">
-      <Project>{E23D36E9-2121-3A65-8A90-8C4A2E75DFFB}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\xxHash\cmake_unofficial\xxhash.vcxproj">
+      <Project>{AE11262B-DE47-37DE-9C6B-88AB2DE8F9F0}</Project>
       <Name>xxhash</Name>
     </ProjectReference>
   </ItemGroup>

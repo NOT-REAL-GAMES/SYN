@@ -1,0 +1,73 @@
+name: MacOS/iOS/tvOS build
+
+on: [push, pull_request]
+
+jobs:
+  precheks:
+    name:    MacOS -> Pre-Checks
+    runs-on: macos-12
+
+    steps:
+    - name: Clone DiligentCore
+      uses: actions/checkout@v3
+      with:
+        repository: DiligentGraphics/DiligentCore
+        path:       DiligentCore
+
+    - name: Clone DiligentSamples
+      uses: actions/checkout@v3
+      with:
+        path: DiligentSamples
+
+    - name: Format validation
+      working-directory: ${{github.workspace}}/DiligentSamples/BuildTools/FormatValidation
+      shell: bash
+      run: ./validate_format_mac.sh
+
+
+  build:
+    needs:   precheks
+    runs-on: macos-12
+
+    strategy:
+      matrix:
+        platform:   ["MacOS", "iOS", "tvOS"]
+        build_type: ["Debug", "Release"]
+
+        include:
+          # For some reason AVX2 causes invalid instruction exception on CI, so disable it
+          - platform:   "MacOS"
+            cmake_args: "-DDILIGENT_CLANG_RELEASE_COMPILE_OPTIONS=\"\""
+          # Do not build GLSLang and friends to save time as it is built by the Core and Engine CI.
+          - platform:   "iOS"
+            cmake_args: "-DDILIGENT_NO_GLSLANG=ON -DDILIGENT_NO_HLSL=ON"
+          - platform:   "tvOS"
+            cmake_args: "-DDILIGENT_NO_GLSLANG=ON -DDILIGENT_NO_HLSL=ON"
+
+        exclude:
+          # Exclude tvOS-Release
+          - platform:   "tvOS"
+            build_type: "Release"
+
+    name: MacOS -> ${{ matrix.platform }}-${{ matrix.build_type }}
+
+    steps:
+    - name: Checkout
+      uses: DiligentGraphics/github-action/checkout@v1
+
+    - name: Set up build environment
+      if:   success()
+      uses: DiligentGraphics/github-action/setup-build-env@v1
+      with:
+        platform: ${{ matrix.platform }}
+
+    - name: Configure CMake
+      if:   success()
+      uses: DiligentGraphics/github-action/configure-cmake@v1
+      with:
+        build-type: ${{ matrix.build_type }}
+        cmake-args: ${{ matrix.cmake_args }}
+
+    - name: Build
+      if:   success()
+      uses: DiligentGraphics/github-action/build@v1

@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{222F6E82-FA1A-3607-9A5C-B5534789B8F3}</ProjectGuid>
+    <ProjectGuid>{34C49E1C-A1DC-315C-B114-F57230053EB8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\Graphics\ShaderTools\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Diligent-ShaderTools.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Diligent-ShaderTools</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\Graphics\ShaderTools\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Diligent-ShaderTools.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Diligent-ShaderTools</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\Graphics\ShaderTools\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Diligent-ShaderTools.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Diligent-ShaderTools</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\Graphics\ShaderTools\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Diligent-ShaderTools.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Diligent-ShaderTools</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -99,10 +99,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;DILIGENT_SPIRV_CROSS_NAMESPACE=diligent_spirv_cross;DEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_DEVELOPMENT;DILIGENT_DEBUG;SPIRV_CROSS_NAMESPACE_OVERRIDE=diligent_spirv_cross;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,7 +115,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -141,10 +141,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DILIGENT_SPIRV_CROSS_NAMESPACE=diligent_spirv_cross;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;SPIRV_CROSS_NAMESPACE_OVERRIDE=diligent_spirv_cross;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -158,7 +158,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -182,10 +182,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DILIGENT_SPIRV_CROSS_NAMESPACE=diligent_spirv_cross;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;SPIRV_CROSS_NAMESPACE_OVERRIDE=diligent_spirv_cross;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
@@ -224,10 +224,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DILIGENT_SPIRV_CROSS_NAMESPACE=diligent_spirv_cross;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;SPIRV_CROSS_NAMESPACE_OVERRIDE=diligent_spirv_cross;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsAccessories\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Win32\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\Basic\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Primitives\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Platforms\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsEngine\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Cross;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\include;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\include;C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Headers\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..;C:\SYN\diligent\include;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\..\External;C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -240,14 +240,14 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions.fxh">
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions.fxh">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Processing HLSLDefinitions.fxh</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools
+cd C:\SYN\diligent\DiligentCore\Graphics\ShaderTools
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/BuildTools/File2Include/script.py include/HLSLDefinitions.fxh include/HLSLDefinitions_inc.fxh
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/BuildTools/File2Include/script.py include/HLSLDefinitions.fxh include/HLSLDefinitions_inc.fxh
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -256,15 +256,15 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Processing HLSLDefinitions.fxh</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools
+cd C:\SYN\diligent\DiligentCore\Graphics\ShaderTools
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/BuildTools/File2Include/script.py include/HLSLDefinitions.fxh include/HLSLDefinitions_inc.fxh
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/BuildTools/File2Include/script.py include/HLSLDefinitions.fxh include/HLSLDefinitions_inc.fxh
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -273,15 +273,15 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Processing HLSLDefinitions.fxh</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools
+cd C:\SYN\diligent\DiligentCore\Graphics\ShaderTools
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/BuildTools/File2Include/script.py include/HLSLDefinitions.fxh include/HLSLDefinitions_inc.fxh
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/BuildTools/File2Include/script.py include/HLSLDefinitions.fxh include/HLSLDefinitions_inc.fxh
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -290,15 +290,15 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Processing HLSLDefinitions.fxh</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools
+cd C:\SYN\diligent\DiligentCore\Graphics\ShaderTools
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/BuildTools/File2Include/script.py include/HLSLDefinitions.fxh include/HLSLDefinitions_inc.fxh
+C:\Users\rbwld\AppData\Local\Programs\Python\Python313\python.exe C:/SYN/diligent/DiligentCore/BuildTools/File2Include/script.py include/HLSLDefinitions.fxh include/HLSLDefinitions_inc.fxh
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -307,16 +307,16 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\CMakeLists.txt">
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/Graphics/ShaderTools/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/Graphics/ShaderTools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/Graphics/ShaderTools/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/Graphics/ShaderTools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -325,11 +325,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\DiligentCore\Graphics\ShaderTools\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/Graphics/ShaderTools/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/Graphics/ShaderTools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/Graphics/ShaderTools/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/Graphics/ShaderTools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -338,11 +338,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\DiligentCore\Graphics\ShaderTools\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/Graphics/ShaderTools/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/Graphics/ShaderTools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/Graphics/ShaderTools/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/Graphics/ShaderTools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -351,11 +351,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\DiligentCore\Graphics\ShaderTools\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/Graphics/ShaderTools/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentCore/Graphics/ShaderTools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4 -BC:/SYN --check-stamp-file C:/SYN/DiligentCore/Graphics/ShaderTools/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SYN/diligent -BC:/SYN/diligent --check-stamp-file C:/SYN/diligent/DiligentCore/Graphics/ShaderTools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -364,103 +364,103 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPython3.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\DiligentCore\Graphics\ShaderTools\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\ShaderToolsCommon.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\GLSLUtils.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\HLSLUtils.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\DXBCUtils.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\DXCompiler.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\SPIRVShaderResources.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\SPIRVTools.cpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\src\GLSLangUtils.cpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\ShaderToolsCommon.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\GLSLUtils.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLUtils.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\DXBCUtils.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\ResourceBindingMap.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\DXCompiler.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\DXCompilerBaseWin32.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\SPIRVShaderResources.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\SPIRVTools.hpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\GLSLangUtils.hpp" />
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\GPUOpenShaderUtils\DXBCChecksum.cpp" />
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\ThirdParty\GPUOpenShaderUtils\DXBCChecksum.h" />
-    <None Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\ShaderToolsCommon.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\GLSLUtils.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\HLSLUtils.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\DXBCUtils.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\DXCompiler.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\SPIRVShaderResources.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\SPIRVTools.cpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\src\GLSLangUtils.cpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\ShaderToolsCommon.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\GLSLUtils.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLUtils.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\DXBCUtils.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\ResourceBindingMap.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\DXCompiler.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\DXCompilerBaseWin32.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\SPIRVShaderResources.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\SPIRVTools.hpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\GLSLangUtils.hpp" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\GPUOpenShaderUtils\DXBCChecksum.cpp" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\GPUOpenShaderUtils\DXBCChecksum.h" />
+    <None Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SYN\ZERO_CHECK.vcxproj">
-      <Project>{D4B72DAE-0BC9-32D7-96D9-AFC211EC519D}</Project>
+    <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">
+      <Project>{B6D7D6D3-B917-38B8-B8E3-A9C02E33AA85}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
-      <Project>{C45E8F1E-8240-3415-9753-149169905F7C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Platforms\Basic\Diligent-BasicPlatform.vcxproj">
+      <Project>{A1A780F6-E035-31AA-A86D-F5DC3ED9A432}</Project>
       <Name>Diligent-BasicPlatform</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Common\Diligent-Common.vcxproj">
-      <Project>{499C6F0D-1DF9-3C5B-8C40-C55EF20EF37F}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Common\Diligent-Common.vcxproj">
+      <Project>{1464DB5C-F5E0-3EEB-A8A7-0936923C73C5}</Project>
       <Name>Diligent-Common</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
-      <Project>{4AA14C03-C9C4-3E15-A53B-831B311E57DD}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\Diligent-GraphicsAccessories.vcxproj">
+      <Project>{CCD4E758-271F-362E-8CEC-484648267EEB}</Project>
       <Name>Diligent-GraphicsAccessories</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
-      <Project>{A1D7B5B9-3941-39E3-A7DD-2A9976779AD3}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\Diligent-GraphicsEngine.vcxproj">
+      <Project>{3612E2FA-58BA-378D-A5EA-4E0F7BDC84B5}</Project>
       <Name>Diligent-GraphicsEngine</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
-      <Project>{8B65DAD8-5DB0-33B1-B291-81B00D2E9160}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\Diligent-HLSL2GLSLConverterLib.vcxproj">
+      <Project>{8A548531-1C0B-3F76-B964-673FBD6FCD8D}</Project>
       <Name>Diligent-HLSL2GLSLConverterLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
-      <Project>{70F70D5B-046D-3F92-B50C-F6648BCAF009}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Primitives\Diligent-Primitives.vcxproj">
+      <Project>{8E1149B8-D59B-356E-B5B4-5519579BBFE7}</Project>
       <Name>Diligent-Primitives</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
-      <Project>{D850516C-9C4E-33DE-AF85-1A8E18AFF64E}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Platforms\Win32\Diligent-Win32Platform.vcxproj">
+      <Project>{DB186C91-086B-316F-BA76-07008423EFAB}</Project>
       <Name>Diligent-Win32Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
-      <Project>{DF0FBAD1-DFAA-31AC-A0C8-35427C6456BE}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\GenericCodeGen.vcxproj">
+      <Project>{A6E8BCAE-9344-3100-B197-400560E1F820}</Project>
       <Name>GenericCodeGen</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
-      <Project>{471C3269-4B35-3E26-B01E-F4FF19B95E0A}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
+      <Project>{35D7936D-2AC0-379B-8201-2B29EF68D777}</Project>
       <Name>MachineIndependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
-      <Project>{01C86EC7-29C5-32C0-80E7-605EA4DEFBA2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
+      <Project>{D30CF4EA-8943-3101-9431-BBEBEA243263}</Project>
       <Name>OGLCompiler</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
-      <Project>{DD35CE09-2BFB-3483-A854-2A688563BC1B}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
+      <Project>{A5EA77F5-9AD9-31E0-A89E-489C6A386F92}</Project>
       <Name>OSDependent</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
-      <Project>{6090D81E-A3D4-3A05-AE1C-F21679C37E22}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\SPIRV\SPIRV.vcxproj">
+      <Project>{CD1F8E91-7C28-3687-8FB2-6A823B57D11E}</Project>
       <Name>SPIRV</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
-      <Project>{08CE441A-9555-3E0A-AEE7-373DDBF83123}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\SPIRV-Tools-opt.vcxproj">
+      <Project>{D083F047-5AD4-331E-8643-B5D0CFA5663A}</Project>
       <Name>SPIRV-Tools-opt</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
-      <Project>{D10B50A1-E032-3ED4-B545-3DC6B2D4792C}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\SPIRV-Tools-static.vcxproj">
+      <Project>{254CC700-E03F-311A-98AF-157C819B6172}</Project>
       <Name>SPIRV-Tools-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
-      <Project>{FAD1B065-759D-3EDE-837F-936EDE77F988}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\glslang.vcxproj">
+      <Project>{5E2933FF-D7C0-38FB-BB53-9C093DB7DB61}</Project>
       <Name>glslang</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
-      <Project>{B466C176-4FF0-31B9-B40B-7F944DFB96F2}</Project>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross\spirv-cross-core.vcxproj">
+      <Project>{3F7890C6-002D-3586-A692-A7E1DEEB354D}</Project>
       <Name>spirv-cross-core</Name>
     </ProjectReference>
   </ItemGroup>

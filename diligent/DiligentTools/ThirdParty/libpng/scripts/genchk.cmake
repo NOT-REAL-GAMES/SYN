@@ -9,8 +9,8 @@
 # and license in png.h
 
 # Variables substituted from CMakeLists.txt
-set(SRCDIR "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/ThirdParty/libpng")
-set(BINDIR "C:/SYN/DiligentTools/ThirdParty/libpng")
+set(SRCDIR "C:/SYN/diligent/DiligentTools/ThirdParty/libpng")
+set(BINDIR "C:/SYN/diligent/DiligentTools/ThirdParty/libpng")
 
 set(AWK "AWK-NOTFOUND")
 

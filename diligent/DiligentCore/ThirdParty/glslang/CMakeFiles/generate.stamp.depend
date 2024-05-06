@@ -7,8 +7,8 @@ C:/Program Files/CMake/share/cmake-3.28/Modules/FindPython/Support.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/FindPython3.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/GNUInstallDirs.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/CHANGES.md
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/CMakeLists.txt
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/ChooseMSVCCRT.cmake
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/build_info.h.tmpl
-C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentCore/ThirdParty/glslang/parse_version.cmake
+C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CHANGES.md
+C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeLists.txt
+C:/SYN/diligent/DiligentCore/ThirdParty/glslang/ChooseMSVCCRT.cmake
+C:/SYN/diligent/DiligentCore/ThirdParty/glslang/build_info.h.tmpl
+C:/SYN/diligent/DiligentCore/ThirdParty/glslang/parse_version.cmake

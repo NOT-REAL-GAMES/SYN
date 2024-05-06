@@ -1,159 +1,159 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\Array2DTools.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\Array2DTools.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\BasicFileStream.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\BasicFileStream.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\DataBlobImpl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\DataBlobImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\DefaultRawMemoryAllocator.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\DefaultRawMemoryAllocator.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\FixedBlockMemoryAllocator.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\FixedBlockMemoryAllocator.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\MemoryFileStream.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\MemoryFileStream.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\Serializer.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\Serializer.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\SpinLock.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\SpinLock.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\ThreadPool.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\ThreadPool.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\src\Timer.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Common\src\Timer.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\include\pch.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\include\pch.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\AdvancedMath.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\AdvancedMath.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\Align.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\Align.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\Array2DTools.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\Array2DTools.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\BasicMath.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\BasicMath.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\BasicFileStream.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\BasicFileStream.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\DataBlobImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\DataBlobImpl.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\DefaultRawMemoryAllocator.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\DefaultRawMemoryAllocator.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\DummyReferenceCounters.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\DummyReferenceCounters.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\FastRand.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\FastRand.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\FileWrapper.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\FileWrapper.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\FilteringTools.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\FilteringTools.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\FixedBlockMemoryAllocator.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\FixedBlockMemoryAllocator.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\HashUtils.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\HashUtils.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\LRUCache.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\LRUCache.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\FixedLinearAllocator.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\FixedLinearAllocator.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\DynamicLinearAllocator.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\DynamicLinearAllocator.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\MemoryFileStream.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\MemoryFileStream.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\ObjectBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\ObjectBase.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\ParsingTools.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\ParsingTools.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\RefCntAutoPtr.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\RefCntAutoPtr.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\RefCountedObjectImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\RefCountedObjectImpl.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\Serializer.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\Serializer.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\SpinLock.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\SpinLock.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\STDAllocator.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\STDAllocator.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\StringDataBlobImpl.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\StringDataBlobImpl.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\StringTools.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\StringTools.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\StringTools.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\StringTools.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\StringPool.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\StringPool.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\ThreadPool.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\ThreadPool.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\ThreadSignal.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\ThreadSignal.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\Timer.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\Timer.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\UniqueIdentifier.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\UniqueIdentifier.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\Cast.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\Cast.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\CompilerDefinitions.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\CompilerDefinitions.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\interface\CallbackWrapper.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\CallbackWrapper.hpp">
       <Filter>interface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Common\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\Common\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="interface">
-      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+      <UniqueIdentifier>{44D225D2-E624-34AB-A967-D14ECE824400}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

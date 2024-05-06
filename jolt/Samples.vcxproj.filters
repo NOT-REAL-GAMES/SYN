@@ -1,0 +1,897 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SYN\jolt\CMakeFiles\Samples.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\SamplesApp.cpp" />
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\BroadPhase\BroadPhaseCastRayTest.cpp">
+      <Filter>Tests\BroadPhase</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\BroadPhase\BroadPhaseInsertionTest.cpp">
+      <Filter>Tests\BroadPhase</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\BroadPhase\BroadPhaseTest.cpp">
+      <Filter>Tests\BroadPhase</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Character\CharacterBaseTest.cpp">
+      <Filter>Tests\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Character\CharacterTest.cpp">
+      <Filter>Tests\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Character\CharacterVirtualTest.cpp">
+      <Filter>Tests\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Character\CharacterSpaceShipTest.cpp">
+      <Filter>Tests\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\ConeConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\ConstraintPriorityTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\ConstraintSingularityTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\ConstraintVsCOMChangeTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\DistanceConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\FixedConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\GearConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\HingeConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\PointConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\PathConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\PoweredHingeConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\PoweredSwingTwistConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\PoweredSliderConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\PulleyConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\RackAndPinionConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\SwingTwistConstraintFrictionTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\SwingTwistConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\SixDOFConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\SliderConstraintTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Constraints\SpringTest.cpp">
+      <Filter>Tests\Constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\CapsuleVsBoxTest.cpp">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\ClosestPointTest.cpp">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\ConvexHullTest.cpp">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\ConvexHullShrinkTest.cpp">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\EPATest.cpp">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\InteractivePairsTest.cpp">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\RandomRayTest.cpp">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ActiveEdgesTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\AllowedDOFsTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\BigVsSmallTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\EnhancedInternalEdgeRemovalTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ShapeFilterTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\CenterOfMassTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ChangeMotionQualityTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ChangeMotionTypeTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ChangeShapeTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ChangeObjectLayerTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ContactListenerTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ContactManifoldTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ConveyorBeltTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\DampingTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\DynamicMeshTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\FrictionTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\FrictionPerTriangleTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\FunnelTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\GravityFactorTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\GyroscopicForceTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\HeavyOnLightTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\HighSpeedTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\IslandTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\KinematicTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\LoadSaveBinaryTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\LoadSaveSceneTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ManifoldReductionTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ModifyMassTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\MultithreadedTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\PyramidTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\RestitutionTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\SensorTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\SimpleTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\StackTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\TwoDFunnelTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\WallTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\General\ActivateDuringUpdateTest.cpp">
+      <Filter>Tests\General</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\BigWorldTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\CreateRigTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\KinematicRigTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\LoadSaveBinaryRigTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\LoadSaveRigTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\LoadRigTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\PoweredRigTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\RigPileTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Rig\SkeletonMapperTest.cpp">
+      <Filter>Tests\Rig</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyBendConstraintTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyContactListenerTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyCustomUpdateTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyForceTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyFrictionTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyGravityFactorTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyKinematicTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyLRAConstraintTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyPressureTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyRestitutionTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyShapesTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodySkinnedConstraintTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyStressTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyUpdatePositionTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyVertexRadiusTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyVsFastMovingTest.cpp">
+      <Filter>Tests\SoftBody</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Test.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Tools\LoadSnapshotTest.cpp">
+      <Filter>Tests\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledBoxShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledCapsuleShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledStaticCompoundShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledMutableCompoundShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledOffsetCenterOfMassShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledConvexHullShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledCylinderShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledHeightFieldShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledMeshShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledSphereShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledTaperedCapsuleShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledTriangleShapeTest.cpp">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\BoxShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\CapsuleShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\DeformedHeightFieldShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\StaticCompoundShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\MutableCompoundShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\OffsetCenterOfMassShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\ConvexHullShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\CylinderShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\HeightFieldShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\MeshShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\SphereShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\RotatedTranslatedShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\TaperedCapsuleShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Shapes\TriangleShapeTest.cpp">
+      <Filter>Tests\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Vehicle\MotorcycleTest.cpp">
+      <Filter>Tests\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Vehicle\TankTest.cpp">
+      <Filter>Tests\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Vehicle\VehicleConstraintTest.cpp">
+      <Filter>Tests\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Vehicle\VehicleSixDOFTest.cpp">
+      <Filter>Tests\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Vehicle\VehicleStressTest.cpp">
+      <Filter>Tests\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Vehicle\VehicleTest.cpp">
+      <Filter>Tests\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Water\BoatTest.cpp">
+      <Filter>Tests\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Tests\Water\WaterShapeTest.cpp">
+      <Filter>Tests\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Utils\ContactListenerImpl.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Utils\RagdollLoader.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Utils\ShapeCreator.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\Samples\Utils\SoftBodyCreator.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\SYN\jolt\Samples\Layers.h" />
+    <ClInclude Include="C:\SYN\jolt\Samples\SamplesApp.h" />
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\BroadPhase\BroadPhaseCastRayTest.h">
+      <Filter>Tests\BroadPhase</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\BroadPhase\BroadPhaseInsertionTest.h">
+      <Filter>Tests\BroadPhase</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\BroadPhase\BroadPhaseTest.h">
+      <Filter>Tests\BroadPhase</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Character\CharacterBaseTest.h">
+      <Filter>Tests\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Character\CharacterTest.h">
+      <Filter>Tests\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Character\CharacterVirtualTest.h">
+      <Filter>Tests\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Character\CharacterSpaceShipTest.h">
+      <Filter>Tests\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\ConeConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\ConstraintPriorityTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\ConstraintSingularityTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\ConstraintVsCOMChangeTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\DistanceConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\FixedConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\GearConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\HingeConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\PointConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\PathConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\PoweredHingeConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\PoweredSwingTwistConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\PoweredSliderConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\PulleyConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\RackAndPinionConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\SwingTwistConstraintFrictionTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\SwingTwistConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\SixDOFConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\SliderConstraintTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Constraints\SpringTest.h">
+      <Filter>Tests\Constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\CapsuleVsBoxTest.h">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\ClosestPointTest.h">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\ConvexHullTest.h">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\ConvexHullShrinkTest.h">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\EPATest.h">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\InteractivePairsTest.h">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ConvexCollision\RandomRayTest.h">
+      <Filter>Tests\ConvexCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ActiveEdgesTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\AllowedDOFsTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\BigVsSmallTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\EnhancedInternalEdgeRemovalTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ShapeFilterTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\CenterOfMassTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ChangeMotionQualityTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ChangeMotionTypeTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ChangeShapeTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ChangeObjectLayerTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ContactListenerTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ContactManifoldTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ConveyorBeltTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\DampingTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\DynamicMeshTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\FrictionTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\FrictionPerTriangleTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\FunnelTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\GravityFactorTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\GyroscopicForceTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\HeavyOnLightTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\HighSpeedTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\IslandTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\KinematicTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\LoadSaveBinaryTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\LoadSaveSceneTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ManifoldReductionTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ModifyMassTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\MultithreadedTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\PyramidTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\RestitutionTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\SensorTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\SimpleTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\StackTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\TwoDFunnelTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\WallTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\General\ActivateDuringUpdateTest.h">
+      <Filter>Tests\General</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\BigWorldTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\CreateRigTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\KinematicRigTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\LoadSaveBinaryRigTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\LoadSaveRigTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\LoadRigTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\PoweredRigTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\RigPileTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Rig\SkeletonMapperTest.h">
+      <Filter>Tests\Rig</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyBendConstraintTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyContactListenerTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyCustomUpdateTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyForceTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyFrictionTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyGravityFactorTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyKinematicTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyLRAConstraintTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyPressureTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyRestitutionTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyShapesTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodySkinnedConstraintTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyStressTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyUpdatePositionTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyVertexRadiusTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\SoftBody\SoftBodyVsFastMovingTest.h">
+      <Filter>Tests\SoftBody</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Test.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Tools\LoadSnapshotTest.h">
+      <Filter>Tests\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledBoxShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledCapsuleShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledStaticCompoundShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledMutableCompoundShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledOffsetCenterOfMassShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledConvexHullShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledCylinderShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledHeightFieldShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledMeshShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledSphereShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledTaperedCapsuleShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\ScaledShapes\ScaledTriangleShapeTest.h">
+      <Filter>Tests\ScaledShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\BoxShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\CapsuleShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\DeformedHeightFieldShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\StaticCompoundShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\MutableCompoundShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\OffsetCenterOfMassShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\ConvexHullShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\CylinderShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\HeightFieldShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\MeshShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\SphereShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\RotatedTranslatedShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\TaperedCapsuleShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Shapes\TriangleShapeTest.h">
+      <Filter>Tests\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Vehicle\MotorcycleTest.h">
+      <Filter>Tests\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Vehicle\TankTest.h">
+      <Filter>Tests\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Vehicle\VehicleConstraintTest.h">
+      <Filter>Tests\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Vehicle\VehicleSixDOFTest.h">
+      <Filter>Tests\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Vehicle\VehicleStressTest.h">
+      <Filter>Tests\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Vehicle\VehicleTest.h">
+      <Filter>Tests\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Water\BoatTest.h">
+      <Filter>Tests\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Tests\Water\WaterShapeTest.h">
+      <Filter>Tests\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Utils\ContactListenerImpl.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Utils\DebugRendererSP.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Utils\RagdollLoader.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Utils\ShapeCreator.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Samples\Utils\SoftBodyCreator.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\CMakeFiles\Samples.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\CMakeFiles\Samples.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\CMakeFiles\Samples.dir\Distribution\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\jolt\Build\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\SYN\jolt\Samples\Samples.cmake" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{DF902760-2287-3584-8CBD-A5FEF9EF81EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E6BA38D9-A2A6-3B2D-B6A7-CDE6117F272D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{9EAF79A0-F970-32E9-B9D1-778FBF24296D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\BroadPhase">
+      <UniqueIdentifier>{FBE26782-52D6-3EDE-8A3D-D4E09DB135D8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Character">
+      <UniqueIdentifier>{C63E59A5-24C8-3B30-BB01-64102ACC5D55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Constraints">
+      <UniqueIdentifier>{EDD3A256-FE49-3536-A2C3-9A801576FF41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\ConvexCollision">
+      <UniqueIdentifier>{EF27A091-3B54-370B-9DDC-30F9E27054F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\General">
+      <UniqueIdentifier>{3FDD5A92-0592-3F0C-AF8D-9EDEEB4143DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Rig">
+      <UniqueIdentifier>{78B4BE6C-445C-3682-9657-AD51771A6718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\ScaledShapes">
+      <UniqueIdentifier>{0EBFB962-DD89-3DC3-A08D-E7BE8046CD6B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Shapes">
+      <UniqueIdentifier>{85CAE4BD-699D-3D51-B672-06F41CD7EAB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\SoftBody">
+      <UniqueIdentifier>{243DECA4-92DB-3F15-8964-33DB1CDCEC69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Tools">
+      <UniqueIdentifier>{28EF8419-7FA9-3B98-B767-1CD00570BBC8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Vehicle">
+      <UniqueIdentifier>{F744389A-B591-30C6-8C93-389888B608C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Water">
+      <UniqueIdentifier>{DD6CA6E0-347B-3F54-BCEA-EF914681105B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{E99C22F7-63C7-345C-8235-D9152677856D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

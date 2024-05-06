@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/ThirdParty
+# Install script for directory: C:/SYN/diligent/DiligentSamples/ThirdParty
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,16 +33,16 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentSamples" TYPE FILE RENAME "Nuklear-Readme.md" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/ThirdParty/nuklear/Readme.md")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentSamples" TYPE FILE RENAME "Nuklear-Readme.md" FILES "C:/SYN/diligent/DiligentSamples/ThirdParty/nuklear/Readme.md")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentSamples" TYPE FILE RENAME "glfw-LICENSE.md" FILES "C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentSamples/ThirdParty/glfw/LICENSE.md")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/Licenses/ThirdParty/DiligentSamples" TYPE FILE RENAME "glfw-LICENSE.md" FILES "C:/SYN/diligent/DiligentSamples/ThirdParty/glfw/LICENSE.md")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/SYN/DiligentSamples/ThirdParty/glfw/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/ThirdParty/glfw/cmake_install.cmake")
 
 endif()
 

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4
+# Install script for directory: C:/SYN/diligent
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/SYN/DiligentCore/cmake_install.cmake")
-  include("C:/SYN/DiligentTools/cmake_install.cmake")
-  include("C:/SYN/DiligentFX/cmake_install.cmake")
-  include("C:/SYN/DiligentSamples/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentCore/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentTools/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentFX/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/cmake_install.cmake")
 
 endif()
 
@@ -49,5 +49,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/SYN/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/SYN/diligent/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

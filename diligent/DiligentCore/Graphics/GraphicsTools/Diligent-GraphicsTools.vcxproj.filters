@@ -1,150 +1,150 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\BufferSuballocator.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\BufferSuballocator.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\BytecodeCache.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\BytecodeCache.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\DurationQueryHelper.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\DurationQueryHelper.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\DynamicBuffer.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\DynamicBuffer.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\DynamicTextureArray.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\DynamicTextureArray.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\DynamicTextureAtlas.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\DynamicTextureAtlas.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilities.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilities.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\ScopedQueryHelper.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\ScopedQueryHelper.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\ScreenCapture.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\ScreenCapture.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\TextureUploader.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\TextureUploader.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\XXH128Hasher.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\XXH128Hasher.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\VertexPool.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\VertexPool.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\RenderStateCache.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\RenderStateCache.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\TextureUploaderD3D11.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\TextureUploaderD3D11.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilitiesD3D11.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilitiesD3D11.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilitiesD3D12.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilitiesD3D12.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilitiesVk.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilitiesVk.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\TextureUploaderD3D12_Vk.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\TextureUploaderD3D12_Vk.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\TextureUploaderGL.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\TextureUploaderGL.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilitiesGL.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\GraphicsUtilitiesGL.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\BufferSuballocator.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\BufferSuballocator.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\BytecodeCache.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\BytecodeCache.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\CommonlyUsedStates.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\CommonlyUsedStates.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\DynamicBuffer.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\DynamicBuffer.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\DynamicTextureArray.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\DynamicTextureArray.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\DynamicTextureAtlas.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\DynamicTextureAtlas.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\DurationQueryHelper.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\DurationQueryHelper.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\GraphicsUtilities.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\GraphicsUtilities.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\MapHelper.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\MapHelper.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\ScopedDebugGroup.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\ScopedDebugGroup.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\GPUCompletionAwaitQueue.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\GPUCompletionAwaitQueue.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\ScopedQueryHelper.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\ScopedQueryHelper.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\ScreenCapture.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\ScreenCapture.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\ShaderMacroHelper.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\ShaderMacroHelper.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\StreamingBuffer.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\StreamingBuffer.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\TextureUploader.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\TextureUploader.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\TextureUploaderBase.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\TextureUploaderBase.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\XXH128Hasher.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\XXH128Hasher.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\VertexPool.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\VertexPool.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\RenderStateCache.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\RenderStateCache.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\RenderStateCache.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\RenderStateCache.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\TextureUploaderD3D11.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\TextureUploaderD3D11.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\TextureUploaderD3D12_Vk.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\TextureUploaderD3D12_Vk.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\interface\TextureUploaderGL.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\TextureUploaderGL.hpp">
       <Filter>interface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentCore\Graphics\GraphicsTools\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="interface">
-      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+      <UniqueIdentifier>{44D225D2-E624-34AB-A967-D14ECE824400}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

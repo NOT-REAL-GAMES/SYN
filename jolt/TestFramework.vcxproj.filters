@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SYN\jolt\CMakeFiles\TestFramework.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Application\Application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Application\DebugUI.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Image\BlitSurface.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Image\LoadBMP.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Image\LoadTGA.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Image\Surface.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Image\ZoomImage.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Input\Keyboard.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Input\Mouse.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Math\Perlin.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\ConstantBuffer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\FatalErrorIfFailed.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\Font.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\PipelineState.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\RenderInstances.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\RenderPrimitive.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\Texture.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Renderer\DebugRendererImp.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIAnimation.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIAnimationSlide.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIButton.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UICheckBox.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIComboBox.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIElement.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIHorizontalStack.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIImage.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIManager.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UISlider.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIStaticText.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UITextButton.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\UI\UIVerticalStack.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Utils\CustomMemoryHook.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Utils\Log.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\jolt\TestFramework\Utils\ReadData.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Application\Application.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Application\DebugUI.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Application\EntryPoint.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Image\BlitSurface.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Image\LoadBMP.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Image\LoadTGA.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Image\Surface.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Image\ZoomImage.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Input\Keyboard.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Input\Mouse.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Math\Perlin.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\ConstantBuffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\CommandQueue.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\DescriptorHeap.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\FatalErrorIfFailed.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\Font.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\Frustum.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\PipelineState.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\RenderInstances.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\RenderPrimitive.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\Texture.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Renderer\DebugRendererImp.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\TestFramework.h" />
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIAnimation.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIAnimationSlide.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIButton.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UICheckBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIComboBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIElement.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIEventListener.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIHorizontalStack.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIImage.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UISlider.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIStaticText.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UITextButton.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UITexturedQuad.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\UI\UIVerticalStack.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Utils\CustomMemoryHook.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Utils\Log.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\TestFramework\Utils\ReadData.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\Assets\Shaders\VertexConstants.h">
+      <Filter>Assets\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\CMakeFiles\TestFramework.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\CMakeFiles\TestFramework.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\jolt\CMakeFiles\TestFramework.dir\Distribution\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\jolt\Build\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\FontVertexShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\LineVertexShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\TriangleDepthVertexShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\TriangleVertexShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\UIVertexShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\FontPixelShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\LinePixelShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\TriangleDepthPixelShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\TrianglePixelShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\UIPixelShader.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+    <FXCompile Include="C:\SYN\jolt\Assets\Shaders\UIPixelShaderUntextured.hlsl">
+      <Filter>Assets\Shaders</Filter>
+    </FXCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\SYN\jolt\TestFramework\TestFramework.cmake" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{DBAAA755-D12C-3563-9F5C-76967AE2156F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{2B1082D8-D58B-32A5-97BE-6C820E531F64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shaders">
+      <UniqueIdentifier>{43EE2894-FABE-36A4-9CF7-D5B6E6DDD951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image">
+      <UniqueIdentifier>{0C75EB44-916E-3394-B538-192DA466E798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{69B39C9B-3DF4-3A8C-BF52-691B8C8DE5B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{7415CCC0-285F-3B34-A25A-0FB4C1EE9477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{DF902760-2287-3584-8CBD-A5FEF9EF81EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{D51ABD22-5C13-33A1-BF05-D13A40BCB0AA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E6BA38D9-A2A6-3B2D-B6A7-CDE6117F272D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{1B4E239E-D509-326F-8CCB-BA4AB45DE5CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{E99C22F7-63C7-345C-8235-D9152677856D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

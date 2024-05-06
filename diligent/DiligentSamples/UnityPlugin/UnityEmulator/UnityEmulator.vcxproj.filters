@@ -1,90 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsEmulator.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsEmulator.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\DiligentGraphicsAdapterD3D11.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\DiligentGraphicsAdapterD3D11.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsD3D11Emulator.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsD3D11Emulator.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\DiligentGraphicsAdapterD3D12.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\DiligentGraphicsAdapterD3D12.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsD3D12Emulator.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsD3D12Emulator.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsGLCoreES_Emulator.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsGLCoreES_Emulator.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\DiligentGraphicsAdapterGL.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\DiligentGraphicsAdapterGL.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsGLCore_Impl.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsGLCore_Impl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\Windows\UnityAppWin32.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\Windows\UnityAppWin32.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityAppBase.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityAppBase.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsD3D11Impl.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsD3D11Impl.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsD3D12Impl.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsD3D12Impl.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\DiligentGraphicsAdapter.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\DiligentGraphicsAdapter.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\ResourceStateTransitionHandler.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\ResourceStateTransitionHandler.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityGraphicsEmulator.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityGraphicsEmulator.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\UnitySceneBase.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\UnitySceneBase.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\DiligentGraphicsAdapterD3D11.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\DiligentGraphicsAdapterD3D11.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityGraphicsD3D11Emulator.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityGraphicsD3D11Emulator.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\DiligentGraphicsAdapterD3D12.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\DiligentGraphicsAdapterD3D12.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityGraphicsD3D12Emulator.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityGraphicsD3D12Emulator.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityGraphicsGLCoreES_Emulator.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityGraphicsGLCoreES_Emulator.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\DiligentGraphicsAdapterGL.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\DiligentGraphicsAdapterGL.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsGLCore_Impl.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\src\UnityGraphicsGLCore_Impl.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityAppBase.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\include\UnityAppBase.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentSamples\UnityPlugin\UnityEmulator\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\UnityPlugin\UnityEmulator\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{75B2B387-C2EC-382F-B8F7-7EB49DEEC53B}</UniqueIdentifier>
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{E46B93D3-1E2D-3185-87D9-D92F1F260252}</UniqueIdentifier>
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

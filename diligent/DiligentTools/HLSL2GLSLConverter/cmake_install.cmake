@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/HLSL2GLSLConverter
+# Install script for directory: C:/SYN/diligent/DiligentTools/HLSL2GLSLConverter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,13 +34,13 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/Debug" TYPE EXECUTABLE FILES "C:/SYN/DiligentTools/HLSL2GLSLConverter/Debug/HLSL2GLSLConverter.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/Debug" TYPE EXECUTABLE FILES "C:/SYN/diligent/DiligentTools/HLSL2GLSLConverter/Debug/HLSL2GLSLConverter.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/Release" TYPE EXECUTABLE FILES "C:/SYN/DiligentTools/HLSL2GLSLConverter/Release/HLSL2GLSLConverter.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/Release" TYPE EXECUTABLE FILES "C:/SYN/diligent/DiligentTools/HLSL2GLSLConverter/Release/HLSL2GLSLConverter.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/MinSizeRel" TYPE EXECUTABLE FILES "C:/SYN/DiligentTools/HLSL2GLSLConverter/MinSizeRel/HLSL2GLSLConverter.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/MinSizeRel" TYPE EXECUTABLE FILES "C:/SYN/diligent/DiligentTools/HLSL2GLSLConverter/MinSizeRel/HLSL2GLSLConverter.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/RelWithDebInfo" TYPE EXECUTABLE FILES "C:/SYN/DiligentTools/HLSL2GLSLConverter/RelWithDebInfo/HLSL2GLSLConverter.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/RelWithDebInfo" TYPE EXECUTABLE FILES "C:/SYN/diligent/DiligentTools/HLSL2GLSLConverter/RelWithDebInfo/HLSL2GLSLConverter.exe")
   endif()
 endif()
 

@@ -1,0 +1,57 @@
+version: '2.5.{build}'
+
+# branches to build
+branches:
+  # whitelist
+  only:
+    - master
+
+image:
+- Visual Studio 2019
+
+environment: 
+  matrix:
+    # Win32/x64/Debug
+    - platform: x64
+      configuration: Debug
+      cmake_args: -D DILIGENT_BUILD_CORE_TESTS=TRUE -D DILIGENT_BUILD_TOOLS_TESTS=TRUE
+      platform_name: Windows
+
+    # Win32/x64/RelWithDebInfo
+    - platform: x64
+      configuration: RelWithDebInfo
+      cmake_args:
+      platform_name: Windows
+
+# clone directory
+clone_folder: c:\projects\diligentengine
+
+install:
+  # clone submodules
+  - git submodule update --init --recursive
+  - DiligentCore\BuildTools\Scripts\appveyor\install.bat
+ 
+before_build:
+  - 'cd %APPVEYOR_BUILD_FOLDER%\DiligentCore\BuildTools\FormatValidation'
+  - validate_format_win.bat
+  - 'cd %APPVEYOR_BUILD_FOLDER%\DiligentTools\BuildTools\FormatValidation'
+  - validate_format_win.bat
+  - 'cd %APPVEYOR_BUILD_FOLDER%\DiligentFX\BuildTools\FormatValidation'
+  - validate_format_win.bat
+  - 'cd %APPVEYOR_BUILD_FOLDER%\DiligentSamples\BuildTools\FormatValidation'
+  - validate_format_win.bat
+  - 'cd %APPVEYOR_BUILD_FOLDER%'
+  - echo %PLATFORM%
+  - echo.%cmake_args%
+  - cmake %cmake_args% -S . -B ./build -G "Visual Studio 16 2019" -A %PLATFORM%
+  - nuget restore C:\projects\diligentengine\build\DiligentEngine.sln
+
+build:
+  project: '%APPVEYOR_BUILD_FOLDER%\build\DiligentEngine.sln'
+  verbosity: minimal
+  parallel: true
+
+test_script:
+  - 'if "%configuration%"=="Debug" (%APPVEYOR_BUILD_FOLDER%\DiligentCore\BuildTools\Scripts\appveyor\run_tests.bat %APPVEYOR_BUILD_FOLDER%\build\DiligentCore %APPVEYOR_BUILD_FOLDER%\DiligentCore\Tests\DiligentCoreTest\assets %APPVEYOR_BUILD_FOLDER%\DiligentCore\Tests\DiligentCoreAPITest\assets)'
+  - 'cd %APPVEYOR_BUILD_FOLDER%\DiligentTools\Tests\DiligentToolsTest\assets'
+  - 'if "%configuration%"=="Debug" (%APPVEYOR_BUILD_FOLDER%\DiligentTools\BuildTools\Scripts\appveyor\run_tests.bat %APPVEYOR_BUILD_FOLDER%\build\DiligentTools)'

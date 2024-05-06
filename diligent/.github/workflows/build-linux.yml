@@ -1,0 +1,170 @@
+name: Linux build
+
+on: [push, pull_request]
+
+jobs:
+  precheks:
+    runs-on: ubuntu-20.04
+    name: Linux -> Pre-checks
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v3
+      with:
+        submodules: true # only need direct submodules
+
+    - name: DiligentCore format validation
+      working-directory: ${{github.workspace}}/DiligentCore/BuildTools/FormatValidation
+      shell: bash
+      run: ./validate_format_linux.sh
+
+    - name: DiligentTools format validation
+      working-directory: ${{github.workspace}}/DiligentTools/BuildTools/FormatValidation
+      shell: bash
+      run: ./validate_format_linux.sh
+
+    - name: DiligentFX format validation
+      working-directory: ${{github.workspace}}/DiligentFX/BuildTools/FormatValidation
+      shell: bash
+      run: ./validate_format_linux.sh
+
+    - name: DiligentSamples format validation
+      working-directory: ${{github.workspace}}/DiligentSamples/BuildTools/FormatValidation
+      shell: bash
+      run: ./validate_format_linux.sh
+
+    - name: Codespell
+      uses: codespell-project/actions-codespell@master
+      with:
+        check_filenames: true
+        ignore_words_list: lod
+        skip: ./.git,./DiligentCore,./DiligentTools,./DiligentFX,./DiligentSamples
+        path: .
+
+
+  build:
+    needs:   precheks
+    runs-on: ubuntu-20.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        name:       ["GCC", "Clang"]
+        build_type: ["Debug", "Release"]
+        cmake_args: ["-DDILIGENT_BUILD_TESTS=ON"]
+        include:
+          - name:            "GCC"
+            cmake_generator: "Unix Makefiles"
+            cc:              "gcc-9"
+            cxx:             "g++-9"
+
+          - name:            "Clang"
+            cmake_generator: "Ninja"
+            cc:              "clang-12"
+            cxx:             "clang++-12"
+
+    name: Linux -> ${{ matrix.name }}-x64, ${{ matrix.build_type }}
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Clone Test Data
+      if:   success()
+      uses: actions/checkout@v3
+      with:
+        repository: DiligentGraphics/DiligentTestData
+        path:       DiligentTestData
+
+    - name: Set up build environment
+      if:   success()
+      uses: DiligentGraphics/github-action/setup-build-env@v1
+      with:
+        platform:        Linux
+        cmake-generator: ${{ matrix.cmake_generator }}
+
+    - name: Configure CMake
+      if:   success()
+      uses: DiligentGraphics/github-action/configure-cmake@v1
+      with:
+        cc:         ${{ matrix.cc }}
+        cxx:        ${{ matrix.cxx }}
+        generator:  ${{ matrix.cmake_generator }}
+        build-type: ${{ matrix.build_type }}
+        cmake-args: ${{ matrix.cmake_args }}
+
+    - name: Build
+      id:   build
+      if:   success()
+      uses: DiligentGraphics/github-action/build@v1
+
+      # Core tests
+    - name: DiligentCoreTest
+      if:   success()
+      uses: DiligentGraphics/github-action/run-core-tests@v1
+
+    - name: DiligentCoreAPITest VK
+      if:   ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-core-gpu-tests@v1
+      with:
+        mode: vk_sw
+        args: --gtest_filter=-DrawCommandTest.DrawIndexedInstancedIndirect_FirstInstance_BaseVertex_FirstIndex_VBOffset_IBOffset_InstOffset:TextureCreation/TextureCreationTest.CreateTexture/TEX_FORMAT_BGRA8_TYPELESS
+
+    - name: DiligentCoreAPITest GL
+      if: ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-core-gpu-tests@v1
+      with:
+        mode: gl
+        args: "--gtest_filter=-DrawCommandTest.MultiDrawIndirectCount:DrawCommandTest.MultiDrawIndexedIndirectCount:PipelineResourceSignatureTest.StructuredBuffers"
+
+    - name: DiligentCoreAPITest GL with Non-Separable Programs
+      if: ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-core-gpu-tests@v1
+      with:
+        mode: gl
+        non-separable-progs: true
+        args: "--gtest_filter=-DrawCommandTest.MultiDrawIndirectCount:DrawCommandTest.MultiDrawIndexedIndirectCount:PipelineResourceSignatureTest.StructuredBuffers:DrawCommandTest.StructuredBufferArray"
+
+      # Tools tests
+    - name: DiligentToolsTest
+      if:   ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-tools-tests@v1
+
+    - name: DiligentToolsGPUTest VK
+      if:   ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-tools-gpu-tests@v1
+      with:
+        mode: vk_sw
+
+    - name: DiligentToolsGPUTest GL
+      if:   ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-tools-gpu-tests@v1
+      with:
+        mode: gl
+
+    - name: HLSL2GLSLConverterTest
+      if:   ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-hlsl2glsl-converter-test@v1
+
+
+      # Samples tests
+    - name: Sample Tests Vk
+      if:   ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-sample-tests@v1
+      with:
+        mode: "vk_sw"
+
+    - name: Sample Tests GL
+      if:    ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-sample-tests@v1
+      with:
+        mode: "gl"
+
+    - name: Sample Tests GL with Non-Separable Programs
+      if:    ${{ success() || failure() && steps.build.outcome == 'success' }}
+      uses: DiligentGraphics/github-action/run-sample-tests@v1
+      with:
+        mode:                "gl"
+        non-separable-progs: "true"

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rbwld/Downloads/DiligentEngine_v2.5.4/DiligentEngine_v2.5.4/DiligentTools/RenderStatePackager
+# Install script for directory: C:/SYN/diligent/DiligentTools/RenderStatePackager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/SYN/install")
+  set(CMAKE_INSTALL_PREFIX "C:/SYN/diligent/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,13 +34,13 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/Debug" TYPE EXECUTABLE OPTIONAL FILES "C:/SYN/DiligentTools/RenderStatePackager/Debug/Diligent-RenderStatePackager.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/Debug" TYPE EXECUTABLE OPTIONAL FILES "C:/SYN/diligent/DiligentTools/RenderStatePackager/Debug/Diligent-RenderStatePackager.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/Release" TYPE EXECUTABLE OPTIONAL FILES "C:/SYN/DiligentTools/RenderStatePackager/Release/Diligent-RenderStatePackager.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/Release" TYPE EXECUTABLE OPTIONAL FILES "C:/SYN/diligent/DiligentTools/RenderStatePackager/Release/Diligent-RenderStatePackager.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/MinSizeRel" TYPE EXECUTABLE OPTIONAL FILES "C:/SYN/DiligentTools/RenderStatePackager/MinSizeRel/Diligent-RenderStatePackager.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/MinSizeRel" TYPE EXECUTABLE OPTIONAL FILES "C:/SYN/diligent/DiligentTools/RenderStatePackager/MinSizeRel/Diligent-RenderStatePackager.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/RelWithDebInfo" TYPE EXECUTABLE OPTIONAL FILES "C:/SYN/DiligentTools/RenderStatePackager/RelWithDebInfo/Diligent-RenderStatePackager.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/DiligentTools/RelWithDebInfo" TYPE EXECUTABLE OPTIONAL FILES "C:/SYN/diligent/DiligentTools/RenderStatePackager/RelWithDebInfo/Diligent-RenderStatePackager.exe")
   endif()
 endif()
 

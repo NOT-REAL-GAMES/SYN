@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\src\GLTFLoader.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\AssetLoader\src\GLTFLoader.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\src\GLTFBuilder.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\AssetLoader\src\GLTFBuilder.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\src\DXSDKMeshLoader.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\AssetLoader\src\DXSDKMeshLoader.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\src\GLTFResourceManager.cpp">
+    <ClCompile Include="C:\SYN\diligent\DiligentTools\AssetLoader\src\GLTFResourceManager.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\interface\GLTFLoader.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\AssetLoader\interface\GLTFLoader.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\interface\GLTFBuilder.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\AssetLoader\interface\GLTFBuilder.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\interface\DXSDKMeshLoader.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\AssetLoader\interface\DXSDKMeshLoader.hpp">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\interface\GLTFResourceManager.hpp">
+    <ClInclude Include="C:\SYN\diligent\DiligentTools\AssetLoader\interface\GLTFResourceManager.hpp">
       <Filter>interface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\rbwld\Downloads\DiligentEngine_v2.5.4\DiligentEngine_v2.5.4\DiligentTools\AssetLoader\CMakeLists.txt" />
+    <CustomBuild Include="C:\SYN\diligent\DiligentTools\AssetLoader\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="interface">
-      <UniqueIdentifier>{F6033947-C1B3-3533-9EA5-1B589AF9973B}</UniqueIdentifier>
+      <UniqueIdentifier>{44D225D2-E624-34AB-A967-D14ECE824400}</UniqueIdentifier>
     </Filter>
     <Filter Include="source">
-      <UniqueIdentifier>{B2E819CD-A4D2-3287-9F2D-87AD0F3B7D35}</UniqueIdentifier>
+      <UniqueIdentifier>{796AFCA7-68F5-366B-8AAE-2D38E089B051}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
