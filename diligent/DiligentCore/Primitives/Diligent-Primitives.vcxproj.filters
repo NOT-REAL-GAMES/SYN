@@ -30,6 +30,9 @@
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\DefineInterfaceHelperMacros.h">
       <Filter>interface</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\DefineRefMacro.h">
+      <Filter>interface</Filter>
+    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\FlagEnum.h">
       <Filter>interface</Filter>
     </ClInclude>
@@ -58,6 +61,9 @@
       <Filter>interface</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\UndefInterfaceHelperMacros.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\UndefRefMacro.h">
       <Filter>interface</Filter>
     </ClInclude>
   </ItemGroup>

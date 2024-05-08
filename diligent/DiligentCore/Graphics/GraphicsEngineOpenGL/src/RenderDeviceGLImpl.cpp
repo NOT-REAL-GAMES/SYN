@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -245,6 +245,15 @@ RenderDeviceGLImpl::RenderDeviceGLImpl(IReferenceCounters*       pRefCounters,
             LOG_ERROR_MESSAGE("Failed to enable primitive restart");
         }
     }
+
+    {
+        // In all APIs except for OpenGL, the first primitive vertex is the provoking vertex
+        // for flat shading. In OpenGL, the last vertex is the provoking vertex by default.
+        // Make the behavior consistent across all APIs
+        glProvokingVertex(GL_FIRST_VERTEX_CONVENTION);
+        if (glGetError() != GL_NO_ERROR)
+            LOG_ERROR_MESSAGE("Failed to set provoking vertex convention to GL_FIRST_VERTEX_CONVENTION");
+    }
 #endif
 
     InitAdapterInfo();
@@ -271,6 +280,37 @@ RenderDeviceGLImpl::RenderDeviceGLImpl(IReferenceCounters*       pRefCounters,
     {
         m_DeviceInfo.NDC = NDCAttribs{-1.0f, 0.5f, 0.5f};
     }
+
+    if (m_GLCaps.FramebufferSRGB)
+    {
+        // When GL_FRAMEBUFFER_SRGB is enabled, and if the destination image is in the sRGB colorspace
+        // then OpenGL will assume the shader's output is in the linear RGB colorspace. It will therefore
+        // convert the output from linear RGB to sRGB.
+        // Any writes to images that are not in the sRGB format should not be affected.
+        // Thus this setting should be just set once and left that way
+        glEnable(GL_FRAMEBUFFER_SRGB);
+        if (glGetError() != GL_NO_ERROR)
+        {
+            LOG_ERROR_MESSAGE("Failed to enable SRGB framebuffers");
+            m_GLCaps.FramebufferSRGB = false;
+        }
+    }
+
+#if PLATFORM_WIN32 || PLATFORM_LINUX || PLATFORM_MACOS
+    if (m_GLCaps.SemalessCubemaps)
+    {
+        // Under the standard filtering rules for cubemaps, filtering does not work across faces of the cubemap.
+        // This results in a seam across the faces of a cubemap. This was a hardware limitation in the past, but
+        // modern hardware is capable of interpolating across a cube face boundary.
+        // GL_TEXTURE_CUBE_MAP_SEAMLESS is not defined in OpenGLES
+        glEnable(GL_TEXTURE_CUBE_MAP_SEAMLESS);
+        if (glGetError() != GL_NO_ERROR)
+        {
+            LOG_ERROR_MESSAGE("Failed to enable seamless cubemap filtering");
+            m_GLCaps.SemalessCubemaps = false;
+        }
+    }
+#endif
 
     // get device limits
     {
@@ -308,11 +348,6 @@ RenderDeviceGLImpl::~RenderDeviceGLImpl()
 }
 
 IMPLEMENT_QUERY_INTERFACE(RenderDeviceGLImpl, IID_RenderDeviceGL, TRenderDeviceBase)
-
-void RenderDeviceGLImpl::InitTexRegionRender()
-{
-    m_pTexRegionRender = std::make_unique<TexRegionRender>(this);
-}
 
 void RenderDeviceGLImpl::CreateBuffer(const BufferDesc& BuffDesc, const BufferData* pBuffData, IBuffer** ppBuffer, bool bIsDeviceInternal)
 {
@@ -812,6 +847,8 @@ void RenderDeviceGLImpl::InitAdapterInfo()
             ENABLE_FEATURE(ResourceBuffer8BitAccess,      CheckExtension("GL_EXT_shader_8bit_storage"));
             ENABLE_FEATURE(UniformBuffer8BitAccess,       CheckExtension("GL_EXT_shader_8bit_storage"));
             ENABLE_FEATURE(TextureComponentSwizzle,       IsGL46OrAbove || CheckExtension("GL_ARB_texture_swizzle"));
+            ENABLE_FEATURE(TextureSubresourceViews,       IsGL43OrAbove || CheckExtension("GL_ARB_texture_view"));
+            ENABLE_FEATURE(NativeMultiDraw,               IsGL46OrAbove || CheckExtension("GL_ARB_shader_draw_parameters")); // Requirements for gl_DrawID
             // clang-format on
 
             TexProps.MaxTexture1DDimension      = MaxTextureSize;
@@ -827,10 +864,20 @@ void RenderDeviceGLImpl::InitAdapterInfo()
             TexProps.TextureView2DOn3DSupported = TexProps.TextureViewSupported;
             ASSERT_SIZEOF(TexProps, 32, "Did you add a new member to TextureProperites? Please initialize it here.");
 
-            SamProps.BorderSamplingModeSupported   = True;
-            SamProps.AnisotropicFilteringSupported = IsGL46OrAbove || CheckExtension("GL_ARB_texture_filter_anisotropic");
-            SamProps.LODBiasSupported              = True;
+            SamProps.BorderSamplingModeSupported = True;
+            if (IsGL46OrAbove || CheckExtension("GL_ARB_texture_filter_anisotropic"))
+            {
+                GLint MaxAnisotropy = 0;
+                glGetIntegerv(GL_MAX_TEXTURE_MAX_ANISOTROPY, &MaxAnisotropy);
+                CHECK_GL_ERROR("glGetIntegerv(GL_MAX_TEXTURE_MAX_ANISOTROPY)");
+                SamProps.MaxAnisotropy = static_cast<Uint8>(MaxAnisotropy);
+            }
+
+            SamProps.LODBiasSupported = True;
             ASSERT_SIZEOF(SamProps, 3, "Did you add a new member to SamplerProperites? Please initialize it here.");
+
+            m_GLCaps.FramebufferSRGB  = IsGL40OrAbove || CheckExtension("GL_ARB_framebuffer_sRGB");
+            m_GLCaps.SemalessCubemaps = IsGL40OrAbove || CheckExtension("GL_ARB_seamless_cube_map");
         }
         else
         {
@@ -879,6 +926,8 @@ void RenderDeviceGLImpl::InitAdapterInfo()
             ENABLE_FEATURE(ResourceBuffer8BitAccess,  strstr(Extensions, "shader_8bit_storage"));
             ENABLE_FEATURE(UniformBuffer8BitAccess,   strstr(Extensions, "shader_8bit_storage"));
             ENABLE_FEATURE(TextureComponentSwizzle,   true);
+            ENABLE_FEATURE(TextureSubresourceViews,   strstr(Extensions, "texture_view"));
+            ENABLE_FEATURE(NativeMultiDraw,           strstr(Extensions, "multi_draw"));
             // clang-format on
 
             TexProps.MaxTexture1DDimension      = 0; // Not supported in GLES 3.2
@@ -894,10 +943,19 @@ void RenderDeviceGLImpl::InitAdapterInfo()
             TexProps.TextureView2DOn3DSupported = TexProps.TextureViewSupported;
             ASSERT_SIZEOF(TexProps, 32, "Did you add a new member to TextureProperites? Please initialize it here.");
 
-            SamProps.BorderSamplingModeSupported   = GL_TEXTURE_BORDER_COLOR && (IsGLES32OrAbove || strstr(Extensions, "texture_border_clamp"));
-            SamProps.AnisotropicFilteringSupported = GL_TEXTURE_MAX_ANISOTROPY_EXT && strstr(Extensions, "texture_filter_anisotropic");
-            SamProps.LODBiasSupported              = GL_TEXTURE_LOD_BIAS && IsGLES31OrAbove;
+            SamProps.BorderSamplingModeSupported = GL_TEXTURE_BORDER_COLOR && (IsGLES32OrAbove || strstr(Extensions, "texture_border_clamp"));
+            if (strstr(Extensions, "texture_filter_anisotropic"))
+            {
+                GLint MaxAnisotropy = 0;
+                glGetIntegerv(GL_MAX_TEXTURE_MAX_ANISOTROPY, &MaxAnisotropy);
+                CHECK_GL_ERROR("glGetIntegerv(GL_MAX_TEXTURE_MAX_ANISOTROPY)");
+                SamProps.MaxAnisotropy = static_cast<Uint8>(MaxAnisotropy);
+            }
+            SamProps.LODBiasSupported = GL_TEXTURE_LOD_BIAS && IsGLES31OrAbove;
             ASSERT_SIZEOF(SamProps, 3, "Did you add a new member to SamplerProperites? Please initialize it here.");
+
+            m_GLCaps.FramebufferSRGB  = strstr(Extensions, "sRGB_write_control");
+            m_GLCaps.SemalessCubemaps = false;
         }
 
 #ifdef GL_KHR_shader_subgroup
@@ -1038,7 +1096,7 @@ void RenderDeviceGLImpl::InitAdapterInfo()
         m_AdapterInfo.Queues[0].TextureCopyGranularity[2] = 1;
     }
 
-    ASSERT_SIZEOF(DeviceFeatures, 41, "Did you add a new feature to DeviceFeatures? Please handle its status here.");
+    ASSERT_SIZEOF(DeviceFeatures, 43, "Did you add a new feature to DeviceFeatures? Please handle its status here.");
 }
 
 void RenderDeviceGLImpl::FlagSupportedTexFormats()
@@ -1166,7 +1224,7 @@ void RenderDeviceGLImpl::FlagSupportedTexFormats()
     FLAG_FORMAT(TEX_FORMAT_BC7_UNORM_SRGB,             bBPTC);
     // clang-format on
 
-#ifdef DILIGENT_DEBUG
+#ifdef DILIGENT_DEVELOPMENT
     const bool bGL43OrAbove = DeviceInfo.Type == RENDER_DEVICE_TYPE_GL && DeviceInfo.APIVersion >= Version{4, 3};
 
     constexpr int      TestTextureDim = 8;
@@ -1235,15 +1293,15 @@ void RenderDeviceGLImpl::FlagSupportedTexFormats()
 
                 if (glGetError() != GL_NO_ERROR)
                 {
-                    LOG_WARNING_MESSAGE("Failed to upload data to a test ", TestTextureDim, "x", TestTextureDim, " ", FmtInfo->Name, " texture. "
-                                                                                                                                     "This likely indicates that the format is not supported despite being reported so by the device.");
+                    LOG_WARNING_MESSAGE("Failed to upload data to a test ", TestTextureDim, "x", TestTextureDim, " ", FmtInfo->Name,
+                                        " texture. This likely indicates that the format is not supported despite being reported so by the device.");
                     FmtInfo->Supported = false;
                 }
             }
             else
             {
-                LOG_WARNING_MESSAGE("Failed to allocate storage for a test ", TestTextureDim, "x", TestTextureDim, " ", FmtInfo->Name, " texture. "
-                                                                                                                                       "This likely indicates that the format is not supported despite being reported so by the device.");
+                LOG_WARNING_MESSAGE("Failed to allocate storage for a test ", TestTextureDim, "x", TestTextureDim, " ", FmtInfo->Name,
+                                    " texture. This likely indicates that the format is not supported despite being reported so by the device.");
                 FmtInfo->Supported = false;
             }
             glBindTexture(GL_TEXTURE_2D, 0);
@@ -1258,7 +1316,7 @@ bool CreateTestGLTexture(GLContextState& GlCtxState, GLenum BindTarget, const GL
     GlCtxState.BindTexture(-1, BindTarget, GLTexObj);
     CreateFunc();
     bool bSuccess = glGetError() == GL_NO_ERROR;
-    GlCtxState.BindTexture(-1, BindTarget, GLObjectWrappers::GLTextureObj(false));
+    GlCtxState.BindTexture(-1, BindTarget, GLObjectWrappers::GLTextureObj{false});
     return bSuccess;
 }
 
@@ -1290,6 +1348,9 @@ void RenderDeviceGLImpl::TestTextureFormat(TEXTURE_FORMAT TexFormat)
 
     // Disable debug messages - errors are expected
     m_ShowDebugGLOutput = 0;
+
+    // Clear error code
+    glGetError();
 
     const auto& TexProps = GetAdapterInfo().Texture;
     // Create test texture 1D
@@ -1402,7 +1463,7 @@ void RenderDeviceGLImpl::TestTextureFormat(TEXTURE_FORMAT TexFormat)
                     glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, ColorTex, 0);
                     CHECK_GL_ERROR("Failed to bind dummy render target to framebuffer");
 
-                    static const GLenum DrawBuffers[] = {GL_COLOR_ATTACHMENT0};
+                    static constexpr GLenum DrawBuffers[] = {GL_COLOR_ATTACHMENT0};
                     glDrawBuffers(_countof(DrawBuffers), DrawBuffers);
                     CHECK_GL_ERROR("Failed to set draw buffers via glDrawBuffers()");
 
@@ -1416,7 +1477,7 @@ void RenderDeviceGLImpl::TestTextureFormat(TEXTURE_FORMAT TexFormat)
                 glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, TestGLTex2D, 0);
                 if (glGetError() == GL_NO_ERROR)
                 {
-                    static const GLenum DrawBuffers[] = {GL_COLOR_ATTACHMENT0};
+                    static constexpr GLenum DrawBuffers[] = {GL_COLOR_ATTACHMENT0};
                     glDrawBuffers(_countof(DrawBuffers), DrawBuffers);
                     CHECK_GL_ERROR("Failed to set draw buffers via glDrawBuffers()");
 

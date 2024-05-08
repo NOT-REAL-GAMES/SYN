@@ -18,13 +18,13 @@ events:
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler:  
-      Build flags: 
+      Build flags: /DWIN32;/D_WINDOWS;/W3
       Id flags:  
       
       The output was:
       0
       MSBuild version 17.9.8+b34f75857 for .NET Framework
-      Build started 5/6/2024 4:34:55 PM.
+      Build started 5/6/2024 8:31:23 PM.
       
       Project "C:\\SYN\\diligent\\CMakeFiles\\3.28.0-rc5\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.91
+      Time Elapsed 00:00:00.87
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -73,13 +73,13 @@ events:
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
-      Build flags: 
+      Build flags: /DWIN32;/D_WINDOWS;/W3;/GR;/EHsc
       Id flags:  
       
       The output was:
       0
       MSBuild version 17.9.8+b34f75857 for .NET Framework
-      Build started 5/6/2024 4:34:56 PM.
+      Build started 5/6/2024 8:31:24 PM.
       
       Project "C:\\SYN\\diligent\\CMakeFiles\\3.28.0-rc5\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.62
+      Time Elapsed 00:00:00.64
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-fq23nr"
-      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-fq23nr"
+      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-qjjak5"
+      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-qjjak5"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -136,40 +136,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-fq23nr'
+        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-qjjak5'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6c724.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6f5bc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 5/6/2024 4:34:57 PM.
+        Build started 5/6/2024 8:31:25 PM.
         
-        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-fq23nr\\cmTC_6c724.vcxproj" on node 1 (default targets).
+        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-qjjak5\\cmTC_6f5bc.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_6c724.dir\\Debug\\".
+          Creating directory "cmTC_6f5bc.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-fq23nr\\Debug\\".
-          Creating directory "cmTC_6c724.dir\\Debug\\cmTC_6c724.tlog\\".
+          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-qjjak5\\Debug\\".
+          Creating directory "cmTC_6f5bc.dir\\Debug\\cmTC_6f5bc.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_6c724.dir\\Debug\\cmTC_6c724.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_6c724.dir\\Debug\\cmTC_6c724.tlog\\unsuccessfulbuild".
+          Creating "cmTC_6f5bc.dir\\Debug\\cmTC_6f5bc.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_6f5bc.dir\\Debug\\cmTC_6f5bc.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6c724.dir\\Debug\\\\" /Fd"cmTC_6c724.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6f5bc.dir\\Debug\\\\" /Fd"cmTC_6f5bc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6c724.dir\\Debug\\\\" /Fd"cmTC_6c724.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6f5bc.dir\\Debug\\\\" /Fd"cmTC_6f5bc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-fq23nr\\Debug\\cmTC_6c724.exe" /INCREMENTAL /ILK:"cmTC_6c724.dir\\Debug\\cmTC_6c724.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-fq23nr/Debug/cmTC_6c724.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-fq23nr/Debug/cmTC_6c724.lib" /MACHINE:X64  /machine:x64 cmTC_6c724.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_6c724.vcxproj -> C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-fq23nr\\Debug\\cmTC_6c724.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-qjjak5\\Debug\\cmTC_6f5bc.exe" /INCREMENTAL /ILK:"cmTC_6f5bc.dir\\Debug\\cmTC_6f5bc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-qjjak5/Debug/cmTC_6f5bc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-qjjak5/Debug/cmTC_6f5bc.lib" /MACHINE:X64  /machine:x64 cmTC_6f5bc.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_6f5bc.vcxproj -> C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-qjjak5\\Debug\\cmTC_6f5bc.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_6c724.dir\\Debug\\cmTC_6c724.tlog\\unsuccessfulbuild".
-          Touching "cmTC_6c724.dir\\Debug\\cmTC_6c724.tlog\\cmTC_6c724.lastbuildstate".
-        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-fq23nr\\cmTC_6c724.vcxproj" (default targets).
+          Deleting file "cmTC_6f5bc.dir\\Debug\\cmTC_6f5bc.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6f5bc.dir\\Debug\\cmTC_6f5bc.tlog\\cmTC_6f5bc.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-qjjak5\\cmTC_6f5bc.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.60
+        Time Elapsed 00:00:00.66
         
       exitCode: 0
   -
@@ -181,8 +181,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-0uzpit"
-      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-0uzpit"
+      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-ocm1zx"
+      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-ocm1zx"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -190,40 +190,193 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-0uzpit'
+        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-ocm1zx'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ac572.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ac530.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 5/6/2024 4:34:58 PM.
+        Build started 5/6/2024 8:31:26 PM.
         
-        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-0uzpit\\cmTC_ac572.vcxproj" on node 1 (default targets).
+        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-ocm1zx\\cmTC_ac530.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_ac572.dir\\Debug\\".
+          Creating directory "cmTC_ac530.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-0uzpit\\Debug\\".
-          Creating directory "cmTC_ac572.dir\\Debug\\cmTC_ac572.tlog\\".
+          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-ocm1zx\\Debug\\".
+          Creating directory "cmTC_ac530.dir\\Debug\\cmTC_ac530.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_ac572.dir\\Debug\\cmTC_ac572.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_ac572.dir\\Debug\\cmTC_ac572.tlog\\unsuccessfulbuild".
+          Creating "cmTC_ac530.dir\\Debug\\cmTC_ac530.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ac530.dir\\Debug\\cmTC_ac530.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ac572.dir\\Debug\\\\" /Fd"cmTC_ac572.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ac530.dir\\Debug\\\\" /Fd"cmTC_ac530.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ac572.dir\\Debug\\\\" /Fd"cmTC_ac572.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ac530.dir\\Debug\\\\" /Fd"cmTC_ac530.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-0uzpit\\Debug\\cmTC_ac572.exe" /INCREMENTAL /ILK:"cmTC_ac572.dir\\Debug\\cmTC_ac572.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-0uzpit/Debug/cmTC_ac572.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-0uzpit/Debug/cmTC_ac572.lib" /MACHINE:X64  /machine:x64 cmTC_ac572.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_ac572.vcxproj -> C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-0uzpit\\Debug\\cmTC_ac572.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-ocm1zx\\Debug\\cmTC_ac530.exe" /INCREMENTAL /ILK:"cmTC_ac530.dir\\Debug\\cmTC_ac530.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-ocm1zx/Debug/cmTC_ac530.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-ocm1zx/Debug/cmTC_ac530.lib" /MACHINE:X64  /machine:x64 cmTC_ac530.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_ac530.vcxproj -> C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-ocm1zx\\Debug\\cmTC_ac530.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_ac572.dir\\Debug\\cmTC_ac572.tlog\\unsuccessfulbuild".
-          Touching "cmTC_ac572.dir\\Debug\\cmTC_ac572.tlog\\cmTC_ac572.lastbuildstate".
-        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-0uzpit\\cmTC_ac572.vcxproj" (default targets).
+          Deleting file "cmTC_ac530.dir\\Debug\\cmTC_ac530.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ac530.dir\\Debug\\cmTC_ac530.tlog\\cmTC_ac530.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-ocm1zx\\cmTC_ac530.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.62
+        Time Elapsed 00:00:00.63
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "DiligentCore/CMakeLists.txt:157 (try_compile)"
+    directories:
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_D3D11"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d70f9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.9.8+b34f75857 for .NET Framework
+        Build started 5/6/2024 8:31:26 PM.
+        
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_d70f9.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_d70f9.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_d70f9.dir\\Debug\\cmTC_d70f9.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_d70f9.dir\\Debug\\cmTC_d70f9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_d70f9.dir\\Debug\\cmTC_d70f9.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d70f9.dir\\Debug\\\\" /Fd"cmTC_d70f9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D11.cpp
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d70f9.dir\\Debug\\\\" /Fd"cmTC_d70f9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D11.cpp
+          CheckD3D11.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_d70f9.exe" /INCREMENTAL /ILK:"cmTC_d70f9.dir\\Debug\\cmTC_d70f9.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_d70f9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_d70f9.lib" /MACHINE:X64  /machine:x64 cmTC_d70f9.dir\\Debug\\CheckD3D11.obj
+          cmTC_d70f9.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_d70f9.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_d70f9.dir\\Debug\\cmTC_d70f9.tlog\\unsuccessfulbuild".
+          Touching "cmTC_d70f9.dir\\Debug\\cmTC_d70f9.tlog\\cmTC_d70f9.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_d70f9.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.93
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "DiligentCore/CMakeLists.txt:158 (try_compile)"
+    directories:
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_D3D12"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cc477.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.9.8+b34f75857 for .NET Framework
+        Build started 5/6/2024 8:31:28 PM.
+        
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_cc477.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_cc477.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_cc477.dir\\Debug\\cmTC_cc477.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_cc477.dir\\Debug\\cmTC_cc477.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_cc477.dir\\Debug\\cmTC_cc477.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_cc477.dir\\Debug\\\\" /Fd"cmTC_cc477.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D12.cpp
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_cc477.dir\\Debug\\\\" /Fd"cmTC_cc477.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D12.cpp
+          CheckD3D12.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_cc477.exe" /INCREMENTAL /ILK:"cmTC_cc477.dir\\Debug\\cmTC_cc477.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_cc477.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_cc477.lib" /MACHINE:X64  /machine:x64 cmTC_cc477.dir\\Debug\\CheckD3D12.obj
+          cmTC_cc477.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_cc477.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_cc477.dir\\Debug\\cmTC_cc477.tlog\\unsuccessfulbuild".
+          Touching "cmTC_cc477.dir\\Debug\\cmTC_cc477.tlog\\cmTC_cc477.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_cc477.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.90
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "DiligentCore/CMakeLists.txt:159 (try_compile)"
+    directories:
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_ATL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a2e30.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.9.8+b34f75857 for .NET Framework
+        Build started 5/6/2024 8:31:29 PM.
+        
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_a2e30.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_a2e30.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_a2e30.dir\\Debug\\cmTC_a2e30.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_a2e30.dir\\Debug\\cmTC_a2e30.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_a2e30.dir\\Debug\\cmTC_a2e30.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a2e30.dir\\Debug\\\\" /Fd"cmTC_a2e30.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckATL.cpp
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a2e30.dir\\Debug\\\\" /Fd"cmTC_a2e30.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckATL.cpp
+          CheckATL.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_a2e30.exe" /INCREMENTAL /ILK:"cmTC_a2e30.dir\\Debug\\cmTC_a2e30.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_a2e30.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_a2e30.lib" /MACHINE:X64  /machine:x64 cmTC_a2e30.dir\\Debug\\CheckATL.obj
+          cmTC_a2e30.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_a2e30.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_a2e30.dir\\Debug\\cmTC_a2e30.tlog\\unsuccessfulbuild".
+          Touching "cmTC_a2e30.dir\\Debug\\cmTC_a2e30.tlog\\cmTC_a2e30.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_a2e30.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.08
         
       exitCode: 0
   -
@@ -231,7 +384,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -244,7 +397,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple (clang|LLVM) version)":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -257,7 +410,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is Clang using "--version" did not match "(clang version)":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -270,7 +423,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is ARMClang using "--version" did not match "armclang":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -283,7 +436,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is OrangeC using "--version" did not match "occ \\(OrangeC\\) Version":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -296,7 +449,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is HP using "-V" did not match "HP C":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -308,7 +461,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is Intel using "--version" did not match "(ICC)":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -321,7 +474,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is IntelLLVM using "--version" did not match "(Intel[^
       ]+oneAPI)":
@@ -335,7 +488,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is SunPro using "-V" did not match "Sun C":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -347,7 +500,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is XL using "-qversion" did not match "XL C":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -360,7 +513,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
       - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:36 (project)"
+      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:29 (project)"
     message: |
       Checking whether the ASM compiler is MSVC using "-?" matched "Microsoft":
       Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
@@ -611,285 +764,318 @@ events:
       /sdl enable additional security features and warnings
       /options:strict unrecognized compiler options are an error
       
+...
+
+---
+events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:255 (check_c_source_compiles)"
-    checks:
-      - "Performing Test HAVE_LD_VERSION_SCRIPT"
+      - "DiligentCore/CMakeLists.txt:157 (try_compile)"
     directories:
-      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-dwgr5s"
-      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-dwgr5s"
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
     cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
-      variable: "HAVE_LD_VERSION_SCRIPT"
+      variable: "HAS_D3D11"
       cached: true
       stdout: |
-        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-dwgr5s'
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_67b2a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_deba3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 5/6/2024 4:35:02 PM.
+        Build started 5/6/2024 8:37:41 PM.
         
-        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-dwgr5s\\cmTC_67b2a.vcxproj" on node 1 (default targets).
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_deba3.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_67b2a.dir\\Debug\\".
+          Creating directory "cmTC_deba3.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-dwgr5s\\Debug\\".
-          Creating directory "cmTC_67b2a.dir\\Debug\\cmTC_67b2a.tlog\\".
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_deba3.dir\\Debug\\cmTC_deba3.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_67b2a.dir\\Debug\\cmTC_67b2a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_67b2a.dir\\Debug\\cmTC_67b2a.tlog\\unsuccessfulbuild".
+          Creating "cmTC_deba3.dir\\Debug\\cmTC_deba3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_deba3.dir\\Debug\\cmTC_deba3.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_LD_VERSION_SCRIPT /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67b2a.dir\\Debug\\\\" /Fd"cmTC_67b2a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  "-Wl,--version-script='C:/SYN/diligent/DiligentTools/ThirdParty/libpng/conftest.map'" "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-dwgr5s\\src.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_deba3.dir\\Debug\\\\" /Fd"cmTC_deba3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D11.cpp
           Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_LD_VERSION_SCRIPT /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67b2a.dir\\Debug\\\\" /Fd"cmTC_67b2a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  "-Wl,--version-script='C:/SYN/diligent/DiligentTools/ThirdParty/libpng/conftest.map'" "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-dwgr5s\\src.c"
-        cl : command line  error D8021: invalid numeric argument '/Wl,--version-script='C:/SYN/diligent/DiligentTools/ThirdParty/libpng/conftest.map'' [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-dwgr5s\\cmTC_67b2a.vcxproj]
-        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-dwgr5s\\cmTC_67b2a.vcxproj" (default targets) -- FAILED.
-        
-        Build FAILED.
-        
-        "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-dwgr5s\\cmTC_67b2a.vcxproj" (default target) (1) ->
-        (ClCompile target) -> 
-          cl : command line  error D8021: invalid numeric argument '/Wl,--version-script='C:/SYN/diligent/DiligentTools/ThirdParty/libpng/conftest.map'' [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-dwgr5s\\cmTC_67b2a.vcxproj]
-        
-            0 Warning(s)
-            1 Error(s)
-        
-        Time Elapsed 00:00:00.31
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
-      - "DiligentTools/ThirdParty/libpng/CMakeLists.txt:268 (check_c_source_compiles)"
-    checks:
-      - "Performing Test HAVE_SOLARIS_LD_VERSION_SCRIPT"
-    directories:
-      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-sq6dgx"
-      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-sq6dgx"
-    cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-    buildResult:
-      variable: "HAVE_SOLARIS_LD_VERSION_SCRIPT"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-sq6dgx'
-        
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f3457.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 5/6/2024 4:35:02 PM.
-        
-        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-sq6dgx\\cmTC_f3457.vcxproj" on node 1 (default targets).
-        PrepareForBuild:
-          Creating directory "cmTC_f3457.dir\\Debug\\".
-          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-sq6dgx\\Debug\\".
-          Creating directory "cmTC_f3457.dir\\Debug\\cmTC_f3457.tlog\\".
-        InitializeBuildStatus:
-          Creating "cmTC_f3457.dir\\Debug\\cmTC_f3457.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_f3457.dir\\Debug\\cmTC_f3457.tlog\\unsuccessfulbuild".
-        ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_SOLARIS_LD_VERSION_SCRIPT /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f3457.dir\\Debug\\\\" /Fd"cmTC_f3457.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Wl,-M -Wl,C:/SYN/diligent/DiligentTools/ThirdParty/libpng/conftest.map "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-sq6dgx\\src.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
-          Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_SOLARIS_LD_VERSION_SCRIPT /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f3457.dir\\Debug\\\\" /Fd"cmTC_f3457.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Wl,-M -Wl,C:/SYN/diligent/DiligentTools/ThirdParty/libpng/conftest.map "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-sq6dgx\\src.c"
-        cl : command line  error D8021: invalid numeric argument '/Wl,-M' [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-sq6dgx\\cmTC_f3457.vcxproj]
-        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-sq6dgx\\cmTC_f3457.vcxproj" (default targets) -- FAILED.
-        
-        Build FAILED.
-        
-        "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-sq6dgx\\cmTC_f3457.vcxproj" (default target) (1) ->
-        (ClCompile target) -> 
-          cl : command line  error D8021: invalid numeric argument '/Wl,-M' [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-sq6dgx\\cmTC_f3457.vcxproj]
-        
-            0 Warning(s)
-            1 Error(s)
-        
-        Time Elapsed 00:00:00.31
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
-      - "DiligentSamples/ThirdParty/glfw/CMakeLists.txt:56 (find_package)"
-    checks:
-      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
-    directories:
-      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-tsdh2g"
-      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-tsdh2g"
-    cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/SYN/diligent/DiligentSamples/ThirdParty/glfw/CMake/modules"
-    buildResult:
-      variable: "CMAKE_HAVE_LIBC_PTHREAD"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-tsdh2g'
-        
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_81314.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 5/6/2024 4:35:06 PM.
-        
-        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\cmTC_81314.vcxproj" on node 1 (default targets).
-        PrepareForBuild:
-          Creating directory "cmTC_81314.dir\\Debug\\".
-          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\Debug\\".
-          Creating directory "cmTC_81314.dir\\Debug\\cmTC_81314.tlog\\".
-        InitializeBuildStatus:
-          Creating "cmTC_81314.dir\\Debug\\cmTC_81314.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_81314.dir\\Debug\\cmTC_81314.tlog\\unsuccessfulbuild".
-        ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_81314.dir\\Debug\\\\" /Fd"cmTC_81314.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\src.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
-          Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_81314.dir\\Debug\\\\" /Fd"cmTC_81314.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\src.c"
-          src.c
-        C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\cmTC_81314.vcxproj]
-        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\cmTC_81314.vcxproj" (default targets) -- FAILED.
-        
-        Build FAILED.
-        
-        "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\cmTC_81314.vcxproj" (default target) (1) ->
-        (ClCompile target) -> 
-          C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-tsdh2g\\cmTC_81314.vcxproj]
-        
-            0 Warning(s)
-            1 Error(s)
-        
-        Time Elapsed 00:00:00.37
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
-      - "DiligentSamples/ThirdParty/glfw/CMakeLists.txt:56 (find_package)"
-    checks:
-      - "Looking for pthread_create in pthreads"
-    directories:
-      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-g99oeq"
-      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-g99oeq"
-    cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/SYN/diligent/DiligentSamples/ThirdParty/glfw/CMake/modules"
-    buildResult:
-      variable: "CMAKE_HAVE_PTHREADS_CREATE"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-g99oeq'
-        
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_bfc7b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 5/6/2024 4:35:06 PM.
-        
-        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\cmTC_bfc7b.vcxproj" on node 1 (default targets).
-        PrepareForBuild:
-          Creating directory "cmTC_bfc7b.dir\\Debug\\".
-          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\Debug\\".
-          Creating directory "cmTC_bfc7b.dir\\Debug\\cmTC_bfc7b.tlog\\".
-        InitializeBuildStatus:
-          Creating "cmTC_bfc7b.dir\\Debug\\cmTC_bfc7b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_bfc7b.dir\\Debug\\cmTC_bfc7b.tlog\\unsuccessfulbuild".
-        ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bfc7b.dir\\Debug\\\\" /Fd"cmTC_bfc7b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\CheckFunctionExists.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
-          Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bfc7b.dir\\Debug\\\\" /Fd"cmTC_bfc7b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\CheckFunctionExists.c"
-          CheckFunctionExists.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_deba3.dir\\Debug\\\\" /Fd"cmTC_deba3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D11.cpp
+          CheckD3D11.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\Debug\\cmTC_bfc7b.exe" /INCREMENTAL /ILK:"cmTC_bfc7b.dir\\Debug\\cmTC_bfc7b.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-g99oeq/Debug/cmTC_bfc7b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-g99oeq/Debug/cmTC_bfc7b.lib" /MACHINE:X64  /machine:x64 cmTC_bfc7b.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\cmTC_bfc7b.vcxproj]
-        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\cmTC_bfc7b.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_deba3.exe" /INCREMENTAL /ILK:"cmTC_deba3.dir\\Debug\\cmTC_deba3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_deba3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_deba3.lib" /MACHINE:X64  /machine:x64 cmTC_deba3.dir\\Debug\\CheckD3D11.obj
+          cmTC_deba3.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_deba3.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_deba3.dir\\Debug\\cmTC_deba3.tlog\\unsuccessfulbuild".
+          Touching "cmTC_deba3.dir\\Debug\\cmTC_deba3.tlog\\cmTC_deba3.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_deba3.vcxproj" (default targets).
         
-        Build FAILED.
-        
-        "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\cmTC_bfc7b.vcxproj" (default target) (1) ->
-        (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-g99oeq\\cmTC_bfc7b.vcxproj]
-        
+        Build succeeded.
             0 Warning(s)
-            1 Error(s)
+            0 Error(s)
         
-        Time Elapsed 00:00:00.45
+        Time Elapsed 00:00:00.87
         
-      exitCode: 1
+      exitCode: 0
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
-      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
-      - "DiligentSamples/ThirdParty/glfw/CMakeLists.txt:56 (find_package)"
-    checks:
-      - "Looking for pthread_create in pthread"
+      - "DiligentCore/CMakeLists.txt:158 (try_compile)"
     directories:
-      source: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-6k5ni5"
-      binary: "C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-6k5ni5"
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
     cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/SYN/diligent/DiligentSamples/ThirdParty/glfw/CMake/modules"
     buildResult:
-      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      variable: "HAS_D3D12"
       cached: true
       stdout: |
-        Change Dir: 'C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-6k5ni5'
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_47644.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d38e4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.9.8+b34f75857 for .NET Framework
-        Build started 5/6/2024 4:35:07 PM.
+        Build started 5/6/2024 8:37:42 PM.
         
-        Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\cmTC_47644.vcxproj" on node 1 (default targets).
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_d38e4.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_47644.dir\\Debug\\".
+          Creating directory "cmTC_d38e4.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\Debug\\".
-          Creating directory "cmTC_47644.dir\\Debug\\cmTC_47644.tlog\\".
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_d38e4.dir\\Debug\\cmTC_d38e4.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_47644.dir\\Debug\\cmTC_47644.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_47644.dir\\Debug\\cmTC_47644.tlog\\unsuccessfulbuild".
+          Creating "cmTC_d38e4.dir\\Debug\\cmTC_d38e4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_d38e4.dir\\Debug\\cmTC_d38e4.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_47644.dir\\Debug\\\\" /Fd"cmTC_47644.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d38e4.dir\\Debug\\\\" /Fd"cmTC_d38e4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D12.cpp
           Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_47644.dir\\Debug\\\\" /Fd"cmTC_47644.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\CheckFunctionExists.c"
-          CheckFunctionExists.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d38e4.dir\\Debug\\\\" /Fd"cmTC_d38e4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D12.cpp
+          CheckD3D12.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\Debug\\cmTC_47644.exe" /INCREMENTAL /ILK:"cmTC_47644.dir\\Debug\\cmTC_47644.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-6k5ni5/Debug/cmTC_47644.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/CMakeFiles/CMakeScratch/TryCompile-6k5ni5/Debug/cmTC_47644.lib" /MACHINE:X64  /machine:x64 cmTC_47644.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\cmTC_47644.vcxproj]
-        Done Building Project "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\cmTC_47644.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_d38e4.exe" /INCREMENTAL /ILK:"cmTC_d38e4.dir\\Debug\\cmTC_d38e4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_d38e4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_d38e4.lib" /MACHINE:X64  /machine:x64 cmTC_d38e4.dir\\Debug\\CheckD3D12.obj
+          cmTC_d38e4.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_d38e4.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_d38e4.dir\\Debug\\cmTC_d38e4.tlog\\unsuccessfulbuild".
+          Touching "cmTC_d38e4.dir\\Debug\\cmTC_d38e4.tlog\\cmTC_d38e4.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_d38e4.vcxproj" (default targets).
         
-        Build FAILED.
-        
-        "C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\cmTC_47644.vcxproj" (default target) (1) ->
-        (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\SYN\\diligent\\CMakeFiles\\CMakeScratch\\TryCompile-6k5ni5\\cmTC_47644.vcxproj]
-        
+        Build succeeded.
             0 Warning(s)
-            1 Error(s)
+            0 Error(s)
         
-        Time Elapsed 00:00:00.45
+        Time Elapsed 00:00:00.85
         
-      exitCode: 1
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "DiligentCore/CMakeLists.txt:159 (try_compile)"
+    directories:
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_ATL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_166b9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.9.8+b34f75857 for .NET Framework
+        Build started 5/6/2024 8:37:43 PM.
+        
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_166b9.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_166b9.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_166b9.dir\\Debug\\cmTC_166b9.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_166b9.dir\\Debug\\cmTC_166b9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_166b9.dir\\Debug\\cmTC_166b9.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_166b9.dir\\Debug\\\\" /Fd"cmTC_166b9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckATL.cpp
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_166b9.dir\\Debug\\\\" /Fd"cmTC_166b9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckATL.cpp
+          CheckATL.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_166b9.exe" /INCREMENTAL /ILK:"cmTC_166b9.dir\\Debug\\cmTC_166b9.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_166b9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_166b9.lib" /MACHINE:X64  /machine:x64 cmTC_166b9.dir\\Debug\\CheckATL.obj
+          cmTC_166b9.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_166b9.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_166b9.dir\\Debug\\cmTC_166b9.tlog\\unsuccessfulbuild".
+          Touching "cmTC_166b9.dir\\Debug\\cmTC_166b9.tlog\\cmTC_166b9.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_166b9.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.98
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "DiligentCore/CMakeLists.txt:157 (try_compile)"
+    directories:
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_D3D11"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_dca32.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.9.8+b34f75857 for .NET Framework
+        Build started 5/6/2024 9:45:14 PM.
+        
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_dca32.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_dca32.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_dca32.dir\\Debug\\cmTC_dca32.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_dca32.dir\\Debug\\cmTC_dca32.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_dca32.dir\\Debug\\cmTC_dca32.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_dca32.dir\\Debug\\\\" /Fd"cmTC_dca32.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D11.cpp
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_dca32.dir\\Debug\\\\" /Fd"cmTC_dca32.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D11.cpp
+          CheckD3D11.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_dca32.exe" /INCREMENTAL /ILK:"cmTC_dca32.dir\\Debug\\cmTC_dca32.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_dca32.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_dca32.lib" /MACHINE:X64  /machine:x64 cmTC_dca32.dir\\Debug\\CheckD3D11.obj
+          cmTC_dca32.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_dca32.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_dca32.dir\\Debug\\cmTC_dca32.tlog\\unsuccessfulbuild".
+          Touching "cmTC_dca32.dir\\Debug\\cmTC_dca32.tlog\\cmTC_dca32.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_dca32.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.06
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "DiligentCore/CMakeLists.txt:158 (try_compile)"
+    directories:
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_D3D12"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7daa8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.9.8+b34f75857 for .NET Framework
+        Build started 5/6/2024 9:45:16 PM.
+        
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_7daa8.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_7daa8.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_7daa8.dir\\Debug\\cmTC_7daa8.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_7daa8.dir\\Debug\\cmTC_7daa8.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_7daa8.dir\\Debug\\cmTC_7daa8.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7daa8.dir\\Debug\\\\" /Fd"cmTC_7daa8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D12.cpp
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7daa8.dir\\Debug\\\\" /Fd"cmTC_7daa8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckD3D12.cpp
+          CheckD3D12.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_7daa8.exe" /INCREMENTAL /ILK:"cmTC_7daa8.dir\\Debug\\cmTC_7daa8.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_7daa8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_7daa8.lib" /MACHINE:X64  /machine:x64 cmTC_7daa8.dir\\Debug\\CheckD3D12.obj
+          cmTC_7daa8.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_7daa8.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_7daa8.dir\\Debug\\cmTC_7daa8.tlog\\unsuccessfulbuild".
+          Touching "cmTC_7daa8.dir\\Debug\\cmTC_7daa8.tlog\\cmTC_7daa8.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_7daa8.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.91
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "DiligentCore/CMakeLists.txt:159 (try_compile)"
+    directories:
+      source: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+      binary: "C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_ATL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_73fe9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.9.8+b34f75857 for .NET Framework
+        Build started 5/6/2024 9:45:17 PM.
+        
+        Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_73fe9.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_73fe9.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_73fe9.dir\\Debug\\cmTC_73fe9.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_73fe9.dir\\Debug\\cmTC_73fe9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_73fe9.dir\\Debug\\cmTC_73fe9.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_73fe9.dir\\Debug\\\\" /Fd"cmTC_73fe9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckATL.cpp
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_73fe9.dir\\Debug\\\\" /Fd"cmTC_73fe9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\\SYN\\diligent\\DiligentCore\\BuildTools\\CMake\\CheckATL.cpp
+          CheckATL.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_73fe9.exe" /INCREMENTAL /ILK:"cmTC_73fe9.dir\\Debug\\cmTC_73fe9.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_73fe9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/SYN/diligent/DiligentCore/CMakeFiles/CMakeTmp/Debug/cmTC_73fe9.lib" /MACHINE:X64  /machine:x64 cmTC_73fe9.dir\\Debug\\CheckATL.obj
+          cmTC_73fe9.vcxproj -> C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_73fe9.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_73fe9.dir\\Debug\\cmTC_73fe9.tlog\\unsuccessfulbuild".
+          Touching "cmTC_73fe9.dir\\Debug\\cmTC_73fe9.tlog\\cmTC_73fe9.lastbuildstate".
+        Done Building Project "C:\\SYN\\diligent\\DiligentCore\\CMakeFiles\\CMakeTmp\\cmTC_73fe9.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.11
+        
+      exitCode: 0
 ...

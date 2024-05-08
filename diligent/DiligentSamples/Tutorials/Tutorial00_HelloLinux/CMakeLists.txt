@@ -24,9 +24,12 @@ set_target_properties(Tutorial00_HelloLinux PROPERTIES
 target_link_libraries(Tutorial00_HelloLinux PRIVATE Diligent-BuildSettings)
 
 if(GL_SUPPORTED)
-    target_link_libraries(Tutorial00_HelloLinux PRIVATE Diligent-GraphicsEngineOpenGL-shared GL X11)
+    find_package(X11 REQUIRED)
+    find_package(OpenGL REQUIRED)
+    target_link_libraries(Tutorial00_HelloLinux PRIVATE Diligent-GraphicsEngineOpenGL-shared OpenGL::GL X11::X11)
 endif()
 
 if(VULKAN_SUPPORTED)
-    target_link_libraries(Tutorial00_HelloLinux PRIVATE Diligent-GraphicsEngineVk-shared xcb)
+    find_library(XCB_LIBRARY xcb)
+    target_link_libraries(Tutorial00_HelloLinux PRIVATE Diligent-GraphicsEngineVk-shared ${XCB_LIBRARY})
 endif()

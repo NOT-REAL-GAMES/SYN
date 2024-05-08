@@ -32,7 +32,6 @@ set(INCLUDE
     include/ShaderResourcesGL.hpp
     include/ShaderVariableManagerGL.hpp
     include/SwapChainGLBase.hpp
-    include/TexRegionRender.hpp
     include/Texture1D_GL.hpp
     include/Texture1DArray_GL.hpp
     include/Texture2D_GL.hpp
@@ -87,7 +86,6 @@ set(SOURCE
     src/ShaderResourceCacheGL.cpp
     src/ShaderResourcesGL.cpp
     src/ShaderVariableManagerGL.cpp
-    src/TexRegionRender.cpp
     src/Texture1D_GL.cpp
     src/Texture1DArray_GL.cpp
     src/Texture2D_GL.cpp
@@ -200,10 +198,12 @@ if(PLATFORM_WIN32)
 elseif(PLATFORM_ANDROID)
     set(PRIVATE_DEPENDENCIES ${PRIVATE_DEPENDENCIES} GLESv3 EGL)
 elseif(PLATFORM_LINUX)
-    set(PRIVATE_DEPENDENCIES ${PRIVATE_DEPENDENCIES} GLEW::glew GL X11)
+    find_package(X11 REQUIRED)
+    find_package(OpenGL REQUIRED)
+    set(PRIVATE_DEPENDENCIES ${PRIVATE_DEPENDENCIES} GLEW::glew OpenGL::GL X11::X11)
 elseif(PLATFORM_MACOS)
     find_package(OpenGL REQUIRED)
-    set(PRIVATE_DEPENDENCIES ${PRIVATE_DEPENDENCIES} GLEW::glew ${OPENGL_LIBRARY})
+    set(PRIVATE_DEPENDENCIES ${PRIVATE_DEPENDENCIES} GLEW::glew OpenGL::GL)
 elseif(PLATFORM_IOS)
     set(PRIVATE_DEPENDENCIES ${PRIVATE_DEPENDENCIES} ${OPENGLES})
 elseif(PLATFORM_EMSCRIPTEN)
@@ -283,8 +283,12 @@ else()
     )
 endif()
 
+add_library(Diligent-GLAdapterSelector OBJECT "src/GLAdapterSelector.cpp")
+target_link_libraries(Diligent-GLAdapterSelector PRIVATE Diligent-BuildSettings)
+
 set_common_target_properties(Diligent-GraphicsEngineOpenGL-shared)
 set_common_target_properties(Diligent-GraphicsEngineOpenGL-static)
+set_common_target_properties(Diligent-GLAdapterSelector)
 
 source_group("src" FILES ${SOURCE})
 if(PLATFORM_WIN32)
@@ -300,6 +304,9 @@ set_target_properties(Diligent-GraphicsEngineOpenGL-static PROPERTIES
 set_target_properties(Diligent-GraphicsEngineOpenGL-shared PROPERTIES
     FOLDER DiligentCore/Graphics
 )
+set_target_properties(Diligent-GLAdapterSelector PROPERTIES 
+    FOLDER DiligentCore/Graphics
+)
 
 set_source_files_properties(
     readme.md PROPERTIES HEADER_FILE_ONLY TRUE
@@ -308,4 +315,5 @@ set_source_files_properties(
 if(DILIGENT_INSTALL_CORE)
     install_core_lib(Diligent-GraphicsEngineOpenGL-shared)
     install_core_lib(Diligent-GraphicsEngineOpenGL-static)
+    install_core_lib(Diligent-GLAdapterSelector)
 endif()

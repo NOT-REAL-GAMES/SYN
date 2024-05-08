@@ -70,9 +70,6 @@
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\ShaderVariableManagerGL.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\TexRegionRender.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\Texture1D_GL.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -241,9 +238,6 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\SwapChainGLBase.hpp">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\TexRegionRender.hpp">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\Texture1D_GL.hpp">

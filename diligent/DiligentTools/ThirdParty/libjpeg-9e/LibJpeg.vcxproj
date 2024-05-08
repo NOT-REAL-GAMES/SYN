@@ -81,6 +81,7 @@
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4244;4127;4100;4201;4505;26812</DisableSpecificWarnings>
       <ExceptionHandling>
@@ -116,6 +117,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4244;4127;4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>
@@ -159,6 +161,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4244;4127;4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -200,6 +203,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libjpeg-9e\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4244;4127;4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>

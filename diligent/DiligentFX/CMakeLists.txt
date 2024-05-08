@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 3.6)
 
+include(BuildUtils.cmake)
+
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 project(DiligentFX CXX)
@@ -23,7 +25,15 @@ PUBLIC
     Diligent-GraphicsEngine
     Diligent-GraphicsTools
     Diligent-AssetLoader
+    Diligent-TextureLoader
+    Diligent-Imgui
 )
+
+if (TARGET Diligent-HLSL2GLSLConverterLib)
+    target_link_libraries(DiligentFX PRIVATE Diligent-HLSL2GLSLConverterLib)
+    target_compile_definitions(DiligentFX PRIVATE HLSL2GLSL_CONVERTER_SUPPORTED=1)
+endif()
+
 set_common_target_properties(DiligentFX)
 
 target_include_directories(DiligentFX
@@ -34,11 +44,13 @@ PUBLIC
 add_subdirectory(Utilities)
 add_subdirectory(Components)
 add_subdirectory(PostProcess)
-add_subdirectory(GLTF_PBR_Renderer)
+add_subdirectory(PBR)
 
-if(DILIGENT_BUILD_TESTS)
-    add_subdirectory(Tests)
+if(DILIGENT_USD_PATH)
+    add_subdirectory(Hydrogent)
 endif()
+
+add_subdirectory(Tests)
 
 get_target_property(SOURCE DiligentFX SOURCES)
 
@@ -56,66 +68,23 @@ foreach(FILE ${SOURCE})
 endforeach()
 
 # Convert shaders to headers and generate master header with the list of all files
-if(NOT FILE2STRING_PATH STREQUAL "")
-    find_package(Python3 REQUIRED)
+set(SHADER_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/shaders_inc)
+file(MAKE_DIRECTORY ${SHADER_OUTPUT_DIR})
+target_include_directories(DiligentFX PRIVATE ${SHADER_OUTPUT_DIR})
 
-    set(SHADER_OUTPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/shaders_inc)
+set(SHADERS_LIST_FILE ${SHADER_OUTPUT_DIR}/shaders_list.h)
+convert_shaders_to_headers("${SHADERS}" ${SHADER_OUTPUT_DIR} ${SHADERS_LIST_FILE} SHADERS_INC_LIST)
 
-    file(MAKE_DIRECTORY ${SHADER_OUTPUT_DIR})
-
-    set(SHADERS_LIST_FILE shaders_inc/shaders_list.h)
-    file(WRITE ${SHADERS_LIST_FILE}
-        "struct ShaderIncInfo\n"
-        "{\n"
-        "    const char* const FileName;\n"
-        "    const char* const Source;\n"
-        "};\n"
-        "\n"
-        "static const ShaderIncInfo g_Shaders[] =\n"
-        "{"
-        )
-
-    foreach(FILE ${SHADERS})
-
-        get_filename_component(FILE_NAME ${FILE} NAME)
-        set(CONVERTED_FILE ${SHADER_OUTPUT_DIR}/${FILE_NAME}.h)
-        add_custom_command(OUTPUT ${CONVERTED_FILE}
-                           COMMAND ${Python3_EXECUTABLE} ${FILE2STRING_PATH} ${FILE} ${CONVERTED_FILE}
-                           MAIN_DEPENDENCY ${FILE} # the primary input source file to the command
-                           COMMENT "Processing shader ${FILE}"
-                           VERBATIM)
-
-        string(REPLACE "." "_" VAR_NAME "${FILE_NAME}")
-        file(APPEND ${SHADERS_LIST_FILE}
-                "\n    {"
-                "\n        \"${FILE_NAME}\","
-                "\n        #include \"${FILE_NAME}.h\""
-                "\n    },"
-            )
-
-            list(APPEND SHADERS_INC_LIST ${CONVERTED_FILE})
-
-    endforeach()
-    file(APPEND ${SHADERS_LIST_FILE}
-        "\n};\n"
-        )
-else()
-    message(WARNING "File2String utility is currently unavailable on this host system. This is not an issues unless you modify shaders")
-endif()
-
-set_source_files_properties(
-    ${SHADERS_INC_LIST}
-    PROPERTIES GENERATED TRUE
-)
 target_sources(DiligentFX PRIVATE
     # A target created in the same directory (CMakeLists.txt file) that specifies any output of the 
     # custom command as a source file is given a rule to generate the file using the command at build time. 
     ${SHADERS_INC_LIST}
+    ${SHADERS_LIST_FILE}
 )
 source_group("generated" FILES
+    ${SHADERS_LIST_FILE}
     ${SHADERS_INC_LIST}
 )
-
 
 if(DILIGENT_INSTALL_FX)
     install(TARGETS				 DiligentFX
@@ -126,11 +95,23 @@ if(DILIGENT_INSTALL_FX)
     install(DIRECTORY    PostProcess/EpipolarLightScattering/interface
             DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PostProcess/EpipolarLightScattering"
     )
+    install(DIRECTORY    PostProcess/TemporalAntiAliasing/interface
+            DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PostProcess/TemporalAntiAliasing"
+    )
+    install(DIRECTORY    PostProcess/ScreenSpaceReflection/interface
+            DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PostProcess/ScreenSpaceReflection"
+    )
+    install(DIRECTORY   PostProcess/ScreenSpaceAmbientOcclusion/interface
+            DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PostProcess/ScreenSpaceAmbientOcclusion"
+    )
+    install(DIRECTORY   PostProcess/Bloom/interface
+            DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PostProcess/Bloom"
+    )
     install(DIRECTORY    Components/interface
             DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/Components"
     )
-    install(DIRECTORY    GLTF_PBR_Renderer/interface
-            DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/GLTF_PBR_Renderer"
+    install(DIRECTORY    PBR/interface
+            DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_FX_DIR}/PBR"
     )
     install(DIRECTORY    Shaders
             DESTINATION  "."

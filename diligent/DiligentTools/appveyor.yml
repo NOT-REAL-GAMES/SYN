@@ -26,7 +26,7 @@ install:
   # clone submodules
   - git submodule update --init --recursive
   - git clone https://github.com/DiligentGraphics/DiligentCore.git ../DiligentCore --recursive
-  - ..\DiligentCore\BuildTools\Scripts\appveyor\install.bat
+  - ps: ..\DiligentCore\BuildTools\Scripts\appveyor\install.ps1
 
 before_build:
   - cd c:\projects\DiligentTools\BuildTools\FormatValidation
@@ -37,7 +37,7 @@ before_build:
   - echo add_subdirectory(DiligentCore) >> CMakeLists.txt
   - echo add_subdirectory(DiligentTools) >> CMakeLists.txt
   - echo %PLATFORM%
-  - cmake -S . -B ./build -D DILIGENT_BUILD_TESTS=TRUE -G "Visual Studio 16 2019" -A %PLATFORM%
+  - cmake -S . -B ./build -D DILIGENT_BUILD_TOOLS_TESTS=TRUE -G "Visual Studio 16 2019" -A %PLATFORM%
 
 build:
   project: c:\projects\build\DiligentTools_Test.sln

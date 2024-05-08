@@ -3209,6 +3209,48 @@ TEST_F(ValidateDecorations,
           "statically used per shader entry point."));
 }
 
+TEST_F(ValidateDecorations,
+       VulkanMultiplePushConstantsSingleEntryPointInterfaceBad) {
+  std::string spirv = R"(
+            OpCapability Shader
+            OpMemoryModel Logical GLSL450
+            OpEntryPoint Vertex %func1 "func1" %pc1 %pc2
+            OpDecorate %struct Block
+            OpMemberDecorate %struct 0 Offset 0
+    %void = OpTypeVoid
+  %voidfn = OpTypeFunction %void
+   %float = OpTypeFloat 32
+     %int = OpTypeInt 32 0
+   %int_0 = OpConstant %int 0
+  %struct = OpTypeStruct %float
+     %ptr = OpTypePointer PushConstant %struct
+%ptr_float = OpTypePointer PushConstant %float
+     %pc1 = OpVariable %ptr PushConstant
+     %pc2 = OpVariable %ptr PushConstant
+   %func1 = OpFunction %void None %voidfn
+  %label1 = OpLabel
+ %access1 = OpAccessChain %ptr_float %pc1 %int_0
+   %load1 = OpLoad %float %access1
+            OpReturn
+            OpFunctionEnd
+   %func2 = OpFunction %void None %voidfn
+  %label2 = OpLabel
+ %access2 = OpAccessChain %ptr_float %pc2 %int_0
+   %load2 = OpLoad %float %access2
+            OpReturn
+            OpFunctionEnd
+)";
+
+  CompileSuccessfully(spirv, SPV_ENV_VULKAN_1_2);
+  EXPECT_EQ(SPV_ERROR_INVALID_DATA,
+            ValidateAndRetrieveValidationState(SPV_ENV_VULKAN_1_2));
+  EXPECT_THAT(getDiagnosticString(),
+              AnyVUID("VUID-StandaloneSpirv-OpVariable-06673"));
+  EXPECT_THAT(getDiagnosticString(),
+              HasSubstr("Entry-point has more than one variable with the "
+                        "PushConstant storage class in the interface"));
+}
+
 TEST_F(ValidateDecorations, VulkanUniformMissingDescriptorSetBad) {
   std::string spirv = R"(
             OpCapability Shader
@@ -8003,6 +8045,7 @@ TEST_F(ValidateDecorations, WorkgroupBlockVariableWith16BitType) {
                OpCapability Shader
                OpCapability Float16
                OpCapability Int16
+               OpCapability WorkgroupMemoryExplicitLayoutKHR
                OpCapability WorkgroupMemoryExplicitLayout16BitAccessKHR
                OpExtension "SPV_KHR_workgroup_memory_explicit_layout"
                OpMemoryModel Logical GLSL450
@@ -8263,6 +8306,37 @@ TEST_F(ValidateDecorations, WorkgroupSingleBlockVariableBadLayout) {
       HasSubstr("Block for variable in Workgroup storage class must follow "
                 "relaxed storage buffer layout rules: "
                 "member 0 at offset 1 is not aligned to 4"));
+}
+
+TEST_F(ValidateDecorations, WorkgroupBlockNoCapability) {
+  std::string spirv = R"(
+               OpCapability Shader
+               OpMemoryModel Logical GLSL450
+               OpEntryPoint GLCompute %main "main" %_
+               OpExecutionMode %main LocalSize 1 1 1
+               OpMemberDecorate %struct 0 Offset 0
+               OpMemberDecorate %struct 1 Offset 4
+               OpDecorate %struct Block
+       %void = OpTypeVoid
+          %3 = OpTypeFunction %void
+        %int = OpTypeInt 32 1
+     %struct = OpTypeStruct %int %int
+%ptr_workgroup = OpTypePointer Workgroup %struct
+          %_ = OpVariable %ptr_workgroup Workgroup
+       %main = OpFunction %void None %3
+          %5 = OpLabel
+               OpReturn
+               OpFunctionEnd
+  )";
+
+  CompileSuccessfully(spirv, SPV_ENV_UNIVERSAL_1_4);
+  EXPECT_EQ(SPV_ERROR_INVALID_BINARY,
+            ValidateAndRetrieveValidationState(SPV_ENV_VULKAN_1_1_SPIRV_1_4));
+  EXPECT_THAT(
+      getDiagnosticString(),
+      HasSubstr(
+          "Workgroup Storage Class variables can't be decorated with Block "
+          "unless declaring the WorkgroupMemoryExplicitLayoutKHR capability"));
 }
 
 TEST_F(ValidateDecorations, BadMatrixStrideUniform) {

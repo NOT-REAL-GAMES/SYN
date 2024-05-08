@@ -576,6 +576,13 @@ struct PipelineStateDesc DILIGENT_DERIVE(DeviceObjectAttribs)
     PipelineResourceLayoutDesc ResourceLayout;
 
 #if DILIGENT_CPP_INTERFACE
+    constexpr PipelineStateDesc() noexcept {}
+
+    explicit constexpr PipelineStateDesc(const Char* _Name, PIPELINE_TYPE Type = PipelineStateDesc{}.PipelineType) :
+        DeviceObjectAttribs{_Name},
+        PipelineType       {Type  }
+    {}
+
     /// Tests if two pipeline state descriptions are equal.
 
     /// \param [in] RHS - reference to the structure to compare with.
@@ -677,6 +684,12 @@ struct PipelineStateCreateInfo
 #endif
 
 #if DILIGENT_CPP_INTERFACE
+    constexpr PipelineStateCreateInfo() noexcept {}
+
+    constexpr PipelineStateCreateInfo(const Char* Name, PIPELINE_TYPE Type) :
+        PSODesc{Name, Type}
+    {}
+
     bool operator==(const PipelineStateCreateInfo& RHS) const noexcept
     {
         if (PSODesc                 != RHS.PSODesc ||
@@ -745,6 +758,15 @@ struct GraphicsPipelineStateCreateInfo DILIGENT_DERIVE(PipelineStateCreateInfo)
     IShader* pMS DEFAULT_INITIALIZER(nullptr);
 
 #if DILIGENT_CPP_INTERFACE
+    constexpr GraphicsPipelineStateCreateInfo() noexcept 
+    {
+        PSODesc.PipelineType = PIPELINE_TYPE_GRAPHICS;
+    }
+
+    explicit constexpr GraphicsPipelineStateCreateInfo(const Char* Name) :
+        PipelineStateCreateInfo{Name, PIPELINE_TYPE_GRAPHICS}
+    {}
+
     bool operator==(const GraphicsPipelineStateCreateInfo& Rhs) const noexcept
     {
         if (static_cast<const PipelineStateCreateInfo&>(*this) != static_cast<const PipelineStateCreateInfo&>(Rhs))
@@ -781,6 +803,10 @@ struct ComputePipelineStateCreateInfo DILIGENT_DERIVE(PipelineStateCreateInfo)
     {
         PSODesc.PipelineType = PIPELINE_TYPE_COMPUTE;
     }
+
+    explicit constexpr ComputePipelineStateCreateInfo(const Char* Name) :
+        PipelineStateCreateInfo{Name, PIPELINE_TYPE_COMPUTE}
+    {}
 
     bool operator==(const ComputePipelineStateCreateInfo& Rhs) const noexcept
     {
@@ -842,6 +868,10 @@ struct RayTracingPipelineStateCreateInfo DILIGENT_DERIVE(PipelineStateCreateInfo
     {
         PSODesc.PipelineType = PIPELINE_TYPE_RAY_TRACING;
     }
+
+    explicit constexpr RayTracingPipelineStateCreateInfo(const Char* Name) :
+        PipelineStateCreateInfo{Name, PIPELINE_TYPE_RAY_TRACING}
+    {}
 
     bool operator==(const RayTracingPipelineStateCreateInfo& RHS)const noexcept
     {
@@ -935,6 +965,11 @@ struct TilePipelineStateCreateInfo DILIGENT_DERIVE(PipelineStateCreateInfo)
     {
         PSODesc.PipelineType = PIPELINE_TYPE_TILE;
     }
+
+    explicit constexpr TilePipelineStateCreateInfo(const Char* Name) :
+        PipelineStateCreateInfo{Name, PIPELINE_TYPE_TILE}
+    {}
+
     bool operator==(const TilePipelineStateCreateInfo& Rhs) const noexcept
     {
         if (static_cast<const PipelineStateCreateInfo&>(*this) != static_cast<const PipelineStateCreateInfo&>(Rhs))
@@ -955,7 +990,7 @@ typedef struct TilePipelineStateCreateInfo TilePipelineStateCreateInfo;
 
 
 // {06084AE5-6A71-4FE8-84B9-395DD489A28C}
-static const struct INTERFACE_ID IID_PipelineState =
+static DILIGENT_CONSTEXPR struct INTERFACE_ID IID_PipelineState =
     {0x6084ae5, 0x6a71, 0x4fe8, {0x84, 0xb9, 0x39, 0x5d, 0xd4, 0x89, 0xa2, 0x8c}};
 
 #define DILIGENT_INTERFACE_NAME IPipelineState

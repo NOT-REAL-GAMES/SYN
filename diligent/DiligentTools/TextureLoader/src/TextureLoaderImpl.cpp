@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -146,6 +146,8 @@ TextureLoaderImpl::TextureLoaderImpl(IReferenceCounters*        pRefCounters,
         {
             m_pDataBlob = DataBlobImpl::Create(DataSize, pData);
         }
+        ImgLoadInfo.IsSRGB           = TexLoadInfo.IsSRGB;
+        ImgLoadInfo.PermultiplyAlpha = TexLoadInfo.PermultiplyAlpha;
         Image::CreateFromDataBlob(m_pDataBlob, ImgLoadInfo, &m_pImage);
         LoadFromImage(TexLoadInfo);
         m_pDataBlob.Release();
@@ -182,7 +184,7 @@ TextureLoaderImpl::TextureLoaderImpl(IReferenceCounters*    pRefCounters,
 void TextureLoaderImpl::CreateTexture(IRenderDevice* pDevice,
                                       ITexture**     ppTexture)
 {
-    TextureData InitData{m_SubResources.data(), static_cast<Uint32>(m_SubResources.size())};
+    TextureData InitData = GetTextureData();
     pDevice->CreateTexture(m_TexDesc, &InitData, ppTexture);
 }
 
@@ -201,10 +203,9 @@ void TextureLoaderImpl::LoadFromImage(const TextureLoadInfo& TexLoadInfo)
     if (TexLoadInfo.MipLevels > 0)
         m_TexDesc.MipLevels = std::min(m_TexDesc.MipLevels, TexLoadInfo.MipLevels);
 
-    Uint32 NumComponents = 0;
     if (m_TexDesc.Format == TEX_FORMAT_UNKNOWN)
     {
-        NumComponents = ImgDesc.NumComponents == 3 ? 4 : ImgDesc.NumComponents;
+        const Uint32 NumComponents = ImgDesc.NumComponents == 3 ? 4 : ImgDesc.NumComponents;
         if (ChannelDepth == 8)
         {
             switch (NumComponents)
@@ -228,36 +229,70 @@ void TextureLoaderImpl::LoadFromImage(const TextureLoadInfo& TexLoadInfo)
         else
             LOG_ERROR_AND_THROW("Unsupported color channel depth (", ChannelDepth, ")");
     }
-    else
-    {
-        const auto& TexFmtDesc = GetTextureFormatAttribs(m_TexDesc.Format);
-
-        NumComponents = TexFmtDesc.NumComponents;
-        if (TexFmtDesc.ComponentSize != ChannelDepth / 8)
-            LOG_ERROR_AND_THROW("Image channel size ", ChannelDepth, " is not compatible with texture format ", TexFmtDesc.Name);
-    }
+    const auto&  TexFmtDesc    = GetTextureFormatAttribs(m_TexDesc.Format);
+    const Uint32 NumComponents = TexFmtDesc.NumComponents;
 
     m_SubResources.resize(m_TexDesc.MipLevels);
     m_Mips.resize(m_TexDesc.MipLevels);
 
-    if (ImgDesc.NumComponents != NumComponents)
+    const bool SwizzleRequired =
+        (NumComponents >= 1 && TexLoadInfo.Swizzle.R != TEXTURE_COMPONENT_SWIZZLE_IDENTITY && TexLoadInfo.Swizzle.R != TEXTURE_COMPONENT_SWIZZLE_R) ||
+        (NumComponents >= 2 && TexLoadInfo.Swizzle.G != TEXTURE_COMPONENT_SWIZZLE_IDENTITY && TexLoadInfo.Swizzle.G != TEXTURE_COMPONENT_SWIZZLE_G) ||
+        (NumComponents >= 3 && TexLoadInfo.Swizzle.B != TEXTURE_COMPONENT_SWIZZLE_IDENTITY && TexLoadInfo.Swizzle.B != TEXTURE_COMPONENT_SWIZZLE_B) ||
+        (NumComponents >= 4 && TexLoadInfo.Swizzle.A != TEXTURE_COMPONENT_SWIZZLE_IDENTITY && TexLoadInfo.Swizzle.A != TEXTURE_COMPONENT_SWIZZLE_A);
+
+    if (ImgDesc.NumComponents != NumComponents ||
+        TexFmtDesc.ComponentSize != ChannelDepth / 8 ||
+        TexLoadInfo.FlipVertically ||
+        SwizzleRequired)
     {
-        auto DstStride = ImgDesc.Width * NumComponents * ChannelDepth / 8;
+        auto DstStride = ImgDesc.Width * NumComponents * TexFmtDesc.ComponentSize;
         DstStride      = AlignUp(DstStride, Uint32{4});
         m_Mips[0].resize(size_t{DstStride} * size_t{ImgDesc.Height});
         m_SubResources[0].pData  = m_Mips[0].data();
         m_SubResources[0].Stride = DstStride;
 
         CopyPixelsAttribs CopyAttribs;
-        CopyAttribs.Width         = ImgDesc.Width;
-        CopyAttribs.Height        = ImgDesc.Height;
-        CopyAttribs.ComponentSize = ChannelDepth / 8;
-        CopyAttribs.pSrcPixels    = m_pImage->GetData()->GetDataPtr();
-        CopyAttribs.SrcStride     = ImgDesc.RowStride;
-        CopyAttribs.SrcCompCount  = ImgDesc.NumComponents;
-        CopyAttribs.pDstPixels    = m_Mips[0].data();
-        CopyAttribs.DstStride     = DstStride;
-        CopyAttribs.DstCompCount  = NumComponents;
+        CopyAttribs.Width            = ImgDesc.Width;
+        CopyAttribs.Height           = ImgDesc.Height;
+        CopyAttribs.SrcComponentSize = ChannelDepth / 8;
+        CopyAttribs.pSrcPixels       = m_pImage->GetData()->GetDataPtr();
+        CopyAttribs.SrcStride        = ImgDesc.RowStride;
+        CopyAttribs.SrcCompCount     = ImgDesc.NumComponents;
+        CopyAttribs.pDstPixels       = m_Mips[0].data();
+        CopyAttribs.DstComponentSize = TexFmtDesc.ComponentSize;
+        CopyAttribs.DstStride        = DstStride;
+        CopyAttribs.DstCompCount     = NumComponents;
+        CopyAttribs.FlipVertically   = TexLoadInfo.FlipVertically;
+
+        if (CopyAttribs.SrcCompCount < 4)
+        {
+            // Always set alpha to 1
+            CopyAttribs.Swizzle.A = TEXTURE_COMPONENT_SWIZZLE_ONE;
+            if (CopyAttribs.SrcCompCount == 1)
+            {
+                // Expand R to RGB
+                CopyAttribs.Swizzle.R = TEXTURE_COMPONENT_SWIZZLE_R;
+                CopyAttribs.Swizzle.G = TEXTURE_COMPONENT_SWIZZLE_R;
+                CopyAttribs.Swizzle.B = TEXTURE_COMPONENT_SWIZZLE_R;
+            }
+            else if (CopyAttribs.SrcCompCount == 2)
+            {
+                // RG -> RG01
+                CopyAttribs.Swizzle.B = TEXTURE_COMPONENT_SWIZZLE_ZERO;
+            }
+            else
+            {
+                VERIFY(CopyAttribs.SrcCompCount == 3, "Unexpected number of components");
+            }
+        }
+
+        // Combine swizzles
+        if (SwizzleRequired)
+        {
+            CopyAttribs.Swizzle *= TexLoadInfo.Swizzle;
+        }
+
         CopyPixels(CopyAttribs);
     }
     else
@@ -268,10 +303,18 @@ void TextureLoaderImpl::LoadFromImage(const TextureLoadInfo& TexLoadInfo)
 
     for (Uint32 m = 1; m < m_TexDesc.MipLevels; ++m)
     {
-        auto MipLevelProps = GetMipLevelProperties(m_TexDesc, m);
-        m_Mips[m].resize(StaticCast<size_t>(MipLevelProps.MipSize));
+        const MipLevelProperties MipLevelProps = GetMipLevelProperties(m_TexDesc, m);
+
+        Uint64 MipSize = MipLevelProps.MipSize;
+        Uint64 RowSize = MipLevelProps.RowSize;
+        if ((RowSize % 4) != 0)
+        {
+            RowSize = AlignUp(RowSize, Uint64{4});
+            MipSize = RowSize * MipLevelProps.LogicalHeight;
+        }
+        m_Mips[m].resize(StaticCast<size_t>(MipSize));
         m_SubResources[m].pData  = m_Mips[m].data();
-        m_SubResources[m].Stride = MipLevelProps.RowSize;
+        m_SubResources[m].Stride = RowSize;
 
         if (TexLoadInfo.GenerateMips)
         {
@@ -326,7 +369,6 @@ void CreateTextureLoaderFromFile(const char*            FilePath,
 
 void CreateTextureLoaderFromMemory(const void*            pData,
                                    size_t                 Size,
-                                   IMAGE_FILE_FORMAT      FileFormat,
                                    bool                   MakeDataCopy,
                                    const TextureLoadInfo& TexLoadInfo,
                                    ITextureLoader**       ppLoader)
@@ -381,12 +423,11 @@ extern "C"
 
     void Diligent_CreateTextureLoaderFromMemory(const void*                      pData,
                                                 size_t                           Size,
-                                                Diligent::IMAGE_FILE_FORMAT      FileFormat,
                                                 bool                             MakeCopy,
                                                 const Diligent::TextureLoadInfo& TexLoadInfo,
                                                 Diligent::ITextureLoader**       ppLoader)
     {
-        Diligent::CreateTextureLoaderFromMemory(pData, Size, FileFormat, MakeCopy, TexLoadInfo, ppLoader);
+        Diligent::CreateTextureLoaderFromMemory(pData, Size, MakeCopy, TexLoadInfo, ppLoader);
     }
 
     void Diligent_CreateTextureLoaderFromImage(Diligent::Image*                 pSrcImage,

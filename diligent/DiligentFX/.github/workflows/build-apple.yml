@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   precheks:
     name:    MacOS -> Pre-Checks
-    runs-on: macos-12
+    runs-on: macos-14
 
     steps:
     - name: Clone DiligentCore
@@ -27,14 +27,14 @@ jobs:
 
   build:
     needs:   precheks
-    runs-on: macos-12
+    runs-on: macos-14
 
     strategy:
       matrix:
         platform:   ["MacOS", "iOS", "tvOS"]
         build_type: ["Debug", "Release"]
         # Do not build GLSLang and friends to save time as it is built by Core and Engine CI.
-        cmake_args: ["-DDILIGENT_NO_GLSLANG=ON -DDILIGENT_NO_HLSL=ON"]
+        cmake_args: ["-DDILIGENT_NO_GLSLANG=ON -DDILIGENT_NO_HLSL=ON -DDILIGENT_BUILD_FX_INCLUDE_TEST=ON"]
         exclude:
           # Exclude tvOS-Release
           - platform:   "tvOS"

@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -199,9 +199,8 @@ static const decltype (&ID3D11DeviceContext1::VSSetConstantBuffers1) SetCB1Metho
 
 // clang-format on
 
-void DeviceContextD3D11Impl::TransitionShaderResources(IPipelineState* pPipelineState, IShaderResourceBinding* pShaderResourceBinding)
+void DeviceContextD3D11Impl::TransitionShaderResources(IShaderResourceBinding* pShaderResourceBinding)
 {
-    DEV_CHECK_ERR(pPipelineState != nullptr, "Pipeline state must not be null");
     DEV_CHECK_ERR(pShaderResourceBinding != nullptr, "Shader resource binding must not be null");
     if (m_pActiveRenderPass)
     {
@@ -660,7 +659,7 @@ void DeviceContextD3D11Impl::PrepareForIndexedDraw(DRAW_FLAGS Flags, VALUE_TYPE 
 
 void DeviceContextD3D11Impl::Draw(const DrawAttribs& Attribs)
 {
-    DvpVerifyDrawArguments(Attribs);
+    TDeviceContextBase::Draw(Attribs, 0);
 
     PrepareForDraw(Attribs.Flags);
 
@@ -673,9 +672,39 @@ void DeviceContextD3D11Impl::Draw(const DrawAttribs& Attribs)
     }
 }
 
+void DeviceContextD3D11Impl::MultiDraw(const MultiDrawAttribs& Attribs)
+{
+    TDeviceContextBase::MultiDraw(Attribs, 0);
+
+    PrepareForDraw(Attribs.Flags);
+
+    if (Attribs.NumInstances > 1 || Attribs.FirstInstanceLocation != 0)
+    {
+        for (Uint32 i = 0; i < Attribs.DrawCount; ++i)
+        {
+            const auto& Item = Attribs.pDrawItems[i];
+            if (Item.NumVertices > 0)
+            {
+                m_pd3d11DeviceContext->DrawInstanced(Item.NumVertices, Attribs.NumInstances, Item.StartVertexLocation, Attribs.FirstInstanceLocation);
+            }
+        }
+    }
+    else if (Attribs.NumInstances > 0)
+    {
+        for (Uint32 i = 0; i < Attribs.DrawCount; ++i)
+        {
+            const auto& Item = Attribs.pDrawItems[i];
+            if (Item.NumVertices > 0)
+            {
+                m_pd3d11DeviceContext->Draw(Item.NumVertices, Item.StartVertexLocation);
+            }
+        }
+    }
+}
+
 void DeviceContextD3D11Impl::DrawIndexed(const DrawIndexedAttribs& Attribs)
 {
-    DvpVerifyDrawIndexedArguments(Attribs);
+    TDeviceContextBase::DrawIndexed(Attribs, 0);
 
     PrepareForIndexedDraw(Attribs.Flags, Attribs.IndexType);
 
@@ -688,9 +717,33 @@ void DeviceContextD3D11Impl::DrawIndexed(const DrawIndexedAttribs& Attribs)
     }
 }
 
+void DeviceContextD3D11Impl::MultiDrawIndexed(const MultiDrawIndexedAttribs& Attribs)
+{
+    TDeviceContextBase::MultiDrawIndexed(Attribs, 0);
+
+    PrepareForIndexedDraw(Attribs.Flags, Attribs.IndexType);
+
+    if (Attribs.NumInstances > 1 || Attribs.FirstInstanceLocation != 0)
+    {
+        for (Uint32 i = 0; i < Attribs.DrawCount; ++i)
+        {
+            const auto& Item = Attribs.pDrawItems[i];
+            m_pd3d11DeviceContext->DrawIndexedInstanced(Item.NumIndices, Attribs.NumInstances, Item.FirstIndexLocation, Item.BaseVertex, Attribs.FirstInstanceLocation);
+        }
+    }
+    else if (Attribs.NumInstances > 0)
+    {
+        for (Uint32 i = 0; i < Attribs.DrawCount; ++i)
+        {
+            const auto& Item = Attribs.pDrawItems[i];
+            m_pd3d11DeviceContext->DrawIndexed(Item.NumIndices, Item.FirstIndexLocation, Item.BaseVertex);
+        }
+    }
+}
+
 void DeviceContextD3D11Impl::DrawIndirect(const DrawIndirectAttribs& Attribs)
 {
-    DvpVerifyDrawIndirectArguments(Attribs);
+    TDeviceContextBase::DrawIndirect(Attribs, 0);
     DEV_CHECK_ERR(Attribs.pCounterBuffer == nullptr, "Direct3D11 does not support indirect counter buffer");
 
     PrepareForDraw(Attribs.Flags);
@@ -727,7 +780,7 @@ void DeviceContextD3D11Impl::DrawIndirect(const DrawIndirectAttribs& Attribs)
 
 void DeviceContextD3D11Impl::DrawIndexedIndirect(const DrawIndexedIndirectAttribs& Attribs)
 {
-    DvpVerifyDrawIndexedIndirectArguments(Attribs);
+    TDeviceContextBase::DrawIndexedIndirect(Attribs, 0);
     DEV_CHECK_ERR(Attribs.pCounterBuffer == nullptr, "Direct3D11 does not support indirect counter buffer");
 
     PrepareForIndexedDraw(Attribs.Flags, Attribs.IndexType);
@@ -773,7 +826,7 @@ void DeviceContextD3D11Impl::DrawMeshIndirect(const DrawMeshIndirectAttribs& Att
 
 void DeviceContextD3D11Impl::DispatchCompute(const DispatchComputeAttribs& Attribs)
 {
-    DvpVerifyDispatchArguments(Attribs);
+    TDeviceContextBase::DispatchCompute(Attribs, 0);
 
     if (Uint32 BindSRBMask = m_BindInfo.GetCommitMask())
     {
@@ -803,7 +856,7 @@ void DeviceContextD3D11Impl::DispatchCompute(const DispatchComputeAttribs& Attri
 
 void DeviceContextD3D11Impl::DispatchComputeIndirect(const DispatchComputeIndirectAttribs& Attribs)
 {
-    DvpVerifyDispatchIndirectArguments(Attribs);
+    TDeviceContextBase::DispatchComputeIndirect(Attribs, 0);
 
     if (Uint32 BindSRBMask = m_BindInfo.GetCommitMask())
     {
@@ -860,7 +913,7 @@ void DeviceContextD3D11Impl::ClearRenderTarget(ITextureView* pView, const float*
     auto* pViewD3D11 = ClassPtrCast<TextureViewD3D11Impl>(pView);
     auto* pd3d11RTV  = static_cast<ID3D11RenderTargetView*>(pViewD3D11->GetD3D11View());
 
-    static const float Zero[4] = {0.f, 0.f, 0.f, 0.f};
+    static constexpr float Zero[4] = {0.f, 0.f, 0.f, 0.f};
     if (RGBA == nullptr)
         RGBA = Zero;
 
@@ -1081,7 +1134,7 @@ void DeviceContextD3D11Impl::FinishFrame()
 
 void DeviceContextD3D11Impl::SetVertexBuffers(Uint32                         StartSlot,
                                               Uint32                         NumBuffersSet,
-                                              IBuffer**                      ppBuffers,
+                                              IBuffer* const*                ppBuffers,
                                               const Uint64*                  pOffsets,
                                               RESOURCE_STATE_TRANSITION_MODE StateTransitionMode,
                                               SET_VERTEX_BUFFERS_FLAGS       Flags)

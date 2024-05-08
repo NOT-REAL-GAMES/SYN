@@ -30,7 +30,7 @@
 #   | Item                      | Section in the right pane             |
 #   | ------------------------- | ------------------------------------- |
 #   | OS, VM                    | Set up job                            |
-#   | git repo, commit hash     | Run actions/checkout@v3               |
+#   | git repo, commit hash     | Run actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633               |
 #   | gcc, tools                | Environment info                      |
 #
 # - To fail earlier, order of tests in the same job are roughly sorted by
@@ -107,7 +107,7 @@ jobs:
       CC: ${{ matrix.cc }}
       CXX: ${{ matrix.cxx }}
     steps:
-    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
     - name: apt-get install
       run: |
@@ -175,7 +175,7 @@ jobs:
     name: Linux x64 check results consistency
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
     - name: Environment info
       run: |
@@ -223,23 +223,23 @@ jobs:
       CC: emcc
 
     steps:
-    - uses: actions/checkout@v3 # https://github.com/actions/checkout
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
     - name: Setup cache
       id: cache-system-libraries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ${{env.EM_CACHE_FOLDER}}
         key: em${{env.EM_VERSION}}-node${{ matrix.node-version }}-${{ runner.os }}
 
     - name: Setup emsdk
-      uses: mymindstorm/setup-emsdk@v12
+      uses: mymindstorm/setup-emsdk@v14
       with:
         version: ${{env.EM_VERSION}}
         actions-cache-folder: ${{env.EM_CACHE_FOLDER}}
 
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
 
@@ -267,7 +267,7 @@ jobs:
     name: Linux x64 misc tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
     - name: apt-get install
       run: |
@@ -314,7 +314,7 @@ jobs:
     name: Linux x64 cmake unofficial build test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
     - name: Environment info
       run: |
@@ -384,6 +384,8 @@ jobs:
           { name: 'MIPS',            xcc_pkg: gcc-mips-linux-gnu,           xcc: mips-linux-gnu-gcc,           xemu_pkg: qemu-system-mips,   xemu: qemu-mips-static,    os: ubuntu-latest, },
           { name: 'M68K',            xcc_pkg: gcc-m68k-linux-gnu,           xcc: m68k-linux-gnu-gcc,           xemu_pkg: qemu-system-m68k,   xemu: qemu-m68k-static,    os: ubuntu-latest, },
           { name: 'RISC-V',          xcc_pkg: gcc-riscv64-linux-gnu,        xcc: riscv64-linux-gnu-gcc,        xemu_pkg: qemu-system-riscv64,xemu: qemu-riscv64-static, os: ubuntu-latest, },
+          # SPARC64 qemu emulation seems broken on Ubuntu-22
+          { name: 'SPARC',           xcc_pkg: gcc-sparc64-linux-gnu,        xcc: sparc64-linux-gnu-gcc,        xemu_pkg: qemu-system-sparc,  xemu: qemu-sparc64-static, os: ubuntu-20.04, },
 
           { name: 'ARM, gcc-10',     xcc_pkg: gcc-10-arm-linux-gnueabi,     xcc: arm-linux-gnueabi-gcc-10,     xemu_pkg: qemu-system-arm,   xemu: qemu-arm-static,     os: ubuntu-20.04, },
           { name: 'AARCH64, gcc-10', xcc_pkg: gcc-10-aarch64-linux-gnu,     xcc: aarch64-linux-gnu-gcc-10,     xemu_pkg: qemu-system-arm,   xemu: qemu-aarch64-static, os: ubuntu-20.04, },
@@ -414,7 +416,7 @@ jobs:
       XEMU: ${{ matrix.xemu }}
       MOREFLAGS: -Werror
     steps:
-    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
     - name: apt update & install (1)
       run: |
         sudo apt-get update
@@ -441,6 +443,8 @@ jobs:
       run: |
         CPPFLAGS="-DXXH_VECTOR=XXH_SCALAR" LDFLAGS="-static" CC=$XCC RUN_ENV=$XEMU make clean check
         CPPFLAGS="-DXXH_VECTOR=XXH_NEON" CFLAGS="-O3 -march=armv7-a -fPIC -mfloat-abi=softfp -mfpu=neon-vfpv4" LDFLAGS="-static" CC=$XCC RUN_ENV=$XEMU make clean check
+        make -C tests clean
+        CPPFLAGS="-DXXH_VECTOR=XXH_SCALAR" LDFLAGS="-static" CC=$XCC RUN_ENV=$XEMU make -C tests sanity_test_vectors.h test_sanity
 
     - name: AARCH64 (XXH_VECTOR=[ scalar, NEON, SVE ])
       if: ${{ startsWith(matrix.name, 'AARCH64') }}
@@ -465,10 +469,10 @@ jobs:
         CPPFLAGS="-DXXH_VECTOR=XXH_SCALAR" LDFLAGS="-static" CC=$XCC RUN_ENV=$XEMU make clean check
         CPPFLAGS=-DXXH_VECTOR=XXH_VSX CFLAGS="-O3 -march=arch11 -mzvector" LDFLAGS="-static" CC=$XCC RUN_ENV=$XEMU make clean check
 
-    - name: MIPS-M68K-RISCV (XXH_VECTOR=[ scalar ])
-      if: ${{ startsWith(matrix.name, 'MIPS') || startsWith(matrix.name, 'M68K') || startsWith(matrix.name, 'RISC-V') }}
+    - name: MIPS-M68K-RISCV-SPARC (XXH_VECTOR=[ scalar ])
+      if: ${{ startsWith(matrix.name, 'MIPS') || startsWith(matrix.name, 'M68K') || startsWith(matrix.name, 'RISC-V') || startsWith(matrix.name, 'SPARC') }}
       run: |
-        LDFLAGS="-static" CC=$XCC RUN_ENV=$XEMU make clean check
+        make clean; LDFLAGS="-static" CC=$XCC RUN_ENV=$XEMU make check
 
 
   # macOS, { 11, 12 }
@@ -484,7 +488,7 @@ jobs:
           { os: macos-12    },
         ]
     steps:
-    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
     - name: Environment info
       run: |
@@ -525,7 +529,7 @@ jobs:
         arch: [ x64, Win32, ARM, ARM64 ]
 
     steps:
-    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
     - name: Build ${{ matrix.system.os }}, ${{ matrix.arch }}
       run: |
@@ -595,7 +599,7 @@ jobs:
       run:
         shell: msys2 {0}
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+      - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
       - uses: msys2/setup-msys2@7efe20baefed56359985e327d329042cde2434ff # v2
         with:
           msystem: MSYS

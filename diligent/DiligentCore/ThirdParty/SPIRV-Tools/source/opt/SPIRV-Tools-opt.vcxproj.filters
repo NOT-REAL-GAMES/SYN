@@ -175,6 +175,9 @@
     <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\interface_var_sroa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\invocation_interlock_placement_pass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\interp_fixup_pass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -236,6 +239,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\merge_return_pass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\modify_maximal_reconvergence.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\module.cpp">
@@ -314,6 +320,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\struct_cfg_analysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\switch_descriptorset_pass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\trim_capabilities_pass.cpp">
@@ -525,6 +534,9 @@
     <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\interface_var_sroa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\invocation_interlock_placement_pass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\interp_fixup_pass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -589,6 +601,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\merge_return_pass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\modify_maximal_reconvergence.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\module.h">
@@ -673,6 +688,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\struct_cfg_analysis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\switch_descriptorset_pass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\tree_iterator.h">

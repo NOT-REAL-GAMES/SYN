@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -85,6 +85,10 @@ DILIGENT_TYPED_ENUM(SHADER_TYPE, Uint32)
     SHADER_TYPE_CALLABLE         = 0x2000, ///< Callable shader
     SHADER_TYPE_TILE             = 0x4000, ///< Tile shader (Only for Metal backend)
     SHADER_TYPE_LAST             = SHADER_TYPE_TILE,
+
+    /// Vertex and pixel shader stages
+    SHADER_TYPE_VS_PS           = SHADER_TYPE_VERTEX |
+                                  SHADER_TYPE_PIXEL,
 
     /// All graphics pipeline shader stages
     SHADER_TYPE_ALL_GRAPHICS    = SHADER_TYPE_VERTEX   |
@@ -1678,6 +1682,12 @@ struct DeviceFeatures
     DEVICE_FEATURE_STATE DepthBiasClamp                DEFAULT_INITIALIZER(DEVICE_FEATURE_STATE_DISABLED);
 
     /// Indicates if device supports depth clamping
+    ///
+    /// \remarks    By default polygon faces are clipped against the near and far planes of the view
+    ///             frustum. If depth clipping is disabled in the PSO, the depth of the fragments that
+    ///             would be clipped is clamped to the near/far plane instead of discarding them.
+    ///             If this feature is enabled, the DepthClipEnable member of the RasterizerStateDesc
+    ///             struct can be set to False. Otherwise it must always be set to True.
     DEVICE_FEATURE_STATE DepthClamp                    DEFAULT_INITIALIZER(DEVICE_FEATURE_STATE_DISABLED);
 
     /// Indicates if device supports depth clamping
@@ -1778,6 +1788,26 @@ struct DeviceFeatures
     /// Indicates if device supports texture component swizzle.
     DEVICE_FEATURE_STATE TextureComponentSwizzle DEFAULT_INITIALIZER(DEVICE_FEATURE_STATE_DISABLED);
 
+    /// Indicates if device supports texture subresource views.
+    ///
+    /// \remarks    This feature is always enabled in all backends except for GLES, WebGL and older
+    ///             OpenGL versions.
+    ///
+    ///             When this feature is disabled, only texture views that reference the entire
+    ///             texture can be created.
+    DEVICE_FEATURE_STATE TextureSubresourceViews DEFAULT_INITIALIZER(DEVICE_FEATURE_STATE_DISABLED);
+
+    /// Indicates if device supports native multi-draw commands.
+    ///
+    /// \remarks    When this feature is enabled, the GPU supports a dedicated command that
+    ///             can be used to issue multiple draw calls with a single command (e.g. vkCmdDrawMultiEXT,
+    ///             glMultiDrawElements, etc.). In OpenGL and Vulkan, the shader can access the draw
+    ///             command index using the gl_DrawID built-in variable.
+    ///
+    ///             When this feature is disabled, the engine emulates multi-draw commands by issuing
+    ///             multiple individual draw calls. The draw command index is unavailable.
+    DEVICE_FEATURE_STATE NativeMultiDraw DEFAULT_INITIALIZER(DEVICE_FEATURE_STATE_DISABLED);
+
 #if DILIGENT_CPP_INTERFACE
     constexpr DeviceFeatures() noexcept {}
 
@@ -1822,11 +1852,13 @@ struct DeviceFeatures
     Handler(VariableRateShading)               \
     Handler(SparseResources)                   \
     Handler(SubpassFramebufferFetch)           \
-    Handler(TextureComponentSwizzle)
+    Handler(TextureComponentSwizzle)           \
+	Handler(TextureSubresourceViews)		   \
+	Handler(NativeMultiDraw)
 
     explicit constexpr DeviceFeatures(DEVICE_FEATURE_STATE State) noexcept
     {
-        static_assert(sizeof(*this) == 41, "Did you add a new feature to DeviceFeatures? Please add it to ENUMERATE_DEVICE_FEATURES.");
+        static_assert(sizeof(*this) == 43, "Did you add a new feature to DeviceFeatures? Please add it to ENUMERATE_DEVICE_FEATURES.");
     #define INIT_FEATURE(Feature) Feature = State;
         ENUMERATE_DEVICE_FEATURES(INIT_FEATURE)
     #undef INIT_FEATURE
@@ -2061,8 +2093,9 @@ struct SamplerProperties
     /// Indicates if device supports border texture addressing mode
     Bool BorderSamplingModeSupported   DEFAULT_INITIALIZER(False);
 
-    /// Indicates if device supports anisotropic filtering
-    Bool AnisotropicFilteringSupported DEFAULT_INITIALIZER(False);
+    /// Maximum anisotropy level supported by the device.
+    /// If anisotropic filtering is not supported, this value is 1.
+    Uint8 MaxAnisotropy DEFAULT_INITIALIZER(1);
 
     /// Indicates if device supports MIP load bias
     Bool LODBiasSupported              DEFAULT_INITIALIZER(False);
@@ -2076,9 +2109,9 @@ struct SamplerProperties
     /// - False otherwise.
     constexpr bool operator==(const SamplerProperties& RHS) const
     {
-        return BorderSamplingModeSupported   == RHS.BorderSamplingModeSupported   &&
-               AnisotropicFilteringSupported == RHS.AnisotropicFilteringSupported &&
-               LODBiasSupported              == RHS.LODBiasSupported;
+        return BorderSamplingModeSupported == RHS.BorderSamplingModeSupported   &&
+               MaxAnisotropy               == RHS.MaxAnisotropy &&
+               LODBiasSupported            == RHS.LODBiasSupported;
     }
 #endif
 
@@ -3414,6 +3447,57 @@ struct EngineCreateInfo
 };
 typedef struct EngineCreateInfo EngineCreateInfo;
 
+#if PLATFORM_EMSCRIPTEN
+/// WebGL power preference.
+DILIGENT_TYPED_ENUM(WEBGL_POWER_PREFERENCE, Uint8)
+{
+    /// Default power preference.
+	WEBGL_POWER_PREFERENCE_DEFAULT = 0,
+
+    /// Low power preference.
+	WEBGL_POWER_PREFERENCE_LOW_POWER,
+
+    /// High performance power preference.
+	WEBGL_POWER_PREFERENCE_HIGH_PERFORMANCE
+};
+
+/// WebGL context attributes.
+///
+/// \remarks    This struct is used to set the members of the EmscriptenWebGLContextAttributes
+///             structure that is passed to emscripten_webgl_create_context().
+struct WebGLContextAttribs
+{
+    /// If true, request alpha channel for the context and enable blending of
+    /// the canvas with the underlying web page contents.
+    ///
+    /// \remarks    This corresponds to the alpha member of the EmscriptenWebGLContextAttributes struct.
+    Bool Alpha DEFAULT_INITIALIZER(true);
+
+    /// If true, enable antialiasing with a browser-specified algorithm and quality level.
+    ///
+    /// \remarks    This corresponds to the antialias member of the EmscriptenWebGLContextAttributes struct.
+    Bool Antialias DEFAULT_INITIALIZER(true);
+
+    /// If true, treat the rendered canvas contents as alpha-premultiplied.
+    ///
+    /// \remarks    This corresponds to the premultipliedAlpha member of the EmscriptenWebGLContextAttributes struct.
+    Bool PremultipliedAlpha DEFAULT_INITIALIZER(true);
+
+    /// If true, preserve the contents of the drawing buffer between consecutive requestAnimationFrame() calls.
+    /// If false, clear the color, depth and stencil at the beginning of each requestAnimationFrame().
+    /// Generally setting this to false gives better performance.
+    ///
+    /// \remarks    This corresponds to the preserveDrawingBuffer member of the EmscriptenWebGLContextAttributes struct.
+    Bool PreserveDrawingBuffer DEFAULT_INITIALIZER(false);
+
+    /// Specifies a hint to the WebGL canvas implementation to how it should choose the use of available GPU resources.
+    ///
+    /// \remarks    This corresponds to the powerPreference member of the EmscriptenWebGLContextAttributes struct.
+    WEBGL_POWER_PREFERENCE PowerPreference DEFAULT_INITIALIZER(WEBGL_POWER_PREFERENCE_DEFAULT);
+};
+typedef struct WebGLContextAttribs WebGLContextAttribs;
+#endif
+
 /// Attributes of the OpenGL-based engine implementation
 struct EngineGLCreateInfo DILIGENT_DERIVE(EngineCreateInfo)
 
@@ -3423,6 +3507,30 @@ struct EngineGLCreateInfo DILIGENT_DERIVE(EngineCreateInfo)
     /// Enable 0..1 normalized-device Z range, if required extension is supported; -1..+1 otherwise.
     /// Use IRenderDevice::GetDeviceInfo().NDC to get current NDC.
     Bool         ZeroToOneNDZ DEFAULT_INITIALIZER(false);
+
+    /// The GPU preference allows you to request either the integrated or dedicated GPU
+    /// on systems having both onboard and dedicated GPUs. Currently this works only on Windows and Linux.
+    ///
+    /// * On Windows this is done by setting the `NvOptimusEnablement` and `AmdPowerXpressRequestHighPerformance`.
+    ///   When the Nvidia and AMD drivers see their respective symbol exported and set to nonzero in a program,
+    ///   they will take precedence over the integrated GPU when creating the OpenGL context.
+    ///
+    ///   Unfortunately, there is no way to transfer exported symbols from static libraries
+    ///   to the executable file without explicitly creating a Module-Definition File (.def).
+    ///
+    ///   Therefore you need to explicitly define these variables in your executable file:
+    ///   https://gist.github.com/statico/6809850727c708f08458
+    ///   or you can use the `Diligent-GLAdapterSelector` object library as source input to your executable target:
+    ///   `target_sources(MyExecutable PRIVATE $<TARGET_OBJECTS:Diligent-GLAdapterSelector>)`,
+    ///   see https://cmake.org/cmake/help/v3.16/manual/cmake-buildsystem.7.html#object-libraries.
+    ///
+    /// * On Linux this affects the `DRI_PRIME` environment variable that is used by Mesa drivers that support PRIME.
+    ADAPTER_TYPE PreferredAdapterType DEFAULT_INITIALIZER(ADAPTER_TYPE_UNKNOWN);
+
+#if PLATFORM_EMSCRIPTEN
+    /// WebGL context attributes.
+    WebGLContextAttribs WebGLAttribs;
+#endif
 
 #if DILIGENT_CPP_INTERFACE
     EngineGLCreateInfo() noexcept : EngineGLCreateInfo{EngineCreateInfo{}}
@@ -4104,6 +4212,11 @@ struct TextureFormatAttribs
     }
 
     constexpr TextureFormatAttribs() noexcept {}
+
+    constexpr bool IsDepthStencil() const noexcept
+    {
+        return ComponentType == COMPONENT_TYPE_DEPTH || ComponentType == COMPONENT_TYPE_DEPTH_STENCIL;
+    }
 #endif
 };
 typedef struct TextureFormatAttribs TextureFormatAttribs;

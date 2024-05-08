@@ -1,4 +1,7 @@
 # CMake generation dependency list for this directory.
 C:/Program Files/CMake/share/cmake-3.28/Modules/GNUInstallDirs.cmake
-C:/SYN/diligent/DiligentCore/BuildUtils.cmake
+C:/SYN/diligent/DiligentCore/BuildTools/CMake/BuildUtils.cmake
+C:/SYN/diligent/DiligentCore/BuildTools/CMake/CheckATL.cpp
+C:/SYN/diligent/DiligentCore/BuildTools/CMake/CheckD3D11.cpp
+C:/SYN/diligent/DiligentCore/BuildTools/CMake/CheckD3D12.cpp
 C:/SYN/diligent/DiligentCore/CMakeLists.txt

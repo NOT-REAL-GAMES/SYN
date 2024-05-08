@@ -71,7 +71,7 @@
     <CustomBuild Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include\HLSLDefinitions_inc.fxh">
+    <None Include="C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\GeneratedShaders\HLSLDefinitions_inc.fxh">
       <Filter>generated</Filter>
     </None>
   </ItemGroup>

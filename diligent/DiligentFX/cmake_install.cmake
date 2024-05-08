@@ -49,11 +49,27 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentFX/PostProcess/TemporalAntiAliasing" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentFX/PostProcess/TemporalAntiAliasing/interface")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentFX/PostProcess/ScreenSpaceReflection" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentFX/PostProcess/ScreenSpaceReflection/interface")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentFX/PostProcess/ScreenSpaceAmbientOcclusion" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentFX/PostProcess/ScreenSpaceAmbientOcclusion/interface")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentFX/PostProcess/Bloom" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentFX/PostProcess/Bloom/interface")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentFX/Components" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentFX/Components/interface")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentFX/GLTF_PBR_Renderer" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentFX/GLTF_PBR_Renderer/interface")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentFX/PBR" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentFX/PBR/interface")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -65,7 +81,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/SYN/diligent/DiligentFX/Utilities/cmake_install.cmake")
   include("C:/SYN/diligent/DiligentFX/Components/cmake_install.cmake")
   include("C:/SYN/diligent/DiligentFX/PostProcess/cmake_install.cmake")
-  include("C:/SYN/diligent/DiligentFX/GLTF_PBR_Renderer/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentFX/PBR/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentFX/Tests/cmake_install.cmake")
 
 endif()
 

@@ -2,20 +2,23 @@
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\ossource.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\osinclude.h">
-      <Filter>Source</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Source">
-      <UniqueIdentifier>{697E46BF-9901-33F5-9D43-6C60CD8F6FAB}</UniqueIdentifier>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{55A24A3A-8659-329D-A4EF-0CD32A725DBD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{881516AD-7FEC-30C9-AC77-848FD6E9A1F9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -118,9 +118,9 @@ public:
     }
 
 #if PLATFORM_ANDROID
-    virtual void InitAndroidFileSystem(struct ANativeActivity* NativeActivity,
-                                       const char*             NativeActivityClassName,
-                                       struct AAssetManager*   AssetManager) const override final;
+    virtual void InitAndroidFileSystem(struct AAssetManager* AssetManager,
+                                       const char*           ExternalFilesDir,
+                                       const char*           OutputFilesDir) const override final;
 #endif
 
 private:
@@ -188,9 +188,9 @@ GraphicsAdapterInfo GetPhysicalDeviceGraphicsAdapterInfo(const VulkanUtilities::
     // Sampler properties
     {
         auto& SamProps{AdapterInfo.Sampler};
-        SamProps.BorderSamplingModeSupported   = True;
-        SamProps.AnisotropicFilteringSupported = vkFeatures.samplerAnisotropy;
-        SamProps.LODBiasSupported              = True;
+        SamProps.BorderSamplingModeSupported = True;
+        SamProps.MaxAnisotropy               = static_cast<Uint8>(vkDeviceLimits.maxSamplerAnisotropy);
+        SamProps.LODBiasSupported            = True;
         ASSERT_SIZEOF(SamProps, 3, "Did you add a new member to SamplerProperites? Please initialize it here.");
     }
 
@@ -1144,6 +1144,23 @@ void EngineFactoryVkImpl::CreateDeviceAndContextsVk(const EngineVkCreateInfo& En
                 }
             }
 
+            if (EnabledFeatures.NativeMultiDraw != DEVICE_FEATURE_STATE_DISABLED)
+            {
+                VERIFY_EXPR(PhysicalDevice->IsExtensionSupported(VK_EXT_MULTI_DRAW_EXTENSION_NAME));
+                DeviceExtensions.push_back(VK_EXT_MULTI_DRAW_EXTENSION_NAME);
+
+                EnabledExtFeats.MultiDraw = DeviceExtFeatures.MultiDraw;
+
+                *NextExt = &EnabledExtFeats.MultiDraw;
+                NextExt  = &EnabledExtFeats.MultiDraw.pNext;
+
+
+                EnabledExtFeats.ShaderDrawParameters = DeviceExtFeatures.ShaderDrawParameters;
+
+                *NextExt = &EnabledExtFeats.ShaderDrawParameters;
+                NextExt  = &EnabledExtFeats.ShaderDrawParameters.pNext;
+            }
+
             // Append user-defined features
             *NextExt = EngineCI.pDeviceExtensionFeatures;
         }
@@ -1153,7 +1170,7 @@ void EngineFactoryVkImpl::CreateDeviceAndContextsVk(const EngineVkCreateInfo& En
                 LOG_ERROR_MESSAGE("Can not enable extended device features when VK_KHR_get_physical_device_properties2 extension is not supported by device");
         }
 
-        ASSERT_SIZEOF(Diligent::DeviceFeatures, 41, "Did you add a new feature to DeviceFeatures? Please handle its status here.");
+        ASSERT_SIZEOF(Diligent::DeviceFeatures, 43, "Did you add a new feature to DeviceFeatures? Please handle its status here.");
 
         for (Uint32 i = 0; i < EngineCI.DeviceExtensionCount; ++i)
         {
@@ -1384,11 +1401,11 @@ void EngineFactoryVkImpl::CreateSwapChainVk(IRenderDevice*       pDevice,
 
 
 #if PLATFORM_ANDROID
-void EngineFactoryVkImpl::InitAndroidFileSystem(struct ANativeActivity* NativeActivity,
-                                                const char*             NativeActivityClassName,
-                                                struct AAssetManager*   AssetManager) const
+void EngineFactoryVkImpl::InitAndroidFileSystem(struct AAssetManager* AssetManager,
+                                                const char*           ExternalFilesDir,
+                                                const char*           OutputFilesDir) const
 {
-    AndroidFileSystem::Init(NativeActivity, NativeActivityClassName, AssetManager);
+    AndroidFileSystem::Init(AssetManager, ExternalFilesDir, OutputFilesDir);
 }
 #endif
 

@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2023 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -182,25 +182,16 @@ inline void ExtractViewFrustumPlanesFromMatrix(const float4x4& Matrix, ViewFrust
     // Compute frustum corners
     float4x4 InvMatrix = Matrix.Inverse();
 
-    float nearClipZ = bIsOpenGL ? -1.f : 0.f;
-
-    static const float3 ProjSpaceCorners[] =
-        {
-            // clang-format off
-            float3(-1, -1, nearClipZ),
-            float3( 1, -1, nearClipZ),
-            float3(-1,  1, nearClipZ),
-            float3( 1,  1, nearClipZ),
-
-            float3(-1, -1, 1),
-            float3( 1, -1, 1),
-            float3(-1,  1, 1),
-            float3( 1,  1, 1),
-            // clang-format on
+    float NearClipZ = bIsOpenGL ? -1.f : 0.f;
+    for (Uint32 i = 0; i < 8; ++i)
+    {
+        const float3 ProjSpaceCorner{
+            (i & 0x01u) ? +1.f : -1.f,
+            (i & 0x02u) ? +1.f : -1.f,
+            (i & 0x04u) ? +1.f : NearClipZ,
         };
-
-    for (int i = 0; i < 8; ++i)
-        FrustumExt.FrustumCorners[i] = ProjSpaceCorners[i] * InvMatrix;
+        FrustumExt.FrustumCorners[i] = ProjSpaceCorner * InvMatrix;
+    }
 }
 
 struct BoundBox
@@ -238,6 +229,61 @@ struct BoundBox
         NewBB.Max += (std::max)(v0, v1);
 
         return NewBB;
+    }
+
+    float3 GetCorner(size_t i) const
+    {
+        return {
+            (i & 0x01u) ? Max.x : Min.x,
+            (i & 0x02u) ? Max.y : Min.y,
+            (i & 0x04u) ? Max.z : Min.z,
+        };
+    }
+
+    BoundBox Combine(const BoundBox& Box) const
+    {
+        return {
+            (std::min)(Min, Box.Min),
+            (std::max)(Max, Box.Max),
+        };
+    }
+
+    BoundBox Enclose(const float3& Point) const
+    {
+        return {
+            (std::min)(Min, Point),
+            (std::max)(Max, Point),
+        };
+    }
+
+    static const BoundBox Invalid()
+    {
+        return {
+            float3{+FLT_MAX},
+            float3{-FLT_MAX},
+        };
+    }
+
+    constexpr bool IsValid() const
+    {
+        return (Max.x >= Min.x &&
+                Max.y >= Min.y &&
+                Max.z >= Min.z);
+    }
+
+    explicit constexpr operator bool() const
+    {
+        return IsValid();
+    }
+
+    constexpr bool operator==(const BoundBox& rhs) const
+    {
+        return Min == rhs.Min && Max == rhs.Max;
+    }
+
+    constexpr bool operator!=(const BoundBox& rhs) const
+    {
+        return !(*this == rhs);
     }
 };
 
@@ -1453,9 +1499,9 @@ TriangulatePolygon3D(const std::vector<Vector3<ComponentType>>& Polygon, bool Ve
     const auto AbsNormal = abs(Normal);
 
     Vector3<ComponentType> Tangent;
-    if (AbsNormal.z > std::max(AbsNormal.x, AbsNormal.y))
+    if (AbsNormal.z > (std::max)(AbsNormal.x, AbsNormal.y))
         Tangent = cross(Vector3<ComponentType>{ComponentType{0}, ComponentType{1}, ComponentType{0}}, Normal);
-    else if (AbsNormal.y > std::max(AbsNormal.x, AbsNormal.z))
+    else if (AbsNormal.y > (std::max)(AbsNormal.x, AbsNormal.z))
         Tangent = cross(Vector3<ComponentType>{ComponentType{1}, ComponentType{0}, ComponentType{0}}, Normal);
     else
         Tangent = cross(Vector3<ComponentType>{ComponentType{0}, ComponentType{0}, ComponentType{1}}, Normal);

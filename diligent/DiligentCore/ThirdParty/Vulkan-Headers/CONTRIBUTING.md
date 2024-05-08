@@ -1,3 +1,9 @@
+<!--
+Copyright 2018-2023 The Khronos Group Inc.
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # CONTRIBUTING
 
 Please note when contributing what files this repository actually is responsible for.
@@ -11,7 +17,6 @@ The majority for the Vulkan headers come from [Vulkan-Docs](https://github.com/K
 * CMakeLists.txt
 * tests/*
 * CODE_OF_CONDUCT.md
-* INTEGRATION.md
 * LICENSE.txt
 * README.md
 * Non-API headers

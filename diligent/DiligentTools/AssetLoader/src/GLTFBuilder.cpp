@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -46,12 +46,7 @@ ModelBuilder::~ModelBuilder()
 {
 }
 
-bool ModelBuilder::ConvertedBufferViewKey::operator==(const ConvertedBufferViewKey& Rhs) const noexcept
-{
-    return AccessorIds == Rhs.AccessorIds;
-}
-
-size_t ModelBuilder::ConvertedBufferViewKey::Hasher::operator()(const ConvertedBufferViewKey& Key) const noexcept
+size_t ModelBuilder::PrimitiveKey::Hasher::operator()(const PrimitiveKey& Key) const noexcept
 {
     if (Key.Hash == 0)
     {
@@ -62,26 +57,68 @@ size_t ModelBuilder::ConvertedBufferViewKey::Hasher::operator()(const ConvertedB
     return Key.Hash;
 }
 
-template <typename SrcType, typename DstType>
-inline void ConvertElement(DstType& Dst, const SrcType& Src)
+template <typename DstType, bool Normalize, typename SrcType>
+inline DstType ConvertElement(SrcType Src)
 {
-    Dst = static_cast<DstType>(Src);
+    return static_cast<DstType>(Src);
+}
+
+// =========================== float -> Int8/Uint8 ============================
+template <>
+inline Uint8 ConvertElement<Uint8, true, float>(float Src)
+{
+    return static_cast<Uint8>(clamp(Src * 255.f + 0.5f, 0.f, 255.f));
 }
 
 template <>
-inline void ConvertElement<float, Uint8>(Uint8& Dst, const float& Src)
+inline Uint8 ConvertElement<Uint8, false, float>(float Src)
 {
-    Dst = static_cast<Uint8>(clamp(Src * 255.f + 0.5f, 0.f, 255.f));
+    return ConvertElement<Uint8, true>(Src);
 }
 
 template <>
-inline void ConvertElement<float, Int8>(Int8& Dst, const float& Src)
+inline Int8 ConvertElement<Int8, true, float>(float Src)
 {
     auto r = Src > 0.f ? +0.5f : -0.5f;
-    Dst    = static_cast<Int8>(clamp(Src * 127.f + r, -127.f, 127.f));
+    return static_cast<Int8>(clamp(Src * 127.f + r, -127.f, 127.f));
 }
 
-template <typename SrcType, typename DstType>
+template <>
+inline Int8 ConvertElement<Int8, false, float>(float Src)
+{
+    return ConvertElement<Int8, true>(Src);
+}
+
+
+// =========================== Int8/Uint8 -> float ============================
+template <>
+inline float ConvertElement<float, true, Int8>(Int8 Src)
+{
+    return std::max(static_cast<float>(Src), -127.f) / 127.f;
+}
+
+template <>
+inline float ConvertElement<float, true, Uint8>(Uint8 Src)
+{
+    return static_cast<float>(Src) / 255.f;
+}
+
+
+// ========================== Int16/Uint16 -> float ===========================
+template <>
+inline float ConvertElement<float, true, Int16>(Int16 Src)
+{
+    return std::max(static_cast<float>(Src), -32767.f) / 32767.f;
+}
+
+template <>
+inline float ConvertElement<float, true, Uint16>(Uint16 Src)
+{
+    return static_cast<float>(Src) / 65535.f;
+}
+
+
+template <typename SrcType, typename DstType, bool IsNormalized>
 inline void WriteGltfData(const void*                  pSrc,
                           Uint32                       NumComponents,
                           Uint32                       SrcElemStride,
@@ -96,33 +133,38 @@ inline void WriteGltfData(const void*                  pSrc,
         auto comp_it = dst_it + DstElementStride * elem;
         for (Uint32 cmp = 0; cmp < NumComponents; ++cmp, comp_it += sizeof(DstType))
         {
-            ConvertElement(reinterpret_cast<DstType&>(*comp_it), pSrcCmp[cmp]);
+            reinterpret_cast<DstType&>(*comp_it) = ConvertElement<DstType, IsNormalized>(pSrcCmp[cmp]);
         }
     }
 }
 
-void ModelBuilder::WriteGltfData(const void*                  pSrc,
-                                 VALUE_TYPE                   SrcType,
-                                 Uint32                       NumSrcComponents,
-                                 Uint32                       SrcElemStride,
-                                 std::vector<Uint8>::iterator dst_it,
-                                 VALUE_TYPE                   DstType,
-                                 Uint32                       NumDstComponents,
-                                 Uint32                       DstElementStride,
-                                 Uint32                       NumElements)
+void ModelBuilder::WriteGltfData(const WriteGltfDataAttribs& Attribs)
 {
-    const auto NumComponentsToCopy = std::min(NumSrcComponents, NumDstComponents);
+    const auto NumComponentsToCopy = std::min(Attribs.NumSrcComponents, Attribs.NumDstComponents);
 
-#define INNER_CASE(SrcType, DstType)                                                          \
-    case DstType:                                                                             \
-        GLTF::WriteGltfData<typename VALUE_TYPE2CType<SrcType>::CType,                        \
-                            typename VALUE_TYPE2CType<DstType>::CType>(                       \
-            pSrc, NumComponentsToCopy, SrcElemStride, dst_it, DstElementStride, NumElements); \
+#define INNER_CASE(SrcType, DstType)                                            \
+    case DstType:                                                               \
+        if (Attribs.IsNormalized)                                               \
+        {                                                                       \
+            GLTF::WriteGltfData<typename VALUE_TYPE2CType<SrcType>::CType,      \
+                                typename VALUE_TYPE2CType<DstType>::CType,      \
+                                true>(                                          \
+                Attribs.pSrc, NumComponentsToCopy, Attribs.SrcElemStride,       \
+                Attribs.dst_it, Attribs.DstElementStride, Attribs.NumElements); \
+        }                                                                       \
+        else                                                                    \
+        {                                                                       \
+            GLTF::WriteGltfData<typename VALUE_TYPE2CType<SrcType>::CType,      \
+                                typename VALUE_TYPE2CType<DstType>::CType,      \
+                                false>(                                         \
+                Attribs.pSrc, NumComponentsToCopy, Attribs.SrcElemStride,       \
+                Attribs.dst_it, Attribs.DstElementStride, Attribs.NumElements); \
+        }                                                                       \
         break
 
 #define CASE(SrcType)                                      \
     case SrcType:                                          \
-        switch (DstType)                                   \
+        switch (Attribs.DstType)                           \
         {                                                  \
             INNER_CASE(SrcType, VT_INT8);                  \
             INNER_CASE(SrcType, VT_INT16);                 \
@@ -138,7 +180,7 @@ void ModelBuilder::WriteGltfData(const void*                  pSrc,
         }                                                  \
         break
 
-    switch (SrcType)
+    switch (Attribs.SrcType)
     {
         CASE(VT_INT8);
         CASE(VT_INT16);
@@ -156,7 +198,44 @@ void ModelBuilder::WriteGltfData(const void*                  pSrc,
 #undef INNER_CASE
 }
 
-void ModelBuilder::InitIndexBuffer(IRenderDevice* pDevice, IDeviceContext* pContext)
+void ModelBuilder::WriteDefaultAttibuteValue(const void*                  pDefaultValue,
+                                             std::vector<Uint8>::iterator dst_it,
+                                             VALUE_TYPE                   DstType,
+                                             Uint32                       NumDstComponents,
+                                             Uint32                       DstElementStride,
+                                             Uint32                       NumElements)
+{
+    auto ElementSize = GetValueSize(DstType) * NumDstComponents;
+    VERIFY(DstElementStride >= ElementSize, "Destination element stride is too small");
+    for (size_t elem = 0; elem < NumElements; ++elem)
+    {
+        //  Note: MSVC asserts when moving iterator past the end of the vector
+        memcpy(&*(dst_it + DstElementStride * elem), pDefaultValue, ElementSize);
+    }
+}
+
+void ModelBuilder::WriteDefaultAttibutes(Uint32 BufferId, size_t StartOffset, size_t EndOffset)
+{
+    const auto VertexStride = m_Model.VertexData.Strides[BufferId];
+    VERIFY(StartOffset % VertexStride == 0, "Start offset is not aligned to vertex stride");
+    VERIFY(EndOffset % VertexStride == 0, "End offset is not aligned to vertex stride");
+    const auto NumVertices = static_cast<Uint32>((EndOffset - StartOffset) / VertexStride);
+    for (Uint32 i = 0; i < m_Model.GetNumVertexAttributes(); ++i)
+    {
+        const auto& Attrib = m_Model.VertexAttributes[i];
+        if (BufferId != Attrib.BufferId || Attrib.pDefaultValue == nullptr)
+            continue;
+
+        WriteDefaultAttibuteValue(Attrib.pDefaultValue,
+                                  m_VertexData[BufferId].begin() + StartOffset + Attrib.RelativeOffset,
+                                  Attrib.ValueType,
+                                  Attrib.NumComponents,
+                                  VertexStride,
+                                  NumVertices);
+    }
+}
+
+void ModelBuilder::InitIndexBuffer(IRenderDevice* pDevice)
 {
     if (m_IndexData.empty())
         return;
@@ -170,9 +249,19 @@ void ModelBuilder::InitIndexBuffer(IRenderDevice* pDevice, IDeviceContext* pCont
     {
         m_Model.IndexData.pAllocation = m_CI.pResourceManager->AllocateIndices(DataSize, 4);
 
-        auto pBuffInitData = BufferInitData::Create();
-        pBuffInitData->Data.emplace_back(std::move(m_IndexData));
-        m_Model.IndexData.pAllocation->SetUserData(pBuffInitData);
+        if (m_Model.IndexData.pAllocation)
+        {
+            auto pBuffInitData = BufferInitData::Create();
+            pBuffInitData->Data.emplace_back(std::move(m_IndexData));
+            m_Model.IndexData.pAllocation->SetUserData(pBuffInitData);
+
+            m_Model.IndexData.AllocatorId = m_CI.pResourceManager->GetIndexAllocatorIndex(m_Model.IndexData.pAllocation->GetAllocator());
+            VERIFY_EXPR(m_Model.IndexData.AllocatorId != ~0u);
+        }
+        else
+        {
+            UNEXPECTED("Failed to allocate indices from the pool.");
+        }
     }
     else
     {
@@ -189,7 +278,7 @@ void ModelBuilder::InitIndexBuffer(IRenderDevice* pDevice, IDeviceContext* pCont
     }
 }
 
-void ModelBuilder::InitVertexBuffers(IRenderDevice* pDevice, IDeviceContext* pContext)
+void ModelBuilder::InitVertexBuffers(IRenderDevice* pDevice)
 {
     if (m_VertexData.empty())
     {
@@ -200,11 +289,19 @@ void ModelBuilder::InitVertexBuffers(IRenderDevice* pDevice, IDeviceContext* pCo
     const auto VBCount = m_Model.GetVertexBufferCount();
     VERIFY_EXPR(m_VertexData.size() == VBCount);
 
-    const auto NumVertices = m_VertexData[0].size() / m_Model.VertexData.Strides[0];
-#ifdef DILIGENT_DEBUG
-    for (Uint32 i = 1; i < VBCount; ++i)
+    size_t NumVertices = 0;
+    for (Uint32 i = 0; i < VBCount; ++i)
     {
-        VERIFY(NumVertices == m_VertexData[i].size() / m_Model.VertexData.Strides[i], "Inconsistent number of vertices in different buffers.");
+        if (!m_VertexData[i].empty())
+        {
+            NumVertices = m_VertexData[i].size() / m_Model.VertexData.Strides[i];
+            break;
+        }
+    }
+#ifdef DILIGENT_DEBUG
+    for (Uint32 i = 0; i < VBCount; ++i)
+    {
+        VERIFY(m_VertexData[i].empty() || NumVertices == m_VertexData[i].size() / m_Model.VertexData.Strides[i], "Inconsistent number of vertices in different buffers.");
     }
 #endif
 
@@ -231,6 +328,8 @@ void ModelBuilder::InitVertexBuffers(IRenderDevice* pDevice, IDeviceContext* pCo
             auto pBuffInitData  = BufferInitData::Create();
             pBuffInitData->Data = std::move(m_VertexData);
             m_Model.VertexData.pAllocation->SetUserData(pBuffInitData);
+            m_Model.VertexData.PoolId = m_CI.pResourceManager->GetVertexPoolIndex(LayoutKey, m_Model.VertexData.pAllocation->GetPool());
+            VERIFY_EXPR(m_Model.VertexData.PoolId != ~0u);
         }
         else
         {
@@ -243,11 +342,14 @@ void ModelBuilder::InitVertexBuffers(IRenderDevice* pDevice, IDeviceContext* pCo
         m_Model.VertexData.Buffers.resize(VBCount);
         for (Uint32 i = 0; i < VBCount; ++i)
         {
-            const auto& Data      = m_VertexData[i];
-            const auto  DataSize  = static_cast<Uint32>(Data.size());
-            const auto  Name      = std::string{"GLTF vertex buffer "} + std::to_string(i);
-            const auto  BindFlags = m_CI.VertBufferBindFlags[i] != BIND_NONE ? m_CI.VertBufferBindFlags[i] : BIND_VERTEX_BUFFER;
-            BufferDesc  BuffDesc{Name.c_str(), DataSize, BindFlags, USAGE_IMMUTABLE};
+            const auto& Data = m_VertexData[i];
+            if (Data.empty())
+                continue;
+
+            const auto DataSize  = static_cast<Uint32>(Data.size());
+            const auto Name      = std::string{"GLTF vertex buffer "} + std::to_string(i);
+            const auto BindFlags = m_CI.VertBufferBindFlags[i] != BIND_NONE ? m_CI.VertBufferBindFlags[i] : BIND_VERTEX_BUFFER;
+            BufferDesc BuffDesc{Name.c_str(), DataSize, BindFlags, USAGE_IMMUTABLE};
 
             const auto ElementStride = m_Model.VertexData.Strides[i];
             VERIFY_EXPR(ElementStride > 0);

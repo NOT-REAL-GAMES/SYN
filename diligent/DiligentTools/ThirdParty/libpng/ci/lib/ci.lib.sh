@@ -1,16 +1,16 @@
-# Copyright (c) 2019-2023 Cosmin Truta.
+# Copyright (c) 2019-2024 Cosmin Truta.
 #
-# Use, modification and distribution are subject
-# to the Boost Software License, Version 1.0.
-# See the accompanying file LICENSE_BSL_1_0.txt
-# or visit http://www.boost.org/LICENSE_1_0.txt
+# Use, modification and distribution are subject to the MIT License.
+# Please see the accompanying file LICENSE_MIT.txt
 #
-# SPDX-License-Identifier: BSL-1.0
+# SPDX-License-Identifier: MIT
 
-test -f "$BASH_SOURCE" ||
+test -f "$BASH_SOURCE" || {
     echo >&2 "warning: this module requires Bash version 3 or newer"
-test "${#BASH_SOURCE[@]}" -gt 1 ||
+}
+test "${#BASH_SOURCE[@]}" -gt 1 || {
     echo >&2 "warning: this module should be sourced from a Bash script"
+}
 
 # Reset the locale to avoid surprises from locale-dependent commands.
 export LC_ALL=C
@@ -25,11 +25,13 @@ CI_SCRIPT_NAME="$(basename -- "$0")"
 CI_SCRIPT_DIR="$(cd "$(dirname -- "$0")" && pwd)"
 CI_TOPLEVEL_DIR="$(cd "$(dirname -- "${BASH_SOURCE[0]}")/../.." && pwd)"
 
-# Initialize the global constants CI_{HOST,TARGET}_{SYSTEM,MACHINE}.
-CI_HOST_SYSTEM="${CI_HOST_SYSTEM:-"$(uname -s | tr 'A-Z/\.-' 'a-z____')"}"
-CI_HOST_MACHINE="${CI_HOST_MACHINE:-"$(uname -m | tr 'A-Z/\.-' 'a-z____')"}"
-CI_TARGET_SYSTEM="${CI_TARGET_SYSTEM:-"$CI_HOST_SYSTEM"}"
-CI_TARGET_MACHINE="${CI_TARGET_MACHINE:-"$CI_HOST_MACHINE"}"
+# Initialize the global constants CI_BUILD_{...} for the host build platform.
+CI_BUILD_ARCH="${CI_BUILD_ARCH:-"$(uname -m | tr 'A-Z/\.-' 'a-z____')"}"
+CI_BUILD_SYSTEM="${CI_BUILD_SYSTEM:-"$(uname -s | tr 'A-Z/\.-' 'a-z____')"}"
+
+# Initialize the global constants CI_TARGET_{...} for the target platform.
+CI_TARGET_ARCH="${CI_TARGET_ARCH:-"$CI_BUILD_ARCH"}"
+CI_TARGET_SYSTEM="${CI_TARGET_SYSTEM:-"$CI_BUILD_SYSTEM"}"
 
 function ci_info {
     printf >&2 "%s: %s\\n" "$CI_SCRIPT_NAME" "$*"
@@ -51,11 +53,17 @@ function ci_err_internal {
     exit 134
 }
 
-function ci_assert {
-    # Use the "test" built-in command instead of the "[[ ]]" syntax,
-    # to ensure the a-priori expansion of all assertion arguments.
-    # (Consistently, both "ci_assert" and "test" have a command-like behavior.)
-    test "$@" || ci_err_internal "failed:" test "$@"
+function ci_expr {
+    if [[ ${*:-0} == [0-9] ]]
+    then
+        # This is the same as in the else-branch below, albeit much faster
+        # for our intended use cases.
+        return $((!$1))
+    else
+        # The funny-looking compound command "... && return $? || return $?"
+        # allows the execution to continue uninterrupted under "set -e".
+        expr >/dev/null "$@" && return $? || return $?
+    fi
 }
 
 function ci_spawn {
@@ -65,8 +73,30 @@ function ci_spawn {
     "$@"
 }
 
-# Ensure that the initialization is correct.
-ci_assert "$CI_TOPLEVEL_DIR/ci/lib/ci.lib.sh" -ef "${BASH_SOURCE[0]}"
-ci_assert "$CI_SCRIPT_DIR/$CI_SCRIPT_NAME" -ef "$0"
-ci_assert -n "$CI_HOST_SYSTEM" -a -n "$CI_HOST_MACHINE"
-ci_assert -n "$CI_TARGET_SYSTEM" -a -n "$CI_TARGET_MACHINE"
+# Ensure that the internal initialization is correct.
+[[ $CI_TOPLEVEL_DIR/ci/lib/ci.lib.sh -ef ${BASH_SOURCE[0]} ]] || {
+    ci_err_internal "bad or missing \$CI_TOPLEVEL_DIR"
+}
+[[ $CI_SCRIPT_DIR/$CI_SCRIPT_NAME -ef $0 ]] || {
+    ci_err_internal "bad or missing \$CI_SCRIPT_DIR/\$CI_SCRIPT_NAME"
+}
+[[ $CI_BUILD_ARCH && $CI_BUILD_SYSTEM ]] || {
+    ci_err_internal "missing \$CI_BUILD_ARCH or \$CI_BUILD_SYSTEM"
+}
+[[ $CI_TARGET_ARCH && $CI_TARGET_SYSTEM ]] || {
+    ci_err_internal "missing \$CI_TARGET_ARCH or \$CI_TARGET_SYSTEM"
+}
+
+# Ensure that the user initialization is correct.
+[[ ${CI_FORCE:-0} == [01] ]] || {
+    ci_err "bad boolean option: \$CI_FORCE: '$CI_FORCE'"
+}
+[[ ${CI_NO_TEST:-0} == [01] ]] || {
+    ci_err "bad boolean option: \$CI_NO_TEST: '$CI_NO_TEST'"
+}
+[[ ${CI_NO_INSTALL:-0} == [01] ]] || {
+    ci_err "bad boolean option: \$CI_NO_INSTALL: '$CI_NO_INSTALL'"
+}
+[[ ${CI_NO_CLEAN:-0} == [01] ]] || {
+    ci_err "bad boolean option: \$CI_NO_CLEAN: '$CI_NO_CLEAN'"
+}

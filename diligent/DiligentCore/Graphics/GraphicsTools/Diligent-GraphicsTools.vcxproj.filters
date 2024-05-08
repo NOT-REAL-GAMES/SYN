@@ -28,6 +28,9 @@
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\ScreenCapture.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\ShaderSourceFactoryUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\src\TextureUploader.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -90,6 +93,9 @@
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\MapHelper.hpp">
       <Filter>interface</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\ResourceRegistry.hpp">
+      <Filter>interface</Filter>
+    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\ScopedDebugGroup.hpp">
       <Filter>interface</Filter>
     </ClInclude>
@@ -108,6 +114,12 @@
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\StreamingBuffer.hpp">
       <Filter>interface</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\ShaderSourceFactoryUtils.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\ShaderSourceFactoryUtils.hpp">
+      <Filter>interface</Filter>
+    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\TextureUploader.hpp">
       <Filter>interface</Filter>
     </ClInclude>
@@ -118,6 +130,9 @@
       <Filter>interface</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\VertexPool.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\VertexPoolX.hpp">
       <Filter>interface</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface\RenderStateCache.h">

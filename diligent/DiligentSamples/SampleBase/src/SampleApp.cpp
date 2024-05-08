@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -343,6 +343,10 @@ void SampleApp::InitializeDiligentEngine(const NativeWindow* pWindow)
             EngineGLCreateInfo EngineCI;
             EngineCI.Window = *pWindow;
 
+#    if PLATFORM_EMSCRIPTEN
+            EngineCI.WebGLAttribs.Alpha           = false;
+            EngineCI.WebGLAttribs.PowerPreference = WEBGL_POWER_PREFERENCE_HIGH_PERFORMANCE;
+#    endif
             if (m_ValidationLevel >= 0)
                 EngineCI.SetValidationLevel(static_cast<VALIDATION_LEVEL>(m_ValidationLevel));
 
@@ -383,7 +387,8 @@ void SampleApp::InitializeDiligentEngine(const NativeWindow* pWindow)
                 {
                     // Validation Performance Warning: [ UNASSIGNED-CoreValidation-Shader-OutputNotConsumed ]
                     // vertex shader writes to output location 1.0 which is not consumed by fragment shader
-                    "UNASSIGNED-CoreValidation-Shader-OutputNotConsumed" //
+                    "UNASSIGNED-CoreValidation-Shader-OutputNotConsumed",
+                    "WARNING-Shader-OutputNotConsumed",
                 };
             EngineCI.ppIgnoreDebugMessageNames = ppIgnoreDebugMessages;
             EngineCI.IgnoreDebugMessageCount   = _countof(ppIgnoreDebugMessages);
@@ -826,6 +831,8 @@ void SampleApp::Render()
         return;
 
     auto* pCtx = GetImmediateContext();
+    pCtx->ClearStats();
+
     auto* pRTV = m_pSwapChain->GetCurrentBackBufferRTV();
     auto* pDSV = m_pSwapChain->GetDepthBufferDSV();
     pCtx->SetRenderTargets(1, &pRTV, pDSV, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
@@ -886,23 +893,51 @@ void SampleApp::CompareGoldenImage(const std::string& FileName, ScreenCapture::C
     auto* pGoldenImgPixels = reinterpret_cast<const Uint8*>(pGoldenImg->GetData()->GetDataPtr());
 
 
-    size_t NumBadPixels = 0;
+    size_t NumBadPixels  = 0;
+    size_t NumDiffPixels = 0;
+    int    MaxDiff       = 0;
     for (size_t row = 0; row < TexDesc.Height; ++row)
     {
         for (size_t col = 0; col < TexDesc.Width; ++col)
         {
             const auto* SrcPixel = &CapturedPixels[(col + row * size_t{TexDesc.Width}) * 3u];
             const auto* DstPixel = pGoldenImgPixels + row * size_t{GoldenImgDesc.RowStride} + col * size_t{GoldenImgDesc.NumComponents};
-            if (std::abs(int{SrcPixel[0]} - int{DstPixel[0]}) > m_GoldenImgPixelTolerance ||
-                std::abs(int{SrcPixel[1]} - int{DstPixel[1]}) > m_GoldenImgPixelTolerance ||
-                std::abs(int{SrcPixel[2]} - int{DstPixel[2]}) > m_GoldenImgPixelTolerance)
+
+            const auto DiffR = std::abs(int{SrcPixel[0]} - int{DstPixel[0]});
+            const auto DiffG = std::abs(int{SrcPixel[1]} - int{DstPixel[1]});
+            const auto DiffB = std::abs(int{SrcPixel[2]} - int{DstPixel[2]});
+            const auto Diff  = std::max(std::max(DiffR, DiffG), DiffB);
+            if (Diff > m_GoldenImgPixelTolerance)
                 ++NumBadPixels;
+            else if (Diff != 0)
+                ++NumDiffPixels;
+            MaxDiff = std::max(MaxDiff, Diff);
         }
     }
     if (NumBadPixels == 0)
-        LOG_INFO_MESSAGE(TextColorCode::Green, GetAppTitle(), ": golden image validation PASSED.", TextColorCode::Default);
+    {
+        if (NumDiffPixels == 0)
+        {
+            LOG_INFO_MESSAGE(TextColorCode::Green, GetAppTitle(), ": golden image validation PASSED.", TextColorCode::Default);
+        }
+        else
+        {
+            LOG_WARNING_MESSAGE(GetAppTitle(), ": golden image validation PASSED with ", NumDiffPixels,
+                                " differing pixels within the threshold (", m_GoldenImgPixelTolerance, "). Maximum difference: ", MaxDiff, '.');
+        }
+    }
     else
-        LOG_ERROR_MESSAGE(GetAppTitle(), ": golden image validation FAILED: ", NumBadPixels, " inconsistent pixels found.");
+    {
+        if (NumDiffPixels == 0)
+        {
+            LOG_ERROR_MESSAGE(GetAppTitle(), ": golden image validation FAILED: ", NumBadPixels, " inconsistent pixels are found. Maximum difference: ", MaxDiff, '.');
+        }
+        else
+        {
+            LOG_ERROR_MESSAGE(GetAppTitle(), ": golden image validation FAILED: ", NumBadPixels, " inconsistent pixels and ", NumDiffPixels,
+                              " differing pixels within the threshold (", m_GoldenImgPixelTolerance, ") are found. Maximum difference: ", MaxDiff, '.');
+        }
+    }
 
     m_ExitCode = NumBadPixels > 0 ? 10 : 0;
 }

@@ -37,7 +37,7 @@ void TestDeviceContextCInterface(struct IDeviceContext* pCtx)
 
     IDeviceContext_Begin(pCtx, 0u);
 
-    IDeviceContext_TransitionShaderResources(pCtx, (struct IPipelineState*)NULL, (struct IShaderResourceBinding*)NULL);
+    IDeviceContext_TransitionShaderResources(pCtx, (struct IShaderResourceBinding*)NULL);
     IDeviceContext_TransitionResourceStates(pCtx, 1u, (const struct StateTransitionDesc*)NULL);
 
     IDeviceContext_SetPipelineState(pCtx, (struct IPipelineState*)NULL);
@@ -121,4 +121,8 @@ void TestDeviceContextCInterface(struct IDeviceContext* pCtx)
     IDeviceContext_SetShadingRate(pCtx, SHADING_RATE_1X1, SHADING_RATE_COMBINER_PASSTHROUGH, SHADING_RATE_COMBINER_PASSTHROUGH);
 
     IDeviceContext_BindSparseResourceMemory(pCtx, (const BindSparseResourceMemoryAttribs*)NULL);
+
+    IDeviceContext_ClearStats(pCtx);
+    const struct DeviceContextStats* pStats = IDeviceContext_GetStats(pCtx);
+    (void)pStats;
 }

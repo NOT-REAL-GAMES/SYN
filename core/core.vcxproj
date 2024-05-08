@@ -40,10 +40,11 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -71,6 +72,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\SYN\diligent;C:\SYN\jolt;C:\SYN\core;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\SYN\diligent;C:\SYN\jolt;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -105,17 +109,21 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <BuildStlModules>true</BuildStlModules>
       <EnableModules>true</EnableModules>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>C:\SYN\core;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\NativeApp\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>"C:\SYN\diligent\DiligentCore\Common\interface";"C:\SYN\diligent\DiligentCore\Platforms\Win32\interface";"C:\SYN\diligent\DiligentCore\Platforms\Basic\interface";"C:\SYN\diligent\DiligentCore\Primitives\interface";"C:\SYN\diligent\DiligentCore\Platforms\interface";"C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface";"C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface";"C:\SYN\diligent\DiligentTools\TextureLoader\interface";"C:\SYN\diligent\DiligentTools\ThirdParty\imgui";"C:\SYN\diligent\DiligentTools\Imgui\interface";"C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface";"C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface";"C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface";"C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface";"C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface";"C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface";"C:\SYN\diligent\DiligentTools\NativeApp\include";%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -124,7 +132,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -132,10 +140,25 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SampleBase.cpp" />
+    <ClCompile Include="Win32.cpp" />
+    <ClCompile Include="Win32\InputControllerWin32.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InputController.hpp" />
+    <ClInclude Include="main.hpp" />
+    <ClInclude Include="SampleBase.hpp" />
+    <ClInclude Include="Win32\InputControllerWin32.hpp" />
+    <ClInclude Include="Win32\resources\Win32AppResource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Win32\resources\Win32AppResource.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

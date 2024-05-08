@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -1291,32 +1291,361 @@ TEST(Common_BasicMath, HighPrecisionCross)
     constexpr float epsilon = 1.f / 32768.f;
 
     {
-        float3 v1{1.f + epsilon, 1.f, 0.f};
-        float3 v2{1.f, 1.f - epsilon, 0.f};
-        auto   v1xv2    = cross(v1, v2);
-        auto   v1xv2_hp = high_precision_cross(v1, v2);
-        EXPECT_EQ(v1xv2, float3{});
-        EXPECT_EQ(v1xv2_hp, float3(0, 0, -epsilon * epsilon));
+        constexpr float3 v1{1.f + epsilon, 1.f, 0.f};
+        constexpr float3 v2{1.f, 1.f - epsilon, 0.f};
+        constexpr float3 v1xv2_hp_ref{0, 0, -epsilon * epsilon};
+
+        float3 v1xv2    = cross(v1, v2);
+        float3 v1xv2_hp = high_precision_cross(v1, v2);
+        EXPECT_TRUE(v1xv2 == float3{} || v1xv2 == v1xv2_hp_ref);
+        EXPECT_EQ(v1xv2_hp, v1xv2_hp_ref);
     }
 
     {
-        float3 v1{1.f + epsilon, 0.f, 1.f};
-        float3 v2{1.f, 0.f, 1.f - epsilon};
-        auto   v1xv2    = cross(v1, v2);
-        auto   v1xv2_hp = high_precision_cross(v1, v2);
-        EXPECT_EQ(v1xv2, float3{});
-        EXPECT_EQ(v1xv2_hp, float3(0, epsilon * epsilon, 0));
+        constexpr float3 v1{1.f + epsilon, 0.f, 1.f};
+        constexpr float3 v2{1.f, 0.f, 1.f - epsilon};
+        constexpr float3 v1xv2_hp_ref{0, epsilon * epsilon, 0};
+
+        float3 v1xv2    = cross(v1, v2);
+        float3 v1xv2_hp = high_precision_cross(v1, v2);
+        EXPECT_TRUE(v1xv2 == float3{} || v1xv2 == v1xv2_hp_ref);
+        EXPECT_EQ(v1xv2_hp, v1xv2_hp_ref);
     }
 
     {
-        float3 v1{0.f, 1.f + epsilon, 1.f};
-        float3 v2{0.f, 1.f, 1.f - epsilon};
-        auto   v1xv2    = cross(v1, v2);
-        auto   v1xv2_hp = high_precision_cross(v1, v2);
-        EXPECT_EQ(v1xv2, float3{});
-        EXPECT_EQ(v1xv2_hp, float3(-epsilon * epsilon, 0, 0));
+        constexpr float3 v1{0.f, 1.f + epsilon, 1.f};
+        constexpr float3 v2{0.f, 1.f, 1.f - epsilon};
+        constexpr float3 v1xv2_hp_ref{-epsilon * epsilon, 0, 0};
+
+        float3 v1xv2    = cross(v1, v2);
+        float3 v1xv2_hp = high_precision_cross(v1, v2);
+        EXPECT_TRUE(v1xv2 == float3{} || v1xv2 == v1xv2_hp_ref);
+        EXPECT_EQ(v1xv2_hp, v1xv2_hp_ref);
     }
 }
+
+
+TEST(Common_BasicMath, MatrixScalarMultiply)
+{
+    // clang-format off
+    EXPECT_EQ(float2x2(1, 2,
+                       3, 4) * 2.f,
+              float2x2(2, 4,
+                       6, 8)
+              );
+    EXPECT_EQ(float3x3(1, 2, 3,
+                       4, 5, 6,
+                       7, 8, 9) * 2.f,
+              float3x3( 2,  4,  6,
+                        8, 10, 12,
+                       14, 16, 18)
+              );
+    EXPECT_EQ(float4x4( 1,  2,  3,  4,
+                        5,  6,  7,  8,
+                        9, 10 ,11, 12,
+                       13, 14, 15, 16) * 2.f,
+              float4x4( 2,  4,  6,  8,
+                       10, 12, 14, 16,
+                       18, 20 ,22, 24,
+                       26, 28, 30, 32)
+              );
+    // clang-format on
+}
+
+TEST(Common_BasicMath, ScalarMatrixMultiply)
+{
+    // clang-format off
+    EXPECT_EQ(2 * int2x2(1, 2,
+                         3, 4),
+              int2x2(2, 4,
+                     6, 8)
+              );
+    EXPECT_EQ(2 * int3x3(1, 2, 3,
+                         4, 5, 6,
+                         7, 8, 9),
+              int3x3( 2,  4,  6,
+                      8, 10, 12,
+                     14, 16, 18)
+              );
+    EXPECT_EQ(2 * int4x4( 1,  2,  3,  4,
+                          5,  6,  7,  8,
+                          9, 10 ,11, 12,
+                         13, 14, 15, 16),
+              int4x4( 2,  4,  6,  8,
+                     10, 12, 14, 16,
+                     18, 20 ,22, 24,
+                     26, 28, 30, 32)
+              );
+    // clang-format on
+}
+
+TEST(Common_BasicMath, ScalarMatrixMultiplyEqual)
+{
+    // clang-format off
+    {
+        auto Mat = int2x2{1, 2,
+                          3, 4};
+        Mat *= 2;
+        EXPECT_EQ(Mat,
+                  int2x2(2, 4,
+                         6, 8)
+                  );
+    }
+    {
+        auto Mat = int3x3{1, 2, 3,
+                          4, 5, 6,
+                          7, 8, 9};
+        Mat *= 2;
+        EXPECT_EQ(Mat,
+                  int3x3( 2,  4,  6,
+                          8, 10, 12,
+                         14, 16, 18)
+                  );
+    }
+    {
+        auto Mat = int4x4{ 1,  2,  3,  4,
+                           5,  6,  7,  8,
+                           9, 10 ,11, 12,
+                          13, 14, 15, 16};
+        Mat *= 2;
+        EXPECT_EQ(Mat,
+                  int4x4( 2,  4,  6,  8,
+                         10, 12, 14, 16,
+                         18, 20 ,22, 24,
+                         26, 28, 30, 32)
+                  );
+    }
+    // clang-format on
+}
+
+TEST(Common_BasicMath, MatrixScalarDivide)
+{
+    // clang-format off
+    EXPECT_EQ(float2x2(2, 4,
+                       6, 8) / 2.f,
+              float2x2(1, 2,
+                       3, 4)
+              );
+    EXPECT_EQ(float3x3( 2,  4,  6,
+                        8, 10, 12,
+                       14, 16, 18) / 2.f,
+              float3x3(1, 2, 3,
+                       4, 5, 6,
+                       7, 8, 9)
+              );
+    EXPECT_EQ(float4x4( 2,  4,  6,  8,
+                       10, 12, 14, 16,
+                       18, 20 ,22, 24,
+                       26, 28, 30, 32) / 2.f,
+              float4x4( 1,  2,  3,  4,
+                        5,  6,  7,  8,
+                        9, 10 ,11, 12,
+                       13, 14, 15, 16)
+              );
+    // clang-format on
+}
+
+TEST(Common_BasicMath, MatrixScalarDivideEqual)
+{
+    // clang-format off
+    {
+        auto Mat = float2x2{2, 4,
+                            6, 8};
+        Mat /= 2.f;
+        EXPECT_EQ(Mat,
+                  float2x2(1, 2,
+                           3, 4)
+                  );
+    }
+    {
+        auto Mat = float3x3{ 2,  4,  6,
+                             8, 10, 12,
+                            14, 16, 18};
+        Mat /= 2.f;
+        EXPECT_EQ(Mat,
+                  float3x3(1, 2, 3,
+                           4, 5, 6,
+                           7, 8, 9)
+                  );
+    }
+    {
+        auto Mat = float4x4{ 2,  4,  6,  8,
+                            10, 12, 14, 16,
+                            18, 20 ,22, 24,
+                            26, 28, 30, 32};
+        Mat /= 2.f;
+        EXPECT_EQ(Mat,
+                  float4x4( 1,  2,  3,  4,
+                            5,  6,  7,  8,
+                            9, 10 ,11, 12,
+                           13, 14, 15, 16)
+                  );
+    }
+    // clang-format on
+}
+
+TEST(Common_BasicMath, MatrixOpeartorPlus)
+{
+    // clang-format off
+    EXPECT_EQ(float2x2(1, 2,
+                       3, 4) +
+              float2x2(5, 6,
+                       7, 8),
+              float2x2( 6,  8,
+                       10, 12)
+              );
+    EXPECT_EQ(float3x3(1, 2, 3,
+                       4, 5, 6,
+                       7, 8, 9) +
+              float3x3(10, 11, 12,
+                       13, 14, 15,
+                       16, 17, 18),
+              float3x3(11, 13, 15,
+                       17, 19, 21,
+                       23, 25, 27)
+              );
+    EXPECT_EQ(float4x4( 1,  2,  3,  4,
+                        5,  6,  7,  8,
+                        9, 10 ,11, 12,
+                       13, 14, 15, 16) +
+              float4x4(17, 18, 19, 20,
+                       21, 22, 23, 24,
+                       25, 26, 27, 28,
+                       29, 30, 31, 32),
+              float4x4(18, 20, 22, 24,
+                       26, 28, 30, 32,
+                       34, 36, 38, 40,
+                       42, 44, 46, 48)
+              );
+    // clang-format on
+}
+
+TEST(Common_BasicMath, MatrixOpeartorPlusEqual)
+{
+    // clang-format off
+    {
+        auto Mat = float2x2{1, 2,
+                            3, 4};
+        Mat +=     float2x2{5, 6,
+                            7, 8};
+        EXPECT_EQ(Mat,
+                  float2x2( 6,  8,
+                           10, 12)
+                  );
+    }
+    {
+        auto Mat = float3x3{1, 2, 3,
+                            4, 5, 6,
+                            7, 8, 9};
+        Mat +=    float3x3{10, 11, 12,
+                           13, 14, 15,
+                           16, 17, 18};
+        EXPECT_EQ(Mat,
+                  float3x3(11, 13, 15,
+                           17, 19, 21,
+                           23, 25, 27)
+                  );
+    }
+    {
+        auto Mat = float4x4{ 1,  2,  3,  4,
+                             5,  6,  7,  8,
+                             9, 10 ,11, 12,
+                            13, 14, 15, 16};
+        Mat +=     float4x4{17, 18, 19, 20,
+                            21, 22, 23, 24,
+                            25, 26, 27, 28,
+                            29, 30, 31, 32};
+        EXPECT_EQ(Mat,
+                  float4x4(18, 20, 22, 24,
+                           26, 28, 30, 32,
+                           34, 36, 38, 40,
+                           42, 44, 46, 48)
+                  );
+    }
+    // clang-format on
+}
+
+
+TEST(Common_BasicMath, MatrixOpeartorMinus)
+{
+    // clang-format off
+    EXPECT_EQ(float2x2( 6,  8,
+                       10, 12) -
+              float2x2(5, 6,
+                       7, 8),
+              float2x2(1, 2,
+                       3, 4));
+    EXPECT_EQ(float3x3(11, 13, 15,
+                       17, 19, 21,
+                       23, 25, 27) -
+              float3x3(10, 11, 12,
+                       13, 14, 15,
+                       16, 17, 18),
+              float3x3(1, 2, 3,
+                       4, 5, 6,
+                       7, 8, 9));
+    EXPECT_EQ(float4x4(18, 20, 22, 24,
+                       26, 28, 30, 32,
+                       34, 36, 38, 40,
+                       42, 44, 46, 48) -
+              float4x4(17, 18, 19, 20,
+                       21, 22, 23, 24,
+                       25, 26, 27, 28,
+                       29, 30, 31, 32),
+              float4x4( 1,  2,  3,  4,
+                        5,  6,  7,  8,
+                        9, 10 ,11, 12,
+                       13, 14, 15, 16)
+              );
+    // clang-format on
+}
+
+
+TEST(Common_BasicMath, MatrixOpeartorMinusEqual)
+{
+    // clang-format off
+    {
+        auto Mat = float2x2{ 6,  8,
+                            10, 12};
+        Mat -=     float2x2{5, 6,
+                            7, 8};
+        EXPECT_EQ(Mat,
+                  float2x2(1, 2,
+                           3, 4)
+                  );
+    }
+    {
+        auto Mat = float3x3{11, 13, 15,
+                            17, 19, 21,
+                            23, 25, 27};
+        Mat -=    float3x3{10, 11, 12,
+                           13, 14, 15,
+                           16, 17, 18};
+        EXPECT_EQ(Mat,
+                  float3x3(1, 2, 3,
+                           4, 5, 6,
+                           7, 8, 9)
+                  );
+    }
+    {
+        auto Mat = float4x4(18, 20, 22, 24,
+                           26, 28, 30, 32,
+                           34, 36, 38, 40,
+                           42, 44, 46, 48);
+        Mat -=     float4x4{17, 18, 19, 20,
+                            21, 22, 23, 24,
+                            25, 26, 27, 28,
+                            29, 30, 31, 32};
+        EXPECT_EQ(Mat,
+                  float4x4( 1,  2,  3,  4,
+                            5,  6,  7,  8,
+                            9, 10 ,11, 12,
+                           13, 14, 15, 16)
+                  );
+    }
+    // clang-format on
+}
+
 
 TEST(Common_AdvancedMath, Planes)
 {
@@ -1969,6 +2298,38 @@ TEST(Common_BasicMath, VectorAll)
     EXPECT_FALSE(all(double4{1, 1, 1, 0}));
 }
 
+
+TEST(Common_BasicMath, Wrap)
+{
+    EXPECT_EQ(WrapToRange(10, 1, 0), 1);
+    EXPECT_EQ(WrapToRange(10, 1, 1), 1);
+    EXPECT_EQ(WrapToRange(-10, 1, 0), 1);
+    EXPECT_EQ(WrapToRange(-10, 1, 1), 1);
+
+    EXPECT_EQ(WrapToRange(0, 200, 10), 200);
+    EXPECT_EQ(WrapToRange(1, 200, 10), 201);
+    EXPECT_EQ(WrapToRange(9, 200, 10), 209);
+    EXPECT_EQ(WrapToRange(10, 200, 10), 200);
+
+    EXPECT_EQ(WrapToRange(-1, 200, 10), 209);
+    EXPECT_EQ(WrapToRange(-9, 200, 10), 201);
+    EXPECT_EQ(WrapToRange(-10, 200, 10), 200);
+
+    for (int Range : {1, 2, 7, 8, 9, 10, 15, 16, 17})
+    {
+        int Min = -Range / 2;
+        for (int i = -2; i <= 2; ++i)
+        {
+            for (int Ref = Min; Ref < Min + Range; ++Ref)
+            {
+                int Value = i * Range + Ref;
+                EXPECT_EQ(WrapToRange(Value, Min, Range), Ref) << Value << " " << Min << " " << Range;
+            }
+        }
+    }
+}
+
+
 TEST(Common_AdvancedMath, IsPointInsideTriangleF)
 {
     {
@@ -2322,6 +2683,15 @@ TEST(Common_AdvancedMath, TransformBoundBox)
         EXPECT_EQ(TransformedBB.Min, float3(-6, 1, 2));
         EXPECT_EQ(TransformedBB.Max, float3(-3, 2, 4));
     }
+}
+
+TEST(Common_AdvancedMath, CombineBoundBoxes)
+{
+    const BoundBox BB1{float3{1, 2, 3}, float3{4, 5, 6}};
+    const BoundBox BB2{float3{-2, -3, -4}, float3{50, 60, 70}};
+    const BoundBox RefBB{float3{-2, -3, -4}, float3{50, 60, 70}};
+    EXPECT_EQ(BB1.Combine(BB2), RefBB);
+    EXPECT_EQ(BB2.Combine(BB1), RefBB);
 }
 
 TEST(Common_AdvancedMath, CheckBox2DBox2DOverlap)

@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -66,6 +66,8 @@ namespace Diligent
 #include "TextureUtilities.h"
 #include "CommonlyUsedStates.h"
 #include "CallbackWrapper.hpp"
+#include "Utilities/interface/DiligentFXShaderSourceStreamFactory.hpp"
+#include "ShaderSourceFactoryUtils.hpp"
 
 namespace Diligent
 {
@@ -632,7 +634,11 @@ void EarthHemsiphere::Create(class ElevationDataSource* pDataSource,
     {
         RefCntAutoPtr<IShaderSourceInputStreamFactory> pStreamFactory;
         m_pDevice->GetEngineFactory()->CreateDefaultShaderSourceStreamFactory("shaders;shaders\\terrain;", &pStreamFactory);
-        CreateRenderStateNotationLoader({m_pDevice, pRSNParser, pStreamFactory}, &m_pRSNLoader);
+
+        RefCntAutoPtr<IShaderSourceInputStreamFactory> pCompoundFactory =
+            CreateCompoundShaderSourceFactory({&DiligentFXShaderSourceStreamFactory::GetInstance(), pStreamFactory});
+
+        CreateRenderStateNotationLoader({m_pDevice, pRSNParser, pCompoundFactory}, &m_pRSNLoader);
     }
 
     const Uint16* pHeightMap;
@@ -765,7 +771,7 @@ void EarthHemsiphere::Render(IDeviceContext*        pContext,
         Macros.AddShaderMacro("NUM_TILE_TEXTURES", NUM_TILE_TEXTURES);
         Macros.AddShaderMacro("NUM_SHADOW_CASCADES", m_Params.m_iNumShadowCascades);
         Macros.AddShaderMacro("BEST_CASCADE_SEARCH", m_Params.m_bBestCascadeSearch ? true : false);
-        Macros.AddShaderMacro("SHADOW_FILTER_SIZE", m_Params.m_FixedShadowFilterSize);
+        Macros.AddShaderMacro("PCF_FILTER_SIZE", m_Params.m_FixedShadowFilterSize);
         Macros.AddShaderMacro("FILTER_ACROSS_CASCADES", m_Params.m_FilterAcrossShadowCascades);
 
         auto ShaderCallback = MakeCallback([&](ShaderCreateInfo& pShaderCI, SHADER_TYPE ShaderType, bool& IsAddToCache) {

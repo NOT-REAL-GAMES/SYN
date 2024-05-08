@@ -66,6 +66,7 @@ add_spvtools_unittest(TARGET opt
        instruction_list_test.cpp
        instruction_test.cpp
        interface_var_sroa_test.cpp
+       invocation_interlock_placement_test.cpp
        interp_fixup_test.cpp
        ir_builder.cpp
        ir_context_test.cpp
@@ -77,6 +78,7 @@ add_spvtools_unittest(TARGET opt
        local_single_block_elim.cpp
        local_single_store_elim_test.cpp
        local_ssa_elim_test.cpp
+       modify_maximal_reconvergence_test.cpp
        module_test.cpp
        module_utils.h
        optimizer_test.cpp
@@ -103,6 +105,7 @@ add_spvtools_unittest(TARGET opt
        strip_debug_info_test.cpp
        strip_nonsemantic_info_test.cpp
        struct_cfg_analysis_test.cpp
+       switch_descriptorset_test.cpp
        trim_capabilities_pass_test.cpp
        type_manager_test.cpp
        types_test.cpp

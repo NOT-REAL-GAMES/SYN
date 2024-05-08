@@ -86,21 +86,6 @@
     <None Include="C:\SYN\diligent\DiligentSamples\Samples\Atmosphere\assets\shaders\HostSharedTerrainStructs.fxh">
       <Filter>Assets\shaders</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\EpipolarLightScattering\public\EpipolarLightScatteringStructures.fxh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\EpipolarLightScattering\public\EpipolarLightScatteringFunctions.fxh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMappingStructures.fxh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\BasicStructures.fxh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\Shadows.fxh">
-      <Filter>Assets\shaders</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">

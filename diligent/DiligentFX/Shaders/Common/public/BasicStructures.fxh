@@ -1,36 +1,7 @@
 #ifndef _BASIC_STRUCTURES_FXH_
 #define _BASIC_STRUCTURES_FXH_
 
-
-#ifdef __cplusplus
-
-#   ifndef BOOL
-#      define BOOL int32_t // Do not use bool, because sizeof(bool)==1 !
-#   endif
-
-#   ifndef CHECK_STRUCT_ALIGNMENT
-        // Note that defining empty macros causes GL shader compilation error on Mac, because
-        // it does not allow standalone semicolons outside of main.
-        // On the other hand, adding semicolon at the end of the macro definition causes gcc error.
-#       define CHECK_STRUCT_ALIGNMENT(s) static_assert( sizeof(s) % 16 == 0, "sizeof(" #s ") is not multiple of 16" )
-#   endif
-
-#   ifndef DEFAULT_VALUE
-#       define DEFAULT_VALUE(x) =x
-#   endif
-
-#else
-
-#   ifndef BOOL
-#       define BOOL bool
-#   endif
-
-#   ifndef DEFAULT_VALUE
-#       define DEFAULT_VALUE(x)
-#   endif
-
-#endif
-
+#include "ShaderDefinitions.fxh"
 
 struct CascadeAttribs
 {
@@ -95,7 +66,7 @@ struct ShadowMapAttribs
     BOOL  bIs32BitEVSM                  DEFAULT_VALUE(1);
     int   iFixedFilterSize              DEFAULT_VALUE(3); // 3x3 filter
     float fFilterWorldSize              DEFAULT_VALUE(0);
-    bool  fDummy;
+    BOOL  fDummy;
 };
 #ifdef CHECK_STRUCT_ALIGNMENT
     CHECK_STRUCT_ALIGNMENT(ShadowMapAttribs);
@@ -118,10 +89,14 @@ struct CameraAttribs
     float4 f4Position;     // Camera world position
     float4 f4ViewportSize; // (width, height, 1/width, 1/height)
 
-    float2 f2ViewportOrigin; // (min x, min y)
     float fNearPlaneZ; 
-    float fFarPlaneZ; // fNearPlaneZ < fFarPlaneZ
-
+    float fFarPlaneZ;  // fNearPlaneZ < fFarPlaneZ
+    float fHandness;   // +1.0 for right-handed coordinate system, -1.0 for left-handed
+    uint  uiFrameIndex;
+    
+    float2 f2Jitter;   // TAA jitter
+    float2 f2Padding1;
+    
 #ifdef __cplusplus
     float4x4 mViewT;
     float4x4 mProjT;
@@ -146,3 +121,4 @@ struct CameraAttribs
 #endif
 
 #endif //_BASIC_STRUCTURES_FXH_
+    

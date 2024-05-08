@@ -14,6 +14,10 @@
 # EXTERNAL cache entries
 ########################
 
+//Allows to build against installed SPIRV-Tools-opt. This is unsupported
+// if the commit isn't the one in known_good.json
+ALLOW_EXTERNAL_SPIRV_TOOLS:BOOL=OFF
+
 //Path to a program.
 AWK:FILEPATH=AWK-NOTFOUND
 
@@ -38,11 +42,14 @@ Atmosphere_SOURCE_DIR:STATIC=C:/SYN/diligent/DiligentSamples/Samples/Atmosphere
 //Build external dependencies in /External
 BUILD_EXTERNAL:BOOL=ON
 
+//Enable warnings as errors (default is OFF)
+BUILD_WERROR:BOOL=OFF
+
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/lib.exe
 
 //ASM compiler
-CMAKE_ASM_COMPILER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/cl.exe
+CMAKE_ASM_COMPILER:STRING=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/cl.exe
 
 //Flags used by the ASM compiler during all build types.
 CMAKE_ASM_FLAGS:STRING=
@@ -261,10 +268,10 @@ CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //If set, runtime paths are not added when installing shared libraries,
 // but are added when building.
-CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
+CMAKE_SKIP_INSTALL_RPATH:BOOL=OFF
 
 //If set, runtime paths are not added when using shared libraries.
-CMAKE_SKIP_RPATH:BOOL=NO
+CMAKE_SKIP_RPATH:BOOL=OFF
 
 //Flags used by the linker during the creation of static libraries
 // during all build types.
@@ -290,7 +297,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
-CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
 //Enable to build 7-Zip packages
 CPACK_BINARY_7Z:BOOL=OFF
@@ -420,7 +427,7 @@ DOT_NET_SDK_VERSIONS:STRING=7.0.401;8.0.204
 Diligent-Archiver-shared_LIB_DEPENDS:STATIC=general;Diligent-Archiver-static;
 
 //Dependencies for the target
-Diligent-Archiver-static_LIB_DEPENDS:STATIC=general;Diligent-Common;general;Diligent-GraphicsAccessories;general;Diligent-GraphicsEngineD3D11-static;general;Diligent-GraphicsEngineD3D12-static;general;Diligent-GraphicsEngineVk-static;general;Diligent-GraphicsEngineOpenGL-static;general;GLEW::glew;general;opengl32.lib;
+Diligent-Archiver-static_LIB_DEPENDS:STATIC=general;Diligent-Common;general;Diligent-GraphicsAccessories;general;Diligent-ShaderTools;general;Diligent-GraphicsEngineD3D11-static;general;Diligent-GraphicsEngineD3D12-static;general;Diligent-GraphicsEngineVk-static;general;Diligent-GraphicsEngineOpenGL-static;general;spirv-cross-core;general;spirv-cross-glsl;general;GLEW::glew;general;opengl32.lib;
 
 //Value Computed by CMake
 Diligent-Archiver_BINARY_DIR:STATIC=C:/SYN/diligent/DiligentCore/Graphics/Archiver
@@ -729,7 +736,7 @@ DiligentFX_BINARY_DIR:STATIC=C:/SYN/diligent/DiligentFX
 DiligentFX_IS_TOP_LEVEL:STATIC=OFF
 
 //Dependencies for the target
-DiligentFX_LIB_DEPENDS:STATIC=general;Diligent-GraphicsEngine;general;Diligent-GraphicsTools;general;Diligent-AssetLoader;
+DiligentFX_LIB_DEPENDS:STATIC=general;Diligent-GraphicsEngine;general;Diligent-GraphicsTools;general;Diligent-AssetLoader;general;Diligent-TextureLoader;general;Diligent-Imgui;general;Diligent-HLSL2GLSLConverterLib;
 
 //Value Computed by CMake
 DiligentFX_SOURCE_DIR:STATIC=C:/SYN/diligent/DiligentFX
@@ -765,6 +772,26 @@ ENABLE_RTTI:BOOL=OFF
 //Enables building of SPVRemapper
 ENABLE_SPVREMAPPER:BOOL=OFF
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=C:/SYN/diligent/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//When not empty, overrides where to find pre-populated content
+// for GLTFAssets
+FETCHCONTENT_SOURCE_DIR_GLTFASSETS:PATH=
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of GLTFAssets
+FETCHCONTENT_UPDATES_DISCONNECTED_GLTFASSETS:BOOL=OFF
+
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
@@ -795,6 +822,12 @@ GLFW_SOURCE_DIR:STATIC=C:/SYN/diligent/DiligentSamples/ThirdParty/glfw
 
 //Force use of high-performance GPU on hybrid systems
 GLFW_USE_HYBRID_HPG:BOOL=OFF
+
+//Enable glslang installation
+GLSLANG_ENABLE_INSTALL:BOOL=OFF
+
+//Enable glslang testing
+GLSLANG_TESTS:BOOL=OFF
 
 //Value Computed by CMake
 GLTFViewer_BINARY_DIR:STATIC=C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer
@@ -834,6 +867,9 @@ HLSL2GLSLConverter_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 HLSL2GLSLConverter_SOURCE_DIR:STATIC=C:/SYN/diligent/DiligentTools/HLSL2GLSLConverter
+
+//imGuIZMO.quat source directory
+IMGUIZMO_QUAT_PATH:PATH=C:/SYN/diligent/DiligentTools/ThirdParty/imGuIZMO.quat
 
 //Value Computed by CMake
 ImguiDemo_BINARY_DIR:STATIC=C:/SYN/diligent/DiligentSamples/Samples/ImguiDemo
@@ -898,7 +934,7 @@ PNG_DEBUG:BOOL=OFF
 //Postfix to append to library file names under the Debug configuration
 PNG_DEBUG_POSTFIX:STRING=d
 
-//Build libpng executables
+//[Deprecated; please use PNG_TOOLS]
 PNG_EXECUTABLES:BOOL=OFF
 
 //Build libpng as a Mac OS X framework
@@ -907,17 +943,23 @@ PNG_FRAMEWORK:BOOL=OFF
 //Enable hardware optimizations
 PNG_HARDWARE_OPTIMIZATIONS:BOOL=ON
 
+//Enable INTEL_SSE optimizations: on|off; on is default
+PNG_INTEL_SSE:STRING=on
+
 //Prefix to prepend to the API function names
 PNG_PREFIX:STRING=
 
-//Build libpng as a shared lib
+//Build libpng as a shared library
 PNG_SHARED:BOOL=OFF
 
-//Build libpng as a static lib
+//Build libpng as a static library
 PNG_STATIC:BOOL=ON
 
-//Build libpng tests
+//Build the libpng tests
 PNG_TESTS:BOOL=OFF
+
+//Build the libpng tools
+PNG_TOOLS:BOOL=OFF
 
 //Skip installation
 SKIP_GLSLANG_INSTALL:BOOL=ON
@@ -962,13 +1004,13 @@ SPIRV_CROSS_ENABLE_CPP:BOOL=OFF
 SPIRV_CROSS_ENABLE_C_API:BOOL=OFF
 
 //Enable GLSL support.
-SPIRV_CROSS_ENABLE_GLSL:BOOL=FALSE
+SPIRV_CROSS_ENABLE_GLSL:BOOL=OFF
 
 //Enable HLSL target support.
 SPIRV_CROSS_ENABLE_HLSL:BOOL=OFF
 
 //Enable MSL target support.
-SPIRV_CROSS_ENABLE_MSL:BOOL=FALSE
+SPIRV_CROSS_ENABLE_MSL:BOOL=OFF
 
 //Enable JSON reflection target support.
 SPIRV_CROSS_ENABLE_REFLECT:BOOL=OFF
@@ -1312,6 +1354,15 @@ Tutorial26_StateCache_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 Tutorial26_StateCache_SOURCE_DIR:STATIC=C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial26_StateCache
 
+//Value Computed by CMake
+Tutorial27_PostProcessing_BINARY_DIR:STATIC=C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial27_PostProcessing
+
+//Value Computed by CMake
+Tutorial27_PostProcessing_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Tutorial27_PostProcessing_SOURCE_DIR:STATIC=C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial27_PostProcessing
+
 //Use MSVC runtime library DLL
 USE_MSVC_RUNTIME_LIBRARY_DLL:BOOL=ON
 
@@ -1391,7 +1442,7 @@ libpng_IS_TOP_LEVEL:STATIC=OFF
 libpng_SOURCE_DIR:STATIC=C:/SYN/diligent/DiligentTools/ThirdParty/libpng
 
 //Dependencies for the target
-png_static_LIB_DEPENDS:STATIC=general;ZLib;
+png_static_LIB_DEPENDS:STATIC=general;ZLIB::ZLIB;
 
 //Value Computed by CMake
 spirv-tools_BINARY_DIR:STATIC=C:/SYN/diligent/DiligentCore/ThirdParty/SPIRV-Tools
@@ -1564,7 +1615,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=130
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=122
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib
@@ -1628,15 +1679,15 @@ CPACK_BINARY_ZIP-ADVANCED:INTERNAL=1
 CPACK_SOURCE_7Z-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CPACK_SOURCE_ZIP
 CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
-//D3D11 is supported on Win32 platform
+//D3D11 is supported
 D3D11_SUPPORTED:INTERNAL=TRUE
 //D3D12 headers support mesh shaders
 D3D12_H_HAS_MESH_SHADER:INTERNAL=ON
-//D3D12 is supported on Win32 platform
+//D3D12 is supported
 D3D12_SUPPORTED:INTERNAL=TRUE
 //Debug configurations
 DEBUG_CONFIGURATIONS:INTERNAL=DEBUG
-DILIGENT_CORE_COMMIT_HASH:INTERNAL=dbdca276
+DILIGENT_CORE_COMMIT_HASH:INTERNAL=ede9ecf7
 //Diligent Core installation directory
 DILIGENT_CORE_DIR:INTERNAL=DiligentCore
 //Core libraries installation list
@@ -1646,6 +1697,8 @@ DILIGENT_CORE_SOURCE_DIR:INTERNAL=C:/SYN/diligent/DiligentCore
 DILIGENT_DXCOMPILER_FOR_SPIRV_PATH:INTERNAL=C:/VulkanSDK/1.3.275.0/Lib/../Bin/dxcompiler.dll
 //Diligent tools libraries installation list
 DILIGENT_TOOLS_INSTALL_LIBS_LIST:INTERNAL=LibJpeg;LibTiff;ZLib;png_static;Diligent-TextureLoader;Diligent-AssetLoader;Diligent-Imgui;Diligent-RenderStateNotation
+//Use SPIRV Toolchain
+DILIGENT_USE_SPIRV_TOOLCHAIN:INTERNAL=TRUE
 //File2String utility
 FILE2STRING_PATH:INTERNAL=C:/SYN/diligent/DiligentCore/BuildTools/File2Include/script.py
 //Details about finding Git
@@ -1666,6 +1719,8 @@ GLFW_BUILD_DOCS:INTERNAL=OFF
 GLFW_BUILD_EXAMPLES:INTERNAL=OFF
 //Build the GLFW test programs
 GLFW_BUILD_TESTS:INTERNAL=OFF
+//Build support for Wayland
+GLFW_BUILD_WAYLAND:INTERNAL=OFF
 //Generate installation target
 GLFW_INSTALL:INTERNAL=OFF
 //GLFW pkg-config Libs.private
@@ -1674,6 +1729,12 @@ GLFW_PKG_CONFIG_LIBS_PRIVATE:INTERNAL= -lgdi32
 GLFW_PKG_CONFIG_REQUIRES_PRIVATE:INTERNAL=
 //OpenGL is supported on Win32 platform
 GL_SUPPORTED:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAS_ATL:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAS_D3D11:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAS_D3D12:INTERNAL=TRUE
 //Test HAVE_LD_VERSION_SCRIPT
 HAVE_LD_VERSION_SCRIPT:INTERNAL=
 //Test HAVE_SOLARIS_LD_VERSION_SCRIPT
@@ -1697,6 +1758,8 @@ PLATFORM_TVOS:INTERNAL=FALSE
 PLATFORM_UNIVERSAL_WINDOWS:INTERNAL=FALSE
 //Target platform: Win32
 PLATFORM_WIN32:INTERNAL=TRUE
+//STRINGS property for variable: PNG_INTEL_SSE
+PNG_INTEL_SSE-STRINGS:INTERNAL=on;off
 //Release configurations
 RELEASE_CONFIGURATIONS:INTERNAL=RELEASE;RELWITHDEBINFO;MINSIZEREL
 //Render state cache is supported
@@ -1721,6 +1784,8 @@ Vulkan_GLSLC_EXECUTABLE-ADVANCED:INTERNAL=1
 Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_LIBRARY
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
+//Windows SDK version
+WINDOWS_SDK_VERSION:INTERNAL=10.0.22621.0
 //ADVANCED property for variable: XXHASH_BUNDLED_MODE
 XXHASH_BUNDLED_MODE-ADVANCED:INTERNAL=1
 //ZLib include directory

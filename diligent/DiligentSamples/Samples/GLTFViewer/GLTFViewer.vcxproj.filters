@@ -15,147 +15,651 @@
     <CustomBuild Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_baseColor.jpg">
-      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\AlphaBlendLabels.png">
+      <Filter>Assets\models\AlphaBlendModeTest\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_baseColor1.png">
-      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\MatBed_baseColor.jpg">
+      <Filter>Assets\models\AlphaBlendModeTest\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_emissive.jpg">
-      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\MatBed_normal.jpg">
+      <Filter>Assets\models\AlphaBlendModeTest\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_normal.png">
-      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\MatBed_occlusionRoughnessMetallic.jpg">
+      <Filter>Assets\models\AlphaBlendModeTest\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_roughnessMetallic.jpg">
-      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp_anisotropy.png">
+      <Filter>Assets\models\AnisotropyBarnLamp\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan.jpg">
-      <Filter>Assets\models\CesiumMan</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp_basecolor.png">
+      <Filter>Assets\models\AnisotropyBarnLamp\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp_normalbump.png">
+      <Filter>Assets\models\AnisotropyBarnLamp\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor1.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp_occlusionroughnessmetal.png">
+      <Filter>Assets\models\AnisotropyBarnLamp\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor2.png">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyDiscTest\glTF\AnisotropyDiscs.png">
+      <Filter>Assets\models\AnisotropyDiscTest\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor3.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyStrengthTest\glTF\AnisotropySpheresLabels.png">
+      <Filter>Assets\models\AnisotropyStrengthTest\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor4.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\ALs_CARS_baseColor.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\ALs_CARS_normal.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal1.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\BARBIE_baseColor.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal2.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\BARBIE_normal.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal3.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\barbie_rear_normal.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal4.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\carshadow_baseColor.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\dodge_rim_sticker_MATTE_baseColor.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic1.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\dodge_rim_sticker_MATTE_emissive.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic2.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\floor_baseColor.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic3.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\floor_normal.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic4.jpg">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\pink_carbon_normal.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\Spheres_BaseColor.png">
-      <Filter>Assets\models\MetalRoughSpheres</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_3_brakelights_normal.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\Spheres_MetalRough.png">
-      <Filter>Assets\models\MetalRoughSpheres</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\window_glass_baseColor.png">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_BaseColor.png">
-      <Filter>Assets\models\NormalTangentTest</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_baseColor.jpg">
+      <Filter>Assets\models\BoomBoxWithAxes\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_Normal.png">
-      <Filter>Assets\models\NormalTangentTest</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_baseColor1.png">
+      <Filter>Assets\models\BoomBoxWithAxes\glTF</Filter>
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_OcclusionRoughnessMetallic.png">
-      <Filter>Assets\models\NormalTangentTest</Filter>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_emissive.jpg">
+      <Filter>Assets\models\BoomBoxWithAxes\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_normal.png">
+      <Filter>Assets\models\BoomBoxWithAxes\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_roughnessMetallic.jpg">
+      <Filter>Assets\models\BoomBoxWithAxes\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\glTF\CesiumMan.jpg">
+      <Filter>Assets\models\CesiumMan\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\ClearCoatLabels.png">
+      <Filter>Assets\models\ClearCoatTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\PartialCoating.png">
+      <Filter>Assets\models\ClearCoatTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\PartialCoating_Alpha.png">
+      <Filter>Assets\models\ClearCoatTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\PlasticWrap_normals.jpg">
+      <Filter>Assets\models\ClearCoatTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\RibsNormal.png">
+      <Filter>Assets\models\ClearCoatTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\RoughnessStripes.png">
+      <Filter>Assets\models\ClearCoatTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\Carbon_normal.png">
+      <Filter>Assets\models\ClearcoatRing\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\Carbon_occlusionRoughnessMetallic.png">
+      <Filter>Assets\models\ClearcoatRing\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\Titan_normal.png">
+      <Filter>Assets\models\ClearcoatRing\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\Titan_occlusionRoughnessMetallic.png">
+      <Filter>Assets\models\ClearcoatRing\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EmissiveStrengthTest\glTF\PlainGrid.png">
+      <Filter>Assets\models\EmissiveStrengthTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\glTF\EnvironmentTest_images\roughness_metallic_0.jpg">
+      <Filter>Assets\models\EnvironmentTest\glTF\EnvironmentTest_images</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\glTF\EnvironmentTest_images\roughness_metallic_1.jpg">
+      <Filter>Assets\models\EnvironmentTest\glTF\EnvironmentTest_images</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor1.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor2.png">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor3.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor4.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal1.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal2.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal3.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal4.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic1.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic2.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic3.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic4.jpg">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\glTF\GlamVelvetSofa_normal.png">
+      <Filter>Assets\models\GlamVelvetSofa\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\glTF\GlamVelvetSofa_occlusion.png">
+      <Filter>Assets\models\GlamVelvetSofa\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\InterpolationTest\glTF\InterpolationTest_img0.jpg">
+      <Filter>Assets\models\InterpolationTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone_BaseColor.jpg">
+      <Filter>Assets\models\IridescenceAbalone\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone_Iridescence.jpg">
+      <Filter>Assets\models\IridescenceAbalone\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone_NormalBump.png">
+      <Filter>Assets\models\IridescenceAbalone\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone_ORM.jpg">
+      <Filter>Assets\models\IridescenceAbalone\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceMetallicSpheres\glTF\textures\guides.png">
+      <Filter>Assets\models\IridescenceMetallicSpheres\glTF\textures</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_irid.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_nrm.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_orm.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_spec.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_thick.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glassdish_irid.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glassdish_spec.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\goldleaf_col.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\goldleaf_nrm.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\goldleaf_orm.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\olives_col.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\olives_nrm.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\olives_orm.png">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\glTF\Spheres_BaseColor.png">
+      <Filter>Assets\models\MetalRoughSpheres\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\glTF\Spheres_MetalRough.png">
+      <Filter>Assets\models\MetalRoughSpheres\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\glTF\uv0.png">
+      <Filter>Assets\models\MultiUVTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\glTF\uv1.png">
+      <Filter>Assets\models\MultiUVTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest_BaseColor.png">
+      <Filter>Assets\models\NormalTangentTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest_Normal.png">
+      <Filter>Assets\models\NormalTangentTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest_OcclusionRoughnessMetallic.png">
+      <Filter>Assets\models\NormalTangentTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\SheenTestGrid\glTF\checker.png">
+      <Filter>Assets\models\SheenTestGrid\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureCoordinateTest\glTF\TextureCoordinateTemplate.png">
+      <Filter>Assets\models\TextureCoordinateTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TTMT_Labels.png">
+      <Filter>Assets\models\TextureTransformMultiTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TestMap-1.png">
+      <Filter>Assets\models\TextureTransformMultiTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TestMap.png">
+      <Filter>Assets\models\TextureTransformMultiTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TestMap_Normal.png">
+      <Filter>Assets\models\TextureTransformMultiTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\Fabric_baseColor.png">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\Fabric_normal.png">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\Fabric_occlusion.png">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_basecolor.png">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_clearcoat.png">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_emissive.png">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_normal.png">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_occlusion_roughness_metallic.png">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\glTF\VertexColorChecks.png">
+      <Filter>Assets\models\VertexColorTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\glTF\VertexColorTestLabels.png">
+      <Filter>Assets\models\VertexColorTest\glTF</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\textures\sheen_albedo_scaling.jpg">
+      <Filter>Assets\textures</Filter>
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\textures\charlie_preintegrated.jpg">
+      <Filter>Assets\textures</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes.bin">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\applypatch-msg.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\commit-msg.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\fsmonitor-watchman.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\post-update.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-applypatch.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-commit.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-merge-commit.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-push.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-rebase.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-receive.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\prepare-commit-msg.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\push-to-checkout.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\sendemail-validate.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\update.sample">
+      <Filter>Assets\models\.git\hooks</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\objects\pack\pack-077365812941d971a1eb8909dc9e0d70dcea6319.idx">
+      <Filter>Assets\models\.git\objects\pack</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\objects\pack\pack-077365812941d971a1eb8909dc9e0d70dcea6319.pack">
+      <Filter>Assets\models\.git\objects\pack</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\objects\pack\pack-077365812941d971a1eb8909dc9e0d70dcea6319.rev">
+      <Filter>Assets\models\.git\objects\pack</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\LICENSE.md">
+      <Filter>Assets\models\AlphaBlendModeTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\AlphaBlendModeTest.bin">
+      <Filter>Assets\models\AlphaBlendModeTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\AlphaBlendModeTest.gltf">
+      <Filter>Assets\models\AlphaBlendModeTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\LICENSE.md">
+      <Filter>Assets\models\AnisotropyBarnLamp</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp.bin">
+      <Filter>Assets\models\AnisotropyBarnLamp\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp.gltf">
+      <Filter>Assets\models\AnisotropyBarnLamp\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyDiscTest\LICENSE.md">
+      <Filter>Assets\models\AnisotropyDiscTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyDiscTest\glTF\AnisotropyDiscTest.gltf">
+      <Filter>Assets\models\AnisotropyDiscTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyDiscTest\glTF\AnisotropyDiscTest_data.bin">
+      <Filter>Assets\models\AnisotropyDiscTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyStrengthTest\LICENSE.md">
+      <Filter>Assets\models\AnisotropyStrengthTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyStrengthTest\glTF\AnisotropyStrengthTest.gltf">
+      <Filter>Assets\models\AnisotropyStrengthTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyStrengthTest\glTF\AnisotropyStrengthTest_data.bin">
+      <Filter>Assets\models\AnisotropyStrengthTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\license.txt">
+      <Filter>Assets\models\BarbieDodgePickup</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\scene.bin">
+      <Filter>Assets\models\BarbieDodgePickup</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\scene.gltf">
+      <Filter>Assets\models\BarbieDodgePickup</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\bottom_baseColor.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\plate_baseColor.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\plate_normal.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_1_INT_EMB_baseColor.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_2_CHROME_emissive.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_3_brakelights_baseColor.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_3_headlights_normal.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_4_RIM_chrome_emissive.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\tire_left_L_baseColor.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\tire_protector_baseColor.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\tire_right_R_baseColor.jpeg">
+      <Filter>Assets\models\BarbieDodgePickup\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\LICENSE.md">
       <Filter>Assets\models\BoomBoxWithAxes</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes.gltf">
-      <Filter>Assets\models\BoomBoxWithAxes</Filter>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes.bin">
+      <Filter>Assets\models\BoomBoxWithAxes\glTF</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan.gltf">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes.gltf">
+      <Filter>Assets\models\BoomBoxWithAxes\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\LICENSE.md">
       <Filter>Assets\models\CesiumMan</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan0.bin">
-      <Filter>Assets\models\CesiumMan</Filter>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\glTF\CesiumMan.gltf">
+      <Filter>Assets\models\CesiumMan\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\glTF\CesiumMan0.bin">
+      <Filter>Assets\models\CesiumMan\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\LICENSE.md">
+      <Filter>Assets\models\ClearCoatTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\ClearCoatTest.bin">
+      <Filter>Assets\models\ClearCoatTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\ClearCoatTest.gltf">
+      <Filter>Assets\models\ClearCoatTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\ClearcoatRing.bin">
+      <Filter>Assets\models\ClearcoatRing\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\ClearcoatRing.gltf">
+      <Filter>Assets\models\ClearcoatRing\glTF</Filter>
     </None>
     <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\DamagedHelmet\DamagedHelmet.gltf">
       <Filter>Assets\models\DamagedHelmet</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet.bin">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\DamagedHelmet\LICENSE.md">
+      <Filter>Assets\models\DamagedHelmet</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EmissiveStrengthTest\LICENSE.md">
+      <Filter>Assets\models\EmissiveStrengthTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EmissiveStrengthTest\glTF\EmissiveStrengthTest.bin">
+      <Filter>Assets\models\EmissiveStrengthTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EmissiveStrengthTest\glTF\EmissiveStrengthTest.gltf">
+      <Filter>Assets\models\EmissiveStrengthTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\LICENSE.md">
+      <Filter>Assets\models\EnvironmentTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\glTF\EnvironmentTest.gltf">
+      <Filter>Assets\models\EnvironmentTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\glTF\EnvironmentTest_binary.bin">
+      <Filter>Assets\models\EnvironmentTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\LICENSE.md">
       <Filter>Assets\models\FlightHelmet</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet.gltf">
-      <Filter>Assets\models\FlightHelmet</Filter>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet.bin">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\MetalRoughSpheres.gltf">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet.gltf">
+      <Filter>Assets\models\FlightHelmet\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\LICENSE.md">
+      <Filter>Assets\models\GlamVelvetSofa</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\glTF\GlamVelvetSofa.bin">
+      <Filter>Assets\models\GlamVelvetSofa\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\glTF\GlamVelvetSofa.gltf">
+      <Filter>Assets\models\GlamVelvetSofa\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\InterpolationTest\LICENSE.md">
+      <Filter>Assets\models\InterpolationTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\InterpolationTest\glTF\InterpolationTest.gltf">
+      <Filter>Assets\models\InterpolationTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\InterpolationTest\glTF\InterpolationTest_data.bin">
+      <Filter>Assets\models\InterpolationTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\LICENSE.md">
+      <Filter>Assets\models\IridescenceAbalone</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone.bin">
+      <Filter>Assets\models\IridescenceAbalone\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone.gltf">
+      <Filter>Assets\models\IridescenceAbalone\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceMetallicSpheres\LICENSE.md">
+      <Filter>Assets\models\IridescenceMetallicSpheres</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceMetallicSpheres\glTF\IridescenceMetallicSpheres.bin">
+      <Filter>Assets\models\IridescenceMetallicSpheres\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceMetallicSpheres\glTF\IridescenceMetallicSpheres.gltf">
+      <Filter>Assets\models\IridescenceMetallicSpheres\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\LICENSE.md">
+      <Filter>Assets\models\IridescentDishWithOlives</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\IridescentDishWithOlives.bin">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\IridescentDishWithOlives.gltf">
+      <Filter>Assets\models\IridescentDishWithOlives\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\LICENSE.md">
       <Filter>Assets\models\MetalRoughSpheres</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\MetalRoughSpheres0.bin">
-      <Filter>Assets\models\MetalRoughSpheres</Filter>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\glTF\MetalRoughSpheres.gltf">
+      <Filter>Assets\models\MetalRoughSpheres\glTF</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest.gltf">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\glTF\MetalRoughSpheres0.bin">
+      <Filter>Assets\models\MetalRoughSpheres\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\LICENSE.md">
+      <Filter>Assets\models\MultiUVTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\glTF\MultiUVTest.bin">
+      <Filter>Assets\models\MultiUVTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\glTF\MultiUVTest.gltf">
+      <Filter>Assets\models\MultiUVTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\LICENSE.md">
       <Filter>Assets\models\NormalTangentTest</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest0.bin">
-      <Filter>Assets\models\NormalTangentTest</Filter>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest.gltf">
+      <Filter>Assets\models\NormalTangentTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest0.bin">
+      <Filter>Assets\models\NormalTangentTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\OrientationTest\glTF\LICENSE.md">
+      <Filter>Assets\models\OrientationTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\OrientationTest\glTF\OrientationTest.bin">
+      <Filter>Assets\models\OrientationTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\OrientationTest\glTF\OrientationTest.gltf">
+      <Filter>Assets\models\OrientationTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\SheenTestGrid\glTF\SheenTestGrid.bin">
+      <Filter>Assets\models\SheenTestGrid\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\SheenTestGrid\glTF\SheenTestGrid.gltf">
+      <Filter>Assets\models\SheenTestGrid\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureCoordinateTest\LICENSE.md">
+      <Filter>Assets\models\TextureCoordinateTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureCoordinateTest\glTF\TextureCoordinateTest.bin">
+      <Filter>Assets\models\TextureCoordinateTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureCoordinateTest\glTF\TextureCoordinateTest.gltf">
+      <Filter>Assets\models\TextureCoordinateTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\LICENSE.md">
+      <Filter>Assets\models\TextureTransformMultiTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TextureTransformMultiTest.bin">
+      <Filter>Assets\models\TextureTransformMultiTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TextureTransformMultiTest.gltf">
+      <Filter>Assets\models\TextureTransformMultiTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\LICENSE.md">
+      <Filter>Assets\models\ToyCar</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar.bin">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar.gltf">
+      <Filter>Assets\models\ToyCar\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\UnlitTest\LICENSE.md">
+      <Filter>Assets\models\UnlitTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\UnlitTest\glTF\LICENSE.md">
+      <Filter>Assets\models\UnlitTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\UnlitTest\glTF\UnlitTest.bin">
+      <Filter>Assets\models\UnlitTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\UnlitTest\glTF\UnlitTest.gltf">
+      <Filter>Assets\models\UnlitTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\LICENSE.md">
+      <Filter>Assets\models\VertexColorTest</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\glTF\VertexColorTest.bin">
+      <Filter>Assets\models\VertexColorTest\glTF</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\glTF\VertexColorTest.gltf">
+      <Filter>Assets\models\VertexColorTest\glTF</Filter>
     </None>
     <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\textures\papermill.ktx">
       <Filter>Assets\textures</Filter>
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\render_states\RenderStates.json">
-      <Filter>Assets\render_states</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\BoundBox.vsh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\BoundBox.psh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\env_map.vsh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\env_map.psh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMappingStructures.fxh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMapping.fxh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\BasicStructures.fxh">
-      <Filter>Assets\shaders</Filter>
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\ShaderUtilities.fxh">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\ApplyPostEffects.psh">
       <Filter>Assets\shaders</Filter>
     </None>
   </ItemGroup>
@@ -171,26 +675,188 @@
     <Filter Include="Assets\models">
       <UniqueIdentifier>{70475671-CBDE-3676-9FD2-16D9574BA0A6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\models\.git">
+      <UniqueIdentifier>{F513ACC1-855C-3CB2-8D30-DFE38C3DAEBB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\.git\hooks">
+      <UniqueIdentifier>{B8D842E4-9D66-34A0-99FB-8943BCD39266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\.git\objects">
+      <UniqueIdentifier>{482A0FE2-EEA7-3E90-9F31-899BA73F89CD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\.git\objects\pack">
+      <UniqueIdentifier>{55B6A56D-FD60-39B0-AB9C-CCBBA4AE32A2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\AlphaBlendModeTest">
+      <UniqueIdentifier>{02C2399E-ACB0-3D25-8656-69A24209F1E5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\AlphaBlendModeTest\glTF">
+      <UniqueIdentifier>{5F1D178C-EF3D-325F-B218-A3DECE8DBA9E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\AnisotropyBarnLamp">
+      <UniqueIdentifier>{D2C56490-297B-3910-A56A-E6270392C897}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\AnisotropyBarnLamp\glTF">
+      <UniqueIdentifier>{7551558F-A805-32E2-8589-851FDA085E6E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\AnisotropyDiscTest">
+      <UniqueIdentifier>{4FD5ADBA-5356-3D99-B915-61C134B90979}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\AnisotropyDiscTest\glTF">
+      <UniqueIdentifier>{8D55A2AC-31D0-302D-8376-3A0D9182B948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\AnisotropyStrengthTest">
+      <UniqueIdentifier>{944A0B0D-6EB5-38B1-A1BA-2A422192A6F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\AnisotropyStrengthTest\glTF">
+      <UniqueIdentifier>{145B3900-8E1F-3235-84F1-44D9C46161BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\BarbieDodgePickup">
+      <UniqueIdentifier>{11250277-E178-3E13-AE62-E3C5507433DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\BarbieDodgePickup\textures">
+      <UniqueIdentifier>{58A163F2-8948-3C00-A925-599F6EA33719}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Assets\models\BoomBoxWithAxes">
       <UniqueIdentifier>{E239EF60-0EA8-3DFD-B336-765B07BD8A1D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\BoomBoxWithAxes\glTF">
+      <UniqueIdentifier>{04073FBD-90E2-3813-9FD5-B1628EB2EF3B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Assets\models\CesiumMan">
       <UniqueIdentifier>{306EF766-0AA7-3510-843D-033B0EE161E8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\models\CesiumMan\glTF">
+      <UniqueIdentifier>{A3DA0730-366D-3243-8DEE-DFEA949B42F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\ClearCoatTest">
+      <UniqueIdentifier>{DD5C4BCC-DEB3-3598-89FA-9EB8EAE48056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\ClearCoatTest\glTF">
+      <UniqueIdentifier>{33129062-6296-3858-B487-25DB73F97033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\ClearcoatRing">
+      <UniqueIdentifier>{F6D333AE-0C0C-3DEC-9661-3E78B9C7CF35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\ClearcoatRing\glTF">
+      <UniqueIdentifier>{83DEE53A-DCA4-36B8-B627-4DE5C9B2CE1A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Assets\models\DamagedHelmet">
       <UniqueIdentifier>{0DF3301D-1DFF-340A-99A0-94F88172F6E5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\EmissiveStrengthTest">
+      <UniqueIdentifier>{248C5F1C-5D6F-33C1-8319-7D9D1CC3B134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\EmissiveStrengthTest\glTF">
+      <UniqueIdentifier>{B4560FDA-453F-343C-9356-0B2FE0D16314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\EnvironmentTest">
+      <UniqueIdentifier>{3A3AF90E-ACF5-3F90-952D-FC52AE1E5209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\EnvironmentTest\glTF">
+      <UniqueIdentifier>{6BE6EA15-3C77-3F31-9972-3C52A0CB2CDC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\EnvironmentTest\glTF\EnvironmentTest_images">
+      <UniqueIdentifier>{75ADFD40-6A2B-36A9-91B1-707A654E35D5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Assets\models\FlightHelmet">
       <UniqueIdentifier>{80F350D7-14DD-3A53-B70B-D2EB35183140}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\models\FlightHelmet\glTF">
+      <UniqueIdentifier>{5A3B188B-1DDA-390E-A99C-D39972999D99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\GlamVelvetSofa">
+      <UniqueIdentifier>{A9609B3D-D3B3-3C0D-8B94-FD6415CBE25F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\GlamVelvetSofa\glTF">
+      <UniqueIdentifier>{3F16F27E-283F-32EE-9A15-AEC4C5C07DBA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\InterpolationTest">
+      <UniqueIdentifier>{DB10341C-0648-34EF-A6F0-3511E309BD5D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\InterpolationTest\glTF">
+      <UniqueIdentifier>{32446C82-DB94-3990-A70D-202EAC074D2D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\IridescenceAbalone">
+      <UniqueIdentifier>{4AF62F6E-FDA3-3BE0-9C5B-9BD76A8F718A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\IridescenceAbalone\glTF">
+      <UniqueIdentifier>{C3CAF517-943A-3889-AA3C-9A1E8530B9CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\IridescenceMetallicSpheres">
+      <UniqueIdentifier>{E4015EED-82FA-38A2-838B-68BE9309E512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\IridescenceMetallicSpheres\glTF">
+      <UniqueIdentifier>{1061B01A-B17C-31A3-92A7-7748C8A8340E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\IridescenceMetallicSpheres\glTF\textures">
+      <UniqueIdentifier>{17E6D6DC-302E-355F-946B-F110B6E7757D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\IridescentDishWithOlives">
+      <UniqueIdentifier>{3144F4B5-FCC9-3E43-9169-75A4581B2DA6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\IridescentDishWithOlives\glTF">
+      <UniqueIdentifier>{EFD64628-B85F-3748-AF94-9968943061C5}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Assets\models\MetalRoughSpheres">
       <UniqueIdentifier>{3A9600BA-387E-3361-8A1D-83E18750D704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\MetalRoughSpheres\glTF">
+      <UniqueIdentifier>{3C6B0AE1-C4A2-3957-8F81-7FD662D9B7C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\MultiUVTest">
+      <UniqueIdentifier>{209B8B2F-C3C5-39A4-ADDA-CF3B6816ED62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\MultiUVTest\glTF">
+      <UniqueIdentifier>{3AD5D7AD-218C-3450-8944-08FBE07D60A0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Assets\models\NormalTangentTest">
       <UniqueIdentifier>{F0E64D06-9E10-3FEC-A4E2-801BF1CB8354}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Assets\render_states">
-      <UniqueIdentifier>{79C27E15-C36A-3886-86A3-33DC982B34D4}</UniqueIdentifier>
+    <Filter Include="Assets\models\NormalTangentTest\glTF">
+      <UniqueIdentifier>{BDF50D30-245C-3ECA-891D-F75CF7695E9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\OrientationTest">
+      <UniqueIdentifier>{9DB795FA-8E76-3F65-9386-313E96498810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\OrientationTest\glTF">
+      <UniqueIdentifier>{E7647AAA-8622-3E1E-96FA-4248FBD7AF21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\SheenTestGrid">
+      <UniqueIdentifier>{AD538506-153A-3C17-9C28-8BB8617C0A95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\SheenTestGrid\glTF">
+      <UniqueIdentifier>{49C85719-7297-3980-97F7-4660B1A3873F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\TextureCoordinateTest">
+      <UniqueIdentifier>{20B64333-580D-37AE-BBCE-2DDAE65B6A71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\TextureCoordinateTest\glTF">
+      <UniqueIdentifier>{2A63B27D-1548-32B9-B5D2-3F96CD91C950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\TextureTransformMultiTest">
+      <UniqueIdentifier>{5494ED2A-8CB3-3A5D-B69D-F4E308B841E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\TextureTransformMultiTest\glTF">
+      <UniqueIdentifier>{01EE4211-8814-3826-8688-BF75AAD6E6D7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\ToyCar">
+      <UniqueIdentifier>{E1CB7F0E-5830-3F38-95AA-97CD0DD392D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\ToyCar\glTF">
+      <UniqueIdentifier>{6190D02C-B877-3539-99D6-66366C395EE7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\UnlitTest">
+      <UniqueIdentifier>{B8D59D2F-555F-38EB-A2AB-DAD26389E8B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\UnlitTest\glTF">
+      <UniqueIdentifier>{334F28D9-445B-34E1-B105-766E973412FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\VertexColorTest">
+      <UniqueIdentifier>{8D39CE32-910C-3AB6-BF81-33ED0D57510A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models\VertexColorTest\glTF">
+      <UniqueIdentifier>{C8209C0F-FD98-3CBC-B269-E014EB804130}</UniqueIdentifier>
     </Filter>
     <Filter Include="Assets\shaders">
       <UniqueIdentifier>{710155C3-5791-3B5F-9F81-253872B05A7E}</UniqueIdentifier>

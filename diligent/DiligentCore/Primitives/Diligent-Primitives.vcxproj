@@ -81,6 +81,7 @@
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Primitives\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4100;4201;4505;26812</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -117,6 +118,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Primitives\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -160,6 +162,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Primitives\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -201,6 +204,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Primitives\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -304,6 +308,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\DebugOutput.h" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\DefineGlobalFuncHelperMacros.h" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\DefineInterfaceHelperMacros.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\DefineRefMacro.h" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\FlagEnum.h" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\Errors.hpp" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\FileStream.h" />
@@ -314,6 +319,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\ReferenceCounters.h" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\UndefGlobalFuncHelperMacros.h" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\UndefInterfaceHelperMacros.h" />
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Primitives\interface\UndefRefMacro.h" />
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Primitives\src\DebugOutput.cpp" />
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Primitives\src\test.cpp" />
   </ItemGroup>

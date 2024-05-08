@@ -382,6 +382,8 @@ elseif(PLATFORM_TVOS)
         endif()
 
         target_link_libraries(${TARGET_NAME} PRIVATE ${UIKIT} ${CORE_ANIMATION})
+        # Silence OpenGLES deprecation warnings (we don't use GLES, but still XCode produces errors)
+        target_compile_definitions(${TARGET_NAME} PUBLIC GLES_SILENCE_DEPRECATION)
 
     endfunction()
 
@@ -391,6 +393,7 @@ elseif(PLATFORM_TVOS)
 
 elseif(PLATFORM_EMSCRIPTEN)
     set(SOURCE 
+        src/Emscripten/EmscriptenAppBase.cpp
         src/Emscripten/EmscriptenMain.cpp
     )
     set(INCLUDE
@@ -399,6 +402,20 @@ elseif(PLATFORM_EMSCRIPTEN)
 
     function(add_emscripten_app TARGET_NAME SOURCE INCLUDE ASSETS)
         add_executable(${TARGET_NAME} ${SOURCE} ${INCLUDE} ${ASSETS})   
+         
+        # The initial amount of memory to use. Using more memory than this will cause us to expand the heap,
+        # which can be costly with typed arrays. If ALLOW_MEMORY_GROWTH is set, this initial amount of memory can
+        # increase later; if not, then it is the final and total amount of memory.
+        #target_link_options(${TARGET_NAME} PRIVATE "SHELL: -s INITIAL_MEMORY=32MB")
+
+        # If false, the app is aborted with an error if it tries to allocate more memory than INITIAL_MEMORY.
+        # If true, the memory arrays will grow at runtime, seamlessly and dynamically.
+        # Related: MEMORY_GROWTH_GEOMETRIC_STEP, MEMORY_GROWTH_GEOMETRIC_CAP, MEMORY_GROWTH_LINEAR_STEP
+        target_link_options(${TARGET_NAME} PRIVATE "SHELL: -s ALLOW_MEMORY_GROWTH=1")
+        
+        # Default stack size is only 64 Kb
+        # https://emscripten.org/docs/tools_reference/settings_reference.html?highlight=environment#default-pthread-stack-size
+        target_link_options(${TARGET_NAME} PRIVATE "SHELL: -s STACK_SIZE=5MB")
     endfunction()
 
     function(add_target_platform_app TARGET_NAME SOURCE INCLUDE ASSETS)
@@ -462,18 +479,28 @@ elseif(PLATFORM_ANDROID)
         include/Android
     )
 elseif(PLATFORM_LINUX)
+    find_package(X11 REQUIRED)
     target_link_libraries(Diligent-NativeAppBase 
     PRIVATE 
-        X11
+        X11::X11
     )
+    if(GL_SUPPORTED)
+        find_package(OpenGL REQUIRED)
+        target_link_libraries(Diligent-NativeAppBase
+        PRIVATE
+            OpenGL::GL
+            OpenGL::GLX
+        )
+    endif()
     target_include_directories(Diligent-NativeAppBase 
     PUBLIC 
         include/Linux
     )
     if(VULKAN_SUPPORTED)
+        find_library(XCB_LIBRARY xcb)
         target_link_libraries(Diligent-NativeAppBase
         PRIVATE 
-            xcb
+            ${XCB_LIBRARY}
         )
     endif()
 elseif(PLATFORM_MACOS)

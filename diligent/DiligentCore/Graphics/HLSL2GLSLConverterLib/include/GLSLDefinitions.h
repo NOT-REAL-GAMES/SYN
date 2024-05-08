@@ -103,10 +103,66 @@
 #define fmod mod
 #define lerp mix
 #define dst distance
-#define countbits bitCount
-#define firstbithigh findMSB
-#define firstbitlow findLSB
-#define reversebits bitfieldReverse
+
+#if defined(GL_ES) && (__VERSION__ < 310)
+
+uint _reversebits(uint Value)
+{
+    uint Bits = (Value << 16u) | (Value >> 16u);
+    Bits = ((Bits & 0x55555555u) << 1u) | ((Bits & 0xAAAAAAAAu) >> 1u);
+    Bits = ((Bits & 0x33333333u) << 2u) | ((Bits & 0xCCCCCCCCu) >> 2u);
+    Bits = ((Bits & 0x0F0F0F0Fu) << 4u) | ((Bits & 0xF0F0F0F0u) >> 4u);
+    Bits = ((Bits & 0x00FF00FFu) << 8u) | ((Bits & 0xFF00FF00u) >> 8u);
+    return Bits;
+}
+uint reversebits(uint Value)
+{
+    return _reversebits(Value);
+}
+uint2 reversebits(uint2 Value)
+{
+	return uint2(_reversebits(Value.x), _reversebits(Value.y));
+}
+uint3 reversebits(uint3 Value)
+{
+	return uint3(_reversebits(Value.x), _reversebits(Value.y), _reversebits(Value.z));
+}
+uint4 reversebits(uint4 Value)
+{
+	return uint4(_reversebits(Value.x), _reversebits(Value.y), _reversebits(Value.z), _reversebits(Value.w));
+}
+
+uint _countbits(uint Val)
+{
+    Val = Val - ((Val >> 1u) & 0x55555555u);                 // add pairs of bits
+    Val = (Val & 0x33333333u) + ((Val >> 2u) & 0x33333333u); // quads
+    Val = (Val + (Val >> 4u)) & 0x0F0F0F0Fu;                 // groups of 8
+    Val *= 0x01010101u;                                      // horizontal sum of bytes
+    return  Val >> 24u;                                      // return just that top byte (after truncating to 32-bit)
+}
+uint countbits(uint Val)
+{
+	return _countbits(Val);
+}
+uint2 countbits(uint2 Val)
+{
+	return uint2(_countbits(Val.x), _countbits(Val.y));
+}
+uint3 countbits(uint3 Val)
+{
+	return uint3(_countbits(Val.x), _countbits(Val.y), _countbits(Val.z));
+}
+uint4 countbits(uint4 Val)
+{
+	return uint4(_countbits(Val.x), _countbits(Val.y), _countbits(Val.z), _countbits(Val.w));
+}
+
+#else
+#   define countbits bitCount
+#   define firstbithigh findMSB
+#   define firstbitlow findLSB
+#   define reversebits bitfieldReverse
+#endif
 
 float rcp( float x ){ return 1.0 / x; }
 vec2  rcp( vec2  x ){ return vec2(1.0,1.0) / x; }
@@ -1111,6 +1167,9 @@ float2x2 MatrixFromRows(float2 row0, float2 row1)
 out gl_PerVertex
 {
     vec4 gl_Position;
+#ifdef USE_GL_POINT_SIZE
+    float gl_PointSize;
+#endif
 };
 #endif
 
@@ -1140,14 +1199,18 @@ out gl_PerVertex
 in gl_PerVertex
 {
     vec4 gl_Position;
-    //float gl_PointSize;
+#ifdef USE_GL_POINT_SIZE
+    float gl_PointSize;
+#endif
     //float gl_ClipDistance[];
 } gl_in[];
 
 out gl_PerVertex
 {
     vec4 gl_Position;
-    //float gl_PointSize;
+#ifdef USE_GL_POINT_SIZE
+    float gl_PointSize;
+#endif
     //float gl_ClipDistance[];
 };
 
@@ -1166,14 +1229,18 @@ out gl_PerVertex
 in gl_PerVertex
 {
     vec4 gl_Position;
-    //float gl_PointSize;
+#ifdef USE_GL_POINT_SIZE
+    float gl_PointSize;
+#endif
     //float gl_ClipDistance[];
 } gl_in[gl_MaxPatchVertices];
 
 out gl_PerVertex
 {
     vec4 gl_Position;
-    //float gl_PointSize;
+#ifdef USE_GL_POINT_SIZE
+    float gl_PointSize;
+#endif
     //float gl_ClipDistance[];
 } gl_out[];
 
@@ -1219,14 +1286,18 @@ void _SetGLTessLevelInner(float InnerLevel)
 in gl_PerVertex
 {
     vec4 gl_Position;
-    //float gl_PointSize;
+#ifdef USE_GL_POINT_SIZE
+    float gl_PointSize;
+#endif
     //float gl_ClipDistance[];
 } gl_in[gl_MaxPatchVertices];
 
 out gl_PerVertex
 {
     vec4 gl_Position;
-    //float gl_PointSize;
+#ifdef USE_GL_POINT_SIZE
+    float gl_PointSize;
+#endif
     //float gl_ClipDistance[];
 };
 

@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -102,6 +102,8 @@ struct TinyGltfNodeWrapper
 {
     const tinygltf::Node& Node;
 
+    const auto& Get() const { return Node; }
+
     // clang-format off
     const auto& GetName()        const { return Node.name; }
     const auto& GetTranslation() const { return Node.translation; }
@@ -111,6 +113,7 @@ struct TinyGltfNodeWrapper
     const auto& GetChildrenIds() const { return Node.children; }
     auto        GetMeshId()      const { return Node.mesh; }
     auto        GetCameraId()    const { return Node.camera; }
+    auto        GetLightId()     const { return Node.light; }
     auto        GetSkinId()      const { return Node.skin; }
     // clang-format on
 };
@@ -172,6 +175,7 @@ struct TinyGltfAccessorWrapper
     auto GetByteOffset()    const { return Accessor.byteOffset; }
     auto GetComponentType() const { return TinyGltfComponentTypeToValueType(Accessor.componentType); }
     auto GetNumComponents() const { return tinygltf::GetNumComponentsInType(Accessor.type); }
+    bool IsNormalized()     const { return Accessor.normalized; }
     // clang-format on
     auto GetByteStride(const TinyGltfBufferViewWrapper& View) const;
 };
@@ -208,6 +212,21 @@ struct TinyGltfCameraWrapper
     const auto& GetType() const { return Camera.type; }
     auto        GetPerspective() const { return TinyGltfPerspectiveCameraWrapper{Camera.perspective}; }
     auto        GetOrthographic() const { return TinyGltfOrthoCameraWrapper{Camera.orthographic}; }
+};
+
+struct TinyGltfLightWrapper
+{
+    const tinygltf::Light& Light;
+
+    // clang-format off
+    const auto& GetName()           const { return Light.name; }
+    const auto& GetType()           const { return Light.type; }
+    const auto& GetColor()          const { return Light.color; }
+    const auto& GetIntensity()      const { return Light.intensity; }
+    const auto& GetRange()          const { return Light.range; }
+    const auto& GetInnerConeAngle() const { return Light.spot.innerConeAngle; }
+    const auto& GetOuterConeAngle() const { return Light.spot.outerConeAngle; }
+    // clang-format on
 };
 
 struct TinyGltfBufferViewWrapper
@@ -315,6 +334,7 @@ struct TinyGltfModelWrapper
     auto GetMesh      (int idx) const { return TinyGltfMeshWrapper      {Model.meshes     [idx]}; }
     auto GetAccessor  (int idx) const { return TinyGltfAccessorWrapper  {Model.accessors  [idx]}; }
     auto GetCamera    (int idx) const { return TinyGltfCameraWrapper    {Model.cameras    [idx]}; }
+    auto GetLight     (int idx) const { return TinyGltfLightWrapper     {Model.lights     [idx]}; }
     auto GetBufferView(int idx) const { return TinyGltfBufferViewWrapper{Model.bufferViews[idx]}; }
     auto GetBuffer    (int idx) const { return TinyGltfBufferWrapper    {Model.buffers    [idx]}; }
 
@@ -323,6 +343,7 @@ struct TinyGltfModelWrapper
 
     auto GetNodeCount()      const { return Model.nodes.size();      }
     auto GetSceneCount()     const { return Model.scenes.size();     }
+    auto GetMeshCount()      const { return Model.meshes.size();     }
     auto GetSkinCount()      const { return Model.skins.size();      }
     auto GetAnimationCount() const { return Model.animations.size(); }
 
@@ -493,8 +514,7 @@ RefCntAutoPtr<TextureInitData> PrepareGLTFTextureInitData(
 
     const auto* pSrcData  = static_cast<const Uint8*>(Image.pData);
     const auto  SrcStride = Image.Width * Image.ComponentSize * Image.NumComponents;
-    VERIFY(Image.ComponentSize == 1, "Only 8-bit image components are currently supported");
-    if (Image.NumComponents == 4 && FmtAttribs.NumComponents == 4 && AlphaCutoff > 0)
+    if (Image.ComponentSize == 1 && Image.NumComponents == 4 && FmtAttribs.NumComponents == 4 && AlphaCutoff > 0)
     {
         // Remap alpha channel using the following formula to improve mip maps:
         //
@@ -522,18 +542,19 @@ RefCntAutoPtr<TextureInitData> PrepareGLTFTextureInitData(
             }
         }
     }
-    else if (Image.NumComponents == static_cast<int>(FmtAttribs.NumComponents))
+    else
     {
         CopyPixelsAttribs CopyAttribs;
-        CopyAttribs.Width         = Image.Width;
-        CopyAttribs.Height        = Image.Height;
-        CopyAttribs.ComponentSize = Image.ComponentSize;
-        CopyAttribs.pSrcPixels    = Image.pData;
-        CopyAttribs.SrcStride     = SrcStride;
-        CopyAttribs.SrcCompCount  = Image.NumComponents;
-        CopyAttribs.pDstPixels    = Level0.Data.data();
-        CopyAttribs.DstStride     = static_cast<Uint32>(Level0Stride);
-        CopyAttribs.DstCompCount  = FmtAttribs.NumComponents;
+        CopyAttribs.Width            = Image.Width;
+        CopyAttribs.Height           = Image.Height;
+        CopyAttribs.SrcComponentSize = Image.ComponentSize;
+        CopyAttribs.pSrcPixels       = Image.pData;
+        CopyAttribs.SrcStride        = SrcStride;
+        CopyAttribs.SrcCompCount     = Image.NumComponents;
+        CopyAttribs.pDstPixels       = Level0.Data.data();
+        CopyAttribs.DstComponentSize = FmtAttribs.ComponentSize;
+        CopyAttribs.DstStride        = static_cast<Uint32>(Level0Stride);
+        CopyAttribs.DstCompCount     = FmtAttribs.NumComponents;
         CopyPixels(CopyAttribs);
     }
 
@@ -549,6 +570,7 @@ Model::Model(const ModelCreateInfo& CI)
     DEV_CHECK_ERR(CI.IndexType == VT_UINT16 || CI.IndexType == VT_UINT32, "Invalid index type");
     DEV_CHECK_ERR(CI.NumVertexAttributes == 0 || CI.VertexAttributes != nullptr, "VertexAttributes must not be null when NumVertexAttributes > 0");
     DEV_CHECK_ERR(CI.NumTextureAttributes == 0 || CI.TextureAttributes != nullptr, "TextureAttributes must not be null when NumTextureAttributes > 0");
+    DEV_CHECK_ERR(CI.NumTextureAttributes <= Material::MaxTextureAttribs, "Too many texture attributes (", CI.NumTextureAttributes, "). Maximum supported: ", Uint32{Material::MaxTextureAttribs});
 
     const auto* pSrcVertAttribs = CI.VertexAttributes != nullptr ? CI.VertexAttributes : DefaultVertexAttributes.data();
     const auto* pSrcTexAttribs  = CI.TextureAttributes != nullptr ? CI.TextureAttributes : DefaultTextureAttributes.data();
@@ -580,9 +602,6 @@ Model::Model(const ModelCreateInfo& CI)
         const auto& Attrib = pSrcTexAttribs[i];
 
         DEV_CHECK_ERR(Attrib.Name != nullptr, "Texture attribute name must not be null");
-        DEV_CHECK_ERR(Attrib.Index < Uint32{Material::NumTextureAttributes}, "Texture attribute index (", Attrib.Index,
-                      ") exceeds the number of attributes (", Uint32{Material::NumTextureAttributes}, ").");
-
         Allocator.AddSpaceForString(Attrib.Name);
     }
 
@@ -612,14 +631,6 @@ Model::Model(const ModelCreateInfo& CI)
         ElementStride = Attrib.RelativeOffset + GetValueSize(Attrib.ValueType) * Attrib.NumComponents;
     }
 
-#ifdef DILIGENT_DEBUG
-    if (CI.VertexAttributes == nullptr)
-    {
-        VERIFY_EXPR(VertexData.Strides.size() == 2);
-        VERIFY_EXPR(VertexData.Strides[0] == sizeof(VertexBasicAttribs));
-        VERIFY_EXPR(VertexData.Strides[1] == sizeof(VertexSkinAttribs));
-    }
-#endif
 
     IndexData.IndexSize = CI.IndexType == VT_UINT32 ? 4 : 2;
 
@@ -644,7 +655,7 @@ Model::~Model()
 {
 }
 
-int Model::GetTextureAttibuteIndex(const char* Name) const
+int Model::GetTextureAttributeIndex(const char* Name) const
 {
     DEV_CHECK_ERR(Name != nullptr, "Name must not be null");
     for (size_t i = 0; i < NumTextureAttributes; ++i)
@@ -658,14 +669,14 @@ int Model::GetTextureAttibuteIndex(const char* Name) const
 
 float Model::GetTextureAlphaCutoffValue(int TextureIndex) const
 {
-    const auto BaseTexAttribIdx = GetTextureAttibuteIndex(BaseColorTextureName);
+    const auto BaseTexAttribIdx = GetTextureAttributeIndex(BaseColorTextureName);
     if (BaseTexAttribIdx < 0)
         return 0;
 
     float AlphaCutoff = -1.f;
     for (const auto& Mat : Materials)
     {
-        if (Mat.TextureIds[BaseTexAttribIdx] != TextureIndex)
+        if (Mat.GetTextureId(BaseTexAttribIdx) != TextureIndex)
         {
             // The material does not use this texture as base color.
             continue;
@@ -833,7 +844,7 @@ Uint32 Model::AddTexture(IRenderDevice*     pDevice,
                 LoadInfo.BindFlags      = BIND_NONE;
                 LoadInfo.CPUAccessFlags = CPU_ACCESS_WRITE;
             }
-            CreateTextureLoaderFromMemory(Image.pData, Image.DataSize, Image.FileFormat, false /*MakeDataCopy*/, LoadInfo, &pTexLoader);
+            CreateTextureLoaderFromMemory(Image.pData, Image.DataSize, false /*MakeDataCopy*/, LoadInfo, &pTexLoader);
             if (pTexLoader)
             {
                 if (pResourceMgr == nullptr)
@@ -911,14 +922,15 @@ void Model::InitMaterialTextureAddressingAttribs(Material& Mat, Uint32 TextureIn
 
     if (TexInfo.pAtlasSuballocation)
     {
-        for (Uint32 i = 0; i < Material::NumTextureAttributes; ++i)
-        {
-            if (Mat.TextureIds[i] == static_cast<int>(TextureIndex))
+        Mat.ProcessActiveTextureAttibs([&](Uint32 Idx, Material::TextureShaderAttribs& TexAttribs, int TexAttribTextureId) {
+            if (TexAttribTextureId == static_cast<int>(TextureIndex))
             {
-                Mat.Attribs.UVScaleBias[i]      = TexInfo.pAtlasSuballocation->GetUVScaleBias();
-                (&Mat.Attribs.TextureSlice0)[i] = static_cast<float>(TexInfo.pAtlasSuballocation->GetSlice());
+                TexAttribs.AtlasUVScaleAndBias = TexInfo.pAtlasSuballocation->GetUVScaleBias();
+                TexAttribs.TextureSlice        = static_cast<float>(TexInfo.pAtlasSuballocation->GetSlice());
             }
-        }
+            // Note: we need to process all attributes as the same texture may be referenced by multiple attributes
+            return true;
+        });
     }
 }
 
@@ -962,7 +974,7 @@ void Model::PrepareGPUResources(IRenderDevice* pDevice, IDeviceContext* pCtx)
         RefCntAutoPtr<TextureInitData> pInitData;
         if (DstTexInfo.pAtlasSuballocation)
         {
-            pTexture  = DstTexInfo.pAtlasSuballocation->GetAtlas()->GetTexture(pDevice, pCtx);
+            pTexture  = DstTexInfo.pAtlasSuballocation->GetAtlas()->Update(pDevice, pCtx);
             pInitData = ClassPtrCast<TextureInitData>(DstTexInfo.pAtlasSuballocation->GetUserData());
             // User data is only set when the allocation is created, so no other
             // thread can call SetUserData() in parallel.
@@ -1072,7 +1084,7 @@ void Model::PrepareGPUResources(IRenderDevice* pDevice, IDeviceContext* pCtx)
     if (IndexData.pBuffer || IndexData.pAllocation)
     {
         IBuffer* pBuffer = IndexData.pAllocation ?
-            IndexData.pAllocation->GetBuffer(pDevice, pCtx) :
+            IndexData.pAllocation->Update(pDevice, pCtx) :
             IndexData.pBuffer;
 
         if (pBuffer != nullptr)
@@ -1107,7 +1119,7 @@ void Model::PrepareGPUResources(IRenderDevice* pDevice, IDeviceContext* pCtx)
     for (Uint32 BuffId = 0; BuffId < GetVertexBufferCount(); ++BuffId)
     {
         IBuffer* pBuffer = VertexData.pAllocation ?
-            VertexData.pAllocation->GetBuffer(BuffId, pDevice, pCtx) :
+            VertexData.pAllocation->Update(BuffId, pDevice, pCtx) :
             VertexData.Buffers[BuffId];
         if (pBuffer == nullptr)
             continue;
@@ -1132,7 +1144,10 @@ void Model::PrepareGPUResources(IRenderDevice* pDevice, IDeviceContext* pCtx)
                 0;
 
             const auto& Data = VertexData.pAllocation ? pInitData->Data[BuffId] : pInitData->Data[0];
-            pCtx->UpdateBuffer(pBuffer, Offset, static_cast<Uint32>(Data.size()), Data.data(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+            if (!Data.empty())
+            {
+                pCtx->UpdateBuffer(pBuffer, Offset, static_cast<Uint32>(Data.size()), Data.data(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+            }
         }
 
         if (!VertexData.Buffers.empty() && VertexData.Buffers[BuffId])
@@ -1171,22 +1186,160 @@ void Model::LoadTextureSamplers(IRenderDevice* pDevice, const tinygltf::Model& g
     }
 }
 
+static void ReadKhrTextureTransform(const Model&                  model,
+                                    const tinygltf::ExtensionMap& Extensions,
+                                    MaterialBuilder&              Mat,
+                                    const char*                   TextureName)
+{
+    auto ext_it = Extensions.find("KHR_texture_transform");
+    if (ext_it == Extensions.end())
+        return;
+
+    const int TexAttribIdx = model.GetTextureAttributeIndex(TextureName);
+    if (TexAttribIdx < 0)
+        return;
+
+    Material::TextureShaderAttribs& TexAttribs{Mat.GetTextureAttrib(TexAttribIdx)};
+    const tinygltf::Value&          ext_value = ext_it->second;
+    if (ext_value.Has("scale"))
+    {
+        const tinygltf::Value& scale = ext_value.Get("scale");
+        if (scale.IsArray() && scale.ArrayLen() >= 2)
+        {
+            const float UScale = static_cast<float>(scale.Get(0).Get<double>());
+            const float VScale = static_cast<float>(scale.Get(1).Get<double>());
+
+            TexAttribs.UVScaleAndRotation = float2x2::Scale(UScale, VScale);
+        }
+        else
+        {
+            LOG_ERROR_MESSAGE("Texture scale value is expected to be a 2-element array. Refer to KHR_texture_transform specification.");
+        }
+    }
+
+    if (ext_value.Has("rotation"))
+    {
+        const float rotation = static_cast<float>(ext_value.Get("rotation").Get<double>());
+        // UV coordinate rotation is defined counter-clockwise, which is clockwise rotation of the image.
+        TexAttribs.UVScaleAndRotation *= float2x2::Rotation(-rotation);
+    }
+
+    if (ext_value.Has("offset"))
+    {
+        const tinygltf::Value& offset = ext_value.Get("offset");
+        if (offset.IsArray() && offset.ArrayLen() >= 2)
+        {
+            TexAttribs.UBias = static_cast<float>(offset.Get(0).Get<double>());
+            TexAttribs.VBias = static_cast<float>(offset.Get(1).Get<double>());
+        }
+        else
+        {
+            LOG_ERROR_MESSAGE("Texture offset value is expected to be a 2-element array. Refer to KHR_texture_transform specification.");
+        }
+    }
+
+    if (ext_value.Has("texCoord"))
+    {
+        const tinygltf::Value& texCoord = ext_value.Get("texCoord");
+        TexAttribs.UVSelector           = static_cast<float>(texCoord.Get<int>());
+    }
+}
+
+static tinygltf::ExtensionMap ReadExtensions(const tinygltf::Value& ExtVal)
+{
+    tinygltf::ExtensionMap Extensions;
+    for (const std::string& Key : ExtVal.Keys())
+    {
+        Extensions.emplace(Key, ExtVal.Get(Key));
+    }
+    return Extensions;
+}
+
+static void LoadExtensionTexture(const Model& model, const tinygltf::Value& Ext, MaterialBuilder& Mat, const char* Name)
+{
+    if (!Ext.Has(Name))
+        return;
+
+    const tinygltf::Value& TexInfo = Ext.Get(Name);
+
+    const auto TexAttribIdx = model.GetTextureAttributeIndex(Name);
+    if (TexAttribIdx < 0)
+        return;
+
+    int TexId = -1;
+    if (TexInfo.Has("index")) // Required
+    {
+        TexId = TexInfo.Get("index").Get<int>();
+    }
+    else
+    {
+        LOG_ERROR_MESSAGE("Required value 'index' is not specified for texture '", Name, "'.");
+    }
+
+    float UVSelector = 0;
+    if (TexInfo.Has("texCoord")) // Optional
+    {
+        UVSelector = static_cast<float>(TexInfo.Get("texCoord").Get<int>());
+    }
+
+    Mat.SetTextureId(TexAttribIdx, TexId);
+    Mat.GetTextureAttrib(TexAttribIdx).UVSelector = UVSelector;
+
+    if (TexInfo.Has("extensions"))
+    {
+        const tinygltf::ExtensionMap TexExt = ReadExtensions(TexInfo.Get("extensions"));
+        ReadKhrTextureTransform(model, TexExt, Mat, Name);
+    }
+}
+
+static void LoadExtensionParameter(const tinygltf::Value& Ext, const char* Name, float& Val)
+{
+    if (!Ext.Has(Name))
+        return;
+
+    const tinygltf::Value& Param = Ext.Get(Name);
+    if (!Param.IsNumber())
+        return;
+
+    Val = static_cast<float>(Param.Get<double>());
+}
+
+
+template <typename VectorType>
+static void LoadExtensionParameter(const tinygltf::Value& Ext, const char* Name, VectorType& Val)
+{
+    if (!Ext.Has(Name))
+        return;
+
+    const tinygltf::Value& Param = Ext.Get(Name);
+    if (Param.IsArray())
+    {
+        for (size_t i = 0; i < std::min(VectorType::GetComponentCount(), Param.ArrayLen()); ++i)
+        {
+            Val[i] = static_cast<typename VectorType::ValueType>(Param.Get(static_cast<int>(i)).Get<double>());
+        }
+    }
+    else if (Param.IsNumber())
+    {
+        Val = VectorType{static_cast<typename VectorType::ValueType>(Param.Get<double>())};
+    }
+}
 
 void Model::LoadMaterials(const tinygltf::Model& gltf_model, const ModelCreateInfo::MaterialLoadCallbackType& MaterialLoadCallback)
 {
     Materials.reserve(gltf_model.materials.size());
     for (const tinygltf::Material& gltf_mat : gltf_model.materials)
     {
-        Material Mat;
+        Material        Mat;
+        MaterialBuilder MatBuilder{Mat};
 
-        auto FindTexture = [&Mat](const TextureAttributeDesc& Attrib, const auto& Mapping) {
+        auto FindTexture = [&MatBuilder](const TextureAttributeDesc& Attrib, const tinygltf::ParameterMap& Mapping) {
             auto tex_it = Mapping.find(Attrib.Name);
             if (tex_it == Mapping.end())
                 return false;
 
-            VERIFY_EXPR(Attrib.Index < Material::NumTextureAttributes);
-            Mat.TextureIds[Attrib.Index]             = tex_it->second.TextureIndex();
-            (&Mat.Attribs.UVSelector0)[Attrib.Index] = static_cast<float>(tex_it->second.TextureTexCoord());
+            MatBuilder.SetTextureId(Attrib.Index, tex_it->second.TextureIndex());
+            MatBuilder.GetTextureAttrib(Attrib.Index).UVSelector = static_cast<float>(tex_it->second.TextureTexCoord());
 
             return true;
         };
@@ -1254,70 +1407,155 @@ void Model::LoadMaterials(const tinygltf::Model& gltf_model, const ModelCreateIn
 
         Mat.Attribs.Workflow = Material::PBR_WORKFLOW_METALL_ROUGH;
 
+        ReadKhrTextureTransform(*this, gltf_mat.pbrMetallicRoughness.baseColorTexture.extensions, MatBuilder, BaseColorTextureName);
+        ReadKhrTextureTransform(*this, gltf_mat.pbrMetallicRoughness.metallicRoughnessTexture.extensions, MatBuilder, MetallicRoughnessTextureName);
+        ReadKhrTextureTransform(*this, gltf_mat.normalTexture.extensions, MatBuilder, NormalTextureName);
+        ReadKhrTextureTransform(*this, gltf_mat.emissiveTexture.extensions, MatBuilder, EmissiveTextureName);
+        ReadKhrTextureTransform(*this, gltf_mat.occlusionTexture.extensions, MatBuilder, OcclusionTextureName);
+
         // Extensions
-        // @TODO: Find out if there is a nicer way of reading these properties with recent tinygltf headers
+
+        // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_unlit
+        {
+            auto ext_it = gltf_mat.extensions.find("KHR_materials_unlit");
+            if (ext_it != gltf_mat.extensions.end())
+            {
+                Mat.Attribs.Workflow = Material::PBR_WORKFLOW_UNLIT;
+            }
+        }
+
         {
             auto ext_it = gltf_mat.extensions.find("KHR_materials_pbrSpecularGlossiness");
             if (ext_it != gltf_mat.extensions.end())
             {
-                if (ext_it->second.Has(SpecularGlossinessTextureName))
-                {
-                    Mat.Attribs.Workflow = Material::PBR_WORKFLOW_SPEC_GLOSS;
+                Mat.Attribs.Workflow = Material::PBR_WORKFLOW_SPEC_GLOSS;
 
-                    const auto SpecGlossTexAttribIdx = GetTextureAttibuteIndex(SpecularGlossinessTextureName);
-                    if (SpecGlossTexAttribIdx >= 0)
-                    {
-                        VERIFY_EXPR(SpecGlossTexAttribIdx < static_cast<int>(Material::NumTextureAttributes));
-                        auto index       = ext_it->second.Get(SpecularGlossinessTextureName).Get("index");
-                        auto texCoordSet = ext_it->second.Get(SpecularGlossinessTextureName).Get("texCoord");
-
-                        Mat.TextureIds[SpecGlossTexAttribIdx]             = index.Get<int>();
-                        (&Mat.Attribs.UVSelector0)[SpecGlossTexAttribIdx] = static_cast<float>(texCoordSet.Get<int>());
-                    }
-                }
-
-                if (ext_it->second.Has(DiffuseTextureName))
-                {
-                    const auto DiffuseTexAttribIdx = GetTextureAttibuteIndex(DiffuseTextureName);
-                    if (DiffuseTexAttribIdx >= 0)
-                    {
-                        VERIFY_EXPR(DiffuseTexAttribIdx < static_cast<int>(Material::NumTextureAttributes));
-                        auto index       = ext_it->second.Get(DiffuseTextureName).Get("index");
-                        auto texCoordSet = ext_it->second.Get(DiffuseTextureName).Get("texCoord");
-
-                        Mat.TextureIds[DiffuseTexAttribIdx]             = index.Get<int>();
-                        (&Mat.Attribs.UVSelector0)[DiffuseTexAttribIdx] = static_cast<float>(texCoordSet.Get<int>());
-                    }
-                }
-
-                if (ext_it->second.Has("diffuseFactor"))
-                {
-                    auto factor = ext_it->second.Get("diffuseFactor");
-                    for (uint32_t i = 0; i < factor.ArrayLen(); i++)
-                    {
-                        const auto val = factor.Get(i);
-                        Mat.Attribs.BaseColorFactor[i] =
-                            val.IsNumber() ? (float)val.Get<double>() : (float)val.Get<int>();
-                    }
-                }
-
-                if (ext_it->second.Has("specularFactor"))
-                {
-                    auto factor = ext_it->second.Get("specularFactor");
-                    for (uint32_t i = 0; i < factor.ArrayLen(); i++)
-                    {
-                        const auto val = factor.Get(i);
-                        Mat.Attribs.SpecularFactor[i] =
-                            val.IsNumber() ? (float)val.Get<double>() : (float)val.Get<int>();
-                    }
-                }
+                const auto& SpecGlossExt = ext_it->second;
+                LoadExtensionTexture(*this, SpecGlossExt, MatBuilder, SpecularGlossinessTextureName);
+                LoadExtensionTexture(*this, SpecGlossExt, MatBuilder, DiffuseTextureName);
+                LoadExtensionParameter(SpecGlossExt, "diffuseFactor", Mat.Attribs.BaseColorFactor);
+                LoadExtensionParameter(SpecGlossExt, "specularFactor", Mat.Attribs.SpecularFactor);
             }
         }
+
+        // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_clearcoat
+        if (Mat.Attribs.Workflow == Material::PBR_WORKFLOW_METALL_ROUGH) // Clearcoat is incompatible with spec-gloss workflow and unlit materials
+        {
+            auto ext_it = gltf_mat.extensions.find("KHR_materials_clearcoat");
+            if (ext_it != gltf_mat.extensions.end())
+            {
+                const auto& ClearcoatExt = ext_it->second;
+                LoadExtensionTexture(*this, ClearcoatExt, MatBuilder, ClearcoatTextureName);
+                LoadExtensionTexture(*this, ClearcoatExt, MatBuilder, ClearcoatRoughnessTextureName);
+                LoadExtensionTexture(*this, ClearcoatExt, MatBuilder, ClearcoatNormalTextureName);
+                LoadExtensionParameter(ClearcoatExt, "clearcoatFactor", Mat.Attribs.ClearcoatFactor);
+                LoadExtensionParameter(ClearcoatExt, "clearcoatRoughnessFactor", Mat.Attribs.ClearcoatRoughnessFactor);
+
+                // The spec says that clear coat factor is zero, the whole clear coat layer is disabled.
+                Mat.HasClearcoat = Mat.Attribs.ClearcoatFactor != 0;
+            }
+        }
+
+        // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_sheen
+        if (Mat.Attribs.Workflow == Material::PBR_WORKFLOW_METALL_ROUGH) // Sheen is incompatible with spec-gloss workflow and unlit materials
+        {
+            auto ext_it = gltf_mat.extensions.find("KHR_materials_sheen");
+            if (ext_it != gltf_mat.extensions.end())
+            {
+                Mat.Sheen = std::make_unique<Material::SheenShaderAttribs>();
+
+                const auto& SheenExt = ext_it->second;
+                LoadExtensionTexture(*this, SheenExt, MatBuilder, SheenColorTextureName);
+                LoadExtensionTexture(*this, SheenExt, MatBuilder, SheenRoughnessTextureName);
+                LoadExtensionParameter(SheenExt, "sheenColorFactor", Mat.Sheen->ColorFactor);
+                LoadExtensionParameter(SheenExt, "sheenRoughnessFactor", Mat.Sheen->RoughnessFactor);
+            }
+        }
+
+        // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_anisotropy
+        if (Mat.Attribs.Workflow == Material::PBR_WORKFLOW_METALL_ROUGH) // Anisotropy is incompatible with spec-gloss workflow and unlit materials
+        {
+            auto ext_it = gltf_mat.extensions.find("KHR_materials_anisotropy");
+            if (ext_it != gltf_mat.extensions.end())
+            {
+                Mat.Anisotropy = std::make_unique<Material::AnisotropyShaderAttribs>();
+
+                const auto& AnisoExt = ext_it->second;
+                LoadExtensionTexture(*this, AnisoExt, MatBuilder, AnisotropyTextureName);
+                LoadExtensionParameter(AnisoExt, "anisotropyRotation", Mat.Anisotropy->Rotation);
+                LoadExtensionParameter(AnisoExt, "anisotropyStrength", Mat.Anisotropy->Strength);
+            }
+        }
+
+        // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_iridescence
+        if (Mat.Attribs.Workflow == Material::PBR_WORKFLOW_METALL_ROUGH) // Iridescence is incompatible with spec-gloss workflow and unlit materials
+        {
+            auto ext_it = gltf_mat.extensions.find("KHR_materials_iridescence");
+            if (ext_it != gltf_mat.extensions.end())
+            {
+                Mat.Iridescence = std::make_unique<Material::IridescenceShaderAttribs>();
+
+                const auto& IridExt = ext_it->second;
+                LoadExtensionTexture(*this, IridExt, MatBuilder, IridescenceTextureName);
+                LoadExtensionTexture(*this, IridExt, MatBuilder, IridescenceThicknessTextureName);
+                LoadExtensionParameter(IridExt, "iridescenceFactor", Mat.Iridescence->Factor);
+                LoadExtensionParameter(IridExt, "iridescenceIor", Mat.Iridescence->IOR);
+                LoadExtensionParameter(IridExt, "iridescenceThicknessMinimum", Mat.Iridescence->ThicknessMinimum);
+                LoadExtensionParameter(IridExt, "iridescenceThicknessMaximum", Mat.Iridescence->ThicknessMaximum);
+            }
+        }
+
+        // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_transmission
+        if (Mat.Attribs.Workflow == Material::PBR_WORKFLOW_METALL_ROUGH) // Transmission is incompatible with spec-gloss workflow and unlit materials
+        {
+            auto ext_it = gltf_mat.extensions.find("KHR_materials_transmission");
+            if (ext_it != gltf_mat.extensions.end())
+            {
+                Mat.Attribs.AlphaMode = Material::ALPHA_MODE_BLEND;
+
+                Mat.Transmission = std::make_unique<Material::TransmissionShaderAttribs>();
+
+                const auto& TransExt = ext_it->second;
+                LoadExtensionTexture(*this, TransExt, MatBuilder, TransmissionTextureName);
+                LoadExtensionParameter(TransExt, "transmissionFactor", Mat.Transmission->Factor);
+            }
+        }
+
+        // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_volume
+        if (Mat.Attribs.Workflow == Material::PBR_WORKFLOW_METALL_ROUGH) // Transmission is incompatible with spec-gloss workflow and unlit materials
+        {
+            auto ext_it = gltf_mat.extensions.find("KHR_materials_volume");
+            if (ext_it != gltf_mat.extensions.end())
+            {
+                Mat.Volume = std::make_unique<Material::VolumeShaderAttribs>();
+
+                const auto& VolExt = ext_it->second;
+                LoadExtensionTexture(*this, VolExt, MatBuilder, ThicknessTextureName);
+                LoadExtensionParameter(VolExt, "thicknessFactor", Mat.Volume->ThicknessFactor);
+                LoadExtensionParameter(VolExt, "attenuationDistance", Mat.Volume->AttenuationDistance);
+                LoadExtensionParameter(VolExt, "attenuationColor", Mat.Volume->AttenuationColor);
+            }
+        }
+
+        // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_emissive_strength
+        if (Mat.Attribs.Workflow != Material::PBR_WORKFLOW_UNLIT) // Incompatible with unlit materials
+        {
+            auto ext_it = gltf_mat.extensions.find("KHR_materials_emissive_strength");
+            if (ext_it != gltf_mat.extensions.end())
+            {
+                const auto& EmissiveStrengthExt = ext_it->second;
+                float       EmissiveStrength    = 1.f;
+                LoadExtensionParameter(EmissiveStrengthExt, "emissiveStrength", EmissiveStrength);
+                Mat.Attribs.EmissiveFactor *= EmissiveStrength;
+            }
+        }
+
+        MatBuilder.Finalize();
 
         if (MaterialLoadCallback != nullptr)
             MaterialLoadCallback(&gltf_mat, Mat);
 
-        Materials.push_back(Mat);
+        Materials.push_back(std::move(Mat));
     }
 
     if (Materials.empty())
@@ -1494,36 +1732,40 @@ bool LoadImageData(tinygltf::Image*     gltf_image,
         gltf_image->pixel_type = TINYGLTF_COMPONENT_TYPE_UNSIGNED_BYTE;
         size_t DstRowSize      = static_cast<size_t>(gltf_image->width) * gltf_image->component * (gltf_image->bits / 8);
         gltf_image->image.resize(static_cast<size_t>(gltf_image->height) * DstRowSize);
-        auto*        pPixelsBlob = pImage->GetData();
-        const Uint8* pSrcPixels  = static_cast<const Uint8*>(pPixelsBlob->GetDataPtr());
-        if (ImgDesc.NumComponents == 3)
-        {
-            for (size_t row = 0; row < ImgDesc.Height; ++row)
-            {
-                for (size_t col = 0; col < ImgDesc.Width; ++col)
-                {
-                    Uint8*       DstPixel = gltf_image->image.data() + DstRowSize * row + col * gltf_image->component;
-                    const Uint8* SrcPixel = pSrcPixels + ImgDesc.RowStride * row + col * ImgDesc.NumComponents;
 
-                    DstPixel[0] = SrcPixel[0];
-                    DstPixel[1] = SrcPixel[1];
-                    DstPixel[2] = SrcPixel[2];
-                    DstPixel[3] = 255;
-                }
-            }
-        }
-        else if (gltf_image->component == 4)
+        CopyPixelsAttribs CopyAttribs;
+        CopyAttribs.Width            = ImgDesc.Width;
+        CopyAttribs.Height           = ImgDesc.Height;
+        CopyAttribs.SrcComponentSize = gltf_image->bits / 8;
+        CopyAttribs.pSrcPixels       = pImage->GetData()->GetDataPtr();
+        CopyAttribs.SrcStride        = ImgDesc.RowStride;
+        CopyAttribs.SrcCompCount     = ImgDesc.NumComponents;
+        CopyAttribs.pDstPixels       = gltf_image->image.data();
+        CopyAttribs.DstComponentSize = gltf_image->bits / 8;
+        CopyAttribs.DstStride        = static_cast<Uint32>(DstRowSize);
+        CopyAttribs.DstCompCount     = gltf_image->component;
+        if (CopyAttribs.SrcCompCount < 4)
         {
-            for (size_t row = 0; row < ImgDesc.Height; ++row)
+            // Always set alpha to 1
+            CopyAttribs.Swizzle.A = TEXTURE_COMPONENT_SWIZZLE_ONE;
+            if (CopyAttribs.SrcCompCount == 1)
             {
-                memcpy(gltf_image->image.data() + DstRowSize * row, pSrcPixels + ImgDesc.RowStride * row, DstRowSize);
+                // Expand R to RGB
+                CopyAttribs.Swizzle.R = TEXTURE_COMPONENT_SWIZZLE_R;
+                CopyAttribs.Swizzle.G = TEXTURE_COMPONENT_SWIZZLE_R;
+                CopyAttribs.Swizzle.B = TEXTURE_COMPONENT_SWIZZLE_R;
+            }
+            else if (CopyAttribs.SrcCompCount == 2)
+            {
+                // RG -> RG01
+                CopyAttribs.Swizzle.B = TEXTURE_COMPONENT_SWIZZLE_ZERO;
+            }
+            else
+            {
+                VERIFY(CopyAttribs.SrcCompCount == 3, "Unexpected number of components");
             }
         }
-        else
-        {
-            *error += FormatString("Unexpected number of image components (", ImgDesc.NumComponents, ")");
-            return false;
-        }
+        CopyPixels(CopyAttribs);
     }
 
     return true;
@@ -1695,7 +1937,12 @@ void Model::LoadFromFile(IRenderDevice*         pDevice,
     LoadTextures(pDevice, gltf_model, LoaderData.BaseDir, pTextureCache, pResourceMgr);
 
     ModelBuilder Builder{CI, *this};
-    Builder.Execute(TinyGltfModelWrapper{gltf_model}, CI.SceneId, pDevice, pContext);
+    Builder.Execute(TinyGltfModelWrapper{gltf_model}, CI.SceneId, pDevice);
+
+    if (pContext != nullptr)
+    {
+        PrepareGPUResources(pDevice, pContext);
+    }
 
     Extensions = gltf_model.extensionsUsed;
 }
@@ -1744,34 +1991,6 @@ static void UpdateNodeGlobalTransform(const Node& node, const float4x4& ParentMa
     }
 }
 
-inline float4x4 ComputeNodeLocalMatrix(const float3&      Scale,
-                                       const QuaternionF& Rotation,
-                                       const float3&      Translation,
-                                       const float4x4&    Matrix)
-{
-    // Translation, rotation, and scale properties and local space transformation are
-    // mutually exclusive in GLTF.
-
-    // LocalMatrix = S * R * T * M
-    float4x4 LocalMatrix = Matrix;
-
-    if (Translation != float3{})
-        LocalMatrix = float4x4::Translation(Translation) * LocalMatrix;
-
-    if (Rotation != QuaternionF{})
-        LocalMatrix = Rotation.ToMatrix() * LocalMatrix;
-
-    if (Scale != float3{1, 1, 1})
-        LocalMatrix = float4x4::Scale(Scale) * LocalMatrix;
-
-    return LocalMatrix;
-}
-
-inline float4x4 ComputeNodeLocalMatrix(const Node& N)
-{
-    return ComputeNodeLocalMatrix(N.Scale, N.Rotation, N.Translation, N.Matrix);
-}
-
 void Model::ComputeTransforms(Uint32           SceneIndex,
                               ModelTransforms& Transforms,
                               const float4x4&  RootTransform,
@@ -1802,7 +2021,7 @@ void Model::ComputeTransforms(Uint32           SceneIndex,
         for (auto* pNode : scene.LinearNodes)
         {
             VERIFY_EXPR(pNode != nullptr);
-            Transforms.NodeLocalMatrices[pNode->Index] = ComputeNodeLocalMatrix(*pNode);
+            Transforms.NodeLocalMatrices[pNode->Index] = pNode->ComputeLocalTransform();
         }
     }
 
@@ -1885,71 +2104,73 @@ void Model::UpdateAnimation(Uint32 SceneIndex, Uint32 AnimationIndex, float time
         }
 
         auto& NodeAnim = Transforms.NodeAnimations[channel.pNode->Index];
-        // TODO: use binary search
-        for (size_t i = 0; i < sampler.Inputs.size() - 1; i++)
+
+        // Get the keyframe index.
+        // Note that different channels may have different time ranges.
+        auto Idx = sampler.FindKeyFrame(time);
+
+        // STEP: The animated values remain constant to the output of the first keyframe, until the next keyframe.
+        //       The number of output elements **MUST** equal the number of input elements.
+        float u = 0;
+
+        // LINEAR: The animated values are linearly interpolated between keyframes.
+        //         The number of output elements **MUST** equal the number of input elements.
+        if (sampler.Interpolation == AnimationSampler::INTERPOLATION_TYPE::LINEAR)
         {
-            if ((time >= sampler.Inputs[i]) &&
-                (time <= sampler.Inputs[i + 1]))
+            if (sampler.Inputs.size() < 2)
+                continue;
+
+            Idx = std::min(Idx, sampler.Inputs.size() - 2);
+            u   = (time - sampler.Inputs[Idx]) / (sampler.Inputs[Idx + 1] - sampler.Inputs[Idx]);
+        }
+
+        // CUBICSPLINE: The animation's interpolation is computed using a cubic spline with specified tangents.
+        //              The number of output elements **MUST** equal three times the number of input elements.
+        //              For each input element, the output stores three elements, an in-tangent, a spline vertex,
+        //              and an out-tangent. There **MUST** be at least two keyframes when using this interpolation.
+        //if (sampler.Interpolation == AnimationSampler::INTERPOLATION_TYPE::CUBICSPLINE)
+        // Not supported
+
+        u = clamp(u, 0.f, 1.f);
+        switch (channel.PathType)
+        {
+            case AnimationChannel::PATH_TYPE::TRANSLATION:
             {
-                // STEP: The animated values remain constant to the output of the first keyframe, until the next keyframe.
-                //       The number of output elements **MUST** equal the number of input elements.
-                float u = 0;
+                const float3 f3Start = sampler.OutputsVec4[Idx];
+                const float3 f3End   = sampler.OutputsVec4[Idx + 1];
+                NodeAnim.Translation = lerp(f3Start, f3End, u);
+                break;
+            }
 
-                // LINEAR: The animated values are linearly interpolated between keyframes.
-                //         The number of output elements **MUST** equal the number of input elements.
-                if (sampler.Interpolation == AnimationSampler::INTERPOLATION_TYPE::LINEAR)
-                    u = (time - sampler.Inputs[i]) / (sampler.Inputs[i + 1] - sampler.Inputs[i]);
+            case AnimationChannel::PATH_TYPE::SCALE:
+            {
+                const float3 f3Start = sampler.OutputsVec4[Idx];
+                const float3 f3End   = sampler.OutputsVec4[Idx + 1];
+                NodeAnim.Scale       = lerp(f3Start, f3End, u);
+                break;
+            }
 
-                // CUBICSPLINE: The animation's interpolation is computed using a cubic spline with specified tangents.
-                //              The number of output elements **MUST** equal three times the number of input elements.
-                //              For each input element, the output stores three elements, an in-tangent, a spline vertex,
-                //              and an out-tangent. There **MUST** be at least two keyframes when using this interpolation.
-                //if (sampler.Interpolation == AnimationSampler::INTERPOLATION_TYPE::CUBICSPLINE)
-                // Not supported
+            case AnimationChannel::PATH_TYPE::ROTATION:
+            {
+                QuaternionF q1;
+                q1.q.x = sampler.OutputsVec4[Idx].x;
+                q1.q.y = sampler.OutputsVec4[Idx].y;
+                q1.q.z = sampler.OutputsVec4[Idx].z;
+                q1.q.w = sampler.OutputsVec4[Idx].w;
 
-                switch (channel.PathType)
-                {
-                    case AnimationChannel::PATH_TYPE::TRANSLATION:
-                    {
-                        const float3 f3Start = sampler.OutputsVec4[i];
-                        const float3 f3End   = sampler.OutputsVec4[i + 1];
-                        NodeAnim.Translation = lerp(f3Start, f3End, u);
-                        break;
-                    }
+                QuaternionF q2;
+                q2.q.x = sampler.OutputsVec4[Idx + 1].x;
+                q2.q.y = sampler.OutputsVec4[Idx + 1].y;
+                q2.q.z = sampler.OutputsVec4[Idx + 1].z;
+                q2.q.w = sampler.OutputsVec4[Idx + 1].w;
 
-                    case AnimationChannel::PATH_TYPE::SCALE:
-                    {
-                        const float3 f3Start = sampler.OutputsVec4[i];
-                        const float3 f3End   = sampler.OutputsVec4[i + 1];
-                        NodeAnim.Scale       = lerp(f3Start, f3End, u);
-                        break;
-                    }
+                NodeAnim.Rotation = normalize(slerp(q1, q2, u));
+                break;
+            }
 
-                    case AnimationChannel::PATH_TYPE::ROTATION:
-                    {
-                        QuaternionF q1;
-                        q1.q.x = sampler.OutputsVec4[i].x;
-                        q1.q.y = sampler.OutputsVec4[i].y;
-                        q1.q.z = sampler.OutputsVec4[i].z;
-                        q1.q.w = sampler.OutputsVec4[i].w;
-
-                        QuaternionF q2;
-                        q2.q.x = sampler.OutputsVec4[i + 1].x;
-                        q2.q.y = sampler.OutputsVec4[i + 1].y;
-                        q2.q.z = sampler.OutputsVec4[i + 1].z;
-                        q2.q.w = sampler.OutputsVec4[i + 1].w;
-
-                        NodeAnim.Rotation = normalize(slerp(q1, q2, u));
-                        break;
-                    }
-
-                    case AnimationChannel::PATH_TYPE::WEIGHTS:
-                    {
-                        UNEXPECTED("Weights are not currently supported");
-                        break;
-                    }
-                }
-
+            case AnimationChannel::PATH_TYPE::WEIGHTS:
+            {
+                UNEXPECTED("Weights are not currently supported");
                 break;
             }
         }

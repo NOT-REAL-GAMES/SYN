@@ -1,3 +1,15 @@
+## v2.5.5
+
+* Added `MultiDraw` and `MultiDrawIndexed` commands (API254006)
+* Added `SerializationDeviceGLInfo` struct (API254005)
+  * The `ValidateShaders` member allows disabling time-consuming shader compilation
+* Replaced `AnisotropicFilteringSupported` member of `SamplerProperties` struct with `MaxAnisotropy` (API254004)
+* Added `TextureSubresourceViews` device feature (API254003)
+* Added device context rendering statistics (API254002)
+  * Added `DeviceContextStats` struct
+  * Added `IDeviceContext::ClearStats` and `IDeviceContext::GetStats` methods
+* `IDeviceContext::TransitionShaderResources`: removed unused `pPipelineState` parameter (API254001)
+
 ## v2.5.4
 
 * Use thread group count X/Y/Z for mesh draw commands (API253012)

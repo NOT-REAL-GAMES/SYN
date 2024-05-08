@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@
 DILIGENT_BEGIN_NAMESPACE(Diligent)
 
 // {F20B91EB-BDE3-4615-81CC-F720AA32410E}
-static const INTERFACE_ID IID_ArchiverFactory =
+static DILIGENT_CONSTEXPR INTERFACE_ID IID_ArchiverFactory =
     {0xf20b91eb, 0xbde3, 0x4615, {0x81, 0xcc, 0xf7, 0x20, 0xaa, 0x32, 0x41, 0xe}};
 
 #define DILIGENT_INTERFACE_NAME IArchiverFactory
@@ -93,6 +93,46 @@ struct SerializationDeviceD3D12Info
 
 };
 typedef struct SerializationDeviceD3D12Info SerializationDeviceD3D12Info;
+
+
+/// Serialization device attributes for OpenGL backend
+struct SerializationDeviceGLInfo
+{
+    /// Whether to optimize OpenGL shaders.
+
+    /// \remarks    In OpenGL backend, shaders are stored as source code in the archive.
+    ///             The source code can be rather large since all included files are inlined,
+    ///             helper shader definitions are added, etc. Compiling such shaders may take
+    ///             a significant amount of time, in particular on mobile devices and WebGL.
+    ///             When OptimizeShaders is set to true, the archiver will optimize the shader
+    ///             source code for run-time loading performance.
+    ///
+    ///             Technical details: the archiver will compile the shader source code to SPIRV
+    ///             with GLSLang and then translate SPIRV back to GLSL using SPIRV-Cross.
+    ///             The resulting GLSL code will be much more compact and will be stored in the
+    ///             archive instead of the original source code.
+    Bool  OptimizeShaders DEFAULT_INITIALIZER(True);
+
+    /// Whether to use zero-to-one clip-space Z range.
+    ///
+    /// \remarks    In OpenGL, the default clip-space Z range is -1 to 1.
+    ///             When this flag is set to True, the archiver will assume
+    ///             that the shaders use zero-to-one clip-space Z range.
+    Bool ZeroToOneClipZ DEFAULT_INITIALIZER(False);
+
+#if DILIGENT_CPP_INTERFACE
+    bool operator==(const SerializationDeviceGLInfo& RHS) const noexcept
+    {
+        return OptimizeShaders == RHS.OptimizeShaders &&
+			   ZeroToOneClipZ  == RHS.ZeroToOneClipZ;
+    }
+    bool operator!=(const SerializationDeviceGLInfo& RHS) const noexcept
+    {
+        return !(*this == RHS);
+    }
+#endif
+};
+typedef struct SerializationDeviceGLInfo SerializationDeviceGLInfo;
 
 
 /// Serialization device attributes for Vulkan backend
@@ -175,6 +215,9 @@ struct SerializationDeviceCreateInfo
 
     /// Direct3D12 attributes, see Diligent::SerializationDeviceD3D12Info.
     SerializationDeviceD3D12Info D3D12;
+
+    /// OpenGL attributes, see Diligent::SerializationDeviceGLInfo.
+    SerializationDeviceGLInfo GL;
 
     /// Vulkan attributes, see Diligent::SerializationDeviceVkInfo.
     SerializationDeviceVkInfo Vulkan;

@@ -21,8 +21,10 @@ android {
     packagingOptions {
         pickFirst "lib/**/libGraphicsEngine*.so"
         pickFirst "lib/**/lib${project.name}.so"
+        pickFirst "lib/**/libVkLayer*.so"
         exclude 'lib/**/*.so'
     }
+    namespace 'com.diligentengine.gltfviewer'
 }
 
 dependencies {

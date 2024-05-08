@@ -1,0 +1,19 @@
+#include "HnClosestSelectedLocation.fxh"
+#include "FullScreenTriangleVSOutput.fxh"
+
+cbuffer cbConstants
+{
+    ClosestSelectedLocationConstants g_Constants;
+}
+
+Texture2D g_SelectionDepth;
+
+void main(in  FullScreenTriangleVSOutput VSOut,
+          out float2                     Location : SV_Target0)
+{
+    bool IsSelected = g_SelectionDepth.Load(int3(VSOut.f4PixelPos.xy, 0)).r != g_Constants.ClearDepth;
+    float Width;
+    float Height;
+    g_SelectionDepth.GetDimensions(Width, Height);
+    Location = EncodeClosestSelectedLocation(VSOut.f4PixelPos.xy / float2(Width, Height), IsSelected);
+}

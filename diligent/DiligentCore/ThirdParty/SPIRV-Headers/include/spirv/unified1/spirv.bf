@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020 The Khronos Group Inc.
+// Copyright (c) 2014-2024 The Khronos Group Inc.
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and/or associated documentation files (the "Materials"),
@@ -69,6 +69,8 @@ namespace Spv
             HERO_C = 8,
             NZSL = 9,
             WGSL = 10,
+            Slang = 11,
+            Zig = 12,
         }
 
         [AllowDuplicates, CRepr] public enum ExecutionModel
@@ -168,12 +170,19 @@ namespace Spv
             RoundingModeRTZ = 4463,
             EarlyAndLateFragmentTestsAMD = 5017,
             StencilRefReplacingEXT = 5027,
+            CoalescingAMDX = 5069,
+            MaxNodeRecursionAMDX = 5071,
+            StaticNumWorkgroupsAMDX = 5072,
+            ShaderIndexAMDX = 5073,
+            MaxNumWorkgroupsAMDX = 5077,
             StencilRefUnchangedFrontAMD = 5079,
             StencilRefGreaterFrontAMD = 5080,
             StencilRefLessFrontAMD = 5081,
             StencilRefUnchangedBackAMD = 5082,
             StencilRefGreaterBackAMD = 5083,
             StencilRefLessBackAMD = 5084,
+            QuadDerivativesKHR = 5088,
+            RequireFullQuadsKHR = 5089,
             OutputLinesEXT = 5269,
             OutputLinesNV = 5269,
             OutputPrimitivesEXT = 5270,
@@ -198,9 +207,14 @@ namespace Spv
             NoGlobalOffsetINTEL = 5895,
             NumSIMDWorkitemsINTEL = 5896,
             SchedulerTargetFmaxMhzINTEL = 5903,
+            MaximallyReconvergesKHR = 6023,
+            FPFastMathDefault = 6028,
             StreamingInterfaceINTEL = 6154,
             RegisterMapInterfaceINTEL = 6160,
             NamedBarrierCountINTEL = 6417,
+            MaximumRegistersINTEL = 6461,
+            MaximumRegistersIdINTEL = 6462,
+            NamedMaximumRegistersINTEL = 6463,
         }
 
         [AllowDuplicates, CRepr] public enum StorageClass
@@ -219,6 +233,8 @@ namespace Spv
             Image = 11,
             StorageBuffer = 12,
             TileImageEXT = 4172,
+            NodePayloadAMDX = 5068,
+            NodeOutputPayloadAMDX = 5076,
             CallableDataKHR = 5328,
             CallableDataNV = 5328,
             IncomingCallableDataKHR = 5329,
@@ -416,8 +432,11 @@ namespace Spv
             NSZ = 2,
             AllowRecip = 3,
             Fast = 4,
+            AllowContract = 16,
             AllowContractFastINTEL = 16,
+            AllowReassoc = 17,
             AllowReassocINTEL = 17,
+            AllowTransform = 18,
         }
 
         [AllowDuplicates, CRepr] public enum FPFastMathModeMask
@@ -428,8 +447,11 @@ namespace Spv
             NSZ = 0x00000004,
             AllowRecip = 0x00000008,
             Fast = 0x00000010,
+            AllowContract = 0x00010000,
             AllowContractFastINTEL = 0x00010000,
+            AllowReassoc = 0x00020000,
             AllowReassocINTEL = 0x00020000,
+            AllowTransform = 0x00040000,
         }
 
         [AllowDuplicates, CRepr] public enum FPRoundingMode
@@ -520,7 +542,12 @@ namespace Spv
             NoUnsignedWrap = 4470,
             WeightTextureQCOM = 4487,
             BlockMatchTextureQCOM = 4488,
+            BlockMatchSamplerQCOM = 4499,
             ExplicitInterpAMD = 4999,
+            NodeSharesPayloadLimitsWithAMDX = 5019,
+            NodeMaxPayloadsAMDX = 5020,
+            TrackFinishWritingAMDX = 5078,
+            PayloadNodeNameAMDX = 5091,
             OverrideCoverageNV = 5248,
             PassthroughNV = 5250,
             ViewportRelativeNV = 5252,
@@ -570,6 +597,9 @@ namespace Spv
             MergeINTEL = 5834,
             BankBitsINTEL = 5835,
             ForcePow2DepthINTEL = 5836,
+            StridesizeINTEL = 5883,
+            WordsizeINTEL = 5884,
+            TrueDualPortINTEL = 5885,
             BurstCoalesceINTEL = 5899,
             CacheSizeINTEL = 5900,
             DontStaticallyCoalesceINTEL = 5901,
@@ -588,6 +618,7 @@ namespace Spv
             SingleElementVectorINTEL = 6085,
             VectorComputeCallableFunctionINTEL = 6087,
             MediaBlockIOINTEL = 6140,
+            StallFreeINTEL = 6151,
             FPMaxErrorDecorationINTEL = 6170,
             LatencyControlLabelINTEL = 6172,
             LatencyControlConstraintINTEL = 6173,
@@ -600,6 +631,11 @@ namespace Spv
             MMHostInterfaceMaxBurstINTEL = 6181,
             MMHostInterfaceWaitRequestINTEL = 6182,
             StableKernelArgumentINTEL = 6183,
+            HostAccessINTEL = 6188,
+            InitModeINTEL = 6190,
+            ImplementInRegisterMapINTEL = 6191,
+            CacheControlLoadINTEL = 6442,
+            CacheControlStoreINTEL = 6443,
         }
 
         [AllowDuplicates, CRepr] public enum BuiltIn
@@ -675,6 +711,8 @@ namespace Spv
             BaryCoordSmoothSampleAMD = 4997,
             BaryCoordPullModelAMD = 4998,
             FragStencilRefEXT = 5014,
+            CoalescedInputCountAMDX = 5021,
+            ShaderIndexAMDX = 5073,
             ViewportMaskNV = 5253,
             SecondaryPositionNV = 5257,
             SecondaryViewportMaskNV = 5258,
@@ -728,6 +766,8 @@ namespace Spv
             HitKindNV = 5333,
             CurrentRayTimeNV = 5334,
             HitTriangleVertexPositionsKHR = 5335,
+            HitMicroTriangleVertexPositionsNV = 5337,
+            HitMicroTriangleVertexBarycentricsNV = 5344,
             IncomingRayFlagsKHR = 5351,
             IncomingRayFlagsNV = 5351,
             RayGeometryIndexKHR = 5352,
@@ -735,6 +775,8 @@ namespace Spv
             SMCountNV = 5375,
             WarpIDNV = 5376,
             SMIDNV = 5377,
+            HitKindFrontFacingMicroTriangleNV = 5405,
+            HitKindBackFacingMicroTriangleNV = 5406,
             CullMaskKHR = 6021,
         }
 
@@ -1042,6 +1084,7 @@ namespace Spv
             TextureSampleWeightedQCOM = 4484,
             TextureBoxFilterQCOM = 4485,
             TextureBlockMatchQCOM = 4486,
+            TextureBlockMatch2QCOM = 4498,
             Float16ImageAMD = 5008,
             ImageGatherBiasLodAMD = 5009,
             FragmentMaskAMD = 5010,
@@ -1049,6 +1092,8 @@ namespace Spv
             ImageReadWriteLodAMD = 5015,
             Int64ImageEXT = 5016,
             ShaderClockKHR = 5055,
+            ShaderEnqueueAMDX = 5067,
+            QuadControlKHR = 5087,
             SampleMaskOverrideCoverageNV = 5249,
             GeometryShaderPassthroughNV = 5251,
             ShaderViewportIndexLayerEXT = 5254,
@@ -1108,10 +1153,14 @@ namespace Spv
             FragmentShaderPixelInterlockEXT = 5378,
             DemoteToHelperInvocation = 5379,
             DemoteToHelperInvocationEXT = 5379,
+            DisplacementMicromapNV = 5380,
             RayTracingOpacityMicromapEXT = 5381,
             ShaderInvocationReorderNV = 5383,
             BindlessTextureNV = 5390,
             RayQueryPositionFetchKHR = 5391,
+            AtomicFloat16VectorNV = 5404,
+            RayTracingDisplacementMicromapNV = 5409,
+            RawAccessChainsNV = 5414,
             SubgroupShuffleINTEL = 5568,
             SubgroupBufferBlockIOINTEL = 5569,
             SubgroupImageBlockIOINTEL = 5570,
@@ -1166,19 +1215,26 @@ namespace Spv
             CooperativeMatrixKHR = 6022,
             BitInstructions = 6025,
             GroupNonUniformRotateKHR = 6026,
+            FloatControls2 = 6029,
             AtomicFloat32AddEXT = 6033,
             AtomicFloat64AddEXT = 6034,
-            LongConstantCompositeINTEL = 6089,
+            LongCompositesINTEL = 6089,
             OptNoneINTEL = 6094,
             AtomicFloat16AddEXT = 6095,
             DebugInfoModuleINTEL = 6114,
             BFloat16ConversionINTEL = 6115,
             SplitBarrierINTEL = 6141,
+            FPGAClusterAttributesV2INTEL = 6150,
             FPGAKernelAttributesv2INTEL = 6161,
             FPMaxErrorINTEL = 6169,
             FPGALatencyControlINTEL = 6171,
             FPGAArgumentInterfacesINTEL = 6174,
+            GlobalVariableHostAccessINTEL = 6187,
+            GlobalVariableFPGADecorationsINTEL = 6189,
             GroupUniformArithmeticKHR = 6400,
+            MaskedGatherScatterINTEL = 6427,
+            CacheControlsINTEL = 6441,
+            RegisterLimitsINTEL = 6460,
         }
 
         [AllowDuplicates, CRepr] public enum RayFlagsShift
@@ -1316,6 +1372,55 @@ namespace Spv
             MatrixAKHR = 0,
             MatrixBKHR = 1,
             MatrixAccumulatorKHR = 2,
+        }
+
+        [AllowDuplicates, CRepr] public enum InitializationModeQualifier
+        {
+            InitOnDeviceReprogramINTEL = 0,
+            InitOnDeviceResetINTEL = 1,
+        }
+
+        [AllowDuplicates, CRepr] public enum HostAccessQualifier
+        {
+            NoneINTEL = 0,
+            ReadINTEL = 1,
+            WriteINTEL = 2,
+            ReadWriteINTEL = 3,
+        }
+
+        [AllowDuplicates, CRepr] public enum LoadCacheControl
+        {
+            UncachedINTEL = 0,
+            CachedINTEL = 1,
+            StreamingINTEL = 2,
+            InvalidateAfterReadINTEL = 3,
+            ConstCachedINTEL = 4,
+        }
+
+        [AllowDuplicates, CRepr] public enum StoreCacheControl
+        {
+            UncachedINTEL = 0,
+            WriteThroughINTEL = 1,
+            WriteBackINTEL = 2,
+            StreamingINTEL = 3,
+        }
+
+        [AllowDuplicates, CRepr] public enum NamedMaximumNumberOfRegisters
+        {
+            AutoINTEL = 0,
+        }
+
+        [AllowDuplicates, CRepr] public enum RawAccessChainOperandsShift
+        {
+            RobustnessPerComponentNV = 0,
+            RobustnessPerElementNV = 1,
+        }
+
+        [AllowDuplicates, CRepr] public enum RawAccessChainOperandsMask
+        {
+            MaskNone = 0,
+            RobustnessPerComponentNV = 0x00000001,
+            RobustnessPerElementNV = 0x00000002,
         }
 
         [AllowDuplicates, CRepr] public enum Op
@@ -1708,6 +1813,10 @@ namespace Spv
             OpImageBoxFilterQCOM = 4481,
             OpImageBlockMatchSSDQCOM = 4482,
             OpImageBlockMatchSADQCOM = 4483,
+            OpImageBlockMatchWindowSSDQCOM = 4500,
+            OpImageBlockMatchWindowSADQCOM = 4501,
+            OpImageBlockMatchGatherSSDQCOM = 4502,
+            OpImageBlockMatchGatherSADQCOM = 4503,
             OpGroupIAddNonUniformAMD = 5000,
             OpGroupFAddNonUniformAMD = 5001,
             OpGroupFMinNonUniformAMD = 5002,
@@ -1719,6 +1828,11 @@ namespace Spv
             OpFragmentMaskFetchAMD = 5011,
             OpFragmentFetchAMD = 5012,
             OpReadClockKHR = 5056,
+            OpFinalizeNodePayloadsAMDX = 5075,
+            OpFinishWritingNodePayloadAMDX = 5078,
+            OpInitializeNodePayloadsAMDX = 5090,
+            OpGroupNonUniformQuadAllKHR = 5110,
+            OpGroupNonUniformQuadAnyKHR = 5111,
             OpHitObjectRecordHitMotionNV = 5249,
             OpHitObjectRecordHitWithIndexMotionNV = 5250,
             OpHitObjectRecordMissMotionNV = 5251,
@@ -1757,6 +1871,8 @@ namespace Spv
             OpSetMeshOutputsEXT = 5295,
             OpGroupNonUniformPartitionNV = 5296,
             OpWritePackedPrimitiveIndices4x8NV = 5299,
+            OpFetchMicroTriangleVertexPositionNV = 5300,
+            OpFetchMicroTriangleVertexBarycentricNV = 5301,
             OpReportIntersectionKHR = 5334,
             OpReportIntersectionNV = 5334,
             OpIgnoreIntersectionNV = 5335,
@@ -1785,6 +1901,7 @@ namespace Spv
             OpConvertUToSampledImageNV = 5395,
             OpConvertSampledImageToUNV = 5396,
             OpSamplerImageAddressingModeNV = 5397,
+            OpRawAccessChainNV = 5398,
             OpSubgroupShuffleINTEL = 5571,
             OpSubgroupShuffleDownINTEL = 5572,
             OpSubgroupShuffleUpINTEL = 5573,
@@ -2026,6 +2143,7 @@ namespace Spv
             OpTypeStructContinuedINTEL = 6090,
             OpConstantCompositeContinuedINTEL = 6091,
             OpSpecConstantCompositeContinuedINTEL = 6092,
+            OpCompositeConstructContinuedINTEL = 6096,
             OpConvertFToBF16INTEL = 6116,
             OpConvertBF16ToFINTEL = 6117,
             OpControlBarrierArriveINTEL = 6142,
@@ -2038,6 +2156,8 @@ namespace Spv
             OpGroupLogicalAndKHR = 6406,
             OpGroupLogicalOrKHR = 6407,
             OpGroupLogicalXorKHR = 6408,
+            OpMaskedGatherINTEL = 6428,
+            OpMaskedScatterINTEL = 6429,
         }
     }
 }

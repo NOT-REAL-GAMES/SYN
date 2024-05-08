@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -40,6 +40,8 @@ class EmscriptenAppBase : public AppBase
 public:
     using AppBase::Update;
 
+    void Update();
+
     virtual void OnMouseEvent(int32_t EventType, const EmscriptenMouseEvent* Event) = 0;
 
     virtual void OnWheelEvent(int32_t EventType, const EmscriptenWheelEvent* Event) = 0;
@@ -49,6 +51,10 @@ public:
     virtual void OnWindowCreated(const char* pCanvasID,
                                  int32_t     WindowWidth,
                                  int32_t     WindowHeight) = 0;
+
+protected:
+    Timer  m_Timer;
+    double m_PrevTime = 0.0;
 };
 
 } // namespace Diligent

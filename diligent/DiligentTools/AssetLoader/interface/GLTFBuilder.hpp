@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -75,33 +75,28 @@ public:
     template <typename GltfModelType>
     void Execute(const GltfModelType& GltfModel,
                  int                  SceneIndex,
-                 IRenderDevice*       pDevice,
-                 IDeviceContext*      pContext);
+                 IRenderDevice*       pDevice);
 
     static std::pair<FILTER_TYPE, FILTER_TYPE> GetFilterType(int32_t GltfFilterMode);
 
     static TEXTURE_ADDRESS_MODE GetAddressMode(int32_t GltfWrapMode);
 
 private:
-    struct ConvertedBufferViewKey
+    struct PrimitiveKey
     {
         std::vector<int> AccessorIds;
         mutable size_t   Hash = 0;
 
-        bool operator==(const ConvertedBufferViewKey& Rhs) const noexcept;
+        bool operator==(const PrimitiveKey& Rhs) const noexcept
+        {
+            return AccessorIds == Rhs.AccessorIds;
+        }
 
         struct Hasher
         {
-            size_t operator()(const ConvertedBufferViewKey& Key) const noexcept;
+            size_t operator()(const PrimitiveKey& Key) const noexcept;
         };
     };
-
-    struct ConvertedBufferViewData
-    {
-        std::vector<size_t> Offsets;
-    };
-
-    using ConvertedBufferViewMap = std::unordered_map<ConvertedBufferViewKey, ConvertedBufferViewData, ConvertedBufferViewKey::Hasher>;
 
     // If SceneIndex >= 0, loads only the specified scene, otherwise loads all scenes.
     // Stores the GLTF node indices as the node pointers.
@@ -128,27 +123,44 @@ private:
     Camera* LoadCamera(const GltfModelType& GltfModel,
                        int                  GltfCameraIndex);
 
-    void InitIndexBuffer(IRenderDevice* pDevice, IDeviceContext* pContext);
-    void InitVertexBuffers(IRenderDevice* pDevice, IDeviceContext* pContext);
+    template <typename GltfModelType>
+    Light* LoadLight(const GltfModelType& GltfModel,
+                     int                  GltfLightIndex);
+
+    void InitIndexBuffer(IRenderDevice* pDevice);
+    void InitVertexBuffers(IRenderDevice* pDevice);
 
     template <typename GltfModelType>
     bool LoadAnimationAndSkin(const GltfModelType& GltfModel);
 
-    static void WriteGltfData(const void*                  pSrc,
-                              VALUE_TYPE                   SrcType,
-                              Uint32                       NumSrcComponents,
-                              Uint32                       SrcElemStride,
-                              std::vector<Uint8>::iterator dst_it,
-                              VALUE_TYPE                   DstType,
-                              Uint32                       NumDstComponents,
-                              Uint32                       DstElementStride,
-                              Uint32                       NumElements);
+    struct WriteGltfDataAttribs
+    {
+        const void*                  pSrc;
+        VALUE_TYPE                   SrcType;
+        Uint32                       NumSrcComponents;
+        Uint32                       SrcElemStride;
+        std::vector<Uint8>::iterator dst_it;
+        VALUE_TYPE                   DstType;
+        Uint32                       NumDstComponents;
+        Uint32                       DstElementStride;
+        Uint32                       NumElements;
+        bool                         IsNormalized;
+    };
+    static void WriteGltfData(const WriteGltfDataAttribs& Attribs);
+
+    static void WriteDefaultAttibuteValue(const void*                  pDefaultValue,
+                                          std::vector<Uint8>::iterator dst_it,
+                                          VALUE_TYPE                   DstType,
+                                          Uint32                       NumDstComponents,
+                                          Uint32                       DstElementStride,
+                                          Uint32                       NumElements);
+
+    void WriteDefaultAttibutes(Uint32 BufferId, size_t StartOffset, size_t EndOffset);
 
     template <typename GltfModelType>
-    void ConvertVertexData(const GltfModelType&          GltfModel,
-                           const ConvertedBufferViewKey& Key,
-                           ConvertedBufferViewData&      Data,
-                           Uint32                        VertexCount);
+    Uint32 ConvertVertexData(const GltfModelType& GltfModel,
+                             const PrimitiveKey&  Key,
+                             Uint32               VertexCount);
 
     template <typename SrcType, typename DstType>
     inline static void WriteIndexData(const void*                  pSrc,
@@ -180,6 +192,9 @@ private:
             nullptr;
     }
 
+    template <typename GltfDataInfoType>
+    bool ComputePrimitiveBoundingBox(const GltfDataInfoType& PosData, float3& Min, float3& Max) const;
+
 private:
     const ModelCreateInfo& m_CI;
     Model&                 m_Model;
@@ -191,17 +206,19 @@ private:
     std::unordered_map<int, int> m_NodeIndexRemapping;
     std::unordered_map<int, int> m_MeshIndexRemapping;
     std::unordered_map<int, int> m_CameraIndexRemapping;
+    std::unordered_map<int, int> m_LightIndexRemapping;
 
     std::unordered_set<int> m_LoadedNodes;
     std::unordered_set<int> m_LoadedMeshes;
     std::unordered_set<int> m_LoadedCameras;
+    std::unordered_set<int> m_LoadedLights;
 
     std::unordered_map<int, int> m_NodeIdToSkinId;
 
     std::vector<Uint8>              m_IndexData;
     std::vector<std::vector<Uint8>> m_VertexData;
 
-    ConvertedBufferViewMap m_ConvertedBuffers;
+    std::unordered_map<PrimitiveKey, Uint32, PrimitiveKey::Hasher> m_PrimitiveOffsets;
 };
 
 template <typename GltfModelType>
@@ -295,21 +312,44 @@ void ModelBuilder::AllocateNode(const GltfModelType& GltfModel,
         AllocateNode(GltfModel, ChildNodeIdx);
     }
 
-    const auto GltfMeshIndex = GltfNode.GetMeshId();
-    if (GltfMeshIndex >= 0)
+    auto AllocateNodeComponent = [](int GltfIndex, auto& Components, auto& IndexRemapping) {
+        if (GltfIndex < 0)
+            return;
+
+        const auto Id = static_cast<int>(Components.size());
+        if (IndexRemapping.emplace(GltfIndex, Id).second)
+            Components.emplace_back();
+    };
+
+    AllocateNodeComponent(GltfNode.GetMeshId(), m_Model.Meshes, m_MeshIndexRemapping);
+    AllocateNodeComponent(GltfNode.GetCameraId(), m_Model.Cameras, m_CameraIndexRemapping);
+    AllocateNodeComponent(GltfNode.GetLightId(), m_Model.Lights, m_LightIndexRemapping);
+}
+
+
+template <typename GltfDataInfoType>
+bool ModelBuilder::ComputePrimitiveBoundingBox(const GltfDataInfoType& PosData, float3& Min, float3& Max) const
+{
+    if (PosData.Accessor.GetComponentType() != VT_FLOAT32)
     {
-        const auto MeshId = static_cast<int>(m_Model.Meshes.size());
-        if (m_MeshIndexRemapping.emplace(GltfMeshIndex, MeshId).second)
-            m_Model.Meshes.emplace_back();
+        DEV_ERROR("Unexpected GLTF vertex position component type: ", GetValueTypeString(PosData.Accessor.GetComponentType()), ". float is expected.");
+        return false;
+    }
+    if (PosData.Accessor.GetNumComponents() != 3)
+    {
+        DEV_ERROR("Unexpected GLTF vertex position component count: ", PosData.Accessor.GetNumComponents(), ". 3 is expected.");
+        return false;
     }
 
-    const auto GltfCameraIndex = GltfNode.GetCameraId();
-    if (GltfCameraIndex >= 0)
+    Max = float3{-FLT_MAX};
+    Min = float3{+FLT_MAX};
+    for (size_t i = 0; i < PosData.Count; ++i)
     {
-        const auto CameraId = static_cast<int>(m_Model.Cameras.size());
-        if (m_CameraIndexRemapping.emplace(GltfCameraIndex, CameraId).second)
-            m_Model.Cameras.emplace_back();
+        const auto& Pos{*reinterpret_cast<const float3*>(static_cast<const Uint8*>(PosData.pData) + PosData.ByteStride * i)};
+        Max = max(Max, Pos);
+        Min = min(Min, Pos);
     }
+    return true;
 }
 
 template <typename GltfModelType>
@@ -354,7 +394,7 @@ Mesh* ModelBuilder::LoadMesh(const GltfModelType& GltfModel,
 
         // Vertices
         {
-            ConvertedBufferViewKey Key;
+            PrimitiveKey Key;
 
             Key.AccessorIds.resize(m_Model.GetNumVertexAttributes());
             for (Uint32 i = 0; i < m_Model.GetNumVertexAttributes(); ++i)
@@ -371,22 +411,29 @@ Mesh* ModelBuilder::LoadMesh(const GltfModelType& GltfModel,
 
                 const auto& PosAccessor = GltfModel.GetAccessor(*pPosAttribId);
 
-                PosMin      = PosAccessor.GetMinValues();
-                PosMax      = PosAccessor.GetMaxValues();
+                PosMin = PosAccessor.GetMinValues();
+                PosMax = PosAccessor.GetMaxValues();
+                if (m_CI.ComputeBoundingBoxes)
+                {
+                    ComputePrimitiveBoundingBox(GetGltfDataInfo(GltfModel, *pPosAttribId), PosMin, PosMax);
+                }
+
                 VertexCount = static_cast<uint32_t>(PosAccessor.GetCount());
             }
 
-            auto& Data = m_ConvertedBuffers[Key];
-            if (Data.Offsets.empty())
+            auto offset_it = m_PrimitiveOffsets.find(Key);
+            if (offset_it == m_PrimitiveOffsets.end())
             {
-                ConvertVertexData(GltfModel, Key, Data, VertexCount);
+                auto Offset = ConvertVertexData(GltfModel, Key, VertexCount);
+                VERIFY_EXPR(Offset != ~0u);
+                offset_it = m_PrimitiveOffsets.emplace(Key, Offset).first;
             }
+            VertexStart = offset_it->second;
 
-            VertexStart = StaticCast<uint32_t>(Data.Offsets[0] / m_Model.VertexData.Strides[0]);
 #ifdef DILIGENT_DEBUG
-            for (size_t i = 1; i < Data.Offsets.size(); ++i)
+            for (size_t i = 0; i < m_VertexData.size(); ++i)
             {
-                VERIFY(Data.Offsets[i] / m_Model.VertexData.Strides[i] == VertexStart, "Vertex data is misaligned");
+                VERIFY(m_Model.VertexData.Strides[i] == 0 || (m_VertexData[i].size() % m_Model.VertexData.Strides[i]) == 0, "Vertex data is misaligned");
             }
 #endif
         }
@@ -410,17 +457,7 @@ Mesh* ModelBuilder::LoadMesh(const GltfModelType& GltfModel,
             m_CI.PrimitiveLoadCallback(&GltfPrimitive.Get(), NewMesh.Primitives.back());
     }
 
-    if (!NewMesh.Primitives.empty())
-    {
-        // Mesh BB from BBs of primitives
-        NewMesh.BB = NewMesh.Primitives[0].BB;
-        for (size_t prim = 1; prim < NewMesh.Primitives.size(); ++prim)
-        {
-            const auto& PrimBB = NewMesh.Primitives[prim].BB;
-            NewMesh.BB.Min     = std::min(NewMesh.BB.Min, PrimBB.Min);
-            NewMesh.BB.Max     = std::max(NewMesh.BB.Max, PrimBB.Max);
-        }
-    }
+    NewMesh.UpdateBoundingBox();
 
     if (m_CI.MeshLoadCallback)
         m_CI.MeshLoadCallback(&GltfMesh.Get(), NewMesh);
@@ -482,6 +519,60 @@ Camera* ModelBuilder::LoadCamera(const GltfModelType& GltfModel,
 }
 
 template <typename GltfModelType>
+Light* ModelBuilder::LoadLight(const GltfModelType& GltfModel,
+                               int                  GltfLightIndex)
+{
+    // https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_lights_punctual
+
+    if (GltfLightIndex < 0)
+        return nullptr;
+
+    auto light_it = m_LightIndexRemapping.find(GltfLightIndex);
+    VERIFY(light_it != m_LightIndexRemapping.end(), "Light with GLTF index ", GltfLightIndex, " is not present in the map. This appears to be a bug.");
+    const auto LoadedLightId = light_it->second;
+
+    auto& NewLight = m_Model.Lights[LoadedLightId];
+
+    if (m_LoadedLights.find(LoadedLightId) != m_LoadedLights.end())
+    {
+        // The Light has already been loaded
+        return &NewLight;
+    }
+    m_LoadedLights.emplace(LoadedLightId);
+
+    const auto& GltfLight = GltfModel.GetLight(GltfLightIndex);
+
+    NewLight.Name = GltfLight.GetName();
+    if (GltfLight.GetType() == "directional")
+    {
+        NewLight.Type = Light::TYPE::DIRECTIONAL;
+    }
+    else if (GltfLight.GetType() == "point")
+    {
+        NewLight.Type = Light::TYPE::POINT;
+    }
+    else if (GltfLight.GetType() == "spot")
+    {
+        NewLight.Type           = Light::TYPE::SPOT;
+        NewLight.InnerConeAngle = static_cast<float>(GltfLight.GetInnerConeAngle());
+        NewLight.OuterConeAngle = static_cast<float>(GltfLight.GetOuterConeAngle());
+    }
+    else
+    {
+        UNEXPECTED("Unexpected light type: ", GltfLight.GetType());
+    }
+
+    const auto& Color = GltfLight.GetColor();
+    for (size_t i = 0; i < std::min<size_t>(3, Color.size()); ++i)
+        NewLight.Color[i] = static_cast<float>(Color[i]);
+
+    NewLight.Intensity = static_cast<float>(GltfLight.GetIntensity());
+    NewLight.Range     = static_cast<float>(GltfLight.GetRange());
+
+    return &NewLight;
+}
+
+template <typename GltfModelType>
 Node* ModelBuilder::LoadNode(const GltfModelType& GltfModel,
                              Node*                Parent,
                              Scene&               scene,
@@ -540,6 +631,12 @@ Node* ModelBuilder::LoadNode(const GltfModelType& GltfModel,
     // Node contains mesh data
     NewNode.pMesh   = LoadMesh(GltfModel, GltfNode.GetMeshId());
     NewNode.pCamera = LoadCamera(GltfModel, GltfNode.GetCameraId());
+    NewNode.pLight  = LoadLight(GltfModel, GltfNode.GetLightId());
+
+    if (m_CI.NodeLoadCallback)
+    {
+        m_CI.NodeLoadCallback(GltfNodeIndex, &GltfNode.Get(), NewNode);
+    }
 
     return &NewNode;
 }
@@ -550,9 +647,11 @@ auto ModelBuilder::GetGltfDataInfo(const GltfModelType& GltfModel, int AccessorI
     const auto  GltfAccessor  = GltfModel.GetAccessor(AccessorId);
     const auto  GltfView      = GltfModel.GetBufferView(GltfAccessor.GetBufferViewId());
     const auto  GltfBuffer    = GltfModel.GetBuffer(GltfView.GetBufferId());
-    const auto* pSrcData      = GltfBuffer.GetData(GltfAccessor.GetByteOffset() + GltfView.GetByteOffset());
     const auto  SrcCount      = GltfAccessor.GetCount();
     const auto  SrcByteStride = GltfAccessor.GetByteStride(GltfView);
+    const auto* pSrcData      = SrcCount > 0 ?
+        GltfBuffer.GetData(GltfAccessor.GetByteOffset() + GltfView.GetByteOffset()) :
+        nullptr;
 
     struct GltfDataInfo
     {
@@ -567,41 +666,100 @@ auto ModelBuilder::GetGltfDataInfo(const GltfModelType& GltfModel, int AccessorI
 }
 
 template <typename GltfModelType>
-void ModelBuilder::ConvertVertexData(const GltfModelType&          GltfModel,
-                                     const ConvertedBufferViewKey& Key,
-                                     ConvertedBufferViewData&      Data,
-                                     Uint32                        VertexCount)
+Uint32 ModelBuilder::ConvertVertexData(const GltfModelType& GltfModel,
+                                       const PrimitiveKey&  Key,
+                                       Uint32               VertexCount)
 {
-    VERIFY_EXPR(Data.Offsets.empty());
-    Data.Offsets.resize(m_VertexData.size());
-    for (size_t i = 0; i < Data.Offsets.size(); ++i)
+    Uint32 StartVertex = ~0u;
+
+    // Note: different primitives may use different vertex attributes.
+    //       Since all primitives share the same vertex buffers, we need to
+    //       make sure that all buffers have consistently sizes.
+    for (size_t i = 0; i < m_VertexData.size(); ++i)
     {
-        Data.Offsets[i] = m_VertexData[i].size();
-        VERIFY((Data.Offsets[i] % m_Model.VertexData.Strides[i]) == 0, "Current offset is not a multiple of the element stride");
-        m_VertexData[i].resize(m_VertexData[i].size() + size_t{VertexCount} * m_Model.VertexData.Strides[i]);
+        const auto Stride = m_Model.VertexData.Strides[i];
+        if (Stride == 0)
+            continue; // Skip unused buffers
+
+        VERIFY((m_VertexData[i].size() % Stride) == 0, "Buffer data size is not a multiple of the element stride");
+        auto VertexOffset = static_cast<Uint32>(m_VertexData[i].size() / Stride);
+        if (StartVertex == ~0u)
+            StartVertex = VertexOffset;
+        else
+            VERIFY(m_VertexData[i].empty() || StartVertex == VertexOffset, "All vertex buffers must have the same number of vertices");
+    }
+    for (size_t i = 0; i < m_VertexData.size(); ++i)
+    {
+        const auto Stride = m_Model.VertexData.Strides[i];
+        if (Stride == 0)
+            continue;
+
+        // Always resize non-empty buffers to ensure consistency
+        if (m_CI.CreateStubVertexBuffers || !m_VertexData[i].empty())
+        {
+            m_VertexData[i].resize(size_t{StartVertex + VertexCount} * Stride);
+        }
     }
 
     VERIFY_EXPR(Key.AccessorIds.size() == m_Model.GetNumVertexAttributes());
-    for (size_t i = 0; i < m_Model.GetNumVertexAttributes(); ++i)
+    for (Uint32 i = 0; i < m_Model.GetNumVertexAttributes(); ++i)
     {
+        const auto& Attrib       = m_Model.VertexAttributes[i];
+        const auto  BufferId     = Attrib.BufferId;
+        const auto  VertexStride = m_Model.VertexData.Strides[BufferId];
+        const auto  DataOffset   = size_t{StartVertex} * size_t{VertexStride};
+        const auto  RequiredSize = DataOffset + size_t{VertexCount} * VertexStride;
+
+        auto& VertexData = m_VertexData[BufferId];
+
         const auto AccessorId = Key.AccessorIds[i];
         if (AccessorId < 0)
+        {
+            if (Attrib.pDefaultValue != nullptr && VertexData.size() == RequiredSize)
+            {
+                auto dst_it = VertexData.begin() + DataOffset + Attrib.RelativeOffset;
+                WriteDefaultAttibuteValue(Attrib.pDefaultValue, dst_it, Attrib.ValueType, Attrib.NumComponents, VertexStride, VertexCount);
+            }
             continue;
+        }
 
-        const auto& Attrib       = m_Model.VertexAttributes[i];
-        const auto  VertexStride = m_Model.VertexData.Strides[Attrib.BufferId];
+        if (VertexData.size() < RequiredSize)
+        {
+            size_t OriginalSize = VertexData.size();
+            VertexData.resize(RequiredSize);
+            if (OriginalSize < DataOffset)
+            {
+                // We have to write default values for all attributes in this buffer
+                // up to the current offset.
+                WriteDefaultAttibutes(Attrib.BufferId, OriginalSize, DataOffset);
+            }
+        }
 
         const auto GltfVerts     = GetGltfDataInfo(GltfModel, AccessorId);
         const auto ValueType     = GltfVerts.Accessor.GetComponentType();
         const auto NumComponents = GltfVerts.Accessor.GetNumComponents();
         const auto SrcStride     = GltfVerts.ByteStride;
+        const bool IsNormalized  = GltfVerts.Accessor.IsNormalized();
         VERIFY_EXPR(SrcStride > 0);
 
-        auto dst_it = m_VertexData[Attrib.BufferId].begin() + Data.Offsets[Attrib.BufferId] + Attrib.RelativeOffset;
+        auto dst_it = VertexData.begin() + DataOffset + Attrib.RelativeOffset;
 
         VERIFY_EXPR(static_cast<Uint32>(GltfVerts.Count) == VertexCount);
-        WriteGltfData(GltfVerts.pData, ValueType, NumComponents, SrcStride, dst_it, Attrib.ValueType, Attrib.NumComponents, VertexStride, VertexCount);
+        WriteGltfData({GltfVerts.pData,
+                       ValueType,
+                       static_cast<Uint32>(NumComponents),
+                       static_cast<Uint32>(SrcStride),
+                       dst_it,
+                       Attrib.ValueType,
+                       Attrib.NumComponents,
+                       VertexStride,
+                       VertexCount,
+                       IsNormalized});
+
+        m_Model.VertexData.EnabledAttributeFlags |= (1u << i);
     }
+
+    return StartVertex;
 }
 
 template <typename SrcType, typename DstType>
@@ -744,17 +902,19 @@ void ModelBuilder::LoadAnimations(const GltfModelType& GltfModel)
                 AnimSampler.Inputs.resize(GltfInputs.Count);
                 memcpy(AnimSampler.Inputs.data(), GltfInputs.pData, sizeof(float) * GltfInputs.Count);
 
-                for (auto input : AnimSampler.Inputs)
+                // Note that different samplers may have different time ranges.
+                // We need to find the overall animation time range.
+                Anim.Start = std::min(Anim.Start, AnimSampler.Inputs.front());
+                Anim.End   = std::max(Anim.End, AnimSampler.Inputs.back());
+#ifdef DILIGENT_DEVELOPMENT
+                for (size_t i = 0; i + 1 < AnimSampler.Inputs.size(); ++i)
                 {
-                    if (input < Anim.Start)
+                    if (AnimSampler.Inputs[i] >= AnimSampler.Inputs[i + 1])
                     {
-                        Anim.Start = input;
-                    }
-                    if (input > Anim.End)
-                    {
-                        Anim.End = input;
+                        LOG_ERROR_MESSAGE("Animation '", Anim.Name, "' sampler ", sam, " input time values are not monotonic at index ", i);
                     }
                 }
+#endif
             }
 
 
@@ -876,8 +1036,7 @@ bool ModelBuilder::LoadAnimationAndSkin(const GltfModelType& GltfModel)
 template <typename GltfModelType>
 void ModelBuilder::Execute(const GltfModelType& GltfModel,
                            int                  SceneIndex,
-                           IRenderDevice*       pDevice,
-                           IDeviceContext*      pContext)
+                           IRenderDevice*       pDevice)
 {
     LoadScenes(GltfModel, SceneIndex);
 
@@ -908,17 +1067,110 @@ void ModelBuilder::Execute(const GltfModelType& GltfModel,
     VERIFY_EXPR(m_LoadedNodes.size() == m_Model.Nodes.size());
     VERIFY_EXPR(m_LoadedMeshes.size() == m_Model.Meshes.size());
     VERIFY_EXPR(m_LoadedCameras.size() == m_Model.Cameras.size());
+    VERIFY_EXPR(m_LoadedLights.size() == m_Model.Lights.size());
 
     LoadAnimationAndSkin(GltfModel);
 
-    InitIndexBuffer(pDevice, pContext);
-    InitVertexBuffers(pDevice, pContext);
-
-    if (pContext != nullptr)
-    {
-        m_Model.PrepareGPUResources(pDevice, pContext);
-    }
+    InitIndexBuffer(pDevice);
+    InitVertexBuffers(pDevice);
 }
+
+class MaterialBuilder
+{
+public:
+    MaterialBuilder(Material& Mat) noexcept :
+        m_Material{Mat}
+    {
+        auto MaxActiveTexAttribIdx = Mat.GetMaxActiveTextureAttribIdx();
+        if (MaxActiveTexAttribIdx != Material::InvalidTextureAttribIdx)
+        {
+            m_TextureAttribs.reserve(MaxActiveTexAttribIdx + 1);
+            m_TextureIds.reserve(MaxActiveTexAttribIdx + 1);
+            Mat.ProcessActiveTextureAttibs(
+                [&](Uint32 Idx, const Material::TextureShaderAttribs& TexAttribs, int TextureId) //
+                {
+                    GetTextureAttrib(Idx) = TexAttribs;
+                    SetTextureId(Idx, TextureId);
+                    return true;
+                });
+        }
+    }
+
+    void SetTextureId(Uint32 Idx, int TextureId)
+    {
+        EnsureTextureAttribCount(Idx + 1);
+        m_TextureIds[Idx] = TextureId;
+    }
+
+    Material::TextureShaderAttribs& GetTextureAttrib(Uint32 Idx)
+    {
+        EnsureTextureAttribCount(Idx + 1);
+        return m_TextureAttribs[Idx];
+    }
+
+    void Finalize() const
+    {
+        m_Material.ActiveTextureAttribs |= m_ForcedActiveTextureAttribs;
+
+        VERIFY_EXPR(m_TextureAttribs.size() == m_TextureIds.size());
+
+        Uint32 NumActiveTextureAttribs = 0;
+        for (Uint32 i = 0; i < m_TextureAttribs.size(); ++i)
+        {
+            static const Material::TextureShaderAttribs DefaultAttribs{};
+            if (m_TextureIds[i] != -1 || memcmp(&m_TextureAttribs[i], &DefaultAttribs, sizeof(DefaultAttribs)) != 0)
+            {
+                m_Material.ActiveTextureAttribs |= (1u << i);
+            }
+            if (m_Material.IsTextureAttribActive(i))
+                ++NumActiveTextureAttribs;
+        }
+
+        VERIFY_EXPR(NumActiveTextureAttribs == m_Material.GetNumActiveTextureAttribs());
+
+        if (NumActiveTextureAttribs > 0)
+        {
+            m_Material.TextureAttribs = std::make_unique<Material::TextureShaderAttribs[]>(NumActiveTextureAttribs);
+            m_Material.TextureIds     = std::make_unique<int[]>(NumActiveTextureAttribs);
+            m_Material.ProcessActiveTextureAttibs(
+                [&](Uint32 Idx, Material::TextureShaderAttribs& TexAttribs, int& TextureId) //
+                {
+                    TexAttribs = m_TextureAttribs[Idx];
+                    TextureId  = m_TextureIds[Idx];
+                    return true;
+                });
+        }
+    }
+
+    static void EnsureTextureAttribActive(Material& Mat, Uint32 Idx)
+    {
+        if (Mat.IsTextureAttribActive(Idx))
+            return;
+
+        MaterialBuilder Builder{Mat};
+        Builder.EnsureTextureAttribCount(Idx + 1);
+        Builder.m_ForcedActiveTextureAttribs |= (1u << Idx);
+        Builder.Finalize();
+    }
+
+private:
+    void EnsureTextureAttribCount(size_t Count)
+    {
+        VERIFY_EXPR(m_TextureAttribs.size() == m_TextureIds.size());
+        if (m_TextureAttribs.size() < Count)
+            m_TextureAttribs.resize(Count);
+        if (m_TextureIds.size() < Count)
+            m_TextureIds.resize(Count, -1);
+    }
+
+private:
+    Material& m_Material;
+
+    decltype(Material::ActiveTextureAttribs) m_ForcedActiveTextureAttribs = 0;
+
+    std::vector<int>                            m_TextureIds;
+    std::vector<Material::TextureShaderAttribs> m_TextureAttribs;
+};
 
 } // namespace GLTF
 

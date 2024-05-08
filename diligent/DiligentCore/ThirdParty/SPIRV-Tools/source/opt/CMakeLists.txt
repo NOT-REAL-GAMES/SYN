@@ -71,6 +71,7 @@ set(SPIRV_TOOLS_OPT_SOURCES
   instruction_list.h
   instrument_pass.h
   interface_var_sroa.h
+  invocation_interlock_placement_pass.h
   interp_fixup_pass.h
   ir_builder.h
   ir_context.h
@@ -93,6 +94,7 @@ set(SPIRV_TOOLS_OPT_SOURCES
   loop_unswitch_pass.h
   mem_pass.h
   merge_return_pass.h
+  modify_maximal_reconvergence.h
   module.h
   null_pass.h
   passes.h
@@ -121,6 +123,7 @@ set(SPIRV_TOOLS_OPT_SOURCES
   strip_debug_info_pass.h
   strip_nonsemantic_info_pass.h
   struct_cfg_analysis.h
+  switch_descriptorset_pass.h
   tree_iterator.h
   trim_capabilities_pass.h
   type_manager.h
@@ -190,6 +193,7 @@ set(SPIRV_TOOLS_OPT_SOURCES
   instruction_list.cpp
   instrument_pass.cpp
   interface_var_sroa.cpp
+  invocation_interlock_placement_pass.cpp
   interp_fixup_pass.cpp
   ir_context.cpp
   ir_loader.cpp
@@ -211,6 +215,7 @@ set(SPIRV_TOOLS_OPT_SOURCES
   loop_unswitch_pass.cpp
   mem_pass.cpp
   merge_return_pass.cpp
+  modify_maximal_reconvergence.cpp
   module.cpp
   optimizer.cpp
   pass.cpp
@@ -237,6 +242,7 @@ set(SPIRV_TOOLS_OPT_SOURCES
   strip_debug_info_pass.cpp
   strip_nonsemantic_info_pass.cpp
   struct_cfg_analysis.cpp
+  switch_descriptorset_pass.cpp
   trim_capabilities_pass.cpp
   type_manager.cpp
   types.cpp

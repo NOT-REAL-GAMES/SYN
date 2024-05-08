@@ -12,16 +12,20 @@ set(INTERFACE
     interface/DurationQueryHelper.hpp
     interface/GraphicsUtilities.h
     interface/MapHelper.hpp
+    interface/ResourceRegistry.hpp
     interface/ScopedDebugGroup.hpp
     interface/GPUCompletionAwaitQueue.hpp
     interface/ScopedQueryHelper.hpp
     interface/ScreenCapture.hpp
     interface/ShaderMacroHelper.hpp
     interface/StreamingBuffer.hpp
+    interface/ShaderSourceFactoryUtils.h
+    interface/ShaderSourceFactoryUtils.hpp
     interface/TextureUploader.hpp
     interface/TextureUploaderBase.hpp
     interface/XXH128Hasher.hpp
     interface/VertexPool.h
+    interface/VertexPoolX.hpp
 )
 
 set(SOURCE
@@ -34,6 +38,7 @@ set(SOURCE
     src/GraphicsUtilities.cpp
     src/ScopedQueryHelper.cpp
     src/ScreenCapture.cpp
+    src/ShaderSourceFactoryUtils.cpp
     src/TextureUploader.cpp
     src/XXH128Hasher.cpp
     src/VertexPool.cpp

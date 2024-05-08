@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -30,6 +30,8 @@
 
 #include "gtest/gtest.h"
 
+#include "GraphicsAccessories.hpp"
+
 using namespace Diligent;
 
 namespace
@@ -39,20 +41,63 @@ template <typename DataType>
 void VerifyCopyPixelsData(const CopyPixelsAttribs& CopyAttribs, const DataType& TestData, const DataType& RefData)
 {
     const auto NumComponents = CopyAttribs.DstCompCount;
-    VERIFY_EXPR(CopyAttribs.DstStride % (CopyAttribs.ComponentSize * CopyAttribs.DstCompCount) == 0);
-    const auto StrideInPixels = CopyAttribs.DstStride / (CopyAttribs.ComponentSize * CopyAttribs.DstCompCount);
+    VERIFY_EXPR(CopyAttribs.DstStride % (CopyAttribs.DstComponentSize * CopyAttribs.DstCompCount) == 0);
+    const auto StrideInPixels = CopyAttribs.DstStride / (CopyAttribs.DstComponentSize * CopyAttribs.DstCompCount);
     for (Uint32 y = 0; y < CopyAttribs.Height; ++y)
     {
         for (Uint32 x = 0; x < CopyAttribs.Width; ++x)
         {
             for (Uint32 c = 0; c < NumComponents; ++c)
             {
+                const auto src_y   = CopyAttribs.FlipVertically ? CopyAttribs.Height - y - 1 : y;
                 const auto TestVal = TestData[(y * StrideInPixels + x) * NumComponents + c];
-                const auto RefVal  = RefData[(y * StrideInPixels + x) * NumComponents + c];
+                const auto RefVal  = RefData[(src_y * StrideInPixels + x) * NumComponents + c];
                 EXPECT_EQ(TestVal, RefVal);
             }
         }
     }
+}
+
+template <typename SrcType, typename DstType>
+void TestComponentSizeChange()
+{
+    static constexpr SrcType SrcShift = 8 * (sizeof(SrcType) - 1);
+    static constexpr SrcType DstShift = 8 * (sizeof(DstType) - 1);
+
+    // clang-format off
+    const std::vector<SrcType> SrcData =
+    {
+         1u << SrcShift,  2u << SrcShift,  3u << SrcShift,  4u << SrcShift,
+         5u << SrcShift,  6u << SrcShift,  7u << SrcShift,  8u << SrcShift,
+         9u << SrcShift, 10u << SrcShift, 11u << SrcShift, 12u << SrcShift,
+        13u << SrcShift, 14u << SrcShift, 15u << SrcShift, 16u << SrcShift,
+    };
+
+    const std::vector<DstType> RefData =
+    {
+         1u << DstShift,  2u << DstShift,  3u << DstShift,  4u << DstShift,
+         5u << DstShift,  6u << DstShift,  7u << DstShift,  8u << DstShift,
+         9u << DstShift, 10u << DstShift, 11u << DstShift, 12u << DstShift,
+        13u << DstShift, 14u << DstShift, 15u << DstShift, 16u << DstShift,
+    };
+    // clang-format on
+
+    std::vector<DstType> TestData(SrcData.size());
+
+    CopyPixelsAttribs CopyAttribs;
+    CopyAttribs.Width            = 2;
+    CopyAttribs.Height           = 4;
+    CopyAttribs.SrcComponentSize = sizeof(SrcType);
+    CopyAttribs.pSrcPixels       = SrcData.data();
+    CopyAttribs.SrcStride        = 2 * 2 * sizeof(SrcType);
+    CopyAttribs.SrcCompCount     = 2;
+    CopyAttribs.pDstPixels       = TestData.data();
+    CopyAttribs.DstComponentSize = sizeof(DstType);
+    CopyAttribs.DstStride        = 2 * 2 * sizeof(DstType);
+    CopyAttribs.DstCompCount     = 2;
+    CopyPixels(CopyAttribs);
+
+    VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
 }
 
 template <typename DataType>
@@ -68,26 +113,32 @@ void TestCopyPixels()
     };
     // clang-format on
 
+    constexpr auto MaxVal = std::numeric_limits<DataType>::max();
 
     // 1 : 1
     {
         std::vector<DataType> TestData(SrcData.size());
 
         CopyPixelsAttribs CopyAttribs;
-        CopyAttribs.Width         = 4;
-        CopyAttribs.Height        = 4;
-        CopyAttribs.ComponentSize = sizeof(DataType);
-        CopyAttribs.pSrcPixels    = SrcData.data();
-        CopyAttribs.SrcStride     = 4 * sizeof(DataType);
-        CopyAttribs.SrcCompCount  = 1;
-        CopyAttribs.pDstPixels    = TestData.data();
-        CopyAttribs.DstStride     = 4 * sizeof(DataType);
-        CopyAttribs.DstCompCount  = 1;
+        CopyAttribs.Width            = 4;
+        CopyAttribs.Height           = 4;
+        CopyAttribs.SrcComponentSize = sizeof(DataType);
+        CopyAttribs.pSrcPixels       = SrcData.data();
+        CopyAttribs.SrcStride        = 4 * sizeof(DataType);
+        CopyAttribs.SrcCompCount     = 1;
+        CopyAttribs.pDstPixels       = TestData.data();
+        CopyAttribs.DstComponentSize = sizeof(DataType);
+        CopyAttribs.DstStride        = 4 * sizeof(DataType);
+        CopyAttribs.DstCompCount     = 1;
+        CopyPixels(CopyAttribs);
+
+        VerifyCopyPixelsData(CopyAttribs, TestData, SrcData);
+
+        CopyAttribs.FlipVertically = true;
         CopyPixels(CopyAttribs);
 
         VerifyCopyPixelsData(CopyAttribs, TestData, SrcData);
     }
-
 
     // Different strides
     {
@@ -104,17 +155,22 @@ void TestCopyPixels()
         std::vector<DataType> TestData(RefData.size());
 
         CopyPixelsAttribs CopyAttribs;
-        CopyAttribs.Width         = 4;
-        CopyAttribs.Height        = 4;
-        CopyAttribs.ComponentSize = sizeof(DataType);
-        CopyAttribs.pSrcPixels    = SrcData.data();
-        CopyAttribs.SrcStride     = 4 * sizeof(DataType);
-        CopyAttribs.SrcCompCount  = 1;
-        CopyAttribs.pDstPixels    = TestData.data();
-        CopyAttribs.DstStride     = 5 * sizeof(DataType);
-        CopyAttribs.DstCompCount  = 1;
+        CopyAttribs.Width            = 4;
+        CopyAttribs.Height           = 4;
+        CopyAttribs.SrcComponentSize = sizeof(DataType);
+        CopyAttribs.pSrcPixels       = SrcData.data();
+        CopyAttribs.SrcStride        = 4 * sizeof(DataType);
+        CopyAttribs.SrcCompCount     = 1;
+        CopyAttribs.pDstPixels       = TestData.data();
+        CopyAttribs.DstComponentSize = sizeof(DataType);
+        CopyAttribs.DstStride        = 5 * sizeof(DataType);
+        CopyAttribs.DstCompCount     = 1;
         CopyPixels(CopyAttribs);
 
+        VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
+
+        CopyAttribs.FlipVertically = true;
+        CopyPixels(CopyAttribs);
         VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
     }
 
@@ -124,27 +180,32 @@ void TestCopyPixels()
         // clang-format off
         const std::vector<DataType> RefData =
         {
-             1,  1,   2,  2,   3,  3,   4,  4,  0, 0,
-             5,  5,   6,  6,   7,  7,   8,  8,  0, 0,
-             9,  9,  10, 10,  11, 11,  12, 12,  0, 0,
-            13, 13,  14, 14,  15, 15,  16, 16,  0, 0,
+             1, 0,   2, 0,   3, 0,   4, 0,  0, 0,
+             5, 0,   6, 0,   7, 0,   8, 0,  0, 0,
+             9, 0,  10, 0,  11, 0,  12, 0,  0, 0,
+            13, 0,  14, 0,  15, 0,  16, 0,  0, 0,
         };
         // clang-format on
 
         std::vector<DataType> TestData(RefData.size());
 
         CopyPixelsAttribs CopyAttribs;
-        CopyAttribs.Width         = 4;
-        CopyAttribs.Height        = 4;
-        CopyAttribs.ComponentSize = sizeof(DataType);
-        CopyAttribs.pSrcPixels    = SrcData.data();
-        CopyAttribs.SrcStride     = 4 * sizeof(DataType);
-        CopyAttribs.SrcCompCount  = 1;
-        CopyAttribs.pDstPixels    = TestData.data();
-        CopyAttribs.DstStride     = 10 * sizeof(DataType);
-        CopyAttribs.DstCompCount  = 2;
+        CopyAttribs.Width            = 4;
+        CopyAttribs.Height           = 4;
+        CopyAttribs.SrcComponentSize = sizeof(DataType);
+        CopyAttribs.pSrcPixels       = SrcData.data();
+        CopyAttribs.SrcStride        = 4 * sizeof(DataType);
+        CopyAttribs.SrcCompCount     = 1;
+        CopyAttribs.pDstPixels       = TestData.data();
+        CopyAttribs.DstComponentSize = sizeof(DataType);
+        CopyAttribs.DstStride        = 10 * sizeof(DataType);
+        CopyAttribs.DstCompCount     = 2;
         CopyPixels(CopyAttribs);
 
+        VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
+
+        CopyAttribs.FlipVertically = true;
+        CopyPixels(CopyAttribs);
         VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
     }
 
@@ -164,23 +225,27 @@ void TestCopyPixels()
         std::vector<DataType> TestData(RefData.size());
 
         CopyPixelsAttribs CopyAttribs;
-        CopyAttribs.Width         = 2;
-        CopyAttribs.Height        = 4;
-        CopyAttribs.ComponentSize = sizeof(DataType);
-        CopyAttribs.pSrcPixels    = SrcData.data();
-        CopyAttribs.SrcStride     = 4 * sizeof(DataType);
-        CopyAttribs.SrcCompCount  = 2;
-        CopyAttribs.pDstPixels    = TestData.data();
-        CopyAttribs.DstStride     = 3 * sizeof(DataType);
-        CopyAttribs.DstCompCount  = 1;
+        CopyAttribs.Width            = 2;
+        CopyAttribs.Height           = 4;
+        CopyAttribs.SrcComponentSize = sizeof(DataType);
+        CopyAttribs.pSrcPixels       = SrcData.data();
+        CopyAttribs.SrcStride        = 4 * sizeof(DataType);
+        CopyAttribs.SrcCompCount     = 2;
+        CopyAttribs.pDstPixels       = TestData.data();
+        CopyAttribs.DstComponentSize = sizeof(DataType);
+        CopyAttribs.DstStride        = 3 * sizeof(DataType);
+        CopyAttribs.DstCompCount     = 1;
         CopyPixels(CopyAttribs);
 
+        VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
+
+        CopyAttribs.FlipVertically = true;
+        CopyPixels(CopyAttribs);
         VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
     }
 
     // RG -> RGBA
     {
-        constexpr auto MaxVal = std::numeric_limits<DataType>::max();
         // clang-format off
         const std::vector<DataType> RefData =
         {
@@ -194,24 +259,29 @@ void TestCopyPixels()
         std::vector<DataType> TestData(RefData.size());
 
         CopyPixelsAttribs CopyAttribs;
-        CopyAttribs.Width         = 2;
-        CopyAttribs.Height        = 4;
-        CopyAttribs.ComponentSize = sizeof(DataType);
-        CopyAttribs.pSrcPixels    = SrcData.data();
-        CopyAttribs.SrcStride     = 4 * sizeof(DataType);
-        CopyAttribs.SrcCompCount  = 2;
-        CopyAttribs.pDstPixels    = TestData.data();
-        CopyAttribs.DstStride     = 12 * sizeof(DataType);
-        CopyAttribs.DstCompCount  = 4;
+        CopyAttribs.Width            = 2;
+        CopyAttribs.Height           = 4;
+        CopyAttribs.SrcComponentSize = sizeof(DataType);
+        CopyAttribs.pSrcPixels       = SrcData.data();
+        CopyAttribs.SrcStride        = 4 * sizeof(DataType);
+        CopyAttribs.SrcCompCount     = 2;
+        CopyAttribs.pDstPixels       = TestData.data();
+        CopyAttribs.DstComponentSize = sizeof(DataType);
+        CopyAttribs.DstStride        = 12 * sizeof(DataType);
+        CopyAttribs.DstCompCount     = 4;
+        CopyAttribs.Swizzle.A        = TEXTURE_COMPONENT_SWIZZLE_ONE;
         CopyPixels(CopyAttribs);
 
+        VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
+
+        CopyAttribs.FlipVertically = true;
+        CopyPixels(CopyAttribs);
         VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
     }
 
 
     // RGB -> RGBA
     {
-        constexpr auto MaxVal = std::numeric_limits<DataType>::max();
         // clang-format off
         const std::vector<DataType> RefData =
         {
@@ -225,19 +295,74 @@ void TestCopyPixels()
         std::vector<DataType> TestData(RefData.size());
 
         CopyPixelsAttribs CopyAttribs;
-        CopyAttribs.Width         = 1;
-        CopyAttribs.Height        = 4;
-        CopyAttribs.ComponentSize = sizeof(DataType);
-        CopyAttribs.pSrcPixels    = SrcData.data();
-        CopyAttribs.SrcStride     = 4 * sizeof(DataType);
-        CopyAttribs.SrcCompCount  = 3;
-        CopyAttribs.pDstPixels    = TestData.data();
-        CopyAttribs.DstStride     = 8 * sizeof(DataType);
-        CopyAttribs.DstCompCount  = 4;
+        CopyAttribs.Width            = 1;
+        CopyAttribs.Height           = 4;
+        CopyAttribs.SrcComponentSize = sizeof(DataType);
+        CopyAttribs.pSrcPixels       = SrcData.data();
+        CopyAttribs.SrcStride        = 4 * sizeof(DataType);
+        CopyAttribs.SrcCompCount     = 3;
+        CopyAttribs.pDstPixels       = TestData.data();
+        CopyAttribs.DstComponentSize = sizeof(DataType);
+        CopyAttribs.DstStride        = 8 * sizeof(DataType);
+        CopyAttribs.DstCompCount     = 4;
+        CopyAttribs.Swizzle.A        = TEXTURE_COMPONENT_SWIZZLE_ONE;
         CopyPixels(CopyAttribs);
 
         VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
+
+        CopyAttribs.FlipVertically = true;
+        CopyPixels(CopyAttribs);
+        VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
     }
+
+    // Swizzle
+    for (Uint32 Comp = 0; Comp < 4; ++Comp)
+    {
+        for (Uint32 Swizzle = 0; Swizzle < TEXTURE_COMPONENT_SWIZZLE_COUNT; ++Swizzle)
+        {
+            std::vector<DataType> RefData = SrcData;
+            for (Uint32 row = 0; row < 4; ++row)
+            {
+                DataType& Val = RefData[row * 4 + Comp];
+                switch (Swizzle)
+                {
+                    // clang-format off
+                    case TEXTURE_COMPONENT_SWIZZLE_IDENTITY:                             break;
+                    case TEXTURE_COMPONENT_SWIZZLE_ZERO:     Val = 0;                    break;
+                    case TEXTURE_COMPONENT_SWIZZLE_ONE:      Val = MaxVal;               break;
+                    case TEXTURE_COMPONENT_SWIZZLE_R:        Val = SrcData[row * 4 + 0]; break;
+                    case TEXTURE_COMPONENT_SWIZZLE_G:        Val = SrcData[row * 4 + 1]; break;
+                    case TEXTURE_COMPONENT_SWIZZLE_B:        Val = SrcData[row * 4 + 2]; break;
+                    case TEXTURE_COMPONENT_SWIZZLE_A:        Val = SrcData[row * 4 + 3]; break;
+                    // clang-format on
+                    default:
+                        UNEXPECTED("Unexpected swizzle");
+                }
+            }
+
+            std::vector<DataType> TestData(SrcData.size());
+
+            CopyPixelsAttribs CopyAttribs;
+            CopyAttribs.Width            = 1;
+            CopyAttribs.Height           = 4;
+            CopyAttribs.SrcComponentSize = sizeof(DataType);
+            CopyAttribs.pSrcPixels       = SrcData.data();
+            CopyAttribs.SrcStride        = 4 * sizeof(DataType);
+            CopyAttribs.SrcCompCount     = 4;
+            CopyAttribs.pDstPixels       = TestData.data();
+            CopyAttribs.DstComponentSize = sizeof(DataType);
+            CopyAttribs.DstStride        = 4 * sizeof(DataType);
+            CopyAttribs.DstCompCount     = 4;
+            CopyAttribs.Swizzle[Comp]    = static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            CopyPixels(CopyAttribs);
+
+            VerifyCopyPixelsData(CopyAttribs, TestData, RefData);
+        }
+    }
+
+    TestComponentSizeChange<DataType, Uint8>();
+    TestComponentSizeChange<DataType, Uint16>();
+    TestComponentSizeChange<DataType, Uint32>();
 }
 
 TEST(Tools_TextureUtilities, CopyPixels8)
@@ -421,6 +546,133 @@ TEST(Tools_TextureUtilities, ExpandPixels16)
 TEST(Tools_TextureUtilities, ExpandPixels32)
 {
     TestExpandPixels<Uint32>();
+}
+
+
+template <typename DataType>
+void VerifyPremultiplyAlphaData(const PremultiplyAlphaAttribs& Attribs, const DataType& TestData, const DataType& RefData)
+{
+    auto       ComponentSize = GetValueSize(Attribs.ComponentType);
+    const auto NumComponents = Attribs.ComponentCount;
+    VERIFY_EXPR(Attribs.Stride % (ComponentSize * Attribs.ComponentCount) == 0);
+    const auto StrideInPixels = Attribs.Stride / (ComponentSize * Attribs.ComponentCount);
+    for (Uint32 y = 0; y < Attribs.Height; ++y)
+    {
+        for (Uint32 x = 0; x < Attribs.Width; ++x)
+        {
+            for (Uint32 c = 0; c < NumComponents; ++c)
+            {
+                const auto TestVal = TestData[(y * StrideInPixels + x) * NumComponents + c];
+                const auto RefVal  = RefData[(y * StrideInPixels + x) * NumComponents + c];
+                EXPECT_EQ(TestVal, RefVal) << " row=" << y << " col=" << x << " c=" << c;
+            }
+        }
+    }
+}
+
+template <typename DataType>
+void TestPremultiplyAlpha(VALUE_TYPE ComponentType)
+{
+    constexpr auto MaxVal = std::numeric_limits<DataType>::max();
+
+    // clang-format off
+    const std::vector<DataType> SrcData =
+    {
+        1,  2,  3,           0,    3,  4, MaxVal,          0,
+        5,  6,  7,  MaxVal / 2,    7,  8, MaxVal, MaxVal / 2,
+        9, 10, 11,  MaxVal / 1,   11, 12, MaxVal, MaxVal / 1,
+        9, 10, 11,  MaxVal / 4,   11, 12, MaxVal, MaxVal / 4,
+    };
+
+    const std::vector<DataType> RefData =
+    {
+        0,  0,  0,           0,    0,  0,          0,          0,
+        2,  3,  3,  MaxVal / 2,    3,  4, MaxVal / 2, MaxVal / 2,
+        9, 10, 11,  MaxVal / 1,   11, 12, MaxVal / 1, MaxVal / 1,
+        2,  2,  3,  MaxVal / 4,    3,  3, MaxVal / 4, MaxVal / 4,    
+    };
+    // clang-format on
+
+    {
+        std::vector<DataType> TestData = SrcData;
+
+        PremultiplyAlphaAttribs Attribs;
+        Attribs.Width          = 2;
+        Attribs.Height         = 4;
+        Attribs.ComponentType  = ComponentType;
+        Attribs.ComponentCount = 4;
+        Attribs.Stride         = 8 * sizeof(DataType);
+        Attribs.pPixels        = TestData.data();
+        PremultiplyAlpha(Attribs);
+
+        VerifyPremultiplyAlphaData(Attribs, TestData, RefData);
+
+        TestData       = SrcData;
+        Attribs.IsSRGB = true;
+        PremultiplyAlpha(Attribs);
+    }
+}
+
+
+template <>
+void TestPremultiplyAlpha<float>(VALUE_TYPE ComponentType)
+{
+    // clang-format off
+    const std::vector<float> SrcData =
+    {
+        0.125,  0.25, 0.375,   0.0,    0.5,  0.75,  1.0,  0.0,
+        0.125,  0.25, 0.375,   0.25,   0.5,  0.75,  1.0,  0.25,
+        0.125,  0.25, 0.375,   0.5,    0.5,  0.75,  1.0,  0.5,
+        0.125,  0.25, 0.375,   1.0,    0.5,  0.75,  1.0,  1.0,
+    };
+
+    const std::vector<float> RefData =
+    {
+                 0.0,         0.0,         0.0,    0.0,           0.0,          0.0,         0.0,  0.0,
+        0.125 * 0.25,  0.25* 0.25, 0.375* 0.25,   0.25,    0.5 * 0.25,  0.75 * 0.25,  1.0 * 0.25,  0.25,
+        0.125 * 0.5,   0.25 * 0.5, 0.375 * 0.5,    0.5,    0.5 * 0.5,   0.75 * 0.5,   1.0 * 0.5,   0.5,
+        0.125,  0.25,                    0.375,    1.0,           0.5,        0.75,         1.0,   1.0,
+    };
+    // clang-format on
+
+    {
+        std::vector<float> TestData = SrcData;
+
+        PremultiplyAlphaAttribs Attribs;
+        Attribs.Width          = 2;
+        Attribs.Height         = 4;
+        Attribs.ComponentType  = ComponentType;
+        Attribs.ComponentCount = 4;
+        Attribs.Stride         = 8 * sizeof(float);
+        Attribs.pPixels        = TestData.data();
+        PremultiplyAlpha(Attribs);
+
+        VerifyPremultiplyAlphaData(Attribs, TestData, RefData);
+
+        TestData       = SrcData;
+        Attribs.IsSRGB = true;
+        PremultiplyAlpha(Attribs);
+    }
+}
+
+TEST(Tools_TextureUtilities, PremultiplyAlpha8)
+{
+    TestPremultiplyAlpha<Uint8>(VT_UINT8);
+}
+
+TEST(Tools_TextureUtilities, PremultiplyAlpha16)
+{
+    TestPremultiplyAlpha<Uint16>(VT_UINT16);
+}
+
+TEST(Tools_TextureUtilities, PremultiplyAlpha32)
+{
+    TestPremultiplyAlpha<Uint32>(VT_UINT32);
+}
+
+TEST(Tools_TextureUtilities, PremultiplyAlphaFloat)
+{
+    TestPremultiplyAlpha<float>(VT_FLOAT32);
 }
 
 } // namespace

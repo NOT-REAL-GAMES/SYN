@@ -64,3 +64,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentCore/Graphics/GraphicsEngineOpenGL/" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineOpenGL/interface")
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DiligentCore/Graphics/GraphicsEngineOpenGL/" TYPE DIRECTORY FILES "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineOpenGL/interface")
+endif()
+

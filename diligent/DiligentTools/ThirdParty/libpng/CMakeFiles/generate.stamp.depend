@@ -1,19 +1,11 @@
 # CMake generation dependency list for this directory.
-C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeASMCompiler.cmake.in
 C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeParseArguments.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestASMCompiler.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/MSVC-ASM.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/GNUInstallDirs.cmake
 C:/SYN/diligent/CMakeFiles/3.28.0-rc5/CMakeASMCompiler.cmake
 C:/SYN/diligent/DiligentTools/ThirdParty/libpng/CMakeLists.txt
-C:/SYN/diligent/DiligentTools/ThirdParty/libpng/scripts/genchk.cmake.in
-C:/SYN/diligent/DiligentTools/ThirdParty/libpng/scripts/genout.cmake.in
-C:/SYN/diligent/DiligentTools/ThirdParty/libpng/scripts/gensrc.cmake.in
+C:/SYN/diligent/DiligentTools/ThirdParty/libpng/scripts/cmake/genchk.cmake.in
+C:/SYN/diligent/DiligentTools/ThirdParty/libpng/scripts/cmake/genout.cmake.in
+C:/SYN/diligent/DiligentTools/ThirdParty/libpng/scripts/cmake/gensrc.cmake.in
 C:/SYN/diligent/DiligentTools/ThirdParty/libpng/scripts/pnglibconf.h.prebuilt

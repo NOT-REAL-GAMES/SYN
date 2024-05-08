@@ -90,6 +90,9 @@
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\ObjectBase.hpp">
       <Filter>interface</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\ObjectsRegistry.hpp">
+      <Filter>interface</Filter>
+    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Common\interface\ParsingTools.hpp">
       <Filter>interface</Filter>
     </ClInclude>

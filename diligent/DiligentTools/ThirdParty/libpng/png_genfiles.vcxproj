@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libpng;C:\SYN\diligent\DiligentTools\ThirdParty\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,7 +76,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libpng;C:\SYN\diligent\DiligentTools\ThirdParty\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -86,7 +86,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libpng;C:\SYN\diligent\DiligentTools\ThirdParty\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -96,7 +96,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libpng;C:\SYN\diligent\DiligentTools\ThirdParty\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentTools\ThirdParty\libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -117,7 +117,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-ASM.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\CMakeFiles\3.28.0-rc5\CMakeASMCompiler.cmake;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\genchk.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\genout.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\gensrc.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-ASM.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\CMakeFiles\3.28.0-rc5\CMakeASMCompiler.cmake;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\genchk.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\genout.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\gensrc.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentTools\ThirdParty\libpng\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentTools/ThirdParty/libpng/CMakeLists.txt</Message>
@@ -130,7 +130,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-ASM.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\CMakeFiles\3.28.0-rc5\CMakeASMCompiler.cmake;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\genchk.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\genout.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\gensrc.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-ASM.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\CMakeFiles\3.28.0-rc5\CMakeASMCompiler.cmake;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\genchk.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\genout.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\gensrc.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentTools\ThirdParty\libpng\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentTools/ThirdParty/libpng/CMakeLists.txt</Message>
@@ -143,7 +143,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-ASM.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\CMakeFiles\3.28.0-rc5\CMakeASMCompiler.cmake;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\genchk.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\genout.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\gensrc.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-ASM.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\CMakeFiles\3.28.0-rc5\CMakeASMCompiler.cmake;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\genchk.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\genout.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\gensrc.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentTools\ThirdParty\libpng\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentTools/ThirdParty/libpng/CMakeLists.txt</Message>
@@ -156,7 +156,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-ASM.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\CMakeFiles\3.28.0-rc5\CMakeASMCompiler.cmake;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\genchk.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\genout.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\gensrc.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-ASM.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\SYN\diligent\CMakeFiles\3.28.0-rc5\CMakeASMCompiler.cmake;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\genchk.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\genout.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\cmake\gensrc.cmake.in;C:\SYN\diligent\DiligentTools\ThirdParty\libpng\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentTools\ThirdParty\libpng\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>

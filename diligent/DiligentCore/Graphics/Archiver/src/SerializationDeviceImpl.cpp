@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -43,6 +43,9 @@ static constexpr ARCHIVE_DEVICE_DATA_FLAGS GetSupportedDeviceFlags()
     Flags = Flags | ARCHIVE_DEVICE_DATA_FLAG_GL;
     Flags = Flags | ARCHIVE_DEVICE_DATA_FLAG_GLES;
 #endif
+#if GLES_SUPPORTED
+    Flags = Flags | ARCHIVE_DEVICE_DATA_FLAG_GLES;
+#endif
 #if D3D11_SUPPORTED
     Flags = Flags | ARCHIVE_DEVICE_DATA_FLAG_D3D11;
 #endif
@@ -79,6 +82,12 @@ SerializationDeviceImpl::SerializationDeviceImpl(IReferenceCounters* pRefCounter
         m_pDxCompiler              = CreateDXCompiler(DXCompilerTarget::Direct3D12, 0, CreateInfo.D3D12.DxCompilerPath);
         m_D3D12Props.pDxCompiler   = m_pDxCompiler.get();
         m_D3D12Props.ShaderVersion = CreateInfo.D3D12.ShaderVersion;
+    }
+
+    if (m_ValidDeviceFlags & (ARCHIVE_DEVICE_DATA_FLAG_GL | ARCHIVE_DEVICE_DATA_FLAG_GLES))
+    {
+        m_GLProps.OptimizeShaders = CreateInfo.GL.OptimizeShaders;
+        m_GLProps.ZeroToOneClipZ  = CreateInfo.GL.ZeroToOneClipZ;
     }
 
     if (m_ValidDeviceFlags & ARCHIVE_DEVICE_DATA_FLAG_VULKAN)

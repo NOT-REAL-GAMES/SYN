@@ -59,6 +59,7 @@ std::string FileNameAsCustomTestSuffix(
 
 using HlslCompileTest = GlslangTest<::testing::TestWithParam<FileNameEntryPointPair>>;
 using HlslVulkan1_1CompileTest = GlslangTest<::testing::TestWithParam<FileNameEntryPointPair>>;
+using HlslVulkan1_2CompileTest = GlslangTest<::testing::TestWithParam<FileNameEntryPointPair>>;
 using HlslSpv1_6CompileTest = GlslangTest<::testing::TestWithParam<FileNameEntryPointPair>>;
 using HlslCompileAndFlattenTest = GlslangTest<::testing::TestWithParam<FileNameEntryPointPair>>;
 using HlslLegalizeTest = GlslangTest<::testing::TestWithParam<FileNameEntryPointPair>>;
@@ -81,6 +82,13 @@ TEST_P(HlslVulkan1_1CompileTest, FromFile)
     loadFileCompileAndCheck(GlobalTestSettings.testRoot, GetParam().fileName,
                             Source::HLSL, Semantics::Vulkan, glslang::EShTargetVulkan_1_1, glslang::EShTargetSpv_1_3,
                             Target::BothASTAndSpv, true, GetParam().entryPoint);
+}
+
+TEST_P(HlslVulkan1_2CompileTest, FromFile)
+{
+    loadFileCompileAndCheck(GlobalTestSettings.testRoot, GetParam().fileName, Source::HLSL, Semantics::Vulkan,
+                            glslang::EShTargetVulkan_1_2, glslang::EShTargetSpv_1_4, Target::BothASTAndSpv, true,
+                            GetParam().entryPoint);
 }
 
 TEST_P(HlslSpv1_6CompileTest, FromFile)
@@ -208,6 +216,7 @@ INSTANTIATE_TEST_SUITE_P(
         {"hlsl.emptystructreturn.tesc", "main"},
         {"hlsl.emptystruct.init.vert", "main"},
         {"hlsl.entry-in.frag", "PixelShaderFunction"},
+        {"hlsl.entry-inout.vert", "main"},
         {"hlsl.entry-out.frag", "PixelShaderFunction"},
         {"hlsl.fraggeom.frag", "main"},
         {"hlsl.float1.frag", "PixelShaderFunction"},
@@ -310,6 +319,7 @@ INSTANTIATE_TEST_SUITE_P(
         {"hlsl.mul-truncate.frag", "main"},
         {"hlsl.multiEntry.vert", "RealEntrypoint"},
         {"hlsl.multiReturn.frag", "main"},
+        {"hlsl.multiView.frag", "main"},
         {"hlsl.matrixindex.frag", "main"},
         {"hlsl.nonstaticMemberFunction.frag", "main"},
         {"hlsl.numericsuffixes.frag", "main"},
@@ -466,6 +476,14 @@ INSTANTIATE_TEST_SUITE_P(
         {"hlsl.wavevote.comp", "CSMain"},
         { "hlsl.type.type.conversion.valid.frag", "main" },
         {"hlsl.int.dot.frag", "main"}
+    }),
+    FileNameAsCustomTestSuffix
+);
+
+INSTANTIATE_TEST_SUITE_P(
+    ToSpirv, HlslVulkan1_2CompileTest,
+    ::testing::ValuesIn(std::vector<FileNameEntryPointPair>{
+        {"hlsl.buffer_ref_parameter.comp", "main"},
     }),
     FileNameAsCustomTestSuffix
 );

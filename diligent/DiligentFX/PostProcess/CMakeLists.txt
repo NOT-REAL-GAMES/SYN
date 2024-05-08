@@ -1,3 +1,9 @@
 cmake_minimum_required (VERSION 3.6)
 
+add_subdirectory(Common)
 add_subdirectory(EpipolarLightScattering)
+add_subdirectory(TemporalAntiAliasing)
+add_subdirectory(ScreenSpaceReflection)
+add_subdirectory(ScreenSpaceAmbientOcclusion)
+add_subdirectory(Bloom)
+add_subdirectory(DepthOfField)

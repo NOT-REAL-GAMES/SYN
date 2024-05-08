@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,7 +34,7 @@
 #include "ShaderMacroHelper.hpp"
 #include "GraphicsUtilities.h"
 #include "GraphicsAccessories.hpp"
-#include "../../../Utilities/include/DiligentFXShaderSourceStreamFactory.hpp"
+#include "Utilities/interface/DiligentFXShaderSourceStreamFactory.hpp"
 #include "MapHelper.hpp"
 #include "CommonlyUsedStates.h"
 #include "Align.hpp"
@@ -139,23 +139,6 @@ static const DepthStencilStateDesc DSS_StencilEqKeepStencil =
         STENCIL_OP_KEEP,        // StencilPassOp
 		COMPARISON_FUNC_EQUAL   // StencilFunc
 	}
-};
-
-static const BlendStateDesc BS_AdditiveBlend = 
-{
-    False, // AlphaToCoverageEnable
-    False, // IndependentBlendEnable
-    RenderTargetBlendDesc
-    {
-        True,                // BlendEnable
-        False,               // LogicOperationEnable
-        BLEND_FACTOR_ONE,    // SrcBlend
-        BLEND_FACTOR_ONE,    // DestBlend
-        BLEND_OPERATION_ADD, // BlendOp
-        BLEND_FACTOR_ONE,    // SrcBlendAlpha
-        BLEND_FACTOR_ONE,    // DestBlendAlpha
-        BLEND_OPERATION_ADD  // BlendOpAlpha
-    }
 };
 // clang-format on
 

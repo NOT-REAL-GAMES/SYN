@@ -88,11 +88,18 @@
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
     <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross\Release;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>C:\SYN\diligent\DiligentCore\ThirdParty\SPIRV-Cross\Debug;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4201;4100;4505;26812</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -111,57 +118,19 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;DEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_DEVELOPMENT;DILIGENT_DEBUG;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <Message>			</Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/PostProcess/ToneMapping/public/ToneMappingStructures.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/PostProcess/ToneMapping/public/ToneMapping.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/Common/public/BasicStructures.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/Common/public/ShaderUtilities.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <PostBuildEvent>
-      <Message>									</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D11/Debug/GraphicsEngineD3D11_64d.dll" "C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/Debug"
 if %errorlevel% neq 0 goto :cmEnd
@@ -254,7 +223,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\..\DiligentTools\NativeApp\Debug\Diligent-NativeAppBase.lib;..\..\SampleBase\Debug\Diligent-SampleBase.lib;..\..\..\DiligentTools\AssetLoader\Debug\Diligent-AssetLoader.lib;..\..\..\DiligentTools\RenderStateNotation\Debug\Diligent-RenderStateNotation.lib;..\..\..\DiligentFX\Debug\DiligentFX.lib;..\..\..\DiligentTools\NativeApp\Debug\Diligent-NativeAppBase.lib;..\..\..\DiligentTools\Imgui\Debug\Diligent-Imgui.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\Debug\GraphicsEngineD3D11_64d.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\Debug\GraphicsEngineD3D12_64d.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\Debug\GraphicsEngineOpenGL_64d.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\Debug\GraphicsEngineVk_64d.lib;..\..\..\DiligentTools\AssetLoader\Debug\Diligent-AssetLoader.lib;..\..\..\DiligentTools\TextureLoader\Debug\Diligent-TextureLoader.lib;..\..\..\DiligentTools\ThirdParty\libpng\Debug\libpng16_staticd.lib;..\..\..\DiligentTools\ThirdParty\libtiff\Debug\LibTiff.lib;..\..\..\DiligentTools\ThirdParty\Debug\ZLib.lib;..\..\..\DiligentTools\ThirdParty\libjpeg-9e\Debug\LibJpeg.lib;..\..\..\DiligentCore\Graphics\GraphicsTools\Debug\Diligent-GraphicsTools.lib;..\..\..\DiligentCore\ThirdParty\xxHash\cmake_unofficial\Debug\xxhash.lib;..\..\..\DiligentCore\Graphics\Archiver\Debug\Diligent-Archiver-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\Debug\Diligent-GraphicsEngineD3D11-static.lib;d3d11.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\Debug\Diligent-GraphicsEngineD3D12-static.lib;dxgi.lib;d3dcompiler.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\Debug\Diligent-GraphicsEngineVk-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineNextGenBase\Debug\Diligent-GraphicsEngineNextGenBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\Debug\Diligent-GraphicsEngineOpenGL-static.lib;..\..\..\DiligentCore\ThirdParty\glew\Debug\glew-static.lib;opengl32.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3DBase\Debug\Diligent-GraphicsEngineD3DBase.lib;..\..\..\DiligentCore\Graphics\ShaderTools\Debug\Diligent-ShaderTools.lib;..\..\..\DiligentCore\Graphics\HLSL2GLSLConverterLib\Debug\Diligent-HLSL2GLSLConverterLib.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Cross\Debug\spirv-cross-cored.lib;..\..\..\DiligentCore\ThirdParty\glslang\SPIRV\Debug\SPIRVd.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\Debug\SPIRV-Tools-opt.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\Debug\SPIRV-Tools.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Debug\glslangd.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Debug\MachineIndependentd.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Debug\GenericCodeGend.lib;..\..\..\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\Debug\OGLCompilerd.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\Debug\OSDependentd.lib;..\..\..\DiligentCore\Graphics\GraphicsEngine\Debug\Diligent-GraphicsEngine.lib;..\..\..\DiligentCore\Graphics\GraphicsAccessories\Debug\Diligent-GraphicsAccessories.lib;..\..\..\DiligentCore\Common\Debug\Diligent-Common.lib;..\..\..\DiligentCore\Platforms\Win32\Debug\Diligent-Win32Platform.lib;..\..\..\DiligentCore\Platforms\Basic\Debug\Diligent-BasicPlatform.lib;Shlwapi.lib;..\..\..\DiligentCore\Primitives\Debug\Diligent-Primitives.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\DiligentTools\NativeApp\Debug\Diligent-NativeAppBase.lib;..\..\SampleBase\Debug\Diligent-SampleBase.lib;..\..\..\DiligentTools\AssetLoader\Debug\Diligent-AssetLoader.lib;..\..\..\DiligentFX\Debug\DiligentFX.lib;..\..\..\DiligentTools\NativeApp\Debug\Diligent-NativeAppBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\Debug\GraphicsEngineD3D11_64d.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\Debug\GraphicsEngineD3D12_64d.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\Debug\GraphicsEngineOpenGL_64d.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\Debug\GraphicsEngineVk_64d.lib;..\..\..\DiligentTools\AssetLoader\Debug\Diligent-AssetLoader.lib;..\..\..\DiligentTools\TextureLoader\Debug\Diligent-TextureLoader.lib;..\..\..\DiligentTools\ThirdParty\libpng\Debug\libpng16_staticd.lib;..\..\..\DiligentTools\ThirdParty\libtiff\Debug\LibTiff.lib;..\..\..\DiligentTools\ThirdParty\Debug\ZLib.lib;..\..\..\DiligentTools\ThirdParty\libjpeg-9e\Debug\LibJpeg.lib;..\..\..\DiligentTools\Imgui\Debug\Diligent-Imgui.lib;..\..\..\DiligentCore\Graphics\GraphicsTools\Debug\Diligent-GraphicsTools.lib;..\..\..\DiligentCore\ThirdParty\xxHash\cmake_unofficial\Debug\xxhash.lib;..\..\..\DiligentCore\Graphics\Archiver\Debug\Diligent-Archiver-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\Debug\Diligent-GraphicsEngineD3D11-static.lib;d3d11.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\Debug\Diligent-GraphicsEngineD3D12-static.lib;dxgi.lib;d3dcompiler.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\Debug\Diligent-GraphicsEngineVk-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineNextGenBase\Debug\Diligent-GraphicsEngineNextGenBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\Debug\Diligent-GraphicsEngineOpenGL-static.lib;spirv-cross-glsl.lib;..\..\..\DiligentCore\ThirdParty\glew\Debug\glew-static.lib;opengl32.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3DBase\Debug\Diligent-GraphicsEngineD3DBase.lib;..\..\..\DiligentCore\Graphics\ShaderTools\Debug\Diligent-ShaderTools.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Cross\Debug\spirv-cross-cored.lib;..\..\..\DiligentCore\ThirdParty\glslang\SPIRV\Debug\SPIRVd.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\Debug\SPIRV-Tools-opt.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\Debug\SPIRV-Tools.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Debug\glslangd.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Debug\MachineIndependentd.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Debug\GenericCodeGend.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\Debug\OSDependentd.lib;..\..\..\DiligentCore\Graphics\HLSL2GLSLConverterLib\Debug\Diligent-HLSL2GLSLConverterLib.lib;..\..\..\DiligentCore\Graphics\GraphicsEngine\Debug\Diligent-GraphicsEngine.lib;..\..\..\DiligentCore\Graphics\GraphicsAccessories\Debug\Diligent-GraphicsAccessories.lib;..\..\..\DiligentCore\Common\Debug\Diligent-Common.lib;..\..\..\DiligentCore\Platforms\Win32\Debug\Diligent-Win32Platform.lib;..\..\..\DiligentCore\Platforms\Basic\Debug\Diligent-BasicPlatform.lib;Shlwapi.lib;..\..\..\DiligentCore\Primitives\Debug\Diligent-Primitives.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -269,8 +238,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4201;4100;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -295,57 +265,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <Message>			</Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/PostProcess/ToneMapping/public/ToneMappingStructures.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/PostProcess/ToneMapping/public/ToneMapping.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/Common/public/BasicStructures.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/Common/public/ShaderUtilities.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <PostBuildEvent>
-      <Message>									</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D11/Release/GraphicsEngineD3D11_64r.dll" "C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/Release"
 if %errorlevel% neq 0 goto :cmEnd
@@ -438,7 +370,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\..\DiligentTools\NativeApp\Release\Diligent-NativeAppBase.lib;..\..\SampleBase\Release\Diligent-SampleBase.lib;..\..\..\DiligentTools\AssetLoader\Release\Diligent-AssetLoader.lib;..\..\..\DiligentTools\RenderStateNotation\Release\Diligent-RenderStateNotation.lib;..\..\..\DiligentFX\Release\DiligentFX.lib;..\..\..\DiligentTools\NativeApp\Release\Diligent-NativeAppBase.lib;..\..\..\DiligentTools\Imgui\Release\Diligent-Imgui.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\Release\GraphicsEngineD3D11_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\Release\GraphicsEngineD3D12_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\Release\GraphicsEngineOpenGL_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\Release\GraphicsEngineVk_64r.lib;..\..\..\DiligentTools\AssetLoader\Release\Diligent-AssetLoader.lib;..\..\..\DiligentTools\TextureLoader\Release\Diligent-TextureLoader.lib;..\..\..\DiligentTools\ThirdParty\libpng\Release\libpng16_static.lib;..\..\..\DiligentTools\ThirdParty\libtiff\Release\LibTiff.lib;..\..\..\DiligentTools\ThirdParty\Release\ZLib.lib;..\..\..\DiligentTools\ThirdParty\libjpeg-9e\Release\LibJpeg.lib;..\..\..\DiligentCore\Graphics\GraphicsTools\Release\Diligent-GraphicsTools.lib;..\..\..\DiligentCore\ThirdParty\xxHash\cmake_unofficial\Release\xxhash.lib;..\..\..\DiligentCore\Graphics\Archiver\Release\Diligent-Archiver-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\Release\Diligent-GraphicsEngineD3D11-static.lib;d3d11.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\Release\Diligent-GraphicsEngineD3D12-static.lib;dxgi.lib;d3dcompiler.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\Release\Diligent-GraphicsEngineVk-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineNextGenBase\Release\Diligent-GraphicsEngineNextGenBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\Release\Diligent-GraphicsEngineOpenGL-static.lib;..\..\..\DiligentCore\ThirdParty\glew\Release\glew-static.lib;opengl32.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3DBase\Release\Diligent-GraphicsEngineD3DBase.lib;..\..\..\DiligentCore\Graphics\ShaderTools\Release\Diligent-ShaderTools.lib;..\..\..\DiligentCore\Graphics\HLSL2GLSLConverterLib\Release\Diligent-HLSL2GLSLConverterLib.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Cross\Release\spirv-cross-core.lib;..\..\..\DiligentCore\ThirdParty\glslang\SPIRV\Release\SPIRV.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\Release\SPIRV-Tools-opt.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\Release\SPIRV-Tools.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Release\glslang.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Release\MachineIndependent.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Release\GenericCodeGen.lib;..\..\..\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\Release\OGLCompiler.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\Release\OSDependent.lib;..\..\..\DiligentCore\Graphics\GraphicsEngine\Release\Diligent-GraphicsEngine.lib;..\..\..\DiligentCore\Graphics\GraphicsAccessories\Release\Diligent-GraphicsAccessories.lib;..\..\..\DiligentCore\Common\Release\Diligent-Common.lib;..\..\..\DiligentCore\Platforms\Win32\Release\Diligent-Win32Platform.lib;..\..\..\DiligentCore\Platforms\Basic\Release\Diligent-BasicPlatform.lib;Shlwapi.lib;..\..\..\DiligentCore\Primitives\Release\Diligent-Primitives.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\DiligentTools\NativeApp\Release\Diligent-NativeAppBase.lib;..\..\SampleBase\Release\Diligent-SampleBase.lib;..\..\..\DiligentTools\AssetLoader\Release\Diligent-AssetLoader.lib;..\..\..\DiligentFX\Release\DiligentFX.lib;..\..\..\DiligentTools\NativeApp\Release\Diligent-NativeAppBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\Release\GraphicsEngineD3D11_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\Release\GraphicsEngineD3D12_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\Release\GraphicsEngineOpenGL_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\Release\GraphicsEngineVk_64r.lib;..\..\..\DiligentTools\AssetLoader\Release\Diligent-AssetLoader.lib;..\..\..\DiligentTools\TextureLoader\Release\Diligent-TextureLoader.lib;..\..\..\DiligentTools\ThirdParty\libpng\Release\libpng16_static.lib;..\..\..\DiligentTools\ThirdParty\libtiff\Release\LibTiff.lib;..\..\..\DiligentTools\ThirdParty\Release\ZLib.lib;..\..\..\DiligentTools\ThirdParty\libjpeg-9e\Release\LibJpeg.lib;..\..\..\DiligentTools\Imgui\Release\Diligent-Imgui.lib;..\..\..\DiligentCore\Graphics\GraphicsTools\Release\Diligent-GraphicsTools.lib;..\..\..\DiligentCore\ThirdParty\xxHash\cmake_unofficial\Release\xxhash.lib;..\..\..\DiligentCore\Graphics\Archiver\Release\Diligent-Archiver-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\Release\Diligent-GraphicsEngineD3D11-static.lib;d3d11.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\Release\Diligent-GraphicsEngineD3D12-static.lib;dxgi.lib;d3dcompiler.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\Release\Diligent-GraphicsEngineVk-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineNextGenBase\Release\Diligent-GraphicsEngineNextGenBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\Release\Diligent-GraphicsEngineOpenGL-static.lib;spirv-cross-glsl.lib;..\..\..\DiligentCore\ThirdParty\glew\Release\glew-static.lib;opengl32.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3DBase\Release\Diligent-GraphicsEngineD3DBase.lib;..\..\..\DiligentCore\Graphics\ShaderTools\Release\Diligent-ShaderTools.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Cross\Release\spirv-cross-core.lib;..\..\..\DiligentCore\ThirdParty\glslang\SPIRV\Release\SPIRV.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\Release\SPIRV-Tools-opt.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\Release\SPIRV-Tools.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Release\glslang.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Release\MachineIndependent.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\Release\GenericCodeGen.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\Release\OSDependent.lib;..\..\..\DiligentCore\Graphics\HLSL2GLSLConverterLib\Release\Diligent-HLSL2GLSLConverterLib.lib;..\..\..\DiligentCore\Graphics\GraphicsEngine\Release\Diligent-GraphicsEngine.lib;..\..\..\DiligentCore\Graphics\GraphicsAccessories\Release\Diligent-GraphicsAccessories.lib;..\..\..\DiligentCore\Common\Release\Diligent-Common.lib;..\..\..\DiligentCore\Platforms\Win32\Release\Diligent-Win32Platform.lib;..\..\..\DiligentCore\Platforms\Basic\Release\Diligent-BasicPlatform.lib;Shlwapi.lib;..\..\..\DiligentCore\Primitives\Release\Diligent-Primitives.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -455,8 +387,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4201;4100;4505;26812;4189</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -479,57 +412,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <Message>			</Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/PostProcess/ToneMapping/public/ToneMappingStructures.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/PostProcess/ToneMapping/public/ToneMapping.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/Common/public/BasicStructures.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/Common/public/ShaderUtilities.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <PostBuildEvent>
-      <Message>									</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D11/MinSizeRel/GraphicsEngineD3D11_64r.dll" "C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
@@ -622,7 +517,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\..\DiligentTools\NativeApp\MinSizeRel\Diligent-NativeAppBase.lib;..\..\SampleBase\MinSizeRel\Diligent-SampleBase.lib;..\..\..\DiligentTools\AssetLoader\MinSizeRel\Diligent-AssetLoader.lib;..\..\..\DiligentTools\RenderStateNotation\MinSizeRel\Diligent-RenderStateNotation.lib;..\..\..\DiligentFX\MinSizeRel\DiligentFX.lib;..\..\..\DiligentTools\NativeApp\MinSizeRel\Diligent-NativeAppBase.lib;..\..\..\DiligentTools\Imgui\MinSizeRel\Diligent-Imgui.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\MinSizeRel\GraphicsEngineD3D11_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\MinSizeRel\GraphicsEngineD3D12_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\MinSizeRel\GraphicsEngineOpenGL_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\MinSizeRel\GraphicsEngineVk_64r.lib;..\..\..\DiligentTools\AssetLoader\MinSizeRel\Diligent-AssetLoader.lib;..\..\..\DiligentTools\TextureLoader\MinSizeRel\Diligent-TextureLoader.lib;..\..\..\DiligentTools\ThirdParty\libpng\MinSizeRel\libpng16_static.lib;..\..\..\DiligentTools\ThirdParty\libtiff\MinSizeRel\LibTiff.lib;..\..\..\DiligentTools\ThirdParty\MinSizeRel\ZLib.lib;..\..\..\DiligentTools\ThirdParty\libjpeg-9e\MinSizeRel\LibJpeg.lib;..\..\..\DiligentCore\Graphics\GraphicsTools\MinSizeRel\Diligent-GraphicsTools.lib;..\..\..\DiligentCore\ThirdParty\xxHash\cmake_unofficial\MinSizeRel\xxhash.lib;..\..\..\DiligentCore\Graphics\Archiver\MinSizeRel\Diligent-Archiver-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\MinSizeRel\Diligent-GraphicsEngineD3D11-static.lib;d3d11.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\MinSizeRel\Diligent-GraphicsEngineD3D12-static.lib;dxgi.lib;d3dcompiler.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\MinSizeRel\Diligent-GraphicsEngineVk-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineNextGenBase\MinSizeRel\Diligent-GraphicsEngineNextGenBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\MinSizeRel\Diligent-GraphicsEngineOpenGL-static.lib;..\..\..\DiligentCore\ThirdParty\glew\MinSizeRel\glew-static.lib;opengl32.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3DBase\MinSizeRel\Diligent-GraphicsEngineD3DBase.lib;..\..\..\DiligentCore\Graphics\ShaderTools\MinSizeRel\Diligent-ShaderTools.lib;..\..\..\DiligentCore\Graphics\HLSL2GLSLConverterLib\MinSizeRel\Diligent-HLSL2GLSLConverterLib.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Cross\MinSizeRel\spirv-cross-core.lib;..\..\..\DiligentCore\ThirdParty\glslang\SPIRV\MinSizeRel\SPIRV.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\MinSizeRel\SPIRV-Tools-opt.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\MinSizeRel\SPIRV-Tools.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\MinSizeRel\glslang.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\MinSizeRel\MachineIndependent.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\MinSizeRel\GenericCodeGen.lib;..\..\..\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\MinSizeRel\OGLCompiler.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\MinSizeRel\OSDependent.lib;..\..\..\DiligentCore\Graphics\GraphicsEngine\MinSizeRel\Diligent-GraphicsEngine.lib;..\..\..\DiligentCore\Graphics\GraphicsAccessories\MinSizeRel\Diligent-GraphicsAccessories.lib;..\..\..\DiligentCore\Common\MinSizeRel\Diligent-Common.lib;..\..\..\DiligentCore\Platforms\Win32\MinSizeRel\Diligent-Win32Platform.lib;..\..\..\DiligentCore\Platforms\Basic\MinSizeRel\Diligent-BasicPlatform.lib;Shlwapi.lib;..\..\..\DiligentCore\Primitives\MinSizeRel\Diligent-Primitives.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\DiligentTools\NativeApp\MinSizeRel\Diligent-NativeAppBase.lib;..\..\SampleBase\MinSizeRel\Diligent-SampleBase.lib;..\..\..\DiligentTools\AssetLoader\MinSizeRel\Diligent-AssetLoader.lib;..\..\..\DiligentFX\MinSizeRel\DiligentFX.lib;..\..\..\DiligentTools\NativeApp\MinSizeRel\Diligent-NativeAppBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\MinSizeRel\GraphicsEngineD3D11_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\MinSizeRel\GraphicsEngineD3D12_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\MinSizeRel\GraphicsEngineOpenGL_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\MinSizeRel\GraphicsEngineVk_64r.lib;..\..\..\DiligentTools\AssetLoader\MinSizeRel\Diligent-AssetLoader.lib;..\..\..\DiligentTools\TextureLoader\MinSizeRel\Diligent-TextureLoader.lib;..\..\..\DiligentTools\ThirdParty\libpng\MinSizeRel\libpng16_static.lib;..\..\..\DiligentTools\ThirdParty\libtiff\MinSizeRel\LibTiff.lib;..\..\..\DiligentTools\ThirdParty\MinSizeRel\ZLib.lib;..\..\..\DiligentTools\ThirdParty\libjpeg-9e\MinSizeRel\LibJpeg.lib;..\..\..\DiligentTools\Imgui\MinSizeRel\Diligent-Imgui.lib;..\..\..\DiligentCore\Graphics\GraphicsTools\MinSizeRel\Diligent-GraphicsTools.lib;..\..\..\DiligentCore\ThirdParty\xxHash\cmake_unofficial\MinSizeRel\xxhash.lib;..\..\..\DiligentCore\Graphics\Archiver\MinSizeRel\Diligent-Archiver-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\MinSizeRel\Diligent-GraphicsEngineD3D11-static.lib;d3d11.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\MinSizeRel\Diligent-GraphicsEngineD3D12-static.lib;dxgi.lib;d3dcompiler.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\MinSizeRel\Diligent-GraphicsEngineVk-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineNextGenBase\MinSizeRel\Diligent-GraphicsEngineNextGenBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\MinSizeRel\Diligent-GraphicsEngineOpenGL-static.lib;spirv-cross-glsl.lib;..\..\..\DiligentCore\ThirdParty\glew\MinSizeRel\glew-static.lib;opengl32.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3DBase\MinSizeRel\Diligent-GraphicsEngineD3DBase.lib;..\..\..\DiligentCore\Graphics\ShaderTools\MinSizeRel\Diligent-ShaderTools.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Cross\MinSizeRel\spirv-cross-core.lib;..\..\..\DiligentCore\ThirdParty\glslang\SPIRV\MinSizeRel\SPIRV.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\MinSizeRel\SPIRV-Tools-opt.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\MinSizeRel\SPIRV-Tools.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\MinSizeRel\glslang.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\MinSizeRel\MachineIndependent.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\MinSizeRel\GenericCodeGen.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\MinSizeRel\OSDependent.lib;..\..\..\DiligentCore\Graphics\HLSL2GLSLConverterLib\MinSizeRel\Diligent-HLSL2GLSLConverterLib.lib;..\..\..\DiligentCore\Graphics\GraphicsEngine\MinSizeRel\Diligent-GraphicsEngine.lib;..\..\..\DiligentCore\Graphics\GraphicsAccessories\MinSizeRel\Diligent-GraphicsAccessories.lib;..\..\..\DiligentCore\Common\MinSizeRel\Diligent-Common.lib;..\..\..\DiligentCore\Platforms\Win32\MinSizeRel\Diligent-Win32Platform.lib;..\..\..\DiligentCore\Platforms\Basic\MinSizeRel\Diligent-BasicPlatform.lib;Shlwapi.lib;..\..\..\DiligentCore\Primitives\MinSizeRel\Diligent-Primitives.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -639,8 +534,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4201;4100;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -664,57 +560,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WIN32=1;D3D11_SUPPORTED=1;D3D12_SUPPORTED=1;GL_SUPPORTED=1;GLES_SUPPORTED=0;VULKAN_SUPPORTED=1;METAL_SUPPORTED=0;DILIGENT_RENDER_STATE_CACHE_SUPPORTED=1;ENGINE_DLL=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentTools\Imgui\..\ThirdParty\imGuIZMO.quat;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentTools\RenderStateNotation\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src;C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\..\..\..\DiligentFX\Shaders\PostProcess\ToneMapping\public;C:\SYN\diligent\DiligentTools\NativeApp\include;C:\SYN\diligent\DiligentTools\NativeApp\include\Win32;C:\SYN\diligent\DiligentSamples\SampleBase\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsTools\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentTools\TextureLoader\interface;C:\SYN\diligent\DiligentTools\ThirdParty\imgui;C:\SYN\diligent\DiligentTools\Imgui\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D11\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3DBase\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineD3D12\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineVulkan\interface;C:\SYN\diligent\DiligentTools\AssetLoader\interface;C:\SYN\diligent\DiligentFX\.;C:\SYN\diligent\DiligentFX\Components\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\interface;C:\SYN\diligent\DiligentFX\PostProcess\Common\..\..\Shaders\PostProcess\Common\public;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface;C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\..\..\Shaders\PostProcess\EpipolarLightScattering\public;C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\..\..\Shaders\PostProcess\ScreenSpaceReflection\public;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface;C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\..\..\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public;C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface;C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface;C:\SYN\diligent\DiligentFX\PBR\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <Message>			</Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/PostProcess/ToneMapping/public/ToneMappingStructures.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/PostProcess/ToneMapping/public/ToneMapping.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/Common/public/BasicStructures.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/../../../DiligentFX/Shaders/Common/public/ShaderUtilities.fxh C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/assets/shaders
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <PostBuildEvent>
-      <Message>									</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/SYN/diligent/DiligentCore/Graphics/GraphicsEngineD3D11/RelWithDebInfo/GraphicsEngineD3D11_64r.dll" "C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
@@ -807,7 +665,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\..\DiligentTools\NativeApp\RelWithDebInfo\Diligent-NativeAppBase.lib;..\..\SampleBase\RelWithDebInfo\Diligent-SampleBase.lib;..\..\..\DiligentTools\AssetLoader\RelWithDebInfo\Diligent-AssetLoader.lib;..\..\..\DiligentTools\RenderStateNotation\RelWithDebInfo\Diligent-RenderStateNotation.lib;..\..\..\DiligentFX\RelWithDebInfo\DiligentFX.lib;..\..\..\DiligentTools\NativeApp\RelWithDebInfo\Diligent-NativeAppBase.lib;..\..\..\DiligentTools\Imgui\RelWithDebInfo\Diligent-Imgui.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\RelWithDebInfo\GraphicsEngineD3D11_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\RelWithDebInfo\GraphicsEngineD3D12_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\RelWithDebInfo\GraphicsEngineOpenGL_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\RelWithDebInfo\GraphicsEngineVk_64r.lib;..\..\..\DiligentTools\AssetLoader\RelWithDebInfo\Diligent-AssetLoader.lib;..\..\..\DiligentTools\TextureLoader\RelWithDebInfo\Diligent-TextureLoader.lib;..\..\..\DiligentTools\ThirdParty\libpng\RelWithDebInfo\libpng16_static.lib;..\..\..\DiligentTools\ThirdParty\libtiff\RelWithDebInfo\LibTiff.lib;..\..\..\DiligentTools\ThirdParty\RelWithDebInfo\ZLib.lib;..\..\..\DiligentTools\ThirdParty\libjpeg-9e\RelWithDebInfo\LibJpeg.lib;..\..\..\DiligentCore\Graphics\GraphicsTools\RelWithDebInfo\Diligent-GraphicsTools.lib;..\..\..\DiligentCore\ThirdParty\xxHash\cmake_unofficial\RelWithDebInfo\xxhash.lib;..\..\..\DiligentCore\Graphics\Archiver\RelWithDebInfo\Diligent-Archiver-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\RelWithDebInfo\Diligent-GraphicsEngineD3D11-static.lib;d3d11.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\RelWithDebInfo\Diligent-GraphicsEngineD3D12-static.lib;dxgi.lib;d3dcompiler.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\RelWithDebInfo\Diligent-GraphicsEngineVk-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineNextGenBase\RelWithDebInfo\Diligent-GraphicsEngineNextGenBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\RelWithDebInfo\Diligent-GraphicsEngineOpenGL-static.lib;..\..\..\DiligentCore\ThirdParty\glew\RelWithDebInfo\glew-static.lib;opengl32.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3DBase\RelWithDebInfo\Diligent-GraphicsEngineD3DBase.lib;..\..\..\DiligentCore\Graphics\ShaderTools\RelWithDebInfo\Diligent-ShaderTools.lib;..\..\..\DiligentCore\Graphics\HLSL2GLSLConverterLib\RelWithDebInfo\Diligent-HLSL2GLSLConverterLib.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Cross\RelWithDebInfo\spirv-cross-core.lib;..\..\..\DiligentCore\ThirdParty\glslang\SPIRV\RelWithDebInfo\SPIRV.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\RelWithDebInfo\SPIRV-Tools-opt.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\RelWithDebInfo\SPIRV-Tools.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\RelWithDebInfo\glslang.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\RelWithDebInfo\MachineIndependent.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\RelWithDebInfo\GenericCodeGen.lib;..\..\..\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\RelWithDebInfo\OGLCompiler.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\RelWithDebInfo\OSDependent.lib;..\..\..\DiligentCore\Graphics\GraphicsEngine\RelWithDebInfo\Diligent-GraphicsEngine.lib;..\..\..\DiligentCore\Graphics\GraphicsAccessories\RelWithDebInfo\Diligent-GraphicsAccessories.lib;..\..\..\DiligentCore\Common\RelWithDebInfo\Diligent-Common.lib;..\..\..\DiligentCore\Platforms\Win32\RelWithDebInfo\Diligent-Win32Platform.lib;..\..\..\DiligentCore\Platforms\Basic\RelWithDebInfo\Diligent-BasicPlatform.lib;Shlwapi.lib;..\..\..\DiligentCore\Primitives\RelWithDebInfo\Diligent-Primitives.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\DiligentTools\NativeApp\RelWithDebInfo\Diligent-NativeAppBase.lib;..\..\SampleBase\RelWithDebInfo\Diligent-SampleBase.lib;..\..\..\DiligentTools\AssetLoader\RelWithDebInfo\Diligent-AssetLoader.lib;..\..\..\DiligentFX\RelWithDebInfo\DiligentFX.lib;..\..\..\DiligentTools\NativeApp\RelWithDebInfo\Diligent-NativeAppBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\RelWithDebInfo\GraphicsEngineD3D11_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\RelWithDebInfo\GraphicsEngineD3D12_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\RelWithDebInfo\GraphicsEngineOpenGL_64r.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\RelWithDebInfo\GraphicsEngineVk_64r.lib;..\..\..\DiligentTools\AssetLoader\RelWithDebInfo\Diligent-AssetLoader.lib;..\..\..\DiligentTools\TextureLoader\RelWithDebInfo\Diligent-TextureLoader.lib;..\..\..\DiligentTools\ThirdParty\libpng\RelWithDebInfo\libpng16_static.lib;..\..\..\DiligentTools\ThirdParty\libtiff\RelWithDebInfo\LibTiff.lib;..\..\..\DiligentTools\ThirdParty\RelWithDebInfo\ZLib.lib;..\..\..\DiligentTools\ThirdParty\libjpeg-9e\RelWithDebInfo\LibJpeg.lib;..\..\..\DiligentTools\Imgui\RelWithDebInfo\Diligent-Imgui.lib;..\..\..\DiligentCore\Graphics\GraphicsTools\RelWithDebInfo\Diligent-GraphicsTools.lib;..\..\..\DiligentCore\ThirdParty\xxHash\cmake_unofficial\RelWithDebInfo\xxhash.lib;..\..\..\DiligentCore\Graphics\Archiver\RelWithDebInfo\Diligent-Archiver-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D11\RelWithDebInfo\Diligent-GraphicsEngineD3D11-static.lib;d3d11.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3D12\RelWithDebInfo\Diligent-GraphicsEngineD3D12-static.lib;dxgi.lib;d3dcompiler.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineVulkan\RelWithDebInfo\Diligent-GraphicsEngineVk-static.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineNextGenBase\RelWithDebInfo\Diligent-GraphicsEngineNextGenBase.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineOpenGL\RelWithDebInfo\Diligent-GraphicsEngineOpenGL-static.lib;spirv-cross-glsl.lib;..\..\..\DiligentCore\ThirdParty\glew\RelWithDebInfo\glew-static.lib;opengl32.lib;..\..\..\DiligentCore\Graphics\GraphicsEngineD3DBase\RelWithDebInfo\Diligent-GraphicsEngineD3DBase.lib;..\..\..\DiligentCore\Graphics\ShaderTools\RelWithDebInfo\Diligent-ShaderTools.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Cross\RelWithDebInfo\spirv-cross-core.lib;..\..\..\DiligentCore\ThirdParty\glslang\SPIRV\RelWithDebInfo\SPIRV.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\opt\RelWithDebInfo\SPIRV-Tools-opt.lib;..\..\..\DiligentCore\ThirdParty\SPIRV-Tools\source\RelWithDebInfo\SPIRV-Tools.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\RelWithDebInfo\glslang.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\RelWithDebInfo\MachineIndependent.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\RelWithDebInfo\GenericCodeGen.lib;..\..\..\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\RelWithDebInfo\OSDependent.lib;..\..\..\DiligentCore\Graphics\HLSL2GLSLConverterLib\RelWithDebInfo\Diligent-HLSL2GLSLConverterLib.lib;..\..\..\DiligentCore\Graphics\GraphicsEngine\RelWithDebInfo\Diligent-GraphicsEngine.lib;..\..\..\DiligentCore\Graphics\GraphicsAccessories\RelWithDebInfo\Diligent-GraphicsAccessories.lib;..\..\..\DiligentCore\Common\RelWithDebInfo\Diligent-Common.lib;..\..\..\DiligentCore\Platforms\Win32\RelWithDebInfo\Diligent-Win32Platform.lib;..\..\..\DiligentCore\Platforms\Basic\RelWithDebInfo\Diligent-BasicPlatform.lib;Shlwapi.lib;..\..\..\DiligentCore\Primitives\RelWithDebInfo\Diligent-Primitives.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -835,7 +693,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/CMakeLists.txt</Message>
@@ -848,7 +706,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/CMakeLists.txt</Message>
@@ -861,7 +719,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SYN/diligent/DiligentSamples/Samples/GLTFViewer/CMakeLists.txt</Message>
@@ -874,7 +732,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -882,99 +740,435 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src\GLTFViewer.cpp" />
     <ClInclude Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\src\GLTFViewer.hpp" />
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes.bin">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\applypatch-msg.sample">
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes.gltf">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\commit-msg.sample">
     </None>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_baseColor.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_baseColor1.png">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_emissive.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_normal.png">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\BoomBoxWithAxes_roughnessMetallic.jpg">
-    </Image>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan.gltf">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\fsmonitor-watchman.sample">
     </None>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan.jpg">
-    </Image>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\CesiumMan0.bin">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\post-update.sample">
     </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-applypatch.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-commit.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-merge-commit.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-push.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-rebase.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\pre-receive.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\prepare-commit-msg.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\push-to-checkout.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\sendemail-validate.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\hooks\update.sample">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\objects\pack\pack-077365812941d971a1eb8909dc9e0d70dcea6319.idx">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\objects\pack\pack-077365812941d971a1eb8909dc9e0d70dcea6319.pack">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\.git\objects\pack\pack-077365812941d971a1eb8909dc9e0d70dcea6319.rev">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\LICENSE.md">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\AlphaBlendLabels.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\AlphaBlendModeTest.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\AlphaBlendModeTest.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\MatBed_baseColor.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\MatBed_normal.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AlphaBlendModeTest\glTF\MatBed_occlusionRoughnessMetallic.jpg">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp_anisotropy.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp_basecolor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp_normalbump.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyBarnLamp\glTF\AnisotropyBarnLamp_occlusionroughnessmetal.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyDiscTest\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyDiscTest\glTF\AnisotropyDiscTest.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyDiscTest\glTF\AnisotropyDiscTest_data.bin">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyDiscTest\glTF\AnisotropyDiscs.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyStrengthTest\LICENSE.md">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyStrengthTest\glTF\AnisotropySpheresLabels.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyStrengthTest\glTF\AnisotropyStrengthTest.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\AnisotropyStrengthTest\glTF\AnisotropyStrengthTest_data.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\license.txt">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\scene.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\scene.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\ALs_CARS_baseColor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\ALs_CARS_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\BARBIE_baseColor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\BARBIE_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\barbie_rear_normal.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\bottom_baseColor.jpeg">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\carshadow_baseColor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\dodge_rim_sticker_MATTE_baseColor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\dodge_rim_sticker_MATTE_emissive.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\floor_baseColor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\floor_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\pink_carbon_normal.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\plate_baseColor.jpeg">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\plate_normal.jpeg">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_1_INT_EMB_baseColor.jpeg">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_2_CHROME_emissive.jpeg">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_3_brakelights_baseColor.jpeg">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_3_brakelights_normal.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_3_headlights_normal.jpeg">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\texture_4_RIM_chrome_emissive.jpeg">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\tire_left_L_baseColor.jpeg">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\tire_protector_baseColor.jpeg">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\tire_right_R_baseColor.jpeg">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BarbieDodgePickup\textures\window_glass_baseColor.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_baseColor.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_baseColor1.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_emissive.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\BoomBoxWithAxes\glTF\BoomBoxWithAxes_roughnessMetallic.jpg">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\glTF\CesiumMan.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\glTF\CesiumMan.jpg">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\CesiumMan\glTF\CesiumMan0.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\LICENSE.md">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\ClearCoatLabels.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\ClearCoatTest.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\ClearCoatTest.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\PartialCoating.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\PartialCoating_Alpha.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\PlasticWrap_normals.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\RibsNormal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearCoatTest\glTF\RoughnessStripes.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\Carbon_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\Carbon_occlusionRoughnessMetallic.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\ClearcoatRing.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\ClearcoatRing.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\Titan_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ClearcoatRing\glTF\Titan_occlusionRoughnessMetallic.png">
+    </Image>
     <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\DamagedHelmet\DamagedHelmet.gltf">
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet.bin">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\DamagedHelmet\LICENSE.md">
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet.gltf">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EmissiveStrengthTest\LICENSE.md">
     </None>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor1.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor2.png">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor3.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_baseColor4.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal1.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal2.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal3.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_normal4.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic1.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic2.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic3.jpg">
-    </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\FlightHelmet_occlusionRoughnessMetallic4.jpg">
-    </Image>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\MetalRoughSpheres.gltf">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EmissiveStrengthTest\glTF\EmissiveStrengthTest.bin">
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\MetalRoughSpheres0.bin">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EmissiveStrengthTest\glTF\EmissiveStrengthTest.gltf">
     </None>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\Spheres_BaseColor.png">
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EmissiveStrengthTest\glTF\PlainGrid.png">
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\Spheres_MetalRough.png">
-    </Image>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest.gltf">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\LICENSE.md">
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest0.bin">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\glTF\EnvironmentTest.gltf">
     </None>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_BaseColor.png">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\glTF\EnvironmentTest_binary.bin">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\glTF\EnvironmentTest_images\roughness_metallic_0.jpg">
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_Normal.png">
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\EnvironmentTest\glTF\EnvironmentTest_images\roughness_metallic_1.jpg">
     </Image>
-    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\NormalTangentTest_OcclusionRoughnessMetallic.png">
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor1.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor2.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor3.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_baseColor4.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal1.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal2.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal3.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_normal4.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic1.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic2.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic3.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\FlightHelmet\glTF\FlightHelmet_occlusionRoughnessMetallic4.jpg">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\glTF\GlamVelvetSofa.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\glTF\GlamVelvetSofa.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\glTF\GlamVelvetSofa_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\GlamVelvetSofa\glTF\GlamVelvetSofa_occlusion.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\InterpolationTest\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\InterpolationTest\glTF\InterpolationTest.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\InterpolationTest\glTF\InterpolationTest_data.bin">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\InterpolationTest\glTF\InterpolationTest_img0.jpg">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone_BaseColor.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone_Iridescence.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone_NormalBump.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceAbalone\glTF\IridescenceAbalone_ORM.jpg">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceMetallicSpheres\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceMetallicSpheres\glTF\IridescenceMetallicSpheres.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceMetallicSpheres\glTF\IridescenceMetallicSpheres.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescenceMetallicSpheres\glTF\textures\guides.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\IridescentDishWithOlives.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\IridescentDishWithOlives.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_irid.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_nrm.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_orm.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_spec.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glasscover_thick.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glassdish_irid.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\glassdish_spec.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\goldleaf_col.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\goldleaf_nrm.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\goldleaf_orm.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\olives_col.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\olives_nrm.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\IridescentDishWithOlives\glTF\olives_orm.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\glTF\MetalRoughSpheres.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\glTF\MetalRoughSpheres0.bin">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\glTF\Spheres_BaseColor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MetalRoughSpheres\glTF\Spheres_MetalRough.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\glTF\MultiUVTest.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\glTF\MultiUVTest.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\glTF\uv0.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\MultiUVTest\glTF\uv1.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest0.bin">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest_BaseColor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest_Normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\NormalTangentTest\glTF\NormalTangentTest_OcclusionRoughnessMetallic.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\OrientationTest\glTF\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\OrientationTest\glTF\OrientationTest.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\OrientationTest\glTF\OrientationTest.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\SheenTestGrid\glTF\SheenTestGrid.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\SheenTestGrid\glTF\SheenTestGrid.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\SheenTestGrid\glTF\checker.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureCoordinateTest\LICENSE.md">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureCoordinateTest\glTF\TextureCoordinateTemplate.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureCoordinateTest\glTF\TextureCoordinateTest.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureCoordinateTest\glTF\TextureCoordinateTest.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\LICENSE.md">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TTMT_Labels.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TestMap-1.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TestMap.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TestMap_Normal.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TextureTransformMultiTest.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\TextureTransformMultiTest\glTF\TextureTransformMultiTest.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\LICENSE.md">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\Fabric_baseColor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\Fabric_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\Fabric_occlusion.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_basecolor.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_clearcoat.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_emissive.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_normal.png">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\ToyCar\glTF\ToyCar_occlusion_roughness_metallic.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\UnlitTest\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\UnlitTest\glTF\LICENSE.md">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\UnlitTest\glTF\UnlitTest.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\UnlitTest\glTF\UnlitTest.gltf">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\LICENSE.md">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\glTF\VertexColorChecks.png">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\glTF\VertexColorTest.bin">
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\glTF\VertexColorTest.gltf">
+    </None>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\models\VertexColorTest\glTF\VertexColorTestLabels.png">
     </Image>
     <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\textures\papermill.ktx">
     </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\render_states\RenderStates.json">
-    </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\BoundBox.vsh">
-    </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\BoundBox.psh">
-    </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\env_map.vsh">
-    </None>
-    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\env_map.psh">
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMappingStructures.fxh">
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMapping.fxh">
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\BasicStructures.fxh">
-    </None>
-    <None Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\ShaderUtilities.fxh">
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\textures\sheen_albedo_scaling.jpg">
+    </Image>
+    <Image Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\textures\charlie_preintegrated.jpg">
+    </Image>
+    <None Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\assets\shaders\ApplyPostEffects.psh">
     </None>
     <ResourceCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc" />
     <ClInclude Include="C:\SYN\diligent\DiligentSamples\Samples\GLTFViewer\readme.md" />
@@ -1074,10 +1268,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{8E1149B8-D59B-356E-B5B4-5519579BBFE7}</Project>
       <Name>Diligent-Primitives</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\SYN\diligent\DiligentTools\RenderStateNotation\Diligent-RenderStateNotation.vcxproj">
-      <Project>{A47C2AB8-ACAD-345A-9552-C87DC8F765B7}</Project>
-      <Name>Diligent-RenderStateNotation</Name>
-    </ProjectReference>
     <ProjectReference Include="C:\SYN\diligent\DiligentSamples\SampleBase\Diligent-SampleBase.vcxproj">
       <Project>{7A012B5F-7A94-3C1E-818C-D6A0385DB86C}</Project>
       <Name>Diligent-SampleBase</Name>
@@ -1113,10 +1303,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
       <Project>{35D7936D-2AC0-379B-8201-2B29EF68D777}</Project>
       <Name>MachineIndependent</Name>
-    </ProjectReference>
-    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
-      <Project>{D30CF4EA-8943-3101-9431-BBEBEA243263}</Project>
-      <Name>OGLCompiler</Name>
     </ProjectReference>
     <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
       <Project>{A5EA77F5-9AD9-31E0-A89E-489C6A386F92}</Project>

@@ -63,6 +63,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial24_VRS/cmake_install.cmake")
   include("C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial25_StatePackager/cmake_install.cmake")
   include("C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial26_StateCache/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentSamples/Tutorials/Tutorial27_PostProcessing/cmake_install.cmake")
 
 endif()
 

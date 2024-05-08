@@ -56,6 +56,7 @@ namespace spv {
         #include "GLSL.ext.NV.h"
         #include "GLSL.ext.ARM.h"
         #include "NonSemanticShaderDebugInfo100.h"
+        #include "GLSL.ext.QCOM.h"
     }
 }
 const char* GlslStd450DebugNames[spv::GLSLstd450Count];
@@ -359,7 +360,7 @@ void SpirvStream::disassembleInstruction(Id resultId, Id /*typeId*/, Op opCode, 
                 switch (stream[word]) {
                 case 8:  idDescriptor[resultId] = "int8_t"; break;
                 case 16: idDescriptor[resultId] = "int16_t"; break;
-                default: assert(0); // fallthrough
+                default: assert(0); [[fallthrough]];
                 case 32: idDescriptor[resultId] = "int"; break;
                 case 64: idDescriptor[resultId] = "int64_t"; break;
                 }
@@ -367,7 +368,7 @@ void SpirvStream::disassembleInstruction(Id resultId, Id /*typeId*/, Op opCode, 
             case OpTypeFloat:
                 switch (stream[word]) {
                 case 16: idDescriptor[resultId] = "float16_t"; break;
-                default: assert(0); // fallthrough
+                default: assert(0); [[fallthrough]];
                 case 32: idDescriptor[resultId] = "float"; break;
                 case 64: idDescriptor[resultId] = "float64_t"; break;
                 }

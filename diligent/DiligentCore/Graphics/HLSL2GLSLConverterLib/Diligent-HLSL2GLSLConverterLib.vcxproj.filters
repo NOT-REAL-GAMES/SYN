@@ -21,7 +21,7 @@
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\include\HLSLKeywords.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\include\GLSLDefinitions_inc.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\GeneratedShaders\GLSLDefinitions_inc.h">
       <Filter>generated</Filter>
     </ClInclude>
   </ItemGroup>

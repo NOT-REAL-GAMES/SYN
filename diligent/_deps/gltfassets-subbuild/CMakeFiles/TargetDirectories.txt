@@ -1,0 +1,3 @@
+C:/SYN/diligent/_deps/gltfassets-subbuild/CMakeFiles/gltfassets-populate.dir
+C:/SYN/diligent/_deps/gltfassets-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/SYN/diligent/_deps/gltfassets-subbuild/CMakeFiles/ZERO_CHECK.dir

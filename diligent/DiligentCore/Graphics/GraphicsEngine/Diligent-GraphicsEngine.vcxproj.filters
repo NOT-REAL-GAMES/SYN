@@ -276,9 +276,6 @@
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\ShaderBindingTableBase.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\StateObjectsRegistry.hpp">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include\SwapChainBase.hpp">
       <Filter>include</Filter>
     </ClInclude>

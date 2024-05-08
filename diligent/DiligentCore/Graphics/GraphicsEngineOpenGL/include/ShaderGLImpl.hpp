@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -55,7 +55,7 @@ public:
                  RenderDeviceGLImpl*     pDeviceGL,
                  const ShaderCreateInfo& ShaderCI,
                  const CreateInfo&       GLShaderCI,
-                 bool                    bIsDeviceInternal = false);
+                 bool                    bIsDeviceInternal = false) noexcept(false);
     ~ShaderGLImpl();
 
     virtual void DILIGENT_CALL_TYPE QueryInterface(const INTERFACE_ID& IID, IObject** ppInterface) override final;
@@ -72,7 +72,7 @@ public:
     /// Implementation of IShaderGL::GetGLShaderHandle() in OpenGL backend.
     virtual GLuint DILIGENT_CALL_TYPE GetGLShaderHandle() const override final { return m_GLShaderObj; }
 
-    static GLObjectWrappers::GLProgramObj LinkProgram(ShaderGLImpl* const* ppShaders, Uint32 NumShaders, bool IsSeparableProgram);
+    static GLObjectWrappers::GLProgramObj LinkProgram(ShaderGLImpl* const* ppShaders, Uint32 NumShaders, bool IsSeparableProgram) noexcept(false);
 
     const std::shared_ptr<const ShaderResourcesGL>& GetShaderResources() const { return m_pShaderResources; }
 

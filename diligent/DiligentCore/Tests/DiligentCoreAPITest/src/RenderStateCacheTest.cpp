@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -36,6 +36,8 @@
 #include "ResourceLayoutTestCommon.hpp"
 
 #include "InlineShaders/RayTracingTestHLSL.h"
+#include "InlineShaders/DrawCommandTestHLSL.h"
+#include "InlineShaders/DrawCommandTestGLSL.h"
 
 #include "gtest/gtest.h"
 
@@ -114,7 +116,7 @@ void TestDraw(IShader*                pVS,
         pPSO->CreateShaderResourceBinding(&_pSRB);
         VERIFY_EXPR(pTexSRV != nullptr);
         _pSRB->GetVariableByName(SHADER_TYPE_PIXEL, "g_Tex2D")->Set(pTexSRV);
-        pCtx->TransitionShaderResources(pPSO, _pSRB);
+        pCtx->TransitionShaderResources(_pSRB);
         pSRB = _pSRB;
     }
 
@@ -238,10 +240,11 @@ void VerifyComputePSO(IPipelineState* pPSO, bool UseSignature = false)
 
 RefCntAutoPtr<IRenderStateCache> CreateCache(IRenderDevice*                   pDevice,
                                              bool                             HotReload,
+                                             bool                             OptimizeGLShaders,
                                              IDataBlob*                       pCacheData           = nullptr,
                                              IShaderSourceInputStreamFactory* pShaderReloadFactory = nullptr)
 {
-    RenderStateCacheCreateInfo CacheCI{pDevice, RENDER_STATE_CACHE_LOG_LEVEL_VERBOSE, HotReload, pShaderReloadFactory};
+    RenderStateCacheCreateInfo CacheCI{pDevice, RENDER_STATE_CACHE_LOG_LEVEL_VERBOSE, HotReload, OptimizeGLShaders, pShaderReloadFactory};
 
     RefCntAutoPtr<IRenderStateCache> pCache;
     CreateRenderStateCache(CacheCI, &pCache);
@@ -252,6 +255,35 @@ RefCntAutoPtr<IRenderStateCache> CreateCache(IRenderDevice*                   pD
     return pCache;
 }
 
+RefCntAutoPtr<IRenderStateCache> CreateCache(IRenderDevice*                   pDevice,
+                                             bool                             HotReload,
+                                             IDataBlob*                       pCacheData           = nullptr,
+                                             IShaderSourceInputStreamFactory* pShaderReloadFactory = nullptr)
+{
+    constexpr bool OptimizeGLShaders = true;
+    return CreateCache(pDevice, HotReload, OptimizeGLShaders, pCacheData, pShaderReloadFactory);
+}
+
+void CreateShader(IRenderStateCache*      pCache,
+                  const ShaderCreateInfo& ShaderCI,
+                  bool                    PresentInCache,
+                  RefCntAutoPtr<IShader>& pShader)
+{
+    auto* const pEnv    = GPUTestingEnvironment::GetInstance();
+    auto* const pDevice = pEnv->GetDevice();
+
+    if (pCache != nullptr)
+    {
+        EXPECT_EQ(pCache->CreateShader(ShaderCI, &pShader), PresentInCache);
+    }
+    else
+    {
+        pDevice->CreateShader(ShaderCI, &pShader);
+        EXPECT_EQ(PresentInCache, false);
+    }
+    ASSERT_TRUE(pShader);
+}
+
 void CreateShader(IRenderStateCache*               pCache,
                   IShaderSourceInputStreamFactory* pShaderSourceFactory,
                   SHADER_TYPE                      Type,
@@ -260,8 +292,7 @@ void CreateShader(IRenderStateCache*               pCache,
                   bool                             PresentInCache,
                   RefCntAutoPtr<IShader>&          pShader)
 {
-    auto* const pEnv    = GPUTestingEnvironment::GetInstance();
-    auto* const pDevice = pEnv->GetDevice();
+    auto* const pEnv = GPUTestingEnvironment::GetInstance();
 
     ShaderCreateInfo ShaderCI;
     ShaderCI.pShaderSourceStreamFactory = pShaderSourceFactory;
@@ -270,21 +301,10 @@ void CreateShader(IRenderStateCache*               pCache,
 
     constexpr ShaderMacro Macros[] = {{"EXTERNAL_MACROS", "2"}};
     ShaderCI.Macros                = {Macros, _countof(Macros)};
+    ShaderCI.Desc                  = {Name, Type, true};
+    ShaderCI.FilePath              = Path;
 
-    {
-        ShaderCI.Desc     = {Name, Type, true};
-        ShaderCI.FilePath = Path;
-        if (pCache != nullptr)
-        {
-            EXPECT_EQ(pCache->CreateShader(ShaderCI, &pShader), PresentInCache);
-        }
-        else
-        {
-            pDevice->CreateShader(ShaderCI, &pShader);
-            EXPECT_EQ(PresentInCache, false);
-        }
-        ASSERT_TRUE(pShader);
-    }
+    CreateShader(pCache, ShaderCI, PresentInCache, pShader);
 }
 
 void CreateGraphicsShaders(IRenderStateCache*               pCache,
@@ -329,50 +349,54 @@ TEST(RenderStateCacheTest, CreateShader)
     ASSERT_TRUE(pShaderSourceFactory);
 
     auto pTexSRV = CreateWhiteTexture();
-    for (Uint32 HotReload = 0; HotReload < 2; ++HotReload)
+
+    for (Uint32 OptimizeGLShaders = pDevice->GetDeviceInfo().IsGLDevice() ? 0 : 1; OptimizeGLShaders < 2; ++OptimizeGLShaders)
     {
-        RefCntAutoPtr<IDataBlob> pData;
-        for (Uint32 pass = 0; pass < 3; ++pass)
+        for (Uint32 HotReload = 0; HotReload < 2; ++HotReload)
         {
-            // 0: empty cache
-            // 1: loaded cache
-            // 2: reloaded cache (loaded -> stored -> loaded)
-
-            auto pCache = CreateCache(pDevice, HotReload, pData);
-            ASSERT_TRUE(pCache);
-
+            RefCntAutoPtr<IDataBlob> pData;
+            for (Uint32 pass = 0; pass < 3; ++pass)
             {
-                RefCntAutoPtr<IShader> pVS, pPS;
-                CreateGraphicsShaders(pCache, pShaderSourceFactory, pVS, pPS, pData != nullptr);
-                ASSERT_NE(pVS, nullptr);
-                ASSERT_NE(pPS, nullptr);
+                // 0: empty cache
+                // 1: loaded cache
+                // 2: reloaded cache (loaded -> stored -> loaded)
 
-                VerifyGraphicsShaders(pVS, pPS, pTexSRV);
+                auto pCache = CreateCache(pDevice, HotReload, OptimizeGLShaders, pData);
+                ASSERT_TRUE(pCache);
 
-                RefCntAutoPtr<IShader> pVS2, pPS2;
-                CreateGraphicsShaders(pCache, pShaderSourceFactory, pVS2, pPS2, true);
-                EXPECT_EQ(pVS, pVS2);
-                EXPECT_EQ(pPS, pPS);
+                {
+                    RefCntAutoPtr<IShader> pVS, pPS;
+                    CreateGraphicsShaders(pCache, pShaderSourceFactory, pVS, pPS, pData != nullptr);
+                    ASSERT_NE(pVS, nullptr);
+                    ASSERT_NE(pPS, nullptr);
+
+                    VerifyGraphicsShaders(pVS, pPS, pTexSRV);
+
+                    RefCntAutoPtr<IShader> pVS2, pPS2;
+                    CreateGraphicsShaders(pCache, pShaderSourceFactory, pVS2, pPS2, true);
+                    EXPECT_EQ(pVS, pVS2);
+                    EXPECT_EQ(pPS, pPS);
+                }
+
+                {
+                    RefCntAutoPtr<IShader> pVS, pPS;
+                    CreateGraphicsShaders(pCache, pShaderSourceFactory, pVS, pPS, true);
+                    EXPECT_NE(pVS, nullptr);
+                    EXPECT_NE(pPS, nullptr);
+                }
+
+                {
+                    RefCntAutoPtr<IShader> pCS;
+                    CreateComputeShader(pCache, pShaderSourceFactory, pCS, pData != nullptr);
+                    EXPECT_NE(pCS, nullptr);
+                }
+
+                pData.Release();
+                pCache->WriteToBlob(ContentVersion, &pData);
+
+                if (HotReload)
+                    EXPECT_EQ(pCache->Reload(), 0u);
             }
-
-            {
-                RefCntAutoPtr<IShader> pVS, pPS;
-                CreateGraphicsShaders(pCache, pShaderSourceFactory, pVS, pPS, true);
-                EXPECT_NE(pVS, nullptr);
-                EXPECT_NE(pPS, nullptr);
-            }
-
-            {
-                RefCntAutoPtr<IShader> pCS;
-                CreateComputeShader(pCache, pShaderSourceFactory, pCS, pData != nullptr);
-                EXPECT_NE(pCS, nullptr);
-            }
-
-            pData.Release();
-            pCache->WriteToBlob(ContentVersion, &pData);
-
-            if (HotReload)
-                EXPECT_EQ(pCache->Reload(), 0u);
         }
     }
 }
@@ -519,7 +543,7 @@ void TestGraphicsPSO(bool UseRenderPass)
     RefCntAutoPtr<IShaderResourceBinding> pRefSRB;
     pRefPSO->CreateShaderResourceBinding(&pRefSRB);
     pRefSRB->GetVariableByName(SHADER_TYPE_PIXEL, "g_Tex2D")->Set(pTexSRV);
-    pCtx->TransitionShaderResources(pRefPSO, pRefSRB);
+    pCtx->TransitionShaderResources(pRefSRB);
 
     for (Uint32 HotReload = 0; HotReload < 2; ++HotReload)
     {
@@ -1229,9 +1253,9 @@ void TestPipelineReload(bool UseRenderPass, bool CreateSrbBeforeReload = false, 
             (UseSignatures ? pSRB1 : pSRB0)->GetVariableByName(SHADER_TYPE_PIXEL, "g_Tex2D_Mut")->Set(RefTextures.GetView(2));
             pSRB0->GetVariableByName(SHADER_TYPE_PIXEL, "g_Tex2D_Dyn")->Set(RefTextures.GetView(3));
 
-            pCtx->TransitionShaderResources(pPSO, pSRB0);
+            pCtx->TransitionShaderResources(pSRB0);
             if (pSRB1)
-                pCtx->TransitionShaderResources(pPSO, pSRB1);
+                pCtx->TransitionShaderResources(pSRB1);
         };
 
         RefCntAutoPtr<IShaderResourceBinding> pSRB0, pSRB1;
@@ -1425,6 +1449,130 @@ TEST(RenderStateCacheTest, Reload_Signatures2)
 
             pData.Release();
             pCache->WriteToBlob(pass == 0 ? ContentVersion : ~0u, &pData);
+        }
+    }
+}
+
+TEST(RenderStateCacheTest, GLExtensions)
+{
+    auto*       pEnv       = GPUTestingEnvironment::GetInstance();
+    auto*       pDevice    = pEnv->GetDevice();
+    auto*       pCtx       = pEnv->GetDeviceContext();
+    auto*       pSwapChain = pEnv->GetSwapChain();
+    const auto& DeviceInfo = pDevice->GetDeviceInfo();
+
+    if (!(DeviceInfo.IsVulkanDevice() || DeviceInfo.IsGLDevice()))
+        GTEST_SKIP() << "This test is only applicable to Vulkan and OpenGL backends";
+
+    if (!DeviceInfo.Features.NativeMultiDraw)
+        GTEST_SKIP() << "Native multi-draw is not supported";
+
+    GPUTestingEnvironment::ScopedReset AutoReset;
+
+    auto CreateShaders = [&DeviceInfo](IRenderStateCache*      pCache,
+                                       RefCntAutoPtr<IShader>& pVS,
+                                       RefCntAutoPtr<IShader>& pPS,
+                                       bool                    PresentInCache) {
+        {
+            ShaderCreateInfo ShaderCI;
+            ShaderCI.SourceLanguage = SHADER_SOURCE_LANGUAGE_GLSL;
+            ShaderCI.Desc           = {"Render State Cache - Multi Draw VS", SHADER_TYPE_VERTEX, true};
+            ShaderCI.Source         = GLSL::DrawTest_VS_DrawId.c_str();
+            ShaderCI.SourceLength   = GLSL::DrawTest_VS_DrawId.length();
+            if (DeviceInfo.IsGLDevice())
+            {
+                ShaderCI.GLSLExtensions = "#extension GL_ARB_shader_draw_parameters : enable";
+            }
+            CreateShader(pCache, ShaderCI, PresentInCache, pVS);
+            ASSERT_TRUE(pVS);
+        }
+
+        {
+            ShaderCreateInfo ShaderCI;
+            ShaderCI.SourceLanguage = SHADER_SOURCE_LANGUAGE_HLSL;
+            ShaderCI.Desc           = {"Render State Cache - Multi Draw PS", SHADER_TYPE_PIXEL, true};
+            ShaderCI.Source         = HLSL::DrawTest_PS.c_str();
+            ShaderCI.SourceLength   = HLSL::DrawTest_PS.length();
+            CreateShader(pCache, ShaderCI, PresentInCache, pPS);
+            ASSERT_TRUE(pPS);
+        }
+    };
+
+    static FastRandFloat rnd{1, 0, 1};
+    for (Uint32 OptimizeGLShaders = DeviceInfo.IsGLDevice() ? 0 : 1; OptimizeGLShaders < 2; ++OptimizeGLShaders)
+    {
+        for (Uint32 HotReload = 0; HotReload < 2; ++HotReload)
+        {
+            RefCntAutoPtr<IDataBlob> pData;
+            for (Uint32 pass = 0; pass < 3; ++pass)
+            {
+                // 0: empty cache
+                // 1: loaded cache
+                // 2: reloaded cache (loaded -> stored -> loaded)
+
+                auto pCache = CreateCache(pDevice, HotReload, OptimizeGLShaders, pData);
+                ASSERT_TRUE(pCache);
+
+                {
+                    RefCntAutoPtr<IShader> pVS, pPS;
+                    CreateShaders(pCache, pVS, pPS, pData != nullptr);
+
+                    const float ClearColor[] = {rnd(), rnd(), rnd(), rnd()};
+                    RenderDrawCommandReference(pSwapChain, ClearColor);
+
+                    {
+                        GraphicsPipelineStateCreateInfo PSOCreateInfo;
+
+                        auto& PSODesc          = PSOCreateInfo.PSODesc;
+                        auto& GraphicsPipeline = PSOCreateInfo.GraphicsPipeline;
+
+                        PSODesc.Name = "Render State Cache Test - GLExtensions";
+
+                        GraphicsPipeline.NumRenderTargets             = 1;
+                        GraphicsPipeline.RTVFormats[0]                = pSwapChain->GetDesc().ColorBufferFormat;
+                        GraphicsPipeline.PrimitiveTopology            = PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+                        GraphicsPipeline.RasterizerDesc.CullMode      = CULL_MODE_NONE;
+                        GraphicsPipeline.DepthStencilDesc.DepthEnable = False;
+
+                        PSOCreateInfo.pVS = pVS;
+                        PSOCreateInfo.pPS = pPS;
+
+                        RefCntAutoPtr<IPipelineState> pPSO;
+                        pCache->CreateGraphicsPipelineState(PSOCreateInfo, &pPSO);
+                        ASSERT_NE(pPSO, nullptr);
+
+                        ITextureView* pRTVs[] = {pSwapChain->GetCurrentBackBufferRTV()};
+                        pCtx->SetRenderTargets(1, pRTVs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+                        pCtx->ClearRenderTarget(pRTVs[0], ClearColor, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+                        pCtx->SetPipelineState(pPSO);
+                        MultiDrawItem DrawItems[] =
+                            {
+                                {3, 0},
+                                {3, 0},
+                            };
+                        MultiDrawAttribs drawAttrs{_countof(DrawItems), DrawItems, DRAW_FLAG_VERIFY_ALL};
+                        pCtx->MultiDraw(drawAttrs);
+
+                        pSwapChain->Present();
+                    }
+
+                    RefCntAutoPtr<IShader> pVS2, pPS2;
+                    CreateShaders(pCache, pVS2, pPS2, true);
+                    EXPECT_EQ(pVS, pVS2);
+                    EXPECT_EQ(pPS, pPS);
+                }
+
+                {
+                    RefCntAutoPtr<IShader> pVS, pPS;
+                    CreateShaders(pCache, pVS, pPS, true);
+                }
+
+                pData.Release();
+                pCache->WriteToBlob(ContentVersion, &pData);
+
+                if (HotReload)
+                    EXPECT_EQ(pCache->Reload(), 0u);
+            }
         }
     }
 }

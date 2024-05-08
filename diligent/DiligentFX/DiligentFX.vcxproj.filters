@@ -4,33 +4,156 @@
     <ClCompile Include="C:\SYN\diligent\DiligentFX\Utilities\src\DiligentFXShaderSourceStreamFactory.cpp">
       <Filter>Utilities\src</Filter>
     </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\Components\src\BoundBoxRenderer.cpp">
+      <Filter>Components\src</Filter>
+    </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentFX\Components\src\ShadowMapManager.cpp">
       <Filter>Components\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\Components\src\EnvMapRenderer.cpp">
+      <Filter>Components\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\Components\src\GBuffer.cpp">
+      <Filter>Components\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\Components\src\VectorFieldRenderer.cpp">
+      <Filter>Components\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\Components\src\ToneMapping.cpp">
+      <Filter>Components\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\Components\src\CoordinateGridRenderer.cpp">
+      <Filter>Components\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PostProcess\Common\src\PostFXRenderTechnique.cpp">
+      <Filter>PostProcess\Common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PostProcess\Common\src\PostFXContext.cpp">
+      <Filter>PostProcess\Common\src</Filter>
     </ClCompile>
     <ClCompile Include="C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\src\EpipolarLightScattering.cpp">
       <Filter>PostProcess\EpipolarLightScattering\src</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\src\GLTF_PBR_Renderer.cpp">
-      <Filter>GLTF_PBR_Renderer\src</Filter>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\src\TemporalAntiAliasing.cpp">
+      <Filter>PostProcess\TemporalAntiAliasing\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\src\ScreenSpaceReflection.cpp">
+      <Filter>PostProcess\ScreenSpaceReflection\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\src\ScreenSpaceAmbientOcclusion.cpp">
+      <Filter>PostProcess\ScreenSpaceAmbientOcclusion\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PostProcess\Bloom\src\Bloom.cpp">
+      <Filter>PostProcess\Bloom\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\src\DepthOfField.cpp">
+      <Filter>PostProcess\DepthOfField\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PBR\src\PBR_Renderer.cpp">
+      <Filter>PBR\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PBR\src\GLTF_PBR_Renderer.cpp">
+      <Filter>PBR\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentFX\PBR\src\USD_Renderer.cpp">
+      <Filter>PBR\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\Utilities\include\DiligentFXShaderSourceStreamFactory.hpp">
-      <Filter>Utilities\include</Filter>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\Utilities\interface\DiligentFXShaderSourceStreamFactory.hpp">
+      <Filter>Utilities\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\Components\interface\BoundBoxRenderer.hpp">
+      <Filter>Components\interface</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\Components\interface\ShadowMapManager.hpp">
       <Filter>Components\interface</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\Components\interface\EnvMapRenderer.hpp">
+      <Filter>Components\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\Components\interface\GBuffer.hpp">
+      <Filter>Components\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\Components\interface\VectorFieldRenderer.hpp">
+      <Filter>Components\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\Components\interface\ToneMapping.hpp">
+      <Filter>Components\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\Components\interface\CoordinateGridRenderer.hpp">
+      <Filter>Components\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PostProcess\Common\interface\PostFXRenderTechnique.hpp">
+      <Filter>PostProcess\Common\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PostProcess\Common\interface\PostFXContext.hpp">
+      <Filter>PostProcess\Common\interface</Filter>
+    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\PostProcess\EpipolarLightScattering\interface\EpipolarLightScattering.hpp">
       <Filter>PostProcess\EpipolarLightScattering\interface</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\GLTF_PBR_Renderer\interface\GLTF_PBR_Renderer.hpp">
-      <Filter>GLTF_PBR_Renderer\interface</Filter>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PostProcess\TemporalAntiAliasing\interface\TemporalAntiAliasing.hpp">
+      <Filter>PostProcess\TemporalAntiAliasing\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceReflection\interface\ScreenSpaceReflection.hpp">
+      <Filter>PostProcess\ScreenSpaceReflection\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PostProcess\ScreenSpaceAmbientOcclusion\interface\ScreenSpaceAmbientOcclusion.hpp">
+      <Filter>PostProcess\ScreenSpaceAmbientOcclusion\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PostProcess\Bloom\interface\Bloom.hpp">
+      <Filter>PostProcess\Bloom\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PostProcess\DepthOfField\interface\DepthOfField.hpp">
+      <Filter>PostProcess\DepthOfField\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PBR\interface\PBR_Renderer.hpp">
+      <Filter>PBR\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PBR\interface\GLTF_PBR_Renderer.hpp">
+      <Filter>PBR\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\PBR\interface\USD_Renderer.hpp">
+      <Filter>PBR\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\BoundBox.psh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\BoundBox.vsh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\BoundBoxStructures.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ComputeBlueNoiseTexture.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ComputeClosestMotion.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ComputeReprojectedDepth.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\CoordinateGridPS.psh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\CopyTextureDepth.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\EnvMap.psh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\EnvMap.vsh.h">
+      <Filter>generated</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\FullScreenTriangleVS.fx.h">
       <Filter>generated</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\FullScreenTriangleVSOutput.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\VectorField.vsh.h">
       <Filter>generated</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\AtlasSampling.fxh.h">
@@ -39,7 +162,25 @@
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\BasicStructures.fxh.h">
       <Filter>generated</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\CoordinateGrid.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\CoordinateGridStructures.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PBR_Common.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PCF.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PostFX_Common.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SRGBUtilities.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ShaderDefinitions.fxh.h">
       <Filter>generated</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ShaderUtilities.fxh.h">
@@ -54,28 +195,70 @@
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\CubemapFace.vsh.h">
       <Filter>generated</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\GLTF_PBR_PrecomputeCommon.fxh.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\Iridescence.fxh.h">
       <Filter>generated</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PrecomputeGLTF_BRDF.psh.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PBR_PrecomputeCommon.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PBR_Textures.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PrecomputeBRDF.psh.h">
       <Filter>generated</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PrefilterEnvMap.psh.h">
       <Filter>generated</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\RenderGLTF_PBR.psh.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\RenderPBR.psh.h">
       <Filter>generated</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\RenderGLTF_PBR.vsh.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\RenderPBR.vsh.h">
       <Filter>generated</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\GLTF_PBR_Shading.fxh.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\RenderPBR_Structures.fxh.h">
       <Filter>generated</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\GLTF_PBR_Structures.fxh.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\RenderUnshaded.psh.h">
       <Filter>generated</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\GLTF_PBR_VertexProcessing.fxh.h">
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PBR_Shading.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\PBR_Structures.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\VertexProcessing.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\Bloom_ComputeDownsampledTexture.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\Bloom_ComputePrefilteredTexture.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\Bloom_ComputeUpsampledTexture.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\BloomStructures.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\DOF_ComputeBokeh.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\DOF_ComputeCircleOfConfusion.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\DOF_ComputeCombinedTexture.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\DOF_ComputePostfilteredTexture.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\DOF_ComputePrefilteredTexture.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\DepthOfFieldStructures.fxh.h">
       <Filter>generated</Filter>
     </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\AtmosphereShadersCommon.fxh.h">
@@ -171,6 +354,69 @@
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\EpipolarLightScatteringStructures.fxh.h">
       <Filter>generated</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_Common.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_ComputeAmbientOcclusion.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_ComputeBilateralUpsampling.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_ComputeConvolutedDepthHistory.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_ComputeDownsampledDepth.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_ComputePrefilteredDepthBuffer.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_ComputeResampledHistory.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_ComputeSpatialReconstruction.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSAO_ComputeTemporalAccumulation.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ScreenSpaceAmbientOcclusionStructures.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSR_Common.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSR_ComputeBilateralCleanup.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSR_ComputeDownsampledStencilMask.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSR_ComputeHierarchicalDepthBuffer.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSR_ComputeIntersection.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSR_ComputeSpatialReconstruction.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSR_ComputeStencilMaskAndExtractRoughness.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\SSR_ComputeTemporalAccumulation.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ScreenSpaceReflectionStructures.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\TAA_ComputeTemporalAccumulation.fx.h">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\TemporalAntiAliasingStructures.fxh.h">
+      <Filter>generated</Filter>
+    </ClInclude>
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ToneMapping.fxh.h">
       <Filter>generated</Filter>
     </ClInclude>
@@ -180,12 +426,48 @@
     <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\ShadowConversions.fx.h">
       <Filter>generated</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentFX\shaders_inc\shaders_list.h">
+      <Filter>generated</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\BoundBox.psh">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\BoundBox.vsh">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\BoundBoxStructures.fxh">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\ComputeBlueNoiseTexture.fx">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\ComputeClosestMotion.fx">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\ComputeReprojectedDepth.fx">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\CoordinateGridPS.psh">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\CopyTextureDepth.fx">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\EnvMap.psh">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\EnvMap.vsh">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\FullScreenTriangleVS.fx">
       <Filter>Shaders\Common\private</Filter>
     </CustomBuild>
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\FullScreenTriangleVSOutput.fxh">
+      <Filter>Shaders\Common\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\private\VectorField.vsh">
       <Filter>Shaders\Common\private</Filter>
     </CustomBuild>
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\AtlasSampling.fxh">
@@ -194,7 +476,25 @@
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\BasicStructures.fxh">
       <Filter>Shaders\Common\public</Filter>
     </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\CoordinateGrid.fxh">
+      <Filter>Shaders\Common\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\CoordinateGridStructures.fxh">
+      <Filter>Shaders\Common\public</Filter>
+    </CustomBuild>
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\PBR_Common.fxh">
+      <Filter>Shaders\Common\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\PCF.fxh">
+      <Filter>Shaders\Common\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\PostFX_Common.fxh">
+      <Filter>Shaders\Common\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\SRGBUtilities.fxh">
+      <Filter>Shaders\Common\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\ShaderDefinitions.fxh">
       <Filter>Shaders\Common\public</Filter>
     </CustomBuild>
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\ShaderUtilities.fxh">
@@ -203,35 +503,77 @@
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\Common\public\Shadows.fxh">
       <Filter>Shaders\Common\public</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\private\ComputeIrradianceMap.psh">
-      <Filter>Shaders\GLTF_PBR\private</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\ComputeIrradianceMap.psh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\private\CubemapFace.vsh">
-      <Filter>Shaders\GLTF_PBR\private</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\CubemapFace.vsh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\private\GLTF_PBR_PrecomputeCommon.fxh">
-      <Filter>Shaders\GLTF_PBR\private</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\Iridescence.fxh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\private\PrecomputeGLTF_BRDF.psh">
-      <Filter>Shaders\GLTF_PBR\private</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\PBR_PrecomputeCommon.fxh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\private\PrefilterEnvMap.psh">
-      <Filter>Shaders\GLTF_PBR\private</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\PBR_Textures.fxh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\private\RenderGLTF_PBR.psh">
-      <Filter>Shaders\GLTF_PBR\private</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\PrecomputeBRDF.psh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\private\RenderGLTF_PBR.vsh">
-      <Filter>Shaders\GLTF_PBR\private</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\PrefilterEnvMap.psh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\public\GLTF_PBR_Shading.fxh">
-      <Filter>Shaders\GLTF_PBR\public</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\RenderPBR.psh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\public\GLTF_PBR_Structures.fxh">
-      <Filter>Shaders\GLTF_PBR\public</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\RenderPBR.vsh">
+      <Filter>Shaders\PBR\private</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\GLTF_PBR\public\GLTF_PBR_VertexProcessing.fxh">
-      <Filter>Shaders\GLTF_PBR\public</Filter>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\RenderPBR_Structures.fxh">
+      <Filter>Shaders\PBR\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\private\RenderUnshaded.psh">
+      <Filter>Shaders\PBR\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\public\PBR_Shading.fxh">
+      <Filter>Shaders\PBR\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\public\PBR_Structures.fxh">
+      <Filter>Shaders\PBR\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PBR\public\VertexProcessing.fxh">
+      <Filter>Shaders\PBR\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\Bloom\private\Bloom_ComputeDownsampledTexture.fx">
+      <Filter>Shaders\PostProcess\Bloom\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\Bloom\private\Bloom_ComputePrefilteredTexture.fx">
+      <Filter>Shaders\PostProcess\Bloom\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\Bloom\private\Bloom_ComputeUpsampledTexture.fx">
+      <Filter>Shaders\PostProcess\Bloom\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\Bloom\public\BloomStructures.fxh">
+      <Filter>Shaders\PostProcess\Bloom\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\DepthOfField\private\DOF_ComputeBokeh.fx">
+      <Filter>Shaders\PostProcess\DepthOfField\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\DepthOfField\private\DOF_ComputeCircleOfConfusion.fx">
+      <Filter>Shaders\PostProcess\DepthOfField\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\DepthOfField\private\DOF_ComputeCombinedTexture.fx">
+      <Filter>Shaders\PostProcess\DepthOfField\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\DepthOfField\private\DOF_ComputePostfilteredTexture.fx">
+      <Filter>Shaders\PostProcess\DepthOfField\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\DepthOfField\private\DOF_ComputePrefilteredTexture.fx">
+      <Filter>Shaders\PostProcess\DepthOfField\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\DepthOfField\public\DepthOfFieldStructures.fxh">
+      <Filter>Shaders\PostProcess\DepthOfField\public</Filter>
     </CustomBuild>
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\EpipolarLightScattering\private\AtmosphereShadersCommon.fxh">
       <Filter>Shaders\PostProcess\EpipolarLightScattering\private</Filter>
@@ -326,6 +668,69 @@
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\EpipolarLightScattering\public\EpipolarLightScatteringStructures.fxh">
       <Filter>Shaders\PostProcess\EpipolarLightScattering\public</Filter>
     </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_Common.fxh">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_ComputeAmbientOcclusion.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_ComputeBilateralUpsampling.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_ComputeConvolutedDepthHistory.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_ComputeDownsampledDepth.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_ComputePrefilteredDepthBuffer.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_ComputeResampledHistory.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_ComputeSpatialReconstruction.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private\SSAO_ComputeTemporalAccumulation.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public\ScreenSpaceAmbientOcclusionStructures.fxh">
+      <Filter>Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\private\SSR_Common.fxh">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\private\SSR_ComputeBilateralCleanup.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\private\SSR_ComputeDownsampledStencilMask.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\private\SSR_ComputeHierarchicalDepthBuffer.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\private\SSR_ComputeIntersection.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\private\SSR_ComputeSpatialReconstruction.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\private\SSR_ComputeStencilMaskAndExtractRoughness.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\private\SSR_ComputeTemporalAccumulation.fx">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ScreenSpaceReflection\public\ScreenSpaceReflectionStructures.fxh">
+      <Filter>Shaders\PostProcess\ScreenSpaceReflection\public</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\TemporalAntiAliasing\private\TAA_ComputeTemporalAccumulation.fx">
+      <Filter>Shaders\PostProcess\TemporalAntiAliasing\private</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\TemporalAntiAliasing\public\TemporalAntiAliasingStructures.fxh">
+      <Filter>Shaders\PostProcess\TemporalAntiAliasing\public</Filter>
+    </CustomBuild>
     <CustomBuild Include="C:\SYN\diligent\DiligentFX\Shaders\PostProcess\ToneMapping\public\ToneMapping.fxh">
       <Filter>Shaders\PostProcess\ToneMapping\public</Filter>
     </CustomBuild>
@@ -350,17 +755,44 @@
     <Filter Include="Components\src">
       <UniqueIdentifier>{6B5580DB-9DF6-3623-B1AE-F152D6754F2F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GLTF_PBR_Renderer">
-      <UniqueIdentifier>{D50CE250-1EBF-3C59-A1C1-8144E53BD691}</UniqueIdentifier>
+    <Filter Include="PBR">
+      <UniqueIdentifier>{CD9DE342-7FE2-393F-BB61-60627E1CAC91}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GLTF_PBR_Renderer\interface">
-      <UniqueIdentifier>{2F323C48-AED6-3A65-9158-30CDBF6EE76D}</UniqueIdentifier>
+    <Filter Include="PBR\interface">
+      <UniqueIdentifier>{8AB39518-1C96-3ED6-B864-45C1CD0E8A3E}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GLTF_PBR_Renderer\src">
-      <UniqueIdentifier>{1DD1F0D6-56CB-3E1B-96FE-B754226DD7C4}</UniqueIdentifier>
+    <Filter Include="PBR\src">
+      <UniqueIdentifier>{8D8F5C13-E181-3455-99EA-44BF53AF4DC9}</UniqueIdentifier>
     </Filter>
     <Filter Include="PostProcess">
       <UniqueIdentifier>{BED02A67-AC5B-310F-8A43-6068790B138A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\Bloom">
+      <UniqueIdentifier>{C242A536-4598-3279-A071-B8822B20F2A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\Bloom\interface">
+      <UniqueIdentifier>{4EE651BC-3C6F-3149-B39A-6BD51AA2F2ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\Bloom\src">
+      <UniqueIdentifier>{FF39428B-0C9F-3526-8E6F-1D608954D43F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\Common">
+      <UniqueIdentifier>{4F50A2F7-B758-3D01-A71E-2569CD9DEFCA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\Common\interface">
+      <UniqueIdentifier>{22F1F049-83F7-3543-B13F-B8222FDA5207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\Common\src">
+      <UniqueIdentifier>{419DC43B-F79E-3434-85B0-17D5364D53D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\DepthOfField">
+      <UniqueIdentifier>{480CB35D-0ECC-35CC-BE05-B757C149CE81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\DepthOfField\interface">
+      <UniqueIdentifier>{E39D7680-ADE8-3A0C-9768-BD33F1602E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\DepthOfField\src">
+      <UniqueIdentifier>{281B4922-CBF5-3CAF-A5BE-8216634E4515}</UniqueIdentifier>
     </Filter>
     <Filter Include="PostProcess\EpipolarLightScattering">
       <UniqueIdentifier>{A018789E-DA4B-3F66-8DDC-9CF07FBCF349}</UniqueIdentifier>
@@ -370,6 +802,33 @@
     </Filter>
     <Filter Include="PostProcess\EpipolarLightScattering\src">
       <UniqueIdentifier>{DDD50596-127E-3F10-94DE-82208317FF01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\ScreenSpaceAmbientOcclusion">
+      <UniqueIdentifier>{5F0F7116-DF2B-35F8-BC51-B1D1CA9BCCE9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\ScreenSpaceAmbientOcclusion\interface">
+      <UniqueIdentifier>{FCE6B025-A868-3561-8AB0-9C143AAC0AE1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\ScreenSpaceAmbientOcclusion\src">
+      <UniqueIdentifier>{327858A8-D6FB-3C66-AE06-54EB6E3CF33B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\ScreenSpaceReflection">
+      <UniqueIdentifier>{BAEE6D9C-9D6F-33C3-B01E-9BBD2560F100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\ScreenSpaceReflection\interface">
+      <UniqueIdentifier>{C7A6EC2F-8D8C-39B8-8C44-129112D9E721}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\ScreenSpaceReflection\src">
+      <UniqueIdentifier>{613B09CA-CECE-36B9-9CF9-9A35E17FC310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\TemporalAntiAliasing">
+      <UniqueIdentifier>{5A1422FA-BE69-3886-8024-654C812ECDE7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\TemporalAntiAliasing\interface">
+      <UniqueIdentifier>{A9DD8378-9570-30E2-B3CB-0A8AAC6FCA85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcess\TemporalAntiAliasing\src">
+      <UniqueIdentifier>{17DE0916-B62E-37EF-9898-16F46C20102E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Shaders">
       <UniqueIdentifier>{4928B86C-4150-3132-A708-0F9466353FC7}</UniqueIdentifier>
@@ -383,17 +842,35 @@
     <Filter Include="Shaders\Common\public">
       <UniqueIdentifier>{9B6C8F09-2DF6-34B0-9657-7996CD122D44}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Shaders\GLTF_PBR">
-      <UniqueIdentifier>{5175DFD4-4292-3421-8B85-4F17A4E48C3B}</UniqueIdentifier>
+    <Filter Include="Shaders\PBR">
+      <UniqueIdentifier>{7C031E1A-AD52-3907-ADEA-1C26F6BAEE20}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Shaders\GLTF_PBR\private">
-      <UniqueIdentifier>{701771D5-BAFF-3214-9A35-61D8A8F89114}</UniqueIdentifier>
+    <Filter Include="Shaders\PBR\private">
+      <UniqueIdentifier>{EF28AD3E-46D7-3E68-8B18-B6AE21A4EF7B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Shaders\GLTF_PBR\public">
-      <UniqueIdentifier>{61A40717-01FE-38BC-8118-5099340BBC08}</UniqueIdentifier>
+    <Filter Include="Shaders\PBR\public">
+      <UniqueIdentifier>{019E57EE-6C10-39C4-9E96-88EE02FC829F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Shaders\PostProcess">
       <UniqueIdentifier>{A9E523F4-1156-3E8C-8CDE-30C15E280309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\Bloom">
+      <UniqueIdentifier>{9344D4A1-F8C5-37E5-B4E2-D5417ED7C99B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\Bloom\private">
+      <UniqueIdentifier>{7A03F78B-3E54-3D45-B5F0-6B9BBF107BA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\Bloom\public">
+      <UniqueIdentifier>{5FC27C90-A018-3E43-BFE5-08D39D04AABD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\DepthOfField">
+      <UniqueIdentifier>{0132429D-1552-34C2-9268-5A9B2924AA04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\DepthOfField\private">
+      <UniqueIdentifier>{AD7E1032-0192-3883-A436-C4714D8C459E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\DepthOfField\public">
+      <UniqueIdentifier>{33DE8B87-2940-38DD-8366-504D26E03901}</UniqueIdentifier>
     </Filter>
     <Filter Include="Shaders\PostProcess\EpipolarLightScattering">
       <UniqueIdentifier>{39EF2CBB-96F9-366A-9DFB-9989DC62D689}</UniqueIdentifier>
@@ -406,6 +883,33 @@
     </Filter>
     <Filter Include="Shaders\PostProcess\EpipolarLightScattering\public">
       <UniqueIdentifier>{76A2F8BC-1734-3ACB-84F1-659774F36C4B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\ScreenSpaceAmbientOcclusion">
+      <UniqueIdentifier>{2E94FA08-D70A-3F21-A092-8F2300790431}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\ScreenSpaceAmbientOcclusion\private">
+      <UniqueIdentifier>{F59460DE-7663-3ACD-9ACD-D5DA6B185C69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\ScreenSpaceAmbientOcclusion\public">
+      <UniqueIdentifier>{1DF2979F-9BC2-340B-B54E-21ADAF3753E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\ScreenSpaceReflection">
+      <UniqueIdentifier>{B1CA719C-4C67-3308-B8D3-DBEA3DC0F458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\ScreenSpaceReflection\private">
+      <UniqueIdentifier>{8C3CCCDF-88F7-3EC5-9807-21CCA71D0542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\ScreenSpaceReflection\public">
+      <UniqueIdentifier>{9A95D9BF-6F2B-37F1-9B7F-FB7B40275D06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\TemporalAntiAliasing">
+      <UniqueIdentifier>{4D31B847-931B-36C5-9687-39953ABC68CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\TemporalAntiAliasing\private">
+      <UniqueIdentifier>{B09B3CA4-5B30-357B-A873-20D698E3FF0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcess\TemporalAntiAliasing\public">
+      <UniqueIdentifier>{587119F6-79F1-3D8A-B2FA-AF0CDB506429}</UniqueIdentifier>
     </Filter>
     <Filter Include="Shaders\PostProcess\ToneMapping">
       <UniqueIdentifier>{C1F0EA2E-6518-33D8-894F-260B4BC3F70B}</UniqueIdentifier>
@@ -422,8 +926,8 @@
     <Filter Include="Utilities">
       <UniqueIdentifier>{9256B1BF-61FB-310E-828C-6E2578034757}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Utilities\include">
-      <UniqueIdentifier>{B6FACEA0-C1E6-3237-893F-7BE1C2E86D60}</UniqueIdentifier>
+    <Filter Include="Utilities\interface">
+      <UniqueIdentifier>{8DD4CD83-0360-33CA-B734-099900F5BA70}</UniqueIdentifier>
     </Filter>
     <Filter Include="Utilities\src">
       <UniqueIdentifier>{560F1A94-D781-3F0A-8706-4FCABD3540EE}</UniqueIdentifier>

@@ -20,19 +20,30 @@ set(REFLECTED
 set(RSN_PARSER_HEADERS_DIR ${CMAKE_CURRENT_BINARY_DIR}/parser_headers CACHE INTERNAL "Render State Notation Parser generated headers directory")
 set(RSN_PARSER_GENERATED_HEADERS_DIR ${RSN_PARSER_HEADERS_DIR}/generated)
 file(MAKE_DIRECTORY "${RSN_PARSER_GENERATED_HEADERS_DIR}")
+# Copy .clang-format to the generated headers directory to make sure that another .clang-format file
+# is not accidentally used.
+file(COPY ../.clang-format DESTINATION "${RSN_PARSER_GENERATED_HEADERS_DIR}")
 
 find_package(Python3 REQUIRED)
 
-execute_process(COMMAND ${Python3_EXECUTABLE} -m pip install libclang==15.0.6.1 # Fails with 16.0.0
-                RESULT_VARIABLE PYTHON_PIP_LIBCLANG_RESULT)
-if(NOT PYTHON_PIP_LIBCLANG_RESULT EQUAL "0")
-    message(FATAL_ERROR "${Python3_EXECUTABLE} -m pip install libclang failed with ${PYTHON_PIP_LIBCLANG_RESULT}")
+set(LIBCLANG_INSTALL_CMD ${Python3_EXECUTABLE} -m pip install libclang==16.0.6)
+set(JINJA2_INSTALL_CMD ${Python3_EXECUTABLE} -m pip install jinja2)
+
+if(${Python3_VERSION} VERSION_GREATER_EQUAL "3.12")
+    set(LIBCLANG_INSTALL_CMD ${LIBCLANG_INSTALL_CMD} --break-system-packages)
+    set(JINJA2_INSTALL_CMD ${JINJA2_INSTALL_CMD} --break-system-packages)
 endif()
 
-execute_process(COMMAND ${Python3_EXECUTABLE} -m pip install jinja2
+execute_process(COMMAND ${LIBCLANG_INSTALL_CMD}
+                RESULT_VARIABLE PYTHON_PIP_LIBCLANG_RESULT)
+if(NOT PYTHON_PIP_LIBCLANG_RESULT EQUAL "0")
+    message(FATAL_ERROR "Command '${LIBCLANG_INSTALL_CMD}' failed with error code ${PYTHON_PIP_LIBCLANG_RESULT}")
+endif()
+
+execute_process(COMMAND ${JINJA2_INSTALL_CMD}
                 RESULT_VARIABLE PYTHON_PIP_JINJIA_RESULT)
 if(NOT PYTHON_PIP_JINJIA_RESULT EQUAL "0")
-    message(FATAL_ERROR "python -m pip install jinja2 failed with ${PYTHON_PIP_JINJIA_RESULT}")
+    message(FATAL_ERROR "Command '${JINJA2_INSTALL_CMD}' failed with error code ${PYTHON_PIP_JINJIA_RESULT}")
 endif()
 
 file(GLOB INCLUDE    include/*)

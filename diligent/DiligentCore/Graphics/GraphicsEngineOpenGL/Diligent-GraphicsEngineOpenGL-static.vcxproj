@@ -81,6 +81,7 @@
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\glew\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4100;4201;4505;26812</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -117,6 +118,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\glew\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -160,6 +162,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\glew\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -201,6 +204,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\..\HLSL2GLSLConverterLib\include;C:\SYN\diligent\DiligentCore\Common\interface;C:\SYN\diligent\DiligentCore\Platforms\Win32\interface;C:\SYN\diligent\DiligentCore\Platforms\Basic\interface;C:\SYN\diligent\DiligentCore\Primitives\interface;C:\SYN\diligent\DiligentCore\Platforms\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngine\interface;C:\SYN\diligent\DiligentCore\Graphics\GraphicsAccessories\interface;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\include;C:\SYN\diligent\DiligentCore\Graphics\ShaderTools\..\..\ThirdParty\DirectXShaderCompiler;C:\SYN\diligent\DiligentCore\Graphics\HLSL2GLSLConverterLib\interface;C:\SYN\diligent\DiligentCore\ThirdParty\glew\include;C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4100;4201;4505;26812;4189</DisableSpecificWarnings>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -320,7 +324,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\ShaderResourceCacheGL.cpp" />
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\ShaderResourcesGL.cpp" />
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\ShaderVariableManagerGL.cpp" />
-    <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\TexRegionRender.cpp" />
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\Texture1D_GL.cpp" />
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\Texture1DArray_GL.cpp" />
     <ClCompile Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\src\Texture2D_GL.cpp" />
@@ -377,7 +380,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\ShaderResourcesGL.hpp" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\ShaderVariableManagerGL.hpp" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\SwapChainGLBase.hpp" />
-    <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\TexRegionRender.hpp" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\Texture1D_GL.hpp" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\Texture1DArray_GL.hpp" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\include\Texture2D_GL.hpp" />
@@ -438,10 +440,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\MachineIndependent.vcxproj">
       <Project>{35D7936D-2AC0-379B-8201-2B29EF68D777}</Project>
       <Name>MachineIndependent</Name>
-    </ProjectReference>
-    <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\OGLCompilersDLL\OGLCompiler.vcxproj">
-      <Project>{D30CF4EA-8943-3101-9431-BBEBEA243263}</Project>
-      <Name>OGLCompiler</Name>
     </ProjectReference>
     <ProjectReference Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\OSDependent.vcxproj">
       <Project>{A5EA77F5-9AD9-31E0-A89E-489C6A386F92}</Project>

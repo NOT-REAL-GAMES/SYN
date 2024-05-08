@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -25,6 +25,8 @@
  */
 
 #include "ParsingTools.hpp"
+
+#include <limits.h>
 
 #include "gtest/gtest.h"
 
@@ -1339,6 +1341,250 @@ TEST(Common_ParsingTools, GetTokenContext)
         std::vector<TestToken> Empty;
         EXPECT_STREQ(GetTokenContext(Empty.begin(), Empty.end(), Empty.begin(), 2).c_str(), "");
     }
+}
+
+
+TEST(Common_ParsingTools, RefinePreprocessorDirective)
+{
+    auto TestRefine = [](const std::string& Str, const char* RefStr) {
+        EXPECT_STREQ(RefinePreprocessorDirective(Str).c_str(), RefStr);
+        EXPECT_STREQ(RefinePreprocessorDirective(Str.c_str()).c_str(), RefStr);
+        EXPECT_STREQ(RefinePreprocessorDirective(Str.c_str(), Str.length()).c_str(), RefStr);
+    };
+
+    TestRefine("", "");
+    TestRefine(" ", "");
+    TestRefine("#", "");
+    TestRefine("# ", "");
+    TestRefine("# \t", "");
+    TestRefine("# \n", "");
+    TestRefine("# /*Comment*/", "");
+
+    TestRefine("define", "");
+    TestRefine("#\ndefine", "");
+    TestRefine("# // define", "");
+    TestRefine(",define", "");
+
+    TestRefine("#define", "define");
+    TestRefine("#   define", "define");
+    TestRefine("#  \t define", "define");
+    TestRefine("#  \t /* Comment*/ define", "define");
+}
+
+
+TEST(Common_ParsingTools, ParseInteger)
+{
+    auto Test = [](const std::string Str, size_t RefPos, int RefValue) {
+        int  Value = INT_MAX;
+        auto Pos   = ParseInteger(Str.begin(), Str.end(), Value);
+        EXPECT_EQ(Pos, Str.begin() + RefPos);
+        EXPECT_EQ(Value, RefValue);
+    };
+
+    Test("", 0, INT_MAX);
+    Test(" ", 0, INT_MAX);
+    Test("+", 0, INT_MAX);
+    Test("-", 0, INT_MAX);
+    Test("x", 0, INT_MAX);
+    Test("abcd", 0, INT_MAX);
+    Test("+x", 0, INT_MAX);
+    Test("-y", 0, INT_MAX);
+    Test("x123", 0, INT_MAX);
+    Test("+0", 2, 0);
+    Test("-0", 2, 0);
+    Test("234", 3, 234);
+    Test("+468", 4, 468);
+    Test("-135", 4, -135);
+    Test("234x567", 3, 234);
+    Test("+468x087", 4, 468);
+    Test("-135x124", 4, -135);
+    for (int i = -100; i <= 100; ++i)
+    {
+        std::string Str = std::to_string(i);
+        Test(Str, Str.length(), i);
+    }
+};
+
+
+TEST(Common_ParsingTools, GetArrayIndex)
+{
+    auto Test = [](const std::string Var, size_t RefNameEndPos, int RefIndex) {
+        std::string NameWOBrackets;
+        int         Index = GetArrayIndex(Var, NameWOBrackets);
+
+        EXPECT_EQ(NameWOBrackets, Var.substr(0, RefNameEndPos));
+        EXPECT_EQ(Index, RefIndex);
+    };
+
+    Test("", 0, InvalidArrayIndex);
+    Test(" ", 0, InvalidArrayIndex);
+    Test("1", 0, InvalidArrayIndex);
+    Test("?", 0, InvalidArrayIndex);
+    Test("x", 1, -1);
+    Test("abc", 3, -1);
+    Test("xy1 ", 3, InvalidArrayIndex);
+    Test("xy2[", 3, InvalidArrayIndex);
+    Test("xy3 [", 3, InvalidArrayIndex);
+    Test("xy4[ ", 3, InvalidArrayIndex);
+    Test("xy5 [ ", 3, InvalidArrayIndex);
+    Test("xy6[10]", 3, 10);
+    Test("xy7[11 ]", 3, 11);
+    Test("xy8[ 12]", 3, 12);
+    Test("xy9[ 13 ]", 3, 13);
+    Test("xy0 [14]", 3, 14);
+    Test("xy1 [ 15]", 3, 15);
+    Test("xy2 [16 ]", 3, 16);
+    Test("xy3 [ 18 ]", 3, 18);
+    Test("xy4[x]", 3, INT_MIN);
+    Test("xy5 [ x ] ", 3, INT_MIN);
+    Test("xy6[12x]", 3, INT_MIN);
+    Test("xy7[12", 3, INT_MIN);
+    Test("xy7[12 ", 3, INT_MIN);
+}
+
+
+TEST(Common_ParsingTools, FindNextPreprocessorDirective)
+{
+    auto Test = [](std::string Source, const std::string& RefDirectiveStart, const std::string& Directive) {
+        std::string::iterator NameStart, NameEnd;
+
+        auto DirectiveStart = FindNextPreprocessorDirective(Source.begin(), Source.end(), NameStart, NameEnd);
+        EXPECT_STREQ(RefDirectiveStart.c_str(), std::string(DirectiveStart, Source.end()).c_str());
+        EXPECT_STREQ(Directive.c_str(), std::string(NameStart, NameEnd).c_str());
+    };
+
+    Test("", "", "");
+    Test(" ", "", "");
+    Test("ABC", "", "");
+    Test("\r\n", "", "");
+    Test("#", "#", "");
+    Test("# ", "# ", "");
+    Test("# define XYZ", "# define XYZ", "define");
+    Test("/* Comment */ # define XYZ", "# define XYZ", "define");
+
+    Test(R"(
+// #version XYZ
+# define ABC)",
+         "# define ABC",
+         "define");
+}
+
+TEST(Common_ParsingTools, StripPreprocessorDirectives)
+{
+    auto Test = [](std::string Source, const std::string& RefSource, const std::vector<std::string>& Directives) {
+        StripPreprocessorDirectives(Source, Directives);
+        EXPECT_STREQ(Source.c_str(), RefSource.c_str());
+    };
+
+    Test("", "", {{"version"}});
+    Test(" ", " ", {{"version"}});
+    Test("// Comment", "// Comment", {{"version"}});
+    Test("/* Comment */", "/* Comment */", {{"version"}});
+    Test("#", "#", {{"version"}});
+    Test("#\n", "#\n", {{"version"}});
+    Test("#\nversion", "#\nversion", {{"version"}});
+    Test("#\n#version XYZ", "#\n", {{"version"}});
+    Test("# ", "# ", {{"version"}});
+    Test("# \n", "# \n", {{"version"}});
+    Test("#extension XYZ", "#extension XYZ", {{"version"}});
+    Test("// #version XYZ", "// #version XYZ", {{"version"}});
+
+    Test(R"(
+void main()
+{
+})",
+         R"(
+void main()
+{
+})",
+         {{"version"}});
+
+
+    Test(R"(
+#version 450
+void main()
+{
+})",
+         R"(
+
+void main()
+{
+})",
+         {{"version"}});
+
+
+    Test(R"(
+// Comment
+#  version 450
+void main()
+{
+})",
+         R"(
+// Comment
+
+void main()
+{
+})",
+         {{"version"}});
+
+
+    Test(R"(
+/* Comment */ #  version 450
+void main()
+{
+})",
+         R"(
+/* Comment */ 
+void main()
+{
+})",
+         {{"version"}});
+
+
+    Test(R"(
+/* #  version 450 */ 
+void main()
+{
+})",
+         R"(
+/* #  version 450 */ 
+void main()
+{
+})",
+         {{"version"}});
+
+
+    Test(R"(
+#version 450
+void main()
+{
+# error Error Message
+})",
+         R"(
+#version 450
+void main()
+{
+
+})",
+         {{"error"}});
+
+    Test(R"(#version 450
+#extension GL_ARB_separate_shader_objects : enable
+#ifndef GL_ARB_shader_draw_parameters
+#error GL_ARB_shader_draw_parameters is not supported.
+#endif
+void main()
+{
+})",
+         R"(
+
+#ifndef GL_ARB_shader_draw_parameters
+
+#endif
+void main()
+{
+})",
+         {{"version"}, {"extension"}, {"error"}});
 }
 
 } // namespace

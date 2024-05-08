@@ -43,11 +43,12 @@
 #include "../Public/ShaderLang.h"
 #include "Versions.h"
 
+#include <algorithm>
+#include <array>
+#include <functional>
+#include <set>
 #include <string>
 #include <vector>
-#include <algorithm>
-#include <set>
-#include <array>
 
 class TInfoSink;
 
@@ -344,10 +345,12 @@ public:
         needToLegalize(false),
         binaryDoubleOutput(false),
         subgroupUniformControlFlow(false),
+        maximallyReconverges(false),
         usePhysicalStorageBuffer(false),
         spirvRequirement(nullptr),
         spirvExecutionMode(nullptr),
-        uniformLocationBase(0)
+        uniformLocationBase(0),
+        quadDerivMode(false), reqFullQuadsMode(false)
     {
         localSize[0] = 1;
         localSize[1] = 1;
@@ -527,6 +530,8 @@ public:
     TOperator mapTypeToConstructorOp(const TType&) const;
     TIntermAggregate* growAggregate(TIntermNode* left, TIntermNode* right);
     TIntermAggregate* growAggregate(TIntermNode* left, TIntermNode* right, const TSourceLoc&);
+    TIntermAggregate* mergeAggregate(TIntermNode* left, TIntermNode* right);
+    TIntermAggregate* mergeAggregate(TIntermNode* left, TIntermNode* right, const TSourceLoc&);
     TIntermAggregate* makeAggregate(TIntermNode* node);
     TIntermAggregate* makeAggregate(TIntermNode* node, const TSourceLoc&);
     TIntermAggregate* makeAggregate(const TSourceLoc&);
@@ -572,7 +577,8 @@ public:
     TIntermTyped* foldSwizzle(TIntermTyped* node, TSwizzleSelectors<TVectorSelector>& fields, const TSourceLoc&);
 
     // Tree ops
-    static const TIntermTyped* findLValueBase(const TIntermTyped*, bool swizzleOkay , bool BufferReferenceOk = false);
+    static const TIntermTyped* traverseLValueBase(const TIntermTyped*, bool swizzleOkay, bool bufferReferenceOk = false,
+                                                  std::function<bool(const TIntermNode&)> proc = {});
 
     // Linkage related
     void addSymbolLinkageNodes(TIntermAggregate*& linkage, EShLanguage, TSymbolTable&);
@@ -853,6 +859,10 @@ public:
 
     void setXfbMode() { xfbMode = true; }
     bool getXfbMode() const { return xfbMode; }
+    void setQuadDerivMode(bool mode = true) { quadDerivMode = mode; }
+    bool getQuadDerivMode() const { return quadDerivMode; }
+    void setReqFullQuadsMode(bool mode = true) { reqFullQuadsMode = mode; }
+    bool getReqFullQuadsMode() const { return reqFullQuadsMode; }
     void setMultiStream() { multiStream = true; }
     bool isMultiStream() const { return multiStream; }
     bool setOutputPrimitive(TLayoutGeometry p)
@@ -958,6 +968,9 @@ public:
 
     void setSubgroupUniformControlFlow() { subgroupUniformControlFlow = true; }
     bool getSubgroupUniformControlFlow() const { return subgroupUniformControlFlow; }
+
+    void setMaximallyReconverges() { maximallyReconverges = true; }
+    bool getMaximallyReconverges() const { return maximallyReconverges; }
 
     // GL_EXT_spirv_intrinsics
     void insertSpirvRequirement(const TSpirvRequirement* spirvReq);
@@ -1222,6 +1235,7 @@ protected:
     bool needToLegalize;
     bool binaryDoubleOutput;
     bool subgroupUniformControlFlow;
+    bool maximallyReconverges;
     bool usePhysicalStorageBuffer;
 
     TSpirvRequirement* spirvRequirement;
@@ -1230,6 +1244,8 @@ protected:
     std::map<TString, AstRefType> bindlessImageModeCaller;
     std::unordered_map<std::string, int> uniformLocationOverrides;
     int uniformLocationBase;
+    bool quadDerivMode;
+    bool reqFullQuadsMode;
     TNumericFeatures numericFeatures;
     std::unordered_map<std::string, TBlockStorageClass> blockBackingOverrides;
 

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\src\Tutorial27_PostProcessing.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SYN\diligent\DiligentSamples\Tutorials\Common\src\TexturedCube.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\src\Tutorial27_PostProcessing.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Common\src\TexturedCube.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\assets\textures\papermill.ktx">
+      <Filter>Assets\textures</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\assets\shaders\GeometryStructures.fxh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\assets\shaders\GenerateGeometry.vsh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\assets\shaders\GenerateGeometry.psh">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\assets\shaders\ComputeLighting.fx">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="C:\SYN\diligent\DiligentSamples\Tutorials\Tutorial27_PostProcessing\assets\shaders\ApplyToneMap.fx">
+      <Filter>Assets\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GLAdapterSelector.dir\$(Configuration)\GLAdapterSelector.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\SYN\diligent\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{CF36015D-5881-304D-ABB4-133907A6F61D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\shaders">
+      <UniqueIdentifier>{710155C3-5791-3B5F-9F81-253872B05A7E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\textures">
+      <UniqueIdentifier>{BC6BA73F-65AF-374C-845C-8E6C3B5AC11E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{82413614-CE3C-33A0-AC72-601208DEF213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{E5B93933-25F0-3CE0-981E-158162FE03FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{32F8D3BD-F243-3850-9B83-FC0BFA412A4A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -32,7 +32,7 @@
 #include "SampleApp.hpp"
 #include "RenderDeviceGLES.h"
 #include "ImGuiImplAndroid.hpp"
-
+#include "JNIMiniHelper.hpp"
 
 namespace Diligent
 {
@@ -77,23 +77,27 @@ public:
 
     virtual void Initialize() override final
     {
+        JNIMiniHelper JNIHelper{app_->activity, native_activity_class_name_};
+
+        std::string ExternalFilesDir = JNIHelper.GetFilesDir(JNIMiniHelper::FILES_DIR_TYPE_EXTERNAL);
+        std::string OutputFilesDir   = JNIHelper.GetFilesDir(JNIMiniHelper::FILES_DIR_TYPE_OUTPUT);
         switch (m_DeviceType)
         {
 #if VULKAN_SUPPORTED
             case RENDER_DEVICE_TYPE_VULKAN:
-                GetEngineFactoryVk()->InitAndroidFileSystem(app_->activity, native_activity_class_name_.c_str(), nullptr);
+                GetEngineFactoryVk()->InitAndroidFileSystem(app_->activity->assetManager, ExternalFilesDir.c_str(), OutputFilesDir.c_str());
                 break;
 #endif
 
             case RENDER_DEVICE_TYPE_GLES:
-                GetEngineFactoryOpenGL()->InitAndroidFileSystem(app_->activity, native_activity_class_name_.c_str(), nullptr);
+                GetEngineFactoryOpenGL()->InitAndroidFileSystem(app_->activity->assetManager, ExternalFilesDir.c_str(), OutputFilesDir.c_str());
                 break;
 
             default:
                 UNEXPECTED("Unexpected device type");
         }
 
-        AndroidFileSystem::Init(app_->activity, native_activity_class_name_.c_str(), nullptr);
+        AndroidFileSystem::Init(app_->activity->assetManager, ExternalFilesDir.c_str(), OutputFilesDir.c_str());
 
         SampleApp::Initialize();
 

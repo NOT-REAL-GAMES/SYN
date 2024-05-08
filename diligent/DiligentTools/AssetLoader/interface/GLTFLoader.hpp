@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,7 +36,9 @@
 #include <functional>
 #include <string>
 #include <limits>
+#include <algorithm>
 
+#include "../../../DiligentCore/Platforms/interface/PlatformMisc.hpp"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/RenderDevice.h"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/DeviceContext.h"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/GraphicsTypesX.hpp"
@@ -65,6 +67,7 @@ namespace GLTF
 {
 
 class ModelBuilder;
+class MaterialBuilder;
 
 /// Texture attribute description.
 struct TextureAttributeDesc
@@ -76,52 +79,76 @@ struct TextureAttributeDesc
     Uint32 Index = 0;
 };
 
-static constexpr char BaseColorTextureName[]          = "baseColorTexture";
-static constexpr char MetallicRoughnessTextureName[]  = "metallicRoughnessTexture";
-static constexpr char NormalTextureName[]             = "normalTexture";
-static constexpr char OcclusionTextureName[]          = "occlusionTexture";
-static constexpr char EmissiveTextureName[]           = "emissiveTexture";
-static constexpr char DiffuseTextureName[]            = "diffuseTexture";
-static constexpr char SpecularGlossinessTextureName[] = "specularGlossinessTexture";
+static constexpr char BaseColorTextureName[]            = "baseColorTexture";
+static constexpr char MetallicRoughnessTextureName[]    = "metallicRoughnessTexture";
+static constexpr char NormalTextureName[]               = "normalTexture";
+static constexpr char OcclusionTextureName[]            = "occlusionTexture";
+static constexpr char EmissiveTextureName[]             = "emissiveTexture";
+static constexpr char DiffuseTextureName[]              = "diffuseTexture";
+static constexpr char SpecularGlossinessTextureName[]   = "specularGlossinessTexture";
+static constexpr char ClearcoatTextureName[]            = "clearcoatTexture";
+static constexpr char ClearcoatRoughnessTextureName[]   = "clearcoatRoughnessTexture";
+static constexpr char ClearcoatNormalTextureName[]      = "clearcoatNormalTexture";
+static constexpr char SheenColorTextureName[]           = "sheenColorTexture";
+static constexpr char SheenRoughnessTextureName[]       = "sheenRoughnessTexture";
+static constexpr char AnisotropyTextureName[]           = "anisotropyTexture";
+static constexpr char IridescenceTextureName[]          = "iridescenceTexture";
+static constexpr char IridescenceThicknessTextureName[] = "iridescenceThicknessTexture";
+static constexpr char TransmissionTextureName[]         = "transmissionTexture";
+static constexpr char ThicknessTextureName[]            = "thicknessTexture";
 
-static constexpr Uint32 DefaultBaseColorTextureAttribId         = 0;
-static constexpr Uint32 DefaultMetallicRoughnessTextureAttribId = 1;
-static constexpr Uint32 DefaultNormalTextureAttribId            = 2;
-static constexpr Uint32 DefaultOcclusionTextureAttribId         = 3;
-static constexpr Uint32 DefaultEmissiveTextureAttribId          = 4;
-static constexpr Uint32 DefaultDiffuseTextureAttribId           = 0;
-static constexpr Uint32 DefaultSpecularGlossinessTextureAttibId = 1;
+static constexpr Uint32 DefaultBaseColorTextureAttribId            = 0;
+static constexpr Uint32 DefaultMetallicRoughnessTextureAttribId    = 1;
+static constexpr Uint32 DefaultNormalTextureAttribId               = 2;
+static constexpr Uint32 DefaultOcclusionTextureAttribId            = 3;
+static constexpr Uint32 DefaultEmissiveTextureAttribId             = 4;
+static constexpr Uint32 DefaultDiffuseTextureAttribId              = 0; // Same as base color
+static constexpr Uint32 DefaultSpecularGlossinessTextureAttibId    = 1; // Same as metallic-roughness
+static constexpr Uint32 DefaultClearcoatTextureAttribId            = 5;
+static constexpr Uint32 DefaultClearcoatRoughnessTextureAttribId   = 6;
+static constexpr Uint32 DefaultClearcoatNormalTextureAttribId      = 7;
+static constexpr Uint32 DefaultSheenColorTextureAttribId           = 8;
+static constexpr Uint32 DefaultSheenRoughnessTextureAttribId       = 9;
+static constexpr Uint32 DefaultAnisotropyTextureAttribId           = 10;
+static constexpr Uint32 DefaultIridescenceTextureAttribId          = 11;
+static constexpr Uint32 DefaultIridescenceThicknessTextureAttribId = 12;
+static constexpr Uint32 DefaultTransmissionTextureAttribId         = 13;
+static constexpr Uint32 DefaultThicknessTextureAttribId            = 14;
 
 // clang-format off
-static constexpr std::array<TextureAttributeDesc, 7> DefaultTextureAttributes =
-    {
-        // Metallic-roughness
-        TextureAttributeDesc{BaseColorTextureName,         DefaultBaseColorTextureAttribId},
-        TextureAttributeDesc{MetallicRoughnessTextureName, DefaultMetallicRoughnessTextureAttribId},
-        TextureAttributeDesc{NormalTextureName,            DefaultNormalTextureAttribId},
-        TextureAttributeDesc{OcclusionTextureName,         DefaultOcclusionTextureAttribId},
-        TextureAttributeDesc{EmissiveTextureName,          DefaultEmissiveTextureAttribId},
+static constexpr std::array<TextureAttributeDesc, 17> DefaultTextureAttributes =
+{
+    // Metallic-roughness
+    TextureAttributeDesc{BaseColorTextureName,            DefaultBaseColorTextureAttribId},
+    TextureAttributeDesc{MetallicRoughnessTextureName,    DefaultMetallicRoughnessTextureAttribId},
+    TextureAttributeDesc{NormalTextureName,               DefaultNormalTextureAttribId},
+    TextureAttributeDesc{OcclusionTextureName,            DefaultOcclusionTextureAttribId},
+    TextureAttributeDesc{EmissiveTextureName,             DefaultEmissiveTextureAttribId},
+    TextureAttributeDesc{ClearcoatTextureName,            DefaultClearcoatTextureAttribId},
+    TextureAttributeDesc{ClearcoatRoughnessTextureName,   DefaultClearcoatRoughnessTextureAttribId},
+    TextureAttributeDesc{ClearcoatNormalTextureName,      DefaultClearcoatNormalTextureAttribId},
+    TextureAttributeDesc{SheenColorTextureName,           DefaultSheenColorTextureAttribId},
+    TextureAttributeDesc{SheenRoughnessTextureName,       DefaultSheenRoughnessTextureAttribId},
+    TextureAttributeDesc{AnisotropyTextureName,           DefaultAnisotropyTextureAttribId},
+    TextureAttributeDesc{IridescenceTextureName,          DefaultIridescenceTextureAttribId},
+    TextureAttributeDesc{IridescenceThicknessTextureName, DefaultIridescenceThicknessTextureAttribId},
+    TextureAttributeDesc{TransmissionTextureName,         DefaultTransmissionTextureAttribId},
+    TextureAttributeDesc{ThicknessTextureName,            DefaultThicknessTextureAttribId},
 
-        // Specular-glossiness
-        TextureAttributeDesc{DiffuseTextureName,            DefaultDiffuseTextureAttribId},
-        TextureAttributeDesc{SpecularGlossinessTextureName, DefaultSpecularGlossinessTextureAttibId}
-    };
+    // Specular-glossiness
+    TextureAttributeDesc{DiffuseTextureName,            DefaultDiffuseTextureAttribId},
+    TextureAttributeDesc{SpecularGlossinessTextureName, DefaultSpecularGlossinessTextureAttibId}
+};
 // clang-format on
 
 
 struct Material
 {
-    Material() noexcept
-    {
-        TextureIds.fill(-1);
-        for (size_t i = 0; i < _countof(Attribs.UVScaleBias); ++i)
-            Attribs.UVScaleBias[i] = float4{1, 1, 0, 0};
-    }
-
     enum PBR_WORKFLOW
     {
         PBR_WORKFLOW_METALL_ROUGH = 0,
-        PBR_WORKFLOW_SPEC_GLOSS
+        PBR_WORKFLOW_SPEC_GLOSS,
+        PBR_WORKFLOW_UNLIT
     };
 
     enum ALPHA_MODE
@@ -132,8 +159,6 @@ struct Material
         ALPHA_MODE_NUM_MODES
     };
 
-    static constexpr Uint32 NumTextureAttributes = 5;
-
     // Material attributes packed in a shader-friendly format
     struct ShaderAttribs
     {
@@ -141,29 +166,15 @@ struct Material
         float4 EmissiveFactor  = float4{0, 0, 0, 0};
         float4 SpecularFactor  = float4{1, 1, 1, 1};
 
-        int   Workflow    = PBR_WORKFLOW_METALL_ROUGH;
-        float UVSelector0 = -1;
-        float UVSelector1 = -1;
-        float UVSelector2 = -1;
-
-        float UVSelector3   = -1;
-        float UVSelector4   = -1;
-        float TextureSlice0 = 0;
-        float TextureSlice1 = 0;
-
-        float TextureSlice2  = 0;
-        float TextureSlice3  = 0;
-        float TextureSlice4  = 0;
+        int   Workflow       = PBR_WORKFLOW_METALL_ROUGH;
+        int   AlphaMode      = ALPHA_MODE_OPAQUE;
+        float AlphaCutoff    = 0.5f;
         float MetallicFactor = 1;
 
-        float RoughnessFactor = 1;
-        int   AlphaMode       = ALPHA_MODE_OPAQUE;
-        float AlphaCutoff     = 0.5f;
-        float Dummy0          = 0;
-
-        // When texture atlas is used, UV scale and bias is applied to
-        // each texture coordinate set.
-        float4 UVScaleBias[NumTextureAttributes];
+        float RoughnessFactor          = 1;
+        float OcclusionFactor          = 1;
+        float ClearcoatFactor          = 0;
+        float ClearcoatRoughnessFactor = 0;
 
         // Any user-specific data
         float4 CustomData = float4{0, 0, 0, 0};
@@ -171,8 +182,67 @@ struct Material
     static_assert(sizeof(ShaderAttribs) % 16 == 0, "ShaderAttribs struct must be 16-byte aligned");
     ShaderAttribs Attribs;
 
-    bool DoubleSided = false;
+    struct SheenShaderAttribs
+    {
+        float3 ColorFactor     = float3{0, 0, 0};
+        float  RoughnessFactor = 0;
+    };
+    static_assert(sizeof(ShaderAttribs) % 16 == 0, "SheenShaderAttribs struct must be 16-byte aligned");
+    std::unique_ptr<SheenShaderAttribs> Sheen;
 
+    struct AnisotropyShaderAttribs
+    {
+        float Strength   = 0;
+        float Rotation   = 0;
+        float Padding[2] = {};
+    };
+    static_assert(sizeof(AnisotropyShaderAttribs) % 16 == 0, "AnisotropyShaderAttribs struct must be 16-byte aligned");
+    std::unique_ptr<AnisotropyShaderAttribs> Anisotropy;
+
+    struct IridescenceShaderAttribs
+    {
+        float Factor           = 0;
+        float IOR              = 1.3f;
+        float ThicknessMinimum = 100;
+        float ThicknessMaximum = 400;
+    };
+    static_assert(sizeof(IridescenceShaderAttribs) % 16 == 0, "IridescenceShaderAttribs struct must be 16-byte aligned");
+    std::unique_ptr<IridescenceShaderAttribs> Iridescence;
+
+    struct TransmissionShaderAttribs
+    {
+        float Factor     = 0;
+        float Padding[3] = {};
+    };
+    static_assert(sizeof(TransmissionShaderAttribs) % 16 == 0, "TransmissionShaderAttribs struct must be 16-byte aligned");
+    std::unique_ptr<TransmissionShaderAttribs> Transmission;
+
+    struct VolumeShaderAttribs
+    {
+        float3 AttenuationColor = float3{1, 1, 1};
+        float  ThicknessFactor  = 0;
+
+        float AttenuationDistance = +FLT_MAX;
+        float Padding[3]          = {};
+    };
+    static_assert(sizeof(VolumeShaderAttribs) % 16 == 0, "VolumeShaderAttribs struct must be 16-byte aligned");
+    std::unique_ptr<VolumeShaderAttribs> Volume;
+
+    struct TextureShaderAttribs
+    {
+        float UVSelector   = -1;
+        float TextureSlice = 0;
+        float UBias        = 0;
+        float VBias        = 0;
+
+        float2x2 UVScaleAndRotation = float2x2::Identity();
+
+        // Atlas UV scale and bias are applied after the UV transform.
+        float4 AtlasUVScaleAndBias = float4{1, 1, 0, 0};
+    };
+    static_assert(sizeof(TextureShaderAttribs) % 16 == 0, "TextureShaderAttribs struct must be 16-byte aligned");
+
+private:
     // Texture indices in Model.Textures array, for each attribute.
     //  _________________            _______________________         __________________
     // |                 |          |                       |       |                   |
@@ -188,7 +258,88 @@ struct Material
     //                    Defined by
     //              ModeCI.TextureAttributes
     //
-    std::array<int, NumTextureAttributes> TextureIds = {};
+    std::unique_ptr<int[]> TextureIds;
+
+    std::unique_ptr<TextureShaderAttribs[]> TextureAttribs;
+
+    Uint32 ActiveTextureAttribs = 0;
+
+    size_t GetActiveTextureAttribPackedIndex(Uint32 Idx) const
+    {
+        VERIFY_EXPR(IsTextureAttribActive(Idx));
+        return PlatformMisc::CountOneBits(ActiveTextureAttribs & ((1u << Idx) - 1u));
+    }
+
+    friend MaterialBuilder;
+
+public:
+    bool DoubleSided  = false;
+    bool HasClearcoat = false;
+
+    // Any user-specific data. One way to set this field is from the
+    // MaterialLoadCallback.
+    RefCntAutoPtr<IObject> pUserData;
+
+    static constexpr Uint32 MaxTextureAttribs = sizeof(ActiveTextureAttribs) * 8;
+
+public:
+    Material() noexcept {}
+
+    // clang-format off
+    Material           (Material&&) = default;
+    Material& operator=(Material&&) = default;
+    // clang-format on
+
+    static constexpr Uint32 InvalidTextureAttribIdx = ~0u;
+
+    Uint32 GetMaxActiveTextureAttribIdx() const
+    {
+        return ActiveTextureAttribs == 0 ? InvalidTextureAttribIdx : PlatformMisc::GetMSB(ActiveTextureAttribs);
+    }
+
+    Uint32 GetNumActiveTextureAttribs() const
+    {
+        return PlatformMisc::CountOneBits(ActiveTextureAttribs);
+    }
+
+    bool IsTextureAttribActive(Uint32 Idx) const
+    {
+        VERIFY_EXPR(Idx < MaxTextureAttribs);
+        return (ActiveTextureAttribs & (1u << Idx)) != 0;
+    }
+
+    int GetTextureId(Uint32 Idx) const
+    {
+        return IsTextureAttribActive(Idx) ? TextureIds[GetActiveTextureAttribPackedIndex(Idx)] : -1;
+    }
+    void SetTextureId(Uint32 Idx, int TextureId)
+    {
+        TextureIds[GetActiveTextureAttribPackedIndex(Idx)] = TextureId;
+    }
+
+    TextureShaderAttribs& GetTextureAttrib(Uint32 Idx)
+    {
+        return TextureAttribs[GetActiveTextureAttribPackedIndex(Idx)];
+    }
+    const TextureShaderAttribs& GetTextureAttrib(Uint32 Idx) const
+    {
+        static constexpr TextureShaderAttribs DefaultAttribs{};
+        return IsTextureAttribActive(Idx) ? TextureAttribs[GetActiveTextureAttribPackedIndex(Idx)] : DefaultAttribs;
+    }
+
+    template <typename HandlerType>
+    void ProcessActiveTextureAttibs(HandlerType&& Handler) const
+    {
+        Uint32 ActiveAttribs = ActiveTextureAttribs;
+        while (ActiveAttribs != 0)
+        {
+            const auto Idx         = PlatformMisc::GetLSB(ActiveAttribs);
+            const auto PackedIndex = GetActiveTextureAttribPackedIndex(Idx);
+            if (!Handler(Idx, TextureAttribs[PackedIndex], TextureIds[PackedIndex]))
+                break;
+            ActiveAttribs &= ~(1u << Idx);
+        }
+    }
 };
 
 
@@ -239,6 +390,20 @@ struct Mesh
     {
         return !Primitives.empty();
     }
+
+    void UpdateBoundingBox()
+    {
+        if (!Primitives.empty())
+        {
+            BB = Primitives[0].BB;
+            for (size_t prim = 1; prim < Primitives.size(); ++prim)
+            {
+                const auto& PrimBB{Primitives[prim].BB};
+                BB.Min = std::min(BB.Min, PrimBB.Min);
+                BB.Max = std::max(BB.Max, PrimBB.Max);
+            }
+        }
+    }
 };
 
 struct Node;
@@ -282,6 +447,33 @@ struct Camera
     };
 };
 
+struct Light
+{
+    std::string Name;
+
+    enum class TYPE
+    {
+        UNKNOWN,
+        DIRECTIONAL,
+        POINT,
+        SPOT,
+    } Type = TYPE::UNKNOWN;
+
+    float3 Color = float3{1, 1, 1};
+
+    float Intensity = 1;
+
+    // Point and spot lights only.
+    //
+    // Recommended implementation is as follows:
+    //   Attenuation = clamp(1.0 - (Distance / Range)^4, 0, 1) / Distance^2
+    float Range = 0;
+
+    // Spot light only
+    float InnerConeAngle = 0;
+    float OuterConeAngle = 0;
+};
+
 struct Node
 {
     // Index in Model.LinearNodes array.
@@ -299,6 +491,7 @@ struct Node
     const Mesh*   pMesh   = nullptr;
     const Camera* pCamera = nullptr;
     const Skin*   pSkin   = nullptr;
+    const Light*  pLight  = nullptr;
 
     float3      Translation;
     QuaternionF Rotation;
@@ -308,6 +501,8 @@ struct Node
     explicit Node(int _Index) :
         Index{_Index}
     {}
+
+    inline float4x4 ComputeLocalTransform() const;
 };
 
 struct Scene
@@ -354,6 +549,9 @@ struct AnimationSampler
     std::vector<float>  Inputs;
     std::vector<float4> OutputsVec4;
 
+    // Returns the index of the key frame for the given animation time.
+    inline size_t FindKeyFrame(float Time) const;
+
     explicit AnimationSampler(INTERPOLATION_TYPE _Interpolation) :
         Interpolation{_Interpolation}
     {}
@@ -391,34 +589,67 @@ struct VertexAttributeDesc
     /// be computed automatically by placing the attribute right after the previous one.
     Uint32 RelativeOffset = ~0U;
 
+    /// Default attribute value.
+    ///
+    /// \remarks    This value is used when the attribute is not present in the source GLTF model.
+    ///             The pointer must point to a value of the appropriate type (e.g. float3 for VT_FLOAT32, 3).
+    ///             If this value is null, the attribute will be initialized with zeros.
+    const void* pDefaultValue = nullptr;
+
     constexpr VertexAttributeDesc() noexcept {}
 
     constexpr VertexAttributeDesc(const char* _Name,
                                   Uint8       _BufferId,
                                   VALUE_TYPE  _ValueType,
                                   Uint8       _NumComponents,
-                                  Uint32      _RelativeOffset = VertexAttributeDesc{}.RelativeOffset) noexcept :
+                                  Uint32      _RelativeOffset = VertexAttributeDesc{}.RelativeOffset,
+                                  const void* _pDefaultValue  = VertexAttributeDesc{}.pDefaultValue) noexcept :
         Name{_Name},
         BufferId{_BufferId},
         ValueType{_ValueType},
         NumComponents{_NumComponents},
-        RelativeOffset{_RelativeOffset}
+        RelativeOffset{_RelativeOffset},
+        pDefaultValue{_pDefaultValue}
+    {}
+
+    constexpr VertexAttributeDesc(const char* _Name,
+                                  Uint8       _BufferId,
+                                  VALUE_TYPE  _ValueType,
+                                  Uint8       _NumComponents,
+                                  const void* _pDefaultValue) noexcept :
+        Name{_Name},
+        BufferId{_BufferId},
+        ValueType{_ValueType},
+        NumComponents{_NumComponents},
+        pDefaultValue{_pDefaultValue}
     {}
 };
 
+static constexpr char PositionAttributeName[]    = "POSITION";
+static constexpr char VertexColorAttributeName[] = "COLOR_0";
+static constexpr char NormalAttributeName[]      = "NORMAL";
+static constexpr char Texcoord0AttributeName[]   = "TEXCOORD_0";
+static constexpr char Texcoord1AttributeName[]   = "TEXCOORD_1";
+static constexpr char JointsAttributeName[]      = "JOINTS_0";
+static constexpr char WeightsAttributeName[]     = "WEIGHTS_0";
+static constexpr char TangentAttributeName[]     = "TANGENT";
+
+static constexpr float4 DefaultVertexColor{1, 1, 1, 1};
+
 /// Default vertex attributes.
 // clang-format off
-static constexpr std::array<VertexAttributeDesc, 6> DefaultVertexAttributes =
+static constexpr std::array<VertexAttributeDesc, 8> DefaultVertexAttributes =
     {
-        // VertexBasicAttribs
-        VertexAttributeDesc{"POSITION",   0, VT_FLOAT32, 3},
-        VertexAttributeDesc{"NORMAL",     0, VT_FLOAT32, 3},
-        VertexAttributeDesc{"TEXCOORD_0", 0, VT_FLOAT32, 2},
-        VertexAttributeDesc{"TEXCOORD_1", 0, VT_FLOAT32, 2},
+        VertexAttributeDesc{PositionAttributeName,  0, VT_FLOAT32, 3},
+        VertexAttributeDesc{NormalAttributeName,    0, VT_FLOAT32, 3},
+        VertexAttributeDesc{Texcoord0AttributeName, 0, VT_FLOAT32, 2},
+        VertexAttributeDesc{Texcoord1AttributeName, 2, VT_FLOAT32, 2}, // Texcoord1 is rarely used, so store it in buffer 2
 
-        // VertexSkinAttribs
-        VertexAttributeDesc{"JOINTS_0",  1, VT_FLOAT32, 4},
-        VertexAttributeDesc{"WEIGHTS_0", 1, VT_FLOAT32, 4},
+        VertexAttributeDesc{JointsAttributeName,  1, VT_FLOAT32, 4},
+        VertexAttributeDesc{WeightsAttributeName, 1, VT_FLOAT32, 4},
+
+        VertexAttributeDesc{VertexColorAttributeName, 3, VT_FLOAT32, 4, &DefaultVertexColor},
+        VertexAttributeDesc{TangentAttributeName,     4, VT_FLOAT32, 3}
     };
 // clang-format on
 
@@ -446,19 +677,49 @@ struct ModelCreateInfo
     /// Optional resource manager to use when allocating resources for the model.
     ResourceManager* pResourceManager = nullptr;
 
-    using MeshLoadCallbackType = std::function<void(const void*, Mesh&)>;
+    using NodeLoadCallbackType = std::function<void(int SrcNodeIndex, const void* pSrcNode, Node& DstNode)>;
+    /// User-provided node loading callback function that will be called for
+    /// every node being loaded.
+    ///
+    /// \param [in]  SrcNodeIndex - index of the node in the source GLTF model.
+    /// \param [in]  pSrcNode     - pointer to the source node.
+    /// \param [out] DstNode      - reference to the destination node.
+    ///
+    /// \remarks    The application should cast pSrcNode to the appropriate type
+    ///             depending on the loader it is using (e.g. tinygltf::Node*).
+    NodeLoadCallbackType NodeLoadCallback = nullptr;
+
+    using MeshLoadCallbackType = std::function<void(const void* pSrcMesh, Mesh& DstMesh)>;
     /// User-provided mesh loading callback function that will be called for
     /// every mesh being loaded.
+    ///
+    /// \param [in]  pSrcMesh - pointer to the source mesh.
+    /// \param [out] DstMesh  - reference to the destination mesh.
+    ///
+    /// \remarks    The application should cast pSrcMesh to the appropriate type
+    ///             depending on the loader it is using (e.g. tinygltf::Mesh*).
     MeshLoadCallbackType MeshLoadCallback = nullptr;
 
-    using PrimitiveLoadCallbackType = std::function<void(const void*, Primitive&)>;
+    using PrimitiveLoadCallbackType = std::function<void(const void* pSrcPrim, Primitive& DstPrim)>;
     /// User-provided primitive loading callback function that will be called for
     /// every primitive being loaded.
+    ///
+    /// \param [in]  pSrcPrim - pointer to the source primitive.
+    /// \param [out] DstPrim  - reference to the destination primitive.
+    ///
+    /// \remarks    The application should cast pSrcPrim to the appropriate type
+    ///             depending on the loader it is using (e.g. tinygltf::Primitive*).
     PrimitiveLoadCallbackType PrimitiveLoadCallback = nullptr;
 
-    using MaterialLoadCallbackType = std::function<void(const void*, Material&)>;
+    using MaterialLoadCallbackType = std::function<void(const void* pSrcMat, Material& DstMat)>;
     /// User-provided material loading callback function that will be called for
     /// every material being loaded.
+    ///
+    /// \param [in]  pSrcMat - pointer to the source material.
+    /// \param [out] DstMat  - reference to the destination material.
+    ///
+    /// \remarks    The application should cast pSrcMat to the appropriate type
+    ///             depending on the loader it is using (e.g. tinygltf::Material*).
     MaterialLoadCallbackType MaterialLoadCallback = nullptr;
 
     using FileExistsCallbackType = std::function<bool(const char* FilePath)>;
@@ -499,6 +760,30 @@ struct ModelCreateInfo
 
     /// Index of the scene to load. If -1, default scene will be loaded.
     Int32 SceneId = -1;
+
+    /// Whether to compute primitive bounding boxes from vertex positions.
+    ///
+    /// \remarks    By default, primitive bounding boxes are defined by the
+    ///             min/max values of the primitive's position accessor in the
+    ///             source GLTF model. If this flag is set to true, the bounding
+    ///             boxes will be computed from vertex positions instead.
+    ///             This may be useful if the source model does not define
+    ///             bounding boxes for its primitives or if the bounding boxes
+    ///             are imprecise.
+    bool ComputeBoundingBoxes = false;
+
+    /// Whether to create stub vertex buffers even if the model
+    /// does provide any attribute to store in the buffer.
+    ///
+    /// \remarks    By default, if the model does not provide any attribute
+    ///             to store in the vertex buffer, the buffer will not be
+    ///             created. However, an application may still request the
+    ///             buffer to be created by setting this flag to true.
+    ///             This may be useful if the application uses the same vertex
+    ///             layout for all models and wants to avoid checking if the
+    ///             buffer is null.
+    ///             The buffer will be zero-initialized.
+    bool CreateStubVertexBuffers = false;
 
     ModelCreateInfo() = default;
 
@@ -551,30 +836,11 @@ struct ModelTransforms
 
 struct Model
 {
-    struct VertexBasicAttribs
-    {
-        float3 pos;
-        float3 normal;
-        float2 uv0;
-        float2 uv1;
-    };
-
-    struct VertexSkinAttribs
-    {
-        float4 joint0;
-        float4 weight0;
-    };
-
-    enum VERTEX_BUFFER_ID
-    {
-        VERTEX_BUFFER_ID_BASIC_ATTRIBS = 0,
-        VERTEX_BUFFER_ID_SKIN_ATTRIBS,
-    };
-
     std::vector<Scene>       Scenes;
     std::vector<Node>        Nodes;
     std::vector<Mesh>        Meshes;
     std::vector<Camera>      Cameras;
+    std::vector<Light>       Lights;
     std::vector<Skin>        Skins;
     std::vector<Material>    Materials;
     std::vector<Animation>   Animations;
@@ -596,6 +862,10 @@ struct Model
 
     ~Model();
 
+    /// Prepares the model's GPU resources:
+    /// * Uploads pending vertex and index data to the GPU buffers
+    /// * Uploads textures to the GPU
+    /// * If the model does not use the resource cache, transitions resources to required states
     void PrepareGPUResources(IRenderDevice* pDevice, IDeviceContext* pCtx);
 
     bool IsGPUDataInitialized() const
@@ -606,16 +876,30 @@ struct Model
     IBuffer* GetVertexBuffer(Uint32 Index, IRenderDevice* pDevice = nullptr, IDeviceContext* pCtx = nullptr) const
     {
         VERIFY_EXPR(Index < GetVertexBufferCount());
-        return VertexData.pAllocation != nullptr ?
-            VertexData.pAllocation->GetBuffer(Index, pDevice, pCtx) :
-            VertexData.Buffers[Index];
+        if (VertexData.pAllocation != nullptr)
+        {
+            return pDevice != nullptr || pCtx != nullptr ?
+                VertexData.pAllocation->Update(Index, pDevice, pCtx) :
+                VertexData.pAllocation->GetBuffer(Index);
+        }
+        else
+        {
+            return VertexData.Buffers[Index];
+        }
     }
 
     IBuffer* GetIndexBuffer(IRenderDevice* pDevice = nullptr, IDeviceContext* pCtx = nullptr) const
     {
-        return IndexData.pAllocation ?
-            IndexData.pAllocation->GetBuffer(pDevice, pCtx) :
-            IndexData.pBuffer;
+        if (IndexData.pAllocation != nullptr)
+        {
+            return pDevice != nullptr || pCtx != nullptr ?
+                IndexData.pAllocation->Update(pDevice, pCtx) :
+                IndexData.pAllocation->GetBuffer();
+        }
+        else
+        {
+            return IndexData.pBuffer;
+        }
     }
 
     ITexture* GetTexture(Uint32 Index, IRenderDevice* pDevice = nullptr, IDeviceContext* pCtx = nullptr) const
@@ -628,12 +912,37 @@ struct Model
         if (TexInfo.pAtlasSuballocation)
         {
             if (auto* pAtlas = TexInfo.pAtlasSuballocation->GetAtlas())
-                return pAtlas->GetTexture(pDevice, pCtx);
+            {
+                return pDevice != nullptr || pCtx != nullptr ?
+                    pAtlas->Update(pDevice, pCtx) :
+                    pAtlas->GetTexture();
+            }
             else
+            {
                 UNEXPECTED("Texture altas can't be null");
+            }
         }
 
         return nullptr;
+    }
+
+    const TextureDesc& GetTextureDesc(Uint32 Index) const
+    {
+        if (Index < Textures.size())
+        {
+            const auto& TexInfo = Textures[Index];
+            if (TexInfo.pTexture)
+            {
+                return TexInfo.pTexture->GetDesc();
+            }
+            else if (auto* pAtlas = (TexInfo.pAtlasSuballocation ? TexInfo.pAtlasSuballocation->GetAtlas() : nullptr))
+            {
+                return pAtlas->GetAtlasDesc();
+            }
+        }
+
+        static const TextureDesc NullDesc{};
+        return NullDesc;
     }
 
     Uint32 GetFirstIndexLocation() const
@@ -654,6 +963,22 @@ struct Model
         return VertexData.pAllocation ?
             VertexData.pAllocation->GetStartVertex() :
             0;
+    }
+
+    /// Returns an index of the vertex pool in the resource manager.
+    ///
+    /// \remarks    This index should be passed to the GetVertexPool method of the resource manager.
+    Uint32 GetVertexPoolIndex() const
+    {
+        return VertexData.PoolId;
+    }
+
+    /// Returns an index of the index buffer allocator in the resource manager.
+    ///
+    /// \remarks    This index should be passed to the GetIndexBuffer method of the resource manager.
+    Uint32 GetIndexAllocatorIndex() const
+    {
+        return IndexData.AllocatorId;
     }
 
     struct ImageData
@@ -677,8 +1002,8 @@ struct Model
                       int                GltfSamplerId,
                       const std::string& CacheId);
 
-    auto GetNumVertexAttributes() const { return NumVertexAttributes; }
-    auto GetNumTextureAttributes() const { return NumTextureAttributes; }
+    Uint32 GetNumVertexAttributes() const { return NumVertexAttributes; }
+    Uint32 GetNumTextureAttributes() const { return NumTextureAttributes; }
 
     const auto& GetVertexAttribute(size_t Idx) const
     {
@@ -701,7 +1026,7 @@ struct Model
     ///
     /// \note This index is NOT the texture index in Textures array. To get this index,
     ///       use Material.TextureIds[TextureAttributeIndex].
-    int GetTextureAttibuteIndex(const char* Name) const;
+    int GetTextureAttributeIndex(const char* Name) const;
 
     bool CompatibleWithTransforms(const ModelTransforms& Transforms) const;
 
@@ -721,6 +1046,11 @@ struct Model
     size_t GetVertexBufferCount() const
     {
         return VertexData.Strides.size();
+    }
+
+    bool IsVertexAttributeEnabled(Uint32 AttribId) const
+    {
+        return (VertexData.EnabledAttributeFlags & (1u << AttribId)) != 0;
     }
 
     void InitMaterialTextureAddressingAttribs(Material& Mat, Uint32 TextureIndex);
@@ -762,6 +1092,8 @@ private:
         std::vector<Uint32>                  Strides;
         std::vector<RefCntAutoPtr<IBuffer>>  Buffers;
         RefCntAutoPtr<IVertexPoolAllocation> pAllocation;
+        Uint32                               PoolId                = 0; // Vertex pool index
+        Uint32                               EnabledAttributeFlags = 0;
     };
     VertexDataInfo VertexData;
 
@@ -770,7 +1102,8 @@ private:
         RefCntAutoPtr<IBuffer>              pBuffer;
         RefCntAutoPtr<IBufferSuballocation> pAllocation;
 
-        Uint32 IndexSize = 0;
+        Uint32 AllocatorId = 0; // Index buffer allocator index
+        Uint32 IndexSize   = 0;
     };
     IndexDataInfo IndexData;
 
@@ -786,6 +1119,64 @@ private:
     };
     std::vector<TextureInfo> Textures;
 };
+
+template <typename T>
+inline Matrix4x4<T> ComputeNodeLocalMatrix(const Vector3<T>&    Scale,
+                                           const Quaternion<T>& Rotation,
+                                           const Vector3<T>&    Translation,
+                                           const Matrix4x4<T>&  Matrix)
+{
+    // Translation, rotation, and scale properties and local space transformation are
+    // mutually exclusive as per GLTF spec.
+
+    // LocalMatrix = S * R * T * M
+    Matrix4x4<T> LocalMatrix = Matrix;
+
+    if (Translation != Vector3<T>{})
+        LocalMatrix = Matrix4x4<T>::Translation(Translation) * LocalMatrix;
+
+    if (Rotation != Quaternion<T>{})
+        LocalMatrix = Rotation.ToMatrix() * LocalMatrix;
+
+    if (Scale != Vector3<T>{1, 1, 1})
+        LocalMatrix = Matrix4x4<T>::Scale(Scale) * LocalMatrix;
+
+    return LocalMatrix;
+}
+
+inline float4x4 Node::ComputeLocalTransform() const
+{
+    return ComputeNodeLocalMatrix(Scale, Rotation, Translation, Matrix);
+}
+
+inline size_t AnimationSampler::FindKeyFrame(float Time) const
+{
+    if (Inputs.size() <= 2)
+        return 0;
+
+    const auto input_it = std::lower_bound(Inputs.begin(), Inputs.end(), Time);
+
+    size_t Idx = 0;
+    if (input_it == Inputs.begin())
+    {
+        VERIFY_EXPR(Time <= Inputs.front());
+        Idx = 0;
+    }
+    else if (input_it == Inputs.end())
+    {
+        VERIFY_EXPR(Time >= Inputs.back());
+        Idx = Inputs.size() - 1;
+    }
+    else
+    {
+        Idx = static_cast<size_t>(std::distance(Inputs.begin(), input_it));
+        VERIFY_EXPR(Idx > 0 && Idx < Inputs.size());
+        --Idx;
+        VERIFY_EXPR(Time >= Inputs[Idx] && Time <= Inputs[Idx + 1]);
+    }
+
+    return Idx;
+}
 
 } // namespace GLTF
 

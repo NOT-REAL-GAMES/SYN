@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,9 +34,11 @@
 #include "GraphicsUtilities.h"
 #include "AdvancedMath.hpp"
 #include "imgui.h"
-#include "imGuIZMO.h"
+#include "../imGuIZMO.quat/imGuIZMO.h"
 #include "ImGuiUtils.hpp"
 #include "CallbackWrapper.hpp"
+#include "Utilities/interface/DiligentFXShaderSourceStreamFactory.hpp"
+#include "ShaderSourceFactoryUtils.hpp"
 
 namespace Diligent
 {
@@ -103,7 +105,11 @@ void ShadowsSample::Initialize(const SampleInitInfo& InitInfo)
     {
         RefCntAutoPtr<IShaderSourceInputStreamFactory> pStreamFactory;
         m_pEngineFactory->CreateDefaultShaderSourceStreamFactory("shaders", &pStreamFactory);
-        CreateRenderStateNotationLoader({m_pDevice, pRSNParser, pStreamFactory}, &m_pRSNLoader);
+
+        RefCntAutoPtr<IShaderSourceInputStreamFactory> pCompoundFactory =
+            CreateCompoundShaderSourceFactory({&DiligentFXShaderSourceStreamFactory::GetInstance(), pStreamFactory});
+
+        CreateRenderStateNotationLoader({m_pDevice, pRSNParser, pCompoundFactory}, &m_pRSNLoader);
     }
 
     CreateUniformBuffer(m_pDevice, sizeof(CameraAttribs), "Camera attribs buffer", &m_CameraAttribsCB);
@@ -323,7 +329,7 @@ void ShadowsSample::CreatePipelineStates()
 {
     ShaderMacroHelper Macros;
     Macros.AddShaderMacro("SHADOW_MODE", m_ShadowSettings.iShadowMode);
-    Macros.AddShaderMacro("SHADOW_FILTER_SIZE", m_LightAttribs.ShadowAttribs.iFixedFilterSize);
+    Macros.AddShaderMacro("PCF_FILTER_SIZE", m_LightAttribs.ShadowAttribs.iFixedFilterSize);
     Macros.AddShaderMacro("FILTER_ACROSS_CASCADES", m_ShadowSettings.FilterAcrossCascades);
     Macros.AddShaderMacro("BEST_CASCADE_SEARCH", m_ShadowSettings.SearchBestCascade);
 
@@ -584,7 +590,7 @@ void ShadowsSample::Render()
 void ShadowsSample::DrawMesh(IDeviceContext* pCtx, bool bIsShadowPass, const ViewFrustumExt& Frustum)
 {
     // Note that Vulkan requires shadow map to be transitioned to DEPTH_READ state, not SHADER_RESOURCE
-    pCtx->TransitionShaderResources((bIsShadowPass ? m_RenderMeshShadowPSO : m_RenderMeshPSO)[0], (bIsShadowPass ? m_ShadowSRBs : m_SRBs)[0]);
+    pCtx->TransitionShaderResources((bIsShadowPass ? m_ShadowSRBs : m_SRBs)[0]);
 
     for (Uint32 meshIdx = 0; meshIdx < m_Mesh.GetNumMeshes(); ++meshIdx)
     {
@@ -668,7 +674,7 @@ void ShadowsSample::WindowResize(Uint32 Width, Uint32 Height)
     float FarPlane    = 250.f;
     float AspectRatio = static_cast<float>(Width) / static_cast<float>(Height);
     m_Camera.SetProjAttribs(NearPlane, FarPlane, AspectRatio, PI_F / 4.f,
-                            m_pSwapChain->GetDesc().PreTransform, m_pDevice->GetDeviceInfo().IsGLDevice());
+                            m_pSwapChain->GetDesc().PreTransform, m_pDevice->GetDeviceInfo().NDC.MinZ == -1);
 }
 
 } // namespace Diligent

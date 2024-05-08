@@ -34,7 +34,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("C:/SYN/diligent/DiligentFX/PostProcess/Common/cmake_install.cmake")
   include("C:/SYN/diligent/DiligentFX/PostProcess/EpipolarLightScattering/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentFX/PostProcess/TemporalAntiAliasing/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentFX/PostProcess/ScreenSpaceReflection/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentFX/PostProcess/ScreenSpaceAmbientOcclusion/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentFX/PostProcess/Bloom/cmake_install.cmake")
+  include("C:/SYN/diligent/DiligentFX/PostProcess/DepthOfField/cmake_install.cmake")
 
 endif()
 

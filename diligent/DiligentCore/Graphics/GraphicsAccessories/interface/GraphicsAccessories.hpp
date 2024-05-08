@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2023 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,6 +29,8 @@
 
 /// \file
 /// Defines graphics engine utilities
+
+#include <vector>
 
 #include "../../GraphicsEngine/interface/GraphicsTypes.h"
 #include "../../GraphicsEngine/interface/Shader.h"
@@ -140,8 +142,8 @@ template <> struct VALUE_TYPE2CType<VT_FLOAT64>
     typedef Float64 CType;
 };
 
-static const Uint32 ValueTypeToSizeMap[] =
-    // clang-format off
+// clang-format off
+static constexpr Uint32 ValueTypeToSizeMap[] =
 {
     0,
     sizeof(VALUE_TYPE2CType<VT_INT8>    :: CType),
@@ -435,6 +437,11 @@ String GetShaderCodeBufferDescString(const ShaderCodeBufferDesc& Desc, size_t Gl
 /// Returns the string containing the shader code variable description.
 String GetShaderCodeVariableDescString(const ShaderCodeVariableDesc& Desc, size_t GlobalIdent = 0, size_t MemberIdent = 2);
 
+const char* GetInputElementFrequencyString(INPUT_ELEMENT_FREQUENCY Frequency);
+
+/// Returns the string containing the layout element description.
+String GetLayoutElementString(const LayoutElement& Element);
+
 PIPELINE_RESOURCE_FLAGS GetValidPipelineResourceFlags(SHADER_RESOURCE_TYPE ResourceType);
 
 PIPELINE_RESOURCE_FLAGS ShaderVariableFlagsToPipelineResourceFlags(SHADER_VARIABLE_FLAGS Flags);
@@ -727,6 +734,17 @@ TEXTURE_FORMAT TexFormatToSRGB(TEXTURE_FORMAT Fmt);
 
 String GetPipelineShadingRateFlagsString(PIPELINE_SHADING_RATE_FLAGS Flags);
 
+/// Converts texture component mapping to a string, for example:
+/// {R, G, B, A} -> "rgba"
+/// {R, G, B, 1} -> "rgb1"
+String GetTextureComponentMappingString(const TextureComponentMapping& Mapping);
+
+/// Converts texture component mapping string to the mapping, for example:
+/// "rgba" -> {R, G, B, A}
+/// "rgb1" -> {R, G, B, 1}
+bool TextureComponentMappingFromString(const String& MappingStr, TextureComponentMapping& Mapping);
+
+
 /// Returns the sparse texture properties assuming the standard tile shapes
 SparseTextureProperties GetStandardSparseTextureProperties(const TextureDesc& TexDesc);
 
@@ -753,5 +771,9 @@ inline uint3 GetNumSparseTilesInMipLevel(const TextureDesc& Desc,
 
 /// Returns true if the Mapping defines an identity texture component swizzle
 bool IsIdentityComponentMapping(const TextureComponentMapping& Mapping);
+
+/// Resolves LAYOUT_ELEMENT_AUTO_OFFSET and LAYOUT_ELEMENT_AUTO_STRIDE values in the input layout,
+/// and returns an array of buffer strides for each used input buffer slot.
+std::vector<Uint32> ResolveInputLayoutAutoOffsetsAndStrides(LayoutElement* pLayoutElements, Uint32 NumElements);
 
 } // namespace Diligent

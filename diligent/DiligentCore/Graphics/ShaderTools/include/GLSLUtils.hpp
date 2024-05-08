@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,6 +27,10 @@
 
 #pragma once
 
+#include <vector>
+#include <string>
+#include <utility>
+
 #include "BasicTypes.h"
 #include "GraphicsTypes.h"
 #include "Shader.h"
@@ -51,11 +55,30 @@ struct IHLSL2GLSLConversionStream;
 // the first time and will use it in all subsequent times.
 // For all subsequent conversions, FilePath member must be the same, or
 // new stream will be created and warning message will be displayed.
-String BuildGLSLSourceString(const ShaderCreateInfo&      ShaderCI,
-                             const RenderDeviceInfo&      DeviceInfo,
-                             const GraphicsAdapterInfo&   AdapterInfo,
-                             TargetGLSLCompiler           TargetCompiler,
-                             const char*                  ExtraDefinitions   = nullptr,
-                             IHLSL2GLSLConversionStream** ppConversionStream = nullptr) noexcept(false);
+struct BuildGLSLSourceStringAttribs
+{
+    const ShaderCreateInfo&       ShaderCI;
+    const GraphicsAdapterInfo&    AdapterInfo;
+    const DeviceFeatures&         Features;
+    RENDER_DEVICE_TYPE            DeviceType         = RENDER_DEVICE_TYPE_UNDEFINED;
+    RenderDeviceShaderVersionInfo MaxShaderVersion   = {};
+    TargetGLSLCompiler            TargetCompiler     = TargetGLSLCompiler::glslang;
+    bool                          ZeroToOneClipZ     = false;
+    const char*                   ExtraDefinitions   = nullptr;
+    IHLSL2GLSLConversionStream**  ppConversionStream = nullptr;
+};
+
+String BuildGLSLSourceString(const BuildGLSLSourceStringAttribs& Attribs) noexcept(false);
+
+void GetGLSLVersion(const ShaderCreateInfo&              ShaderCI,
+                    TargetGLSLCompiler                   TargetCompiler,
+                    RENDER_DEVICE_TYPE                   DeviceType,
+                    const RenderDeviceShaderVersionInfo& MaxShaderVersion,
+                    ShaderVersion&                       GLSLVer,
+                    bool&                                IsES);
+
+/// Extracts all #extension directives from the GLSL source, returning them as a vector of pairs
+/// (extension name, extension behavior). The behavior is the string following the extension name.
+std::vector<std::pair<std::string, std::string>> GetGLSLExtensions(const char* Source, size_t SourceLen = 0);
 
 } // namespace Diligent

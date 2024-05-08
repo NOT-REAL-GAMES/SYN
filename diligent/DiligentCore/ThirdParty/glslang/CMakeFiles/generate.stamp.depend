@@ -1,14 +1,9 @@
 # CMake generation dependency list for this directory.
 C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDependentOption.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/FindPython/Support.cmake
-C:/Program Files/CMake/share/cmake-3.28/Modules/FindPython3.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/GNUInstallDirs.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake
 C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CHANGES.md
 C:/SYN/diligent/DiligentCore/ThirdParty/glslang/CMakeLists.txt
-C:/SYN/diligent/DiligentCore/ThirdParty/glslang/ChooseMSVCCRT.cmake
 C:/SYN/diligent/DiligentCore/ThirdParty/glslang/build_info.h.tmpl
 C:/SYN/diligent/DiligentCore/ThirdParty/glslang/parse_version.cmake

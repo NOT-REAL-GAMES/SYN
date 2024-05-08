@@ -30,11 +30,17 @@
     <ClInclude Include="C:\SYN\diligent\DiligentCore\Platforms\Basic\interface\StandardFile.hpp">
       <Filter>interface</Filter>
     </ClInclude>
+    <ClInclude Include="C:\SYN\diligent\DiligentCore\Platforms\Basic\include\SearchRecursive.inl">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\SYN\diligent\DiligentCore\Platforms\Basic\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{5A14F361-B369-3446-A4CF-D92ABCBC34C7}</UniqueIdentifier>
+    </Filter>
     <Filter Include="interface">
       <UniqueIdentifier>{44D225D2-E624-34AB-A967-D14ECE824400}</UniqueIdentifier>
     </Filter>

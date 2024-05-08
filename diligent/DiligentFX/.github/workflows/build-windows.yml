@@ -35,7 +35,7 @@ jobs:
         toolset:         ["Win32", "x64"]
         build_type:      ["Debug", "Release"]
         cmake_generator: ["Visual Studio 17 2022"]
-        cmake_args:      ["-DDILIGENT_NO_GLSLANG=ON -DDILIGENT_NO_HLSL=ON"]
+        cmake_args:      ["-DDILIGENT_NO_GLSLANG=ON -DDILIGENT_NO_HLSL=ON -DDILIGENT_BUILD_FX_INCLUDE_TEST=ON"]
         platform:        ["Win32"]
 
         include:
@@ -45,13 +45,6 @@ jobs:
             build_type:      "RelWithDebInfo"
             cmake_generator: "Visual Studio 17 2022"
             cmake_args:      "-DDILIGENT_NO_GLSLANG=ON -DDILIGENT_NO_HLSL=ON -DDILIGENT_DEVELOPMENT=ON"
-
-          - name:            "Win8.1"
-            platform:        "Win32"
-            toolset:         "x64"
-            build_type:      "Release"
-            cmake_generator: "Visual Studio 17 2022"
-            cmake_args:      "-DDILIGENT_NO_GLSLANG=ON -DDILIGENT_NO_HLSL=ON -DCMAKE_SYSTEM_VERSION=8.1"
 
           - name:            "Win10-Ninja"
             platform:        "Win32"

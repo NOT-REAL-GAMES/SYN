@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2023 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -71,7 +71,7 @@ void Tutorial12_RenderTarget::CreateCubePSO()
     // Dynamic buffers can be frequently updated by the CPU
     CreateUniformBuffer(m_pDevice, sizeof(float4x4), "VS constants CB", &m_CubeVSConstants);
 
-    // Since we did not explcitly specify the type for 'Constants' variable, default
+    // Since we did not explicitly specify the type for 'Constants' variable, default
     // type (SHADER_RESOURCE_VARIABLE_TYPE_STATIC) will be used. Static variables never
     // change and are bound directly through the pipeline state object.
     m_pCubePSO->GetStaticVariableByName(SHADER_TYPE_VERTEX, "Constants")->Set(m_CubeVSConstants);
@@ -138,7 +138,14 @@ void Tutorial12_RenderTarget::CreateRenderTargetPSO()
 #endif
 
     ShaderMacroHelper Macros;
-    Macros.AddShaderMacro("TRANSFORM_UV", TransformUVCoords);
+    Macros.Add("TRANSFORM_UV", TransformUVCoords);
+
+    // Presentation engine always expects input in gamma space. Normally, pixel shader output is
+    // converted from linear to gamma space by the GPU. However, some platforms (e.g. Android in GLES mode,
+    // or Emscripten in WebGL mode) do not support gamma-correction. In this case the application
+    // has to do the conversion manually.
+    Macros.Add("CONVERT_PS_OUTPUT_TO_GAMMA", m_ConvertPSOutputToGamma);
+
     ShaderCI.Macros = Macros;
 
     // Create a pixel shader
@@ -191,7 +198,7 @@ void Tutorial12_RenderTarget::CreateRenderTargetPSO()
 
     m_pDevice->CreateGraphicsPipelineState(RTPSOCreateInfo, &m_pRTPSO);
 
-    // Since we did not explcitly specify the type for Constants, default type
+    // Since we did not explicitly specify the type for Constants, default type
     // (SHADER_RESOURCE_VARIABLE_TYPE_STATIC) will be used. Static variables never change and are bound directly
     // to the pipeline state object.
     m_pRTPSO->GetStaticVariableByName(SHADER_TYPE_PIXEL, "Constants")->Set(m_RTPSConstants);

@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2023 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,6 +29,7 @@
 
 #include "GraphicsAccessories.hpp"
 #include "../../../../Graphics/GraphicsEngine/include/PrivateConstants.h"
+#include "GraphicsTypesOutputInserters.hpp"
 
 #include "gtest/gtest.h"
 
@@ -738,6 +739,116 @@ TEST(GraphicsAccessories_GraphicsAccessories, GetPipelineShadingRateFlagsString)
     EXPECT_STREQ(GetPipelineShadingRateFlagsString(PIPELINE_SHADING_RATE_FLAG_PER_PRIMITIVE | PIPELINE_SHADING_RATE_FLAG_TEXTURE_BASED).c_str(), "PER_PRIMITIVE | TEXTURE_BASED");
 }
 
+TEST(GraphicsAccessories_GraphicsAccessories, GetTextureComponentMappingString)
+{
+    EXPECT_STREQ(GetTextureComponentMappingString(TextureComponentMapping::Identity()).c_str(), "rgba");
+    EXPECT_STREQ(GetTextureComponentMappingString(
+                     TextureComponentMapping(TEXTURE_COMPONENT_SWIZZLE_ZERO, TEXTURE_COMPONENT_SWIZZLE_ZERO, TEXTURE_COMPONENT_SWIZZLE_ZERO, TEXTURE_COMPONENT_SWIZZLE_ZERO))
+                     .c_str(),
+                 "0000");
+    EXPECT_STREQ(GetTextureComponentMappingString(
+                     TextureComponentMapping(TEXTURE_COMPONENT_SWIZZLE_ONE, TEXTURE_COMPONENT_SWIZZLE_ONE, TEXTURE_COMPONENT_SWIZZLE_ONE, TEXTURE_COMPONENT_SWIZZLE_ONE))
+                     .c_str(),
+                 "1111");
+    EXPECT_STREQ(GetTextureComponentMappingString(
+                     TextureComponentMapping(TEXTURE_COMPONENT_SWIZZLE_R, TEXTURE_COMPONENT_SWIZZLE_R, TEXTURE_COMPONENT_SWIZZLE_R, TEXTURE_COMPONENT_SWIZZLE_R))
+                     .c_str(),
+                 "rrrr");
+    EXPECT_STREQ(GetTextureComponentMappingString(
+                     TextureComponentMapping(TEXTURE_COMPONENT_SWIZZLE_G, TEXTURE_COMPONENT_SWIZZLE_G, TEXTURE_COMPONENT_SWIZZLE_G, TEXTURE_COMPONENT_SWIZZLE_G))
+                     .c_str(),
+                 "gggg");
+    EXPECT_STREQ(GetTextureComponentMappingString(
+                     TextureComponentMapping(TEXTURE_COMPONENT_SWIZZLE_B, TEXTURE_COMPONENT_SWIZZLE_B, TEXTURE_COMPONENT_SWIZZLE_B, TEXTURE_COMPONENT_SWIZZLE_B))
+                     .c_str(),
+                 "bbbb");
+    EXPECT_STREQ(GetTextureComponentMappingString(
+                     TextureComponentMapping(TEXTURE_COMPONENT_SWIZZLE_A, TEXTURE_COMPONENT_SWIZZLE_A, TEXTURE_COMPONENT_SWIZZLE_A, TEXTURE_COMPONENT_SWIZZLE_A))
+                     .c_str(),
+                 "aaaa");
+    EXPECT_STREQ(GetTextureComponentMappingString(
+                     TextureComponentMapping(TEXTURE_COMPONENT_SWIZZLE_A, TEXTURE_COMPONENT_SWIZZLE_B, TEXTURE_COMPONENT_SWIZZLE_G, TEXTURE_COMPONENT_SWIZZLE_R))
+                     .c_str(),
+                 "abgr");
+    EXPECT_STREQ(GetTextureComponentMappingString(
+                     TextureComponentMapping(TEXTURE_COMPONENT_SWIZZLE_IDENTITY, TEXTURE_COMPONENT_SWIZZLE_IDENTITY, TEXTURE_COMPONENT_SWIZZLE_IDENTITY, TEXTURE_COMPONENT_SWIZZLE_ONE))
+                     .c_str(),
+                 "rgb1");
+    for (size_t Comp = 0; Comp < 4; ++Comp)
+    {
+        for (Uint32 Swizzle = 0; Swizzle < TEXTURE_COMPONENT_SWIZZLE_COUNT; ++Swizzle)
+        {
+            TextureComponentMapping Mapping{TextureComponentMapping::Identity()};
+            Mapping[Comp]      = static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            std::string RefStr = "rgba";
+            if (Swizzle != TEXTURE_COMPONENT_SWIZZLE_IDENTITY)
+                RefStr[Comp] = " 01rgba"[Swizzle];
+            EXPECT_STREQ(GetTextureComponentMappingString(Mapping).c_str(), RefStr.c_str());
+        }
+    }
+}
+
+TEST(GraphicsAccessories_GraphicsAccessories, TextureComponentMappingFromString)
+{
+    {
+        TextureComponentMapping Mapping;
+        EXPECT_TRUE(TextureComponentMappingFromString("", Mapping));
+        EXPECT_EQ(Mapping, TextureComponentMapping::Identity());
+    }
+
+    for (Uint32 Swizzle = 0; Swizzle < TEXTURE_COMPONENT_SWIZZLE_COUNT; ++Swizzle)
+    {
+        {
+            const char*             Strings[TEXTURE_COMPONENT_SWIZZLE_COUNT] = {"r", "0", "1", "r", "g", "b", "a"};
+            TextureComponentMapping TestMapping;
+            EXPECT_TRUE(TextureComponentMappingFromString(Strings[Swizzle], TestMapping));
+
+            TextureComponentMapping RefMapping;
+            RefMapping[0] = Swizzle == TEXTURE_COMPONENT_SWIZZLE_R ? TEXTURE_COMPONENT_SWIZZLE_IDENTITY : static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            EXPECT_EQ(TestMapping, RefMapping);
+        }
+
+        {
+            const char*             Strings[TEXTURE_COMPONENT_SWIZZLE_COUNT] = {"rg", "00", "11", "rr", "gg", "bb", "aa"};
+            TextureComponentMapping TestMapping;
+            EXPECT_TRUE(TextureComponentMappingFromString(Strings[Swizzle], TestMapping));
+
+            TextureComponentMapping RefMapping;
+            RefMapping[0] = Swizzle == TEXTURE_COMPONENT_SWIZZLE_R ? TEXTURE_COMPONENT_SWIZZLE_IDENTITY : static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            RefMapping[1] = Swizzle == TEXTURE_COMPONENT_SWIZZLE_G ? TEXTURE_COMPONENT_SWIZZLE_IDENTITY : static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            EXPECT_EQ(TestMapping, RefMapping);
+        }
+
+        {
+            const char*             Strings[TEXTURE_COMPONENT_SWIZZLE_COUNT] = {"rgb", "000", "111", "rrr", "ggg", "bbb", "aaa"};
+            TextureComponentMapping TestMapping;
+            EXPECT_TRUE(TextureComponentMappingFromString(Strings[Swizzle], TestMapping));
+
+            TextureComponentMapping RefMapping;
+            RefMapping[0] = Swizzle == TEXTURE_COMPONENT_SWIZZLE_R ? TEXTURE_COMPONENT_SWIZZLE_IDENTITY : static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            RefMapping[1] = Swizzle == TEXTURE_COMPONENT_SWIZZLE_G ? TEXTURE_COMPONENT_SWIZZLE_IDENTITY : static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            RefMapping[2] = Swizzle == TEXTURE_COMPONENT_SWIZZLE_B ? TEXTURE_COMPONENT_SWIZZLE_IDENTITY : static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            EXPECT_EQ(TestMapping, RefMapping);
+        }
+
+        for (size_t Comp = 0; Comp < 4; ++Comp)
+        {
+            TextureComponentMapping Mapping{TextureComponentMapping::Identity()};
+            Mapping[Comp]   = static_cast<TEXTURE_COMPONENT_SWIZZLE>(Swizzle);
+            std::string Str = GetTextureComponentMappingString(Mapping);
+            if ((Comp == 0 && Swizzle == TEXTURE_COMPONENT_SWIZZLE_R) ||
+                (Comp == 1 && Swizzle == TEXTURE_COMPONENT_SWIZZLE_G) ||
+                (Comp == 2 && Swizzle == TEXTURE_COMPONENT_SWIZZLE_B) ||
+                (Comp == 3 && Swizzle == TEXTURE_COMPONENT_SWIZZLE_A))
+                Mapping[Comp] = TEXTURE_COMPONENT_SWIZZLE_IDENTITY;
+
+            TextureComponentMapping MappingFromStr;
+            EXPECT_TRUE(TextureComponentMappingFromString(Str, MappingFromStr));
+            EXPECT_EQ(Mapping, MappingFromStr);
+        }
+    }
+}
+
 TEST(GraphicsAccessories_GraphicsAccessories, GetMipLevelProperties)
 {
     TextureDesc        Desc;
@@ -1123,6 +1234,119 @@ TEST(GraphicsAccessories_GraphicsAccessories, GetAdapterTypeString)
     EXPECT_STREQ(GetAdapterTypeString(ADAPTER_TYPE_SOFTWARE, true), "ADAPTER_TYPE_SOFTWARE");
     EXPECT_STREQ(GetAdapterTypeString(ADAPTER_TYPE_INTEGRATED, true), "ADAPTER_TYPE_INTEGRATED");
     EXPECT_STREQ(GetAdapterTypeString(ADAPTER_TYPE_DISCRETE, true), "ADAPTER_TYPE_DISCRETE");
+}
+
+
+TEST(GraphicsAccessories_GraphicsAccessories, ResolveInputLayoutAutoOffsetsAndStrides)
+{
+    auto Test = [](std::vector<LayoutElement> Elems, const std::vector<LayoutElement>& RefElems, const std::vector<Uint32>& RefStides) {
+        auto Stides = ResolveInputLayoutAutoOffsetsAndStrides(Elems.data(), static_cast<Uint32>(Elems.size()));
+        ASSERT_EQ(Elems.size(), RefElems.size());
+        for (size_t i = 0; i < Elems.size(); ++i)
+        {
+            EXPECT_EQ(Elems[i], RefElems[i]) << "i = " << i;
+        }
+
+        EXPECT_EQ(Stides, RefStides);
+    };
+
+    Test({}, {}, {});
+
+    Test({
+             {0, 0, 3, VT_FLOAT32},
+         },
+         {
+             {0, 0, 3, VT_FLOAT32, false, 0, 12},
+         },
+         {12});
+
+    Test({
+             {0, 3, 4, VT_FLOAT32},
+         },
+         {
+             {0, 3, 4, VT_FLOAT32, false, 0, 16},
+         },
+         {0, 0, 0, 16});
+
+    Test({
+             {0, 1, 4, VT_FLOAT32},
+             {0, 1, 2, VT_FLOAT32, false, 32},
+         },
+         {
+             {0, 1, 4, VT_FLOAT32, false, 0, 40},
+             {0, 1, 2, VT_FLOAT32, false, 32, 40},
+         },
+         {0, 40});
+
+    Test({
+             {0, 2, 1, VT_FLOAT32, false, LAYOUT_ELEMENT_AUTO_OFFSET, 32},
+         },
+         {
+             {0, 2, 1, VT_FLOAT32, false, 0, 32},
+         },
+         {0, 0, 32});
+
+    Test({
+             {0, 2, 1, VT_FLOAT32, false, 8},
+         },
+         {
+             {0, 2, 1, VT_FLOAT32, false, 8, 12},
+         },
+         {0, 0, 12});
+
+    Test({
+             {0, 2, 1, VT_FLOAT32, false, 8},
+             {0, 2, 3, VT_FLOAT32, false},
+             {0, 2, 4, VT_FLOAT32, false, 28},
+             {0, 2, 2, VT_FLOAT32, false, LAYOUT_ELEMENT_AUTO_OFFSET, 128},
+         },
+         {
+             {0, 2, 1, VT_FLOAT32, false, 8, 128},
+             {0, 2, 3, VT_FLOAT32, false, 12, 128},
+             {0, 2, 4, VT_FLOAT32, false, 28, 128},
+             {0, 2, 2, VT_FLOAT32, false, 44, 128},
+         },
+         {0, 0, 128});
+
+    Test({
+             {0, 2, 1, VT_FLOAT32, false, 32},
+             {0, 2, 2, VT_FLOAT32, false, 8},
+             {0, 2, 1, VT_FLOAT32, false, 20},
+             {0, 2, 3, VT_FLOAT32, false},
+         },
+         {
+             {0, 2, 1, VT_FLOAT32, false, 32, 48},
+             {0, 2, 2, VT_FLOAT32, false, 8, 48},
+             {0, 2, 1, VT_FLOAT32, false, 20, 48},
+             {0, 2, 3, VT_FLOAT32, false, 36, 48},
+         },
+         {0, 0, 48});
+
+    Test({
+             {0, 1, 1, VT_FLOAT32, false, 8},
+             {0, 3, 1, VT_FLOAT32, false},
+             {0, 1, 2, VT_FLOAT32, false},
+             {0, 3, 1, VT_FLOAT32, false, 12},
+         },
+         {
+             {0, 1, 1, VT_FLOAT32, false, 8, 20},
+             {0, 3, 1, VT_FLOAT32, false, 0, 16},
+             {0, 1, 2, VT_FLOAT32, false, 12, 20},
+             {0, 3, 1, VT_FLOAT32, false, 12, 16},
+         },
+         {0, 20, 0, 16});
+
+    Test({
+             {0, 2, 1, VT_FLOAT32, false, 8},
+             {1, 2, 1, VT_FLOAT32, false, 8},
+             {3, 2, 3, VT_FLOAT32, false, 8},
+         },
+         {
+             {0, 2, 1, VT_FLOAT32, false, 8, 20},
+             {1, 2, 1, VT_FLOAT32, false, 8, 20},
+             {3, 2, 3, VT_FLOAT32, false, 8, 20},
+         },
+         {0, 0, 20});
 }
 
 } // namespace

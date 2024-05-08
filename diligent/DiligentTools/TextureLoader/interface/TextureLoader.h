@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2023 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -79,6 +79,12 @@ struct TextureLoadInfo
     /// Flag indicating that the procedure should generate lower mip levels
     Bool GenerateMips                   DEFAULT_VALUE(True);
 
+    /// Flag indicating that the image should be flipped vertically
+    Bool FlipVertically                 DEFAULT_VALUE(False);
+
+    /// Flag indicating that RGB channels should be premultiplied by alpha
+    Bool PermultiplyAlpha               DEFAULT_VALUE(False);
+
     /// Texture format
     TEXTURE_FORMAT Format               DEFAULT_VALUE(TEX_FORMAT_UNKNOWN);
 
@@ -93,6 +99,16 @@ struct TextureLoadInfo
 
     /// Coarse mip filter type, see Diligent::TEXTURE_LOAD_MIP_FILTER.
     TEXTURE_LOAD_MIP_FILTER MipFilter   DEFAULT_VALUE(TEXTURE_LOAD_MIP_FILTER_DEFAULT);
+
+    /// Texture component swizzle.
+    ///
+    /// \remarks    When the number of channels in the source image is less than
+    ///             the number of channels in the destination texture, the following
+    ///             rules apply:
+    ///             - Alpha channel is always set to 1.
+    ///             - Single-channel source image is replicated to all channels.
+    ///             - Two-channel source image is replicated to RG channels, B channel is set to 0.
+    TextureComponentMapping Swizzle DEFAULT_INITIALIZER(TextureComponentMapping::Identity());
 
 #if DILIGENT_CPP_INTERFACE
     explicit TextureLoadInfo(const Char*         _Name,
@@ -121,7 +137,7 @@ typedef struct TextureLoadInfo TextureLoadInfo;
 
 
 // {E04FE6D5-8665-4183-A872-852E0F7CE242}
-static const struct INTERFACE_ID IID_TextureLoader =
+static DILIGENT_CONSTEXPR struct INTERFACE_ID IID_TextureLoader =
     {0xe04fe6d5, 0x8665, 0x4183, {0xa8, 0x72, 0x85, 0x2e, 0xf, 0x7c, 0xe2, 0x42}};
 
 #define DILIGENT_INTERFACE_NAME ITextureLoader
@@ -148,6 +164,9 @@ DILIGENT_BEGIN_INTERFACE(ITextureLoader, IObject)
     VIRTUAL const TextureSubResData REF METHOD(GetSubresourceData)(THIS_
                                                                    Uint32 MipLevel,
                                                                    Uint32 ArraySlice DEFAULT_VALUE(0)) CONST PURE;
+
+    /// Returns the texture initialization data.
+    VIRTUAL TextureData METHOD(GetTextureData)(THIS) PURE;
 };
 DILIGENT_END_INTERFACE
 // clang-format on
@@ -160,6 +179,7 @@ DILIGENT_END_INTERFACE
 #    define ITextureLoader_CreateTexture(This, ...)      CALL_IFACE_METHOD(TextureLoader_CreateTexture,       CreateTexture,       This, __VA_ARGS__)
 #    define ITextureLoader_GetTextureDesc(This)          CALL_IFACE_METHOD(TextureLoader_GetTextureDesc,      GetTextureDesc,      This)
 #    define ITextureLoader_GetSubresourceData(This, ...) CALL_IFACE_METHOD(TextureLoader_GetSubresourceData,  GetSubresourceData,  This, __VA_ARGS__)
+#    define ITextureLoader_GetTextureData(This)          CALL_IFACE_METHOD(TextureLoader_GetTextureData,      GetTextureData,      This)
 // clang-format on
 
 #endif
@@ -191,8 +211,6 @@ void DILIGENT_GLOBAL_FUNCTION(CreateTextureLoaderFromFile)(const char*          
 
 /// \param [in]  pData       - Pointer to the data.
 /// \param [in]  Size        - The data size.
-/// \param [in]  FileFormat  - File format. If this parameter is IMAGE_FILE_FORMAT_UNKNOWN,
-///                            the format will be derived from the contents.
 /// \param [in]  MakeCopy    - Whether to make the copy of the data (see remarks).
 /// \param [in]  TexLoadInfo - Texture loading information, see Diligent::TextureLoadInfo.
 /// \param [out] ppLoader    - Memory location where pointer to the created texture loader will be written.
@@ -201,7 +219,6 @@ void DILIGENT_GLOBAL_FUNCTION(CreateTextureLoaderFromFile)(const char*          
 ///             texture loader object is destroyed.
 void DILIGENT_GLOBAL_FUNCTION(CreateTextureLoaderFromMemory)(const void*               pData,
                                                              size_t                    Size,
-                                                             IMAGE_FILE_FORMAT         FileFormat,
                                                              bool                      MakeCopy,
                                                              const TextureLoadInfo REF TexLoadInfo,
                                                              ITextureLoader**          ppLoader);

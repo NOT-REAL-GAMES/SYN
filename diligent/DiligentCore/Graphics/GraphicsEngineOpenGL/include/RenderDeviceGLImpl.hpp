@@ -35,7 +35,6 @@
 #include "VAOCache.hpp"
 #include "BaseInterfacesGL.h"
 #include "FBOCache.hpp"
-#include "TexRegionRender.hpp"
 
 namespace Diligent
 {
@@ -200,8 +199,6 @@ public:
     size_t GetCommandQueueCount() const { return 1; }
     Uint64 GetCommandQueueMask() const { return Uint64{1}; }
 
-    void InitTexRegionRender();
-
     struct GLDeviceLimits
     {
         GLint MaxUniformBlocks;
@@ -210,6 +207,13 @@ public:
         GLint MaxImagesUnits;
     };
     const GLDeviceLimits& GetDeviceLimits() const { return m_DeviceLimits; }
+
+    struct GLDeviceCaps
+    {
+        bool FramebufferSRGB  = false;
+        bool SemalessCubemaps = false;
+    };
+    const GLDeviceCaps& GetGLCaps() const { return m_GLCaps; }
 
 protected:
     friend class DeviceContextGLImpl;
@@ -232,8 +236,6 @@ protected:
     Threading::SpinLock                                          m_FBOCacheLock;
     std::unordered_map<GLContext::NativeGLContextType, FBOCache> m_FBOCache;
 
-    std::unique_ptr<TexRegionRender> m_pTexRegionRender;
-
 private:
     virtual void TestTextureFormat(TEXTURE_FORMAT TexFormat) override final;
     bool         CheckExtension(const Char* ExtensionString) const;
@@ -243,6 +245,7 @@ private:
     int m_ShowDebugGLOutput = 1;
 
     GLDeviceLimits m_DeviceLimits = {};
+    GLDeviceCaps   m_GLCaps       = {};
 };
 
 } // namespace Diligent

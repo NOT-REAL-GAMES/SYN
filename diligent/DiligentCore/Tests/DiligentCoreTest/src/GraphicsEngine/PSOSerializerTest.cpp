@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -369,8 +369,12 @@ TEST(PSOSerializerTest, SerializeGraphicsPSOCreateInfo)
             {
                 GraphicsPipeline.RTVFormats[i] = Val(TEX_FORMAT_UNKNOWN, TEX_FORMAT_NUM_FORMATS - 1, i + 1);
             }
+            GraphicsPipeline.DSVFormat        = Val(TEX_FORMAT_UNKNOWN, TEX_FORMAT_NUM_FORMATS - 1, 9);
+            GraphicsPipeline.ReadOnlyDSV      = Val.Bool();
             GraphicsPipeline.SmplDesc.Count   = Val(Uint8{0}, Uint8{64});
             GraphicsPipeline.SmplDesc.Quality = Val(Uint8{0}, Uint8{8});
+
+            ASSERT_SIZEOF64(GraphicsPipelineStateCreateInfo, 344, "Did you add a new member to GraphicsPipelineStateCreateInfo? Please add serialization test here.");
         }
 
         void Measure(Serializer<SerializerMode::Measure>& Ser, const GraphicsPipelineStateCreateInfo& CI, const TPRSNames& PRSNames)
@@ -697,10 +701,17 @@ TEST(PSOSerializerTest, SerializeRenderPassDesc)
 void SerializeShaderCreateInfo(bool UseBytecode)
 {
     ShaderCreateInfo RefCI;
-    RefCI.Desc           = {"Serialized Shader", SHADER_TYPE_COMPUTE, true, "suff"};
-    RefCI.EntryPoint     = "Entry_Point";
-    RefCI.SourceLanguage = SHADER_SOURCE_LANGUAGE_HLSL;
-    RefCI.ShaderCompiler = SHADER_COMPILER_GLSLANG;
+    RefCI.Desc                         = {"Serialized Shader", SHADER_TYPE_COMPUTE, true, "suff"};
+    RefCI.EntryPoint                   = "Entry_Point";
+    RefCI.SourceLanguage               = SHADER_SOURCE_LANGUAGE_HLSL;
+    RefCI.ShaderCompiler               = SHADER_COMPILER_GLSLANG;
+    RefCI.HLSLVersion                  = {1, 2};
+    RefCI.GLSLVersion                  = {3, 4};
+    RefCI.GLESSLVersion                = {5, 6};
+    RefCI.MSLVersion                   = {7, 8};
+    RefCI.CompileFlags                 = SHADER_COMPILE_FLAG_SKIP_REFLECTION;
+    RefCI.LoadConstantBufferReflection = true;
+    RefCI.GLSLExtensions               = "My extension";
 
     constexpr size_t RefBytecodeSize              = 7;
     const Uint8      RefBytecode[RefBytecodeSize] = {42, 13, 179, 211, 97, 65, 71};

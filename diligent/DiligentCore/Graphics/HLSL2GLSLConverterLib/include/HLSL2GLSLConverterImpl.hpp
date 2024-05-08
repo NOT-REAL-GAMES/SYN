@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -257,6 +257,7 @@ private:
         TokenType Type = TokenType::Undefined;
         String    Literal;
         String    Delimiter;
+        size_t    Idx = ~size_t{0};
 
         void SetType(TokenType _Type)
         {
@@ -303,19 +304,22 @@ private:
                                 const std::string::const_iterator& DelimStart,
                                 const std::string::const_iterator& DelimEnd,
                                 const std::string::const_iterator& LiteralStart,
-                                const std::string::const_iterator& LiteralEnd)
+                                const std::string::const_iterator& LiteralEnd,
+                                size_t                             Idx)
         {
-            return TokenInfo{_Type, std::string{LiteralStart, LiteralEnd}, std::string{DelimStart, DelimEnd}};
+            return TokenInfo{_Type, std::string{LiteralStart, LiteralEnd}, std::string{DelimStart, DelimEnd}, Idx};
         }
 
         TokenInfo() {}
 
         TokenInfo(TokenType   _Type,
                   std::string _Literal,
-                  std::string _Delimiter = "") :
+                  std::string _Delimiter = "",
+                  size_t      _Idx       = ~size_t{0}) :
             Type{_Type},
             Literal{std::move(_Literal)},
-            Delimiter{std::move(_Delimiter)}
+            Delimiter{std::move(_Delimiter)},
+            Idx{_Idx}
         {}
 
         size_t GetDelimiterLen() const
@@ -402,6 +406,8 @@ private:
 
         const HLSLObjectInfo* FindHLSLObject(const String& Name);
 
+        void ParseGlobalPreprocessorDefines();
+
         void ProcessShaderDeclaration(TokenListType::iterator EntryPointToken, SHADER_TYPE ShaderType);
 
         void ProcessObjectMethods(const TokenListType::iterator& ScopeStart, const TokenListType::iterator& ScopeEnd);
@@ -435,6 +441,8 @@ private:
         void   RemoveSpecialShaderAttributes();
         void   RemoveSemanticsFromBlock(TokenListType::iterator& Token, TokenType OpenBracketType, TokenType ClosingBracketType);
         void   RemoveSamplerRegister(TokenListType::iterator& Token);
+
+        TokenListType::iterator FindMacroDefinition(const std::string& MacroName);
 
         // IteratorType may be String::iterator or String::const_iterator.
         // While iterator is convertible to const_iterator,
@@ -513,7 +521,8 @@ private:
 
         const char* GetInterpolationQualifier(const ShaderParameterInfo& ParamInfo) const;
 
-        void ProcessFragmentShaderArguments(std::vector<ShaderParameterInfo>& Params,
+        void ProcessFragmentShaderArguments(TokenListType::iterator&          Token,
+                                            std::vector<ShaderParameterInfo>& Params,
                                             String&                           GlobalVariables,
                                             std::stringstream&                ReturnHandlerSS,
                                             String&                           Prologue);
@@ -585,6 +594,9 @@ private:
         // List of tokens defining structs
         std::unordered_map<HashMapStringKey, TokenListType::iterator> m_StructDefinitions;
 
+        // List of preprocessor macro definitions in global scope
+        std::unordered_map<HashMapStringKey, TokenListType::iterator> m_PreprocessorDefinitions;
+
         // Stack of parsed objects, for every scope level.
         // There are currently only two levels:
         // level 0 - global scope, contains all global objects
@@ -612,6 +624,9 @@ private:
 
     // Set of all HLSL atomic operations (InterlockedAdd, InterlockedOr, ...)
     std::unordered_set<HashMapStringKey> m_AtomicOperations;
+
+    // Set of all HLSL special shader attributes (numthreads, earlydepthstencil, ...)
+    std::unordered_set<HashMapStringKey> m_SpecialShaderAttributes;
 
     // HLSL semantic -> glsl variable, for every shader stage and input/output type (in == 0, out == 1)
     // Example: [vertex, output] SV_Position -> gl_Position

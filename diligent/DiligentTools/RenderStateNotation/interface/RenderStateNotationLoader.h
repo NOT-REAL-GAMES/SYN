@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2023 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -36,11 +36,7 @@
 
 DILIGENT_BEGIN_NAMESPACE(Diligent)
 
-#if DILIGENT_C_INTERFACE
-#    define REF *
-#else
-#    define REF &
-#endif
+#include "../../../DiligentCore/Primitives/interface/DefineRefMacro.h"
 
 /// Render state notation loader initialization info.
 struct RenderStateNotationLoaderCreateInfo
@@ -200,8 +196,10 @@ typedef struct LoadPipelineStateInfo LoadPipelineStateInfo;
 
 // clang-format on
 
+#include "../../../DiligentCore/Primitives/interface/UndefRefMacro.h"
+
 // {FD9B12C5-3BC5-4729-A2B4-924DF374B3D3}
-static const INTERFACE_ID IID_RenderStateNotationLoader = {0xFD9B12C5, 0x3BC5, 0x4729, {0xA2, 0xB4, 0x92, 0x4D, 0xF3, 0x74, 0xB3, 0xD3}};
+static DILIGENT_CONSTEXPR INTERFACE_ID IID_RenderStateNotationLoader = {0xFD9B12C5, 0x3BC5, 0x4729, {0xA2, 0xB4, 0x92, 0x4D, 0xF3, 0x74, 0xB3, 0xD3}};
 
 #define DILIGENT_INTERFACE_NAME IRenderStateNotationLoader
 #include "../../../DiligentCore/Primitives/interface/DefineInterfaceHelperMacros.h"

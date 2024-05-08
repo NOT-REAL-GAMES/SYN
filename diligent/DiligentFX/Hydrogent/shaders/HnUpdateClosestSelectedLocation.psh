@@ -1,0 +1,56 @@
+#include "HnClosestSelectedLocation.fxh"
+#include "FullScreenTriangleVSOutput.fxh"
+
+cbuffer cbConstants
+{
+    ClosestSelectedLocationConstants g_Constants;
+}
+
+Texture2D g_SrcClosestLocation;
+
+void UpdateClosestLocation(in    float2 CurrentLocation,
+                           in    float2 Offset,
+                           inout float2 ClosestLocation, 
+                           inout bool   IsLocationValid,
+                           inout float  ClosestDistance)
+{
+    float2 TestSelectedLocation;
+    if (!DecodeClosestSelectedLocation(g_SrcClosestLocation.Load(int3(CurrentLocation + Offset * g_Constants.SampleRange, 0)).xy, TestSelectedLocation))
+        return;
+
+    float Width;
+    float Height;
+    g_SrcClosestLocation.GetDimensions(Width, Height);
+    float2 Dir = TestSelectedLocation * float2(Width, Height) - CurrentLocation;
+    float DistSqr = dot(Dir, Dir);
+    if (DistSqr < ClosestDistance)
+    {
+        ClosestDistance = DistSqr;
+        ClosestLocation = TestSelectedLocation;
+        IsLocationValid = true;
+    }
+}
+
+void main(in  FullScreenTriangleVSOutput VSOut,
+          out float2                     Location : SV_Target0)
+{
+    float2 ClosestLocation = float2(0.0, 0.0);
+    bool   IsLocationValid = false;
+    float  ClosestDistance = 1e+10;
+
+    float2 Pos = VSOut.f4PixelPos.xy;
+    
+    UpdateClosestLocation(Pos, float2(-1.0, -1.0), ClosestLocation, IsLocationValid, ClosestDistance);
+    UpdateClosestLocation(Pos, float2( 0.0, -1.0), ClosestLocation, IsLocationValid, ClosestDistance);
+    UpdateClosestLocation(Pos, float2(+1.0, -1.0), ClosestLocation, IsLocationValid, ClosestDistance);
+
+    UpdateClosestLocation(Pos, float2(-1.0,  0.0), ClosestLocation, IsLocationValid, ClosestDistance);
+    UpdateClosestLocation(Pos, float2( 0.0,  0.0), ClosestLocation, IsLocationValid, ClosestDistance);
+    UpdateClosestLocation(Pos, float2(+1.0,  0.0), ClosestLocation, IsLocationValid, ClosestDistance);
+
+    UpdateClosestLocation(Pos, float2(-1.0, +1.0), ClosestLocation, IsLocationValid, ClosestDistance);
+    UpdateClosestLocation(Pos, float2( 0.0, +1.0), ClosestLocation, IsLocationValid, ClosestDistance);
+    UpdateClosestLocation(Pos, float2(+1.0, +1.0), ClosestLocation, IsLocationValid, ClosestDistance);
+
+    Location = EncodeClosestSelectedLocation(ClosestLocation, IsLocationValid);
+}

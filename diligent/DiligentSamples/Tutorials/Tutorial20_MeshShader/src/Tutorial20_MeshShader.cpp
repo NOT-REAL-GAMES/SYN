@@ -112,7 +112,7 @@ void Tutorial20_MeshShader::CreateDrawTasks()
     //  * time that is used for animation and will be updated in the shader.
     // Additionally you can store model transformation matrix, mesh and material IDs, etc.
 
-    const int2          GridDim{1024, 1024};
+    const int2          GridDim{4096, 4096};
     FastRandReal<float> Rnd{0, 0.f, 1.f};
 
     std::vector<DrawTask> DrawTasks;

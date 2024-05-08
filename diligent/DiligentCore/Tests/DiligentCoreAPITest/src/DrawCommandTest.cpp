@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -127,6 +127,7 @@ using namespace Diligent;
 using namespace Diligent::Testing;
 
 #include "InlineShaders/DrawCommandTestHLSL.h"
+#include "InlineShaders/DrawCommandTestGLSL.h"
 
 namespace
 {
@@ -339,6 +340,33 @@ void main(in  uint    VertId : SV_VertexID,
 }
 )"
 };
+
+const std::string DrawTest_VS_Attribs{
+R"(
+struct PSInput
+{
+    float4 Pos   : SV_POSITION;
+    float3 Color : COLOR;
+};
+
+struct VSInput
+{
+    float4 Pos     : ATTRIB5;
+    float4 Unused0 : ATTRIB1;
+    float4 Unused1 : ATTRIB4;
+    float3 Color   : ATTRIB2;
+    float4 Unused2 : ATTRIB7;
+};
+
+void main(in  VSInput VSIn,
+          out PSInput PSIn)
+{
+    PSIn.Pos   = VSIn.Pos;
+    PSIn.Color = VSIn.Color;
+}
+)"
+};
+
 // clang-format on
 
 } // namespace HLSL
@@ -347,7 +375,9 @@ void main(in  uint    VertId : SV_VertexID,
 
 namespace GLSL
 {
+
 // clang-format off
+
 const std::string DrawTest_VSStructuredBufferArray{
 R"(
 layout(std140) readonly buffer g_Buffers
@@ -376,7 +406,9 @@ void main()
 }
 )"
 };
+
 // clang-format on
+
 } // namespace GLSL
 
 namespace MSL
@@ -581,6 +613,23 @@ protected:
         pDevice->CreateGraphicsPipelineState(PSOCreateInfo, &sm_pDraw_2xStride_PSO);
         ASSERT_NE(sm_pDraw_2xStride_PSO, nullptr);
 
+        PSODesc.Name = "Draw command test - Buffer 2";
+
+        Elems[0] = {0, 1, 4, VT_FLOAT32};
+        Elems[1] = {1, 3, 3, VT_FLOAT32};
+#if PLATFORM_LINUX
+        if (pDevice->GetDeviceInfo().IsVulkanDevice() && pDevice->GetAdapterInfo().Type == ADAPTER_TYPE_SOFTWARE)
+        {
+            sm_UseNullBoundVBWorkaround = true;
+            // On Linux, Vulkan software rasterizer fails if there are null buffers bound.
+            Elems[0].BufferSlot = 0;
+            Elems[1].BufferSlot = 1;
+        }
+#endif
+        pDevice->CreateGraphicsPipelineState(PSOCreateInfo, &sm_pDraw_2VBs_PSO);
+        ASSERT_NE(sm_pDraw_2VBs_PSO, nullptr);
+
+
         PSODesc.Name = "Instanced draw command test";
         // clang-format off
         LayoutElement InstancedElems[] =
@@ -604,6 +653,7 @@ protected:
         sm_pDrawProceduralPSO.Release();
         sm_pDrawPSO.Release();
         sm_pDraw_2xStride_PSO.Release();
+        sm_pDraw_2VBs_PSO.Release();
         sm_pDrawInstancedPSO.Release();
         sm_pDrawStripPSO.Release();
 
@@ -730,17 +780,25 @@ protected:
     static RefCntAutoPtr<IPipelineState> sm_pDrawProceduralPSO;
     static RefCntAutoPtr<IPipelineState> sm_pDrawPSO;
     static RefCntAutoPtr<IPipelineState> sm_pDraw_2xStride_PSO;
+    static RefCntAutoPtr<IPipelineState> sm_pDraw_2VBs_PSO;
     static RefCntAutoPtr<IPipelineState> sm_pDrawInstancedPSO;
     static RefCntAutoPtr<IPipelineState> sm_pDrawStripPSO;
     static FastRandFloat                 sm_Rnd;
+
+    // On Linux, Vulkan software rasterizer fails if there are
+    // null buffers bound.
+    static bool sm_UseNullBoundVBWorkaround;
 };
 
 RefCntAutoPtr<IPipelineState> DrawCommandTest::sm_pDrawProceduralPSO;
 RefCntAutoPtr<IPipelineState> DrawCommandTest::sm_pDrawPSO;
 RefCntAutoPtr<IPipelineState> DrawCommandTest::sm_pDraw_2xStride_PSO;
+RefCntAutoPtr<IPipelineState> DrawCommandTest::sm_pDraw_2VBs_PSO;
 RefCntAutoPtr<IPipelineState> DrawCommandTest::sm_pDrawInstancedPSO;
 RefCntAutoPtr<IPipelineState> DrawCommandTest::sm_pDrawStripPSO;
 FastRandFloat                 DrawCommandTest::sm_Rnd{0, 0.f, 1.f};
+
+bool DrawCommandTest::sm_UseNullBoundVBWorkaround = false;
 
 TEST_F(DrawCommandTest, DrawProcedural)
 {
@@ -897,6 +955,43 @@ TEST_F(DrawCommandTest, Draw_StartVertex_VBOffset_2xStride)
     Present();
 }
 
+TEST_F(DrawCommandTest, Draw_2VBs)
+{
+    auto* pEnv     = GPUTestingEnvironment::GetInstance();
+    auto* pContext = pEnv->GetDeviceContext();
+
+    SetRenderTargets(sm_pDraw_2VBs_PSO);
+
+    // clang-format off
+    const float4 Positions[] =
+    {
+        Pos[0], Pos[1], Pos[2],
+        Pos[3], Pos[4], Pos[5]
+    };
+    const float3 Colors[] =
+    {
+        Color[0], Color[1], Color[2],
+        Color[0], Color[1], Color[2],
+    };
+    // clang-format on
+
+    auto pPosVB = CreateVertexBuffer(Positions, sizeof(Positions));
+    auto pColVB = CreateVertexBuffer(Colors, sizeof(Colors));
+    if (sm_UseNullBoundVBWorkaround)
+    {
+        IBuffer* pVBs[] = {pPosVB, pColVB};
+        pContext->SetVertexBuffers(0, _countof(pVBs), pVBs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+    }
+    else
+    {
+        IBuffer* pVBs[] = {nullptr, pPosVB, nullptr, pColVB};
+        pContext->SetVertexBuffers(0, _countof(pVBs), pVBs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+    }
+    DrawAttribs drawAttrs{6, DRAW_FLAG_VERIFY_ALL};
+    pContext->Draw(drawAttrs);
+
+    Present();
+}
 
 
 // Indexed draw calls (glDrawElements/DrawIndexed)
@@ -1024,6 +1119,48 @@ TEST_F(DrawCommandTest, DrawIndexed_IBOffset_BaseVertex)
 
     DrawIndexedAttribs drawAttrs{6, VT_UINT32, DRAW_FLAG_VERIFY_ALL};
     drawAttrs.BaseVertex = bv;
+    pContext->DrawIndexed(drawAttrs);
+
+    Present();
+}
+
+TEST_F(DrawCommandTest, Draw_2VBs_Indexed)
+{
+    auto* pEnv     = GPUTestingEnvironment::GetInstance();
+    auto* pContext = pEnv->GetDeviceContext();
+
+    SetRenderTargets(sm_pDraw_2VBs_PSO);
+
+    // clang-format off
+    const float4 Positions[] =
+    {
+        {}, Pos[0], {}, Pos[1], {}, Pos[2],
+        {}, {}, Pos[3], Pos[4], {}, {}, Pos[5]
+    };
+    const float3 Colors[] =
+    {
+        {}, Color[0], {}, Color[1], {}, Color[2],
+        {}, {}, Color[0], Color[1], {}, {}, Color[2],
+    };
+    const Uint32 Indices[] = {1,3,5, 8,9,12};
+    // clang-format on
+
+    auto pPosVB = CreateVertexBuffer(Positions, sizeof(Positions));
+    auto pColVB = CreateVertexBuffer(Colors, sizeof(Colors));
+    if (sm_UseNullBoundVBWorkaround)
+    {
+        IBuffer* pVBs[] = {pPosVB, pColVB};
+        pContext->SetVertexBuffers(0, _countof(pVBs), pVBs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+    }
+    else
+    {
+        IBuffer* pVBs[] = {nullptr, pPosVB, nullptr, pColVB};
+        pContext->SetVertexBuffers(0, _countof(pVBs), pVBs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+    }
+    auto pIB = CreateIndexBuffer(Indices, _countof(Indices));
+    pContext->SetIndexBuffer(pIB, 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+
+    DrawIndexedAttribs drawAttrs{6, VT_UINT32, DRAW_FLAG_VERIFY_ALL};
     pContext->DrawIndexed(drawAttrs);
 
     Present();
@@ -2681,14 +2818,14 @@ void DrawCommandTest::DrawWithStructuredOrFormattedBuffers(bool                 
 
     UpdateBuffer(pPositionsBuffView, Pos, 0, sizeof(float4) * 3);
     UpdateBuffer(pColorsBuffView, Color4, 4, sizeof(float4) * 3);
-    pContext->TransitionShaderResources(pPSO, pSRB);
+    pContext->TransitionShaderResources(pSRB);
 
     DrawAttribs drawAttrs{3, DRAW_FLAG_VERIFY_ALL};
     pContext->Draw(drawAttrs);
 
     UpdateBuffer(pPositionsBuffView, Pos + 3, 0, sizeof(float4) * 3);
     UpdateBuffer(pColorsBuffView, Color4, 4, sizeof(float4) * 3);
-    pContext->TransitionShaderResources(pPSO, pSRB);
+    pContext->TransitionShaderResources(pSRB);
 
     pContext->Draw(drawAttrs);
 
@@ -3173,6 +3310,275 @@ TEST_F(DrawCommandTest, UniformBufferOffsets_MSL)
 
     DrawWithUniOrStructBufferOffsets(pVS, pPS, BUFFER_MODE_UNDEFINED, SHADER_RESOURCE_VARIABLE_TYPE_MUTABLE,
                                      USAGE_DYNAMIC, SHADER_VARIABLE_FLAG_NONE);
+}
+
+TEST_F(DrawCommandTest, VertexAttributes)
+{
+    auto* pEnv       = GPUTestingEnvironment::GetInstance();
+    auto* pDevice    = pEnv->GetDevice();
+    auto* pContext   = pEnv->GetDeviceContext();
+    auto* pSwapChain = pEnv->GetSwapChain();
+
+    GraphicsPipelineStateCreateInfo PSOCreateInfo;
+
+    auto& PSODesc          = PSOCreateInfo.PSODesc;
+    auto& GraphicsPipeline = PSOCreateInfo.GraphicsPipeline;
+
+    PSODesc.PipelineType                          = PIPELINE_TYPE_GRAPHICS;
+    GraphicsPipeline.NumRenderTargets             = 1;
+    GraphicsPipeline.RTVFormats[0]                = pSwapChain->GetDesc().ColorBufferFormat;
+    GraphicsPipeline.PrimitiveTopology            = PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+    GraphicsPipeline.RasterizerDesc.CullMode      = CULL_MODE_NONE;
+    GraphicsPipeline.DepthStencilDesc.DepthEnable = False;
+
+    ShaderCreateInfo ShaderCI;
+    ShaderCI.SourceLanguage = SHADER_SOURCE_LANGUAGE_HLSL;
+    ShaderCI.ShaderCompiler = pEnv->GetDefaultCompiler(ShaderCI.SourceLanguage);
+
+    RefCntAutoPtr<IShader> pVS;
+    {
+        ShaderCI.Desc       = {"Draw command test - vertex attributes", SHADER_TYPE_VERTEX, true};
+        ShaderCI.EntryPoint = "main";
+        ShaderCI.Source     = HLSL::DrawTest_VS_Attribs.c_str();
+        pDevice->CreateShader(ShaderCI, &pVS);
+        ASSERT_NE(pVS, nullptr);
+    }
+
+    RefCntAutoPtr<IShader> pPS;
+    {
+        ShaderCI.Desc       = {"Draw command test pixel shader", SHADER_TYPE_PIXEL, true};
+        ShaderCI.EntryPoint = "main";
+        ShaderCI.Source     = HLSL::DrawTest_PS.c_str();
+        pDevice->CreateShader(ShaderCI, &pPS);
+        ASSERT_NE(pPS, nullptr);
+    }
+
+    LayoutElement Elems[] =
+        {
+            LayoutElement{5, 3, 4, VT_FLOAT32},
+            LayoutElement{2, 1, 3, VT_FLOAT32},
+            LayoutElement{1, 2, 4, VT_FLOAT32},
+            LayoutElement{4, 2, 4, VT_FLOAT32},
+            LayoutElement{7, 2, 4, VT_FLOAT32},
+        };
+    if (sm_UseNullBoundVBWorkaround)
+    {
+        Elems[0].BufferSlot = 0;
+        Elems[1].BufferSlot = 1;
+    }
+    GraphicsPipeline.InputLayout.LayoutElements = Elems;
+    GraphicsPipeline.InputLayout.NumElements    = _countof(Elems);
+
+    PSOCreateInfo.pVS = pVS;
+    PSOCreateInfo.pPS = pPS;
+
+    RefCntAutoPtr<IPipelineState> pPSO;
+    pDevice->CreateGraphicsPipelineState(PSOCreateInfo, &pPSO);
+    ASSERT_NE(pPSO, nullptr);
+
+    SetRenderTargets(pPSO);
+
+    // clang-format off
+    const float4 Positions[] =
+    {
+        Pos[0], Pos[1], Pos[2],
+        Pos[3], Pos[4], Pos[5]
+    };
+    const float3 Colors[] =
+    {
+        Color[0], Color[1], Color[2],
+        Color[0], Color[1], Color[2]
+    };
+    const float4 Zero[_countof(Positions)];
+    // clang-format on
+
+    auto pPosVB  = CreateVertexBuffer(Positions, sizeof(Positions));
+    auto pColVB  = CreateVertexBuffer(Colors, sizeof(Colors));
+    auto pZeroVB = CreateVertexBuffer(Zero, sizeof(Zero));
+    if (sm_UseNullBoundVBWorkaround)
+    {
+        IBuffer* pVBs[] = {pPosVB, pColVB, pZeroVB};
+        pContext->SetVertexBuffers(0, _countof(pVBs), pVBs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+    }
+    else
+    {
+        IBuffer* pVBs[] = {nullptr, pColVB, pZeroVB, pPosVB};
+        pContext->SetVertexBuffers(0, _countof(pVBs), pVBs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+    }
+    DrawAttribs drawAttrs{6, DRAW_FLAG_VERIFY_ALL};
+    pContext->Draw(drawAttrs);
+
+    Present();
+}
+
+TEST_F(DrawCommandTest, MultiDraw)
+{
+    auto* pEnv     = GPUTestingEnvironment::GetInstance();
+    auto* pContext = pEnv->GetDeviceContext();
+
+    SetRenderTargets(sm_pDrawPSO);
+
+    auto     pVB    = CreateVertexBuffer(Vert, sizeof(Vert));
+    IBuffer* pVBs[] = {pVB};
+    pContext->SetVertexBuffers(0, 1, pVBs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+
+    MultiDrawItem DrawItems[] =
+        {
+            {3, 0},
+            {3, 3},
+        };
+
+    MultiDrawAttribs drawAttrs{_countof(DrawItems), DrawItems, DRAW_FLAG_VERIFY_ALL};
+    pContext->MultiDraw(drawAttrs);
+
+    Present();
+}
+
+TEST_F(DrawCommandTest, MultiDrawIndexed)
+{
+    auto* pEnv     = GPUTestingEnvironment::GetInstance();
+    auto* pContext = pEnv->GetDeviceContext();
+
+    SetRenderTargets(sm_pDrawPSO);
+
+    // clang-format off
+    const Vertex Triangles[] =
+    {
+        {}, {},
+        Vert[0], {}, Vert[1], {}, {}, Vert[2],
+        Vert[3], {}, {}, Vert[5], Vert[4]
+    };
+    const Uint32 Indices[] = {2,4,7, 8,12,11};
+    // clang-format on
+
+    auto pVB = CreateVertexBuffer(Triangles, sizeof(Triangles));
+    auto pIB = CreateIndexBuffer(Indices, _countof(Indices));
+
+    IBuffer* pVBs[] = {pVB};
+    pContext->SetVertexBuffers(0, 1, pVBs, nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+    pContext->SetIndexBuffer(pIB, 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+
+    MultiDrawIndexedItem DrawItems[] =
+        {
+            {3, 0},
+            {3, 3},
+        };
+
+    MultiDrawIndexedAttribs drawAttrs{_countof(DrawItems), DrawItems, VT_UINT32, DRAW_FLAG_VERIFY_ALL};
+    pContext->MultiDrawIndexed(drawAttrs);
+
+    Present();
+}
+
+RefCntAutoPtr<IPipelineState> CreateNativeMultiDrawPSO()
+{
+    auto* const pEnv       = GPUTestingEnvironment::GetInstance();
+    auto* const pDevice    = pEnv->GetDevice();
+    auto* const pSwapChain = pEnv->GetSwapChain();
+
+    GraphicsPipelineStateCreateInfo PSOCreateInfo;
+
+    auto& PSODesc          = PSOCreateInfo.PSODesc;
+    auto& GraphicsPipeline = PSOCreateInfo.GraphicsPipeline;
+
+    PSODesc.PipelineType                          = PIPELINE_TYPE_GRAPHICS;
+    GraphicsPipeline.NumRenderTargets             = 1;
+    GraphicsPipeline.RTVFormats[0]                = pSwapChain->GetDesc().ColorBufferFormat;
+    GraphicsPipeline.PrimitiveTopology            = PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+    GraphicsPipeline.RasterizerDesc.CullMode      = CULL_MODE_NONE;
+    GraphicsPipeline.DepthStencilDesc.DepthEnable = False;
+
+    ShaderCreateInfo ShaderCI;
+    ShaderCI.SourceLanguage = SHADER_SOURCE_LANGUAGE_GLSL;
+    ShaderCI.ShaderCompiler = pEnv->GetDefaultCompiler(ShaderCI.SourceLanguage);
+
+    RefCntAutoPtr<IShader> pVS;
+    {
+        ShaderCI.Desc       = {"Draw command test - native multi draw", SHADER_TYPE_VERTEX, true};
+        ShaderCI.EntryPoint = "main";
+        ShaderCI.Source     = GLSL::DrawTest_VS_DrawId.c_str();
+        if (pDevice->GetDeviceInfo().IsGLDevice())
+        {
+            ShaderCI.GLSLExtensions = "#extension GL_ARB_shader_draw_parameters : enable\n";
+        }
+        pDevice->CreateShader(ShaderCI, &pVS);
+        if (!pVS) return {};
+    }
+
+    ShaderCI.SourceLanguage = SHADER_SOURCE_LANGUAGE_HLSL;
+
+    RefCntAutoPtr<IShader> pPS;
+    {
+        ShaderCI.Desc           = {"Draw command test pixel shader", SHADER_TYPE_PIXEL, true};
+        ShaderCI.EntryPoint     = "main";
+        ShaderCI.Source         = HLSL::DrawTest_PS.c_str();
+        ShaderCI.GLSLExtensions = nullptr;
+        pDevice->CreateShader(ShaderCI, &pPS);
+        if (!pPS) return {};
+    }
+
+    PSOCreateInfo.pVS = pVS;
+    PSOCreateInfo.pPS = pPS;
+
+    RefCntAutoPtr<IPipelineState> pPSO;
+    pDevice->CreateGraphicsPipelineState(PSOCreateInfo, &pPSO);
+    return pPSO;
+}
+
+TEST_F(DrawCommandTest, NativeMultiDraw)
+{
+    auto* const pEnv    = GPUTestingEnvironment::GetInstance();
+    auto* const pDevice = pEnv->GetDevice();
+    if (!pDevice->GetDeviceInfo().Features.NativeMultiDraw)
+        GTEST_SKIP() << "Native multi draw is not supported by this device";
+
+    auto* pContext = pEnv->GetDeviceContext();
+
+    auto pPSO = CreateNativeMultiDrawPSO();
+    ASSERT_TRUE(pPSO);
+
+    SetRenderTargets(pPSO);
+
+    MultiDrawItem DrawItems[] =
+        {
+            {3, 0},
+            {3, 0},
+        };
+    MultiDrawAttribs drawAttrs{_countof(DrawItems), DrawItems, DRAW_FLAG_VERIFY_ALL};
+    pContext->MultiDraw(drawAttrs);
+
+    Present();
+}
+
+
+TEST_F(DrawCommandTest, NativeMultiDrawIndexed)
+{
+    auto* const pEnv    = GPUTestingEnvironment::GetInstance();
+    auto* const pDevice = pEnv->GetDevice();
+    if (!pDevice->GetDeviceInfo().Features.NativeMultiDraw)
+        GTEST_SKIP() << "Native multi draw is not supported by this device";
+
+    auto* pContext = pEnv->GetDeviceContext();
+
+    auto pPSO = CreateNativeMultiDrawPSO();
+    ASSERT_TRUE(pPSO);
+
+    SetRenderTargets(pPSO);
+
+    const Uint32 Indices[] = {0, 1, 2};
+
+    auto pIB = CreateIndexBuffer(Indices, _countof(Indices));
+    pContext->SetIndexBuffer(pIB, 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+
+    MultiDrawIndexedItem DrawItems[] =
+        {
+            {3, 0},
+            {3, 0},
+        };
+    MultiDrawIndexedAttribs drawAttrs{_countof(DrawItems), DrawItems, VT_UINT32, DRAW_FLAG_VERIFY_ALL};
+    pContext->MultiDrawIndexed(drawAttrs);
+
+    Present();
 }
 
 } // namespace

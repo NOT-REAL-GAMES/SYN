@@ -173,6 +173,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GLAdapterSelector.vcxproj">
+      <Project>{8467657F-96D0-3D5B-85F2-F04B815363A4}</Project>
+      <Name>Diligent-GLAdapterSelector</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
     <ProjectReference Include="C:\SYN\diligent\DiligentCore\Graphics\GraphicsEngineOpenGL\Diligent-GraphicsEngineOpenGL-shared.vcxproj">
       <Project>{D1FD7E3D-D916-38FE-B5F9-C9FE53DF56B3}</Project>
       <Name>Diligent-GraphicsEngineOpenGL-shared</Name>

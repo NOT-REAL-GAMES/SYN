@@ -123,9 +123,9 @@ xxhsum.o: $(XXHSUM_SRC_DIR)/xxhsum.c $(XXHSUM_HEADERS) \
 xxh_x86dispatch.o: xxh_x86dispatch.c xxh_x86dispatch.h xxhash.h
 
 .PHONY: xxhsum_and_links
-xxhsum_and_links: xxhsum xxh32sum xxh64sum xxh128sum
+xxhsum_and_links: xxhsum xxh32sum xxh64sum xxh128sum xxh3sum
 
-xxh32sum xxh64sum xxh128sum: xxhsum
+xxh32sum xxh64sum xxh128sum xxh3sum: xxhsum
 	ln -sf $<$(EXT) $@$(EXT)
 
 xxhsum_inlinedXXH: CPPFLAGS += -DXXH_INLINE_ALL
@@ -182,7 +182,8 @@ clean:  ## remove all build artifacts
 	$(Q)$(RM) core *.o *.obj *.$(SHARED_EXT) *.$(SHARED_EXT).* *.a libxxhash.pc
 	$(Q)$(RM) xxhsum$(EXT) xxhsum32$(EXT) xxhsum_inlinedXXH$(EXT) dispatch$(EXT)
 	$(Q)$(RM) xxhsum.wasm xxhsum.js xxhsum.html
-	$(Q)$(RM) xxh32sum$(EXT) xxh64sum$(EXT) xxh128sum$(EXT)
+	$(Q)$(RM) xxh32sum$(EXT) xxh64sum$(EXT) xxh128sum$(EXT) xxh3sum$(EXT)
+	$(Q)$(RM) fuzzer
 	$(Q)$(RM) $(XXHSUM_SRC_DIR)/*.o $(XXHSUM_SRC_DIR)/*.obj
 	$(MAKE) -C tests clean
 	$(MAKE) -C tests/bench clean
@@ -288,14 +289,14 @@ test-xxhsum-c: xxhsum
 	./xxhsum --tag -H1 xxhsum* | $(GREP) XXH64
 	./xxhsum --tag -H2 xxhsum* | $(GREP) XXH128
 	./xxhsum --tag -H3 xxhsum* | $(GREP) XXH3
-	./xxhsum       -H3 xxhsum* | $(GREP) XXH3  # --tag is implicit for H3
+	./xxhsum       -H3 xxhsum* | $(GREP) XXH3_ # prefix for GNU format
 	./xxhsum --tag -H32 xxhsum* | $(GREP) XXH32
 	./xxhsum --tag -H64 xxhsum* | $(GREP) XXH64
 	./xxhsum --tag -H128 xxhsum* | $(GREP) XXH128
 	./xxhsum --tag -H0 --little-endian xxhsum* | $(GREP) XXH32_LE
 	./xxhsum --tag -H1 --little-endian xxhsum* | $(GREP) XXH64_LE
 	./xxhsum --tag -H2 --little-endian xxhsum* | $(GREP) XXH128_LE
-	./xxhsum       -H3 --little-endian xxhsum* | $(GREP) XXH3_LE
+	./xxhsum --tag -H3 --little-endian xxhsum* | $(GREP) XXH3_LE
 	./xxhsum --tag -H32 --little-endian xxhsum* | $(GREP) XXH32_LE
 	./xxhsum --tag -H64 --little-endian xxhsum* | $(GREP) XXH64_LE
 	./xxhsum --tag -H128 --little-endian xxhsum* | $(GREP) XXH128_LE
@@ -314,6 +315,13 @@ test-xxhsum-c: xxhsum
 	echo "0000000000000000  test-expects-file-not-found" | ./xxhsum -c -; test $$? -eq 1
 	echo "00000000  test-expects-file-not-found" | ./xxhsum -c -; test $$? -eq 1
 	@$(RM) .test.*
+
+LIB_FUZZING_ENGINE?="-fsanitize=fuzzer"
+CC_VERSION := $(shell $(CC) --version)
+ifneq (,$(findstring clang,$(CC_VERSION)))
+fuzzer: libxxhash.a fuzz/fuzzer.c
+	$(CC) $(CFLAGS) $(LIB_FUZZING_ENGINE) -I. -o fuzzer fuzz/fuzzer.c -L. -Wl,-Bstatic -lxxhash -Wl,-Bdynamic
+endif
 
 .PHONY: test-filename-escape
 test-filename-escape:
@@ -459,26 +467,37 @@ test-xxh-nnn-sums: xxhsum_and_links
 	./xxh32sum  README.md > tmp.xxh32sum.out
 	./xxh64sum  README.md > tmp.xxh64sum.out
 	./xxh128sum README.md > tmp.xxh128sum.out
+	./xxh3sum   README.md > tmp.xxh3sum.out
 	cat tmp.xxhsum.out
 	cat tmp.xxh32sum.out
 	cat tmp.xxh64sum.out
 	cat tmp.xxh128sum.out
+	cat tmp.xxh3sum.out
 	./xxhsum -c tmp.xxhsum.out
 	./xxhsum -c tmp.xxh32sum.out
 	./xxhsum -c tmp.xxh64sum.out
 	./xxhsum -c tmp.xxh128sum.out
+	./xxhsum -c tmp.xxh3sum.out
 	./xxh32sum -c tmp.xxhsum.out            ; test $$? -eq 1  # expects "no properly formatted"
 	./xxh32sum -c tmp.xxh32sum.out
 	./xxh32sum -c tmp.xxh64sum.out          ; test $$? -eq 1  # expects "no properly formatted"
 	./xxh32sum -c tmp.xxh128sum.out         ; test $$? -eq 1  # expects "no properly formatted"
+	./xxh32sum -c tmp.xxh3sum.out           ; test $$? -eq 1  # expects "no properly formatted"
 	./xxh64sum -c tmp.xxhsum.out
 	./xxh64sum -c tmp.xxh32sum.out          ; test $$? -eq 1  # expects "no properly formatted"
 	./xxh64sum -c tmp.xxh64sum.out
 	./xxh64sum -c tmp.xxh128sum.out         ; test $$? -eq 1  # expects "no properly formatted"
+	./xxh64sum -c tmp.xxh3sum.out           ; test $$? -eq 1  # expects "no properly formatted"
 	./xxh128sum -c tmp.xxhsum.out           ; test $$? -eq 1  # expects "no properly formatted"
 	./xxh128sum -c tmp.xxh32sum.out         ; test $$? -eq 1  # expects "no properly formatted"
 	./xxh128sum -c tmp.xxh64sum.out         ; test $$? -eq 1  # expects "no properly formatted"
 	./xxh128sum -c tmp.xxh128sum.out
+	./xxh128sum -c tmp.xxh3sum.out          ; test $$? -eq 1  # expects "no properly formatted"
+	./xxh3sum -c tmp.xxhsum.out             ; test $$? -eq 1  # expects "no properly formatted"
+	./xxh3sum -c tmp.xxh32sum.out           ; test $$? -eq 1  # expects "no properly formatted"
+	./xxh3sum -c tmp.xxh64sum.out           ; test $$? -eq 1  # expects "no properly formatted"
+	./xxh3sum -c tmp.xxh128sum.out          ; test $$? -eq 1  # expects "no properly formatted"
+	./xxh3sum -c tmp.xxh3sum.out
 
 .PHONY: listL120
 listL120:  # extract lines >= 120 characters in *.{c,h}, by Takayuki Matsuoka (note: $$, for Makefile compatibility)
@@ -535,7 +554,7 @@ endif
 
 INSTALL_PROGRAM ?= $(INSTALL)
 INSTALL_DATA    ?= $(INSTALL) -m 644
-INSTALL_DIR     ?= $(INSTALL) -d -m 755
+MAKE_DIR        ?= $(INSTALL) -d -m 755
 
 
 # Escape special symbols by putting each character into its separate class
@@ -574,12 +593,12 @@ libxxhash.pc: libxxhash.pc.in
 
 install_libxxhash.a: libxxhash.a
 	@echo Installing libxxhash.a
-	$(Q)$(INSTALL_DIR) $(DESTDIR)$(LIBDIR)
+	$(Q)$(MAKE_DIR) $(DESTDIR)$(LIBDIR)
 	$(Q)$(INSTALL_DATA) libxxhash.a $(DESTDIR)$(LIBDIR)
 
 install_libxxhash: libxxhash
 	@echo Installing libxxhash
-	$(Q)$(INSTALL_DIR) $(DESTDIR)$(LIBDIR)
+	$(Q)$(MAKE_DIR) $(DESTDIR)$(LIBDIR)
 	$(Q)$(INSTALL_PROGRAM) $(LIBXXH) $(DESTDIR)$(LIBDIR)
 	$(Q)ln -sf $(LIBXXH) $(DESTDIR)$(LIBDIR)/libxxhash.$(SHARED_EXT_MAJOR)
 	$(Q)ln -sf $(LIBXXH) $(DESTDIR)$(LIBDIR)/libxxhash.$(SHARED_EXT)
@@ -594,24 +613,26 @@ endif
 
 install_libxxhash.pc: libxxhash.pc
 	@echo Installing pkgconfig
-	$(Q)$(INSTALL_DIR) $(DESTDIR)$(PKGCONFIGDIR)/
+	$(Q)$(MAKE_DIR) $(DESTDIR)$(PKGCONFIGDIR)/
 	$(Q)$(INSTALL_DATA) libxxhash.pc $(DESTDIR)$(PKGCONFIGDIR)/
 
 install_xxhsum: xxhsum
 	@echo Installing xxhsum
-	$(Q)$(INSTALL_DIR) $(DESTDIR)$(BINDIR)/
+	$(Q)$(MAKE_DIR) $(DESTDIR)$(BINDIR)/
 	$(Q)$(INSTALL_PROGRAM) xxhsum $(DESTDIR)$(BINDIR)/xxhsum
 	$(Q)ln -sf xxhsum $(DESTDIR)$(BINDIR)/xxh32sum
 	$(Q)ln -sf xxhsum $(DESTDIR)$(BINDIR)/xxh64sum
 	$(Q)ln -sf xxhsum $(DESTDIR)$(BINDIR)/xxh128sum
+	$(Q)ln -sf xxhsum $(DESTDIR)$(BINDIR)/xxh3sum
 
 install_man:
 	@echo Installing man pages
-	$(Q)$(INSTALL_DIR) $(DESTDIR)$(MANDIR)/
+	$(Q)$(MAKE_DIR) $(DESTDIR)$(MANDIR)/
 	$(Q)$(INSTALL_DATA) $(MAN) $(DESTDIR)$(MANDIR)/xxhsum.1
 	$(Q)ln -sf xxhsum.1 $(DESTDIR)$(MANDIR)/xxh32sum.1
 	$(Q)ln -sf xxhsum.1 $(DESTDIR)$(MANDIR)/xxh64sum.1
 	$(Q)ln -sf xxhsum.1 $(DESTDIR)$(MANDIR)/xxh128sum.1
+	$(Q)ln -sf xxhsum.1 $(DESTDIR)$(MANDIR)/xxh3sum.1
 
 .PHONY: install
 install: install_libxxhash.a install_libxxhash install_libxxhash.includes install_libxxhash.pc install_xxhsum install_man ## install libraries, CLI, links and man page
@@ -630,10 +651,12 @@ uninstall:  ## uninstall libraries, CLI, links and man page
 	$(Q)$(RM) $(DESTDIR)$(BINDIR)/xxh32sum
 	$(Q)$(RM) $(DESTDIR)$(BINDIR)/xxh64sum
 	$(Q)$(RM) $(DESTDIR)$(BINDIR)/xxh128sum
+	$(Q)$(RM) $(DESTDIR)$(BINDIR)/xxh3sum
 	$(Q)$(RM) $(DESTDIR)$(BINDIR)/xxhsum
 	$(Q)$(RM) $(DESTDIR)$(MANDIR)/xxh32sum.1
 	$(Q)$(RM) $(DESTDIR)$(MANDIR)/xxh64sum.1
 	$(Q)$(RM) $(DESTDIR)$(MANDIR)/xxh128sum.1
+	$(Q)$(RM) $(DESTDIR)$(MANDIR)/xxh3sum.1
 	$(Q)$(RM) $(DESTDIR)$(MANDIR)/xxhsum.1
 	@echo xxhsum successfully uninstalled
 

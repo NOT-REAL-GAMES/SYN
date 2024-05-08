@@ -268,8 +268,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\ossource.cpp" />
     <ClInclude Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\osinclude.h" />
+    <ClCompile Include="C:\SYN\diligent\DiligentCore\ThirdParty\glslang\glslang\OSDependent\Windows\ossource.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\SYN\diligent\ZERO_CHECK.vcxproj">

@@ -259,7 +259,6 @@ TEST_F(PipelineResourceSignatureTest, VariableTypes)
     PipelineResourceSignatureDesc PRSDesc;
     PRSDesc.Name = "Variable types test";
 
-    constexpr auto SHADER_TYPE_VS_PS = SHADER_TYPE_VERTEX | SHADER_TYPE_PIXEL;
     // clang-format off
     PipelineResourceDesc Resources[]
     {
@@ -629,7 +628,6 @@ TEST_F(PipelineResourceSignatureTest, ImmutableSamplers)
     PipelineResourceSignatureDesc PRSDesc;
     PRSDesc.Name = "Variable types test";
 
-    constexpr auto SHADER_TYPE_VS_PS = SHADER_TYPE_VERTEX | SHADER_TYPE_PIXEL;
     // clang-format off
     PipelineResourceDesc Resources[]
     {
@@ -1405,7 +1403,6 @@ void PipelineResourceSignatureTest::TestCombinedImageSamplers(SHADER_SOURCE_LANG
 
     VERIFY_EXPR(ShaderLang == SHADER_SOURCE_LANGUAGE_HLSL || !UseEmulatedSamplers);
 
-    constexpr auto SHADER_TYPE_VS_PS = SHADER_TYPE_VERTEX | SHADER_TYPE_PIXEL;
     // clang-format off
     std::vector<PipelineResourceDesc> Resources =
     {
@@ -1584,8 +1581,7 @@ void PipelineResourceSignatureTest::TestFormattedOrStructuredBuffer(BUFFER_MODE 
     PipelineResourceSignatureDesc PRSDesc;
     PRSDesc.Name = "Formatted buffer test";
 
-    constexpr auto SHADER_TYPE_VS_PS   = SHADER_TYPE_VERTEX | SHADER_TYPE_PIXEL;
-    const auto     FormattedBufferFlag = BufferMode == BUFFER_MODE_FORMATTED ? PIPELINE_RESOURCE_FLAG_FORMATTED_BUFFER : PIPELINE_RESOURCE_FLAG_NONE;
+    const auto FormattedBufferFlag = BufferMode == BUFFER_MODE_FORMATTED ? PIPELINE_RESOURCE_FLAG_FORMATTED_BUFFER : PIPELINE_RESOURCE_FLAG_NONE;
     // clang-format off
     PipelineResourceDesc Resources[]
     {
@@ -1804,6 +1800,13 @@ static void TestRunTimeResourceArray(bool IsGLSL, IShaderSourceInputStreamFactor
     Macros.AddShaderMacro("NUM_RWSTRUCT_BUFFERS", RWStructBuffArraySize);
     Macros.AddShaderMacro("NUM_RWFMT_BUFFERS", RWFormattedBuffArraySize);
 
+    if (pEnv->NeedWARPResourceArrayIndexingBugWorkaround())
+    {
+        // Constant buffer indexing does not work properly in D3D12 WARP - only the 0th element is accessed correctly
+        Macros.AddShaderMacro("USE_D3D12_WARP_BUG_WORKAROUND", 1);
+        ConstantBufferNonUniformIndexing = false;
+    }
+
     Macros.AddShaderMacro("TEXTURES_NONUNIFORM_INDEXING", SRVTextureNonUniformIndexing ? 1 : 0);
     Macros.AddShaderMacro("CONST_BUFFERS_NONUNIFORM_INDEXING", ConstantBufferNonUniformIndexing ? 1 : 0);
     Macros.AddShaderMacro("FMT_BUFFERS_NONUNIFORM_INDEXING", SRVBufferNonUniformIndexing ? 1 : 0);
@@ -1811,12 +1814,6 @@ static void TestRunTimeResourceArray(bool IsGLSL, IShaderSourceInputStreamFactor
     Macros.AddShaderMacro("RWTEXTURES_NONUNIFORM_INDEXING", UAVTextureNonUniformIndexing ? 1 : 0);
     Macros.AddShaderMacro("RWSTRUCT_BUFFERS_NONUNIFORM_INDEXING", UAVBufferNonUniformIndexing ? 1 : 0);
     Macros.AddShaderMacro("RWFMT_BUFFERS_NONUNIFORM_INDEXING", UAVBufferNonUniformIndexing ? 1 : 0);
-
-    if (pEnv->NeedWARPResourceArrayIndexingBugWorkaround())
-    {
-        // Constant buffer indexing does not work properly in D3D12 WARP - only the 0th element is accessed correctly
-        Macros.AddShaderMacro("USE_D3D12_WARP_BUG_WORKAROUND", 1);
-    }
 
     if (IsGLSL)
         Macros.AddShaderMacro("float4", "vec4");

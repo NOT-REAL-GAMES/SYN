@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2023 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -36,10 +36,12 @@
 #include "DeviceObjectArchiveGL.hpp"
 #include "SerializedPipelineStateImpl.hpp"
 #include "ShaderToolsCommon.hpp"
+#include "ParsingTools.hpp"
 
 #if !DILIGENT_NO_GLSLANG
 #    include "GLSLUtils.hpp"
 #    include "GLSLangUtils.hpp"
+#    include "spirv_glsl.hpp"
 #endif
 
 namespace Diligent
@@ -57,17 +59,109 @@ struct SerializedResourceSignatureImpl::SignatureTraits<PipelineResourceSignatur
 namespace
 {
 
+#if !DILIGENT_NO_GLSLANG
+static bool GetUseGLAngleMultiDrawWorkaround(const ShaderCreateInfo& ShaderCI)
+{
+    if (ShaderCI.SourceLanguage == SHADER_SOURCE_LANGUAGE_GLSL_VERBATIM ||
+        ShaderCI.Desc.ShaderType != SHADER_TYPE_VERTEX)
+        return false;
+
+    const auto Extensions = GetGLSLExtensions(ShaderCI.GLSLExtensions);
+    for (const auto& Ext : Extensions)
+    {
+        if (Ext.first == "GL_ANGLE_multi_draw")
+        {
+            return Ext.second == "enable" || Ext.second == "require";
+        }
+    }
+
+    return false;
+}
+
+static void PatchSourceForWebGL(std::string& Source, SHADER_TYPE ShaderType)
+{
+    // Remove location qualifiers
+    {
+        // WebGL only supports location qualifiers for VS inputs and FS outputs.
+        const std::string InOutQualifier = ShaderType == SHADER_TYPE_VERTEX ? " out " : " in ";
+
+        auto layout_pos = Source.find("layout");
+        while (layout_pos != std::string::npos)
+        {
+            // layout(location = 3) flat out int _VSOut_PrimitiveID;
+            // ^
+            // layout_pos
+
+            const auto declaration_end_pos = Source.find_first_of(";{", layout_pos + 6);
+            if (declaration_end_pos == std::string::npos)
+                break;
+            // layout(location = 3) flat out int _VSOut_PrimitiveID;
+            //                                                     ^
+            //                                                  declaration_end_pos
+
+            // layout(std140) uniform cbPrimitiveAttribs {
+            //                                           ^
+            //                                      declaration_end_pos
+
+            const std::string Declaration = Source.substr(layout_pos, declaration_end_pos - layout_pos);
+            // layout(location = 3) flat out int _VSOut_PrimitiveID
+
+            if (Declaration.find(InOutQualifier) != std::string::npos)
+            {
+                const auto closing_paren_pos = Source.find(')', layout_pos);
+                if (closing_paren_pos == std::string::npos)
+                    break;
+
+                // layout(location = 3) flat out int _VSOut_PrimitiveID;
+                //                    ^
+                //              closing_paren_pos
+
+                for (size_t i = layout_pos; i <= closing_paren_pos; ++i)
+                    Source[i] = ' ';
+                //                      flat out int _VSOut_PrimitiveID;
+            }
+
+            layout_pos = Source.find("layout", layout_pos + 6);
+        }
+    }
+
+    if (ShaderType == SHADER_TYPE_VERTEX)
+    {
+        // Replace gl_DrawIDARB with gl_DrawID
+        size_t pos = Source.find("gl_DrawIDARB");
+        while (pos != std::string::npos)
+        {
+            Source.replace(pos, 12, "gl_DrawID");
+            pos = Source.find("gl_DrawIDARB", pos + 9);
+        }
+    }
+}
+#endif
+
 struct CompiledShaderGL final : SerializedShaderImpl::CompiledShader
 {
-    const String           UnrolledSource;
+    String                 UnrolledSource;
     RefCntAutoPtr<IShader> pShaderGL;
+    bool                   IsOptimized = false;
 
-    CompiledShaderGL(IReferenceCounters*             pRefCounters,
-                     const ShaderCreateInfo&         ShaderCI,
-                     const ShaderGLImpl::CreateInfo& GLShaderCI,
-                     IRenderDevice*                  pRenderDeviceGL) :
-        UnrolledSource{UnrollSource(ShaderCI)}
+    CompiledShaderGL(IReferenceCounters*                          pRefCounters,
+                     const ShaderCreateInfo&                      ShaderCI,
+                     const ShaderGLImpl::CreateInfo&              GLShaderCI,
+                     IRenderDevice*                               pRenderDeviceGL,
+                     RENDER_DEVICE_TYPE                           DeviceType,
+                     const SerializationDeviceImpl::GLProperties& GLProps)
     {
+        if (GLProps.OptimizeShaders)
+        {
+            UnrolledSource = TransformSource(ShaderCI, GLShaderCI, DeviceType, GLProps);
+            IsOptimized    = !UnrolledSource.empty();
+        }
+        if (UnrolledSource.empty())
+        {
+            UnrolledSource = UnrollSource(ShaderCI);
+        }
+        VERIFY_EXPR(!UnrolledSource.empty());
+
         // Use serialization CI to be consistent with what will be saved in the archive.
         const auto SerializationCI = GetSerializationCI(ShaderCI);
         if (pRenderDeviceGL)
@@ -93,6 +187,11 @@ struct CompiledShaderGL final : SerializedShaderImpl::CompiledShader
         ShaderCI.ShaderCompiler = SHADER_COMPILER_DEFAULT;
         ShaderCI.Macros         = {}; // Macros are inlined into unrolled source
 
+        if (IsOptimized)
+        {
+            ShaderCI.SourceLanguage = SHADER_SOURCE_LANGUAGE_GLSL;
+            ShaderCI.EntryPoint     = "main";
+        }
         return ShaderCI;
     }
 
@@ -120,6 +219,124 @@ private:
         }
         Source.append(UnrollShaderIncludes(CI));
         return Source;
+    }
+
+    static String TransformSource(const ShaderCreateInfo&                      ShaderCI,
+                                  const ShaderGLImpl::CreateInfo&              GLShaderCI,
+                                  RENDER_DEVICE_TYPE                           DeviceType,
+                                  const SerializationDeviceImpl::GLProperties& GLProps)
+    {
+        std::string OptimizedGLSL;
+
+#if !DILIGENT_NO_GLSLANG
+
+        RENDER_DEVICE_TYPE            CompileDeviceType = DeviceType;
+        RenderDeviceShaderVersionInfo MaxShaderVersion  = GLShaderCI.DeviceInfo.MaxShaderVersion;
+
+        const bool UseGLAngleMultiDrawWorkaround = GetUseGLAngleMultiDrawWorkaround(ShaderCI);
+        if (UseGLAngleMultiDrawWorkaround)
+        {
+            // Since GLSLang does not support GL_ANGLE_multi_draw extension, we need to compile the shader
+            // for desktop GL.
+            CompileDeviceType = RENDER_DEVICE_TYPE_GL;
+
+            // Use GLSL4.6 as it uses the gl_DrawID built-in variable, same as the ANGLE extension.
+            MaxShaderVersion.GLSL = {4, 6};
+        }
+
+        const std::string GLSLSourceString = BuildGLSLSourceString(
+            {
+                ShaderCI,
+                GLShaderCI.AdapterInfo,
+                GLShaderCI.DeviceInfo.Features,
+                CompileDeviceType,
+                MaxShaderVersion,
+                TargetGLSLCompiler::glslang,
+                GLProps.ZeroToOneClipZ, // Note that this is not the same as GLShaderCI.DeviceInfo.NDC.MinZ == 0
+            });
+
+        const SHADER_SOURCE_LANGUAGE SourceLang = ParseShaderSourceLanguageDefinition(GLSLSourceString);
+        if (ShaderCI.SourceLanguage == SHADER_SOURCE_LANGUAGE_GLSL_VERBATIM && SourceLang != SHADER_SOURCE_LANGUAGE_DEFAULT)
+        {
+            // This combination of ShaderCI.SourceLanguage and SourceLang indicates that the shader source
+            // was retrieved from the existing shader object via IShader::GetBytecode (by e.g. Render State Cache,
+            // see RenderStateCacheImpl::SerializeShader).
+            // In this case, we don't need to do anything with the source.
+            return OptimizedGLSL;
+        }
+
+        GLSLangUtils::GLSLtoSPIRVAttribs Attribs;
+        Attribs.ShaderType = ShaderCI.Desc.ShaderType;
+        VERIFY_EXPR(DeviceType == RENDER_DEVICE_TYPE_GL || DeviceType == RENDER_DEVICE_TYPE_GLES);
+        Attribs.Version = DeviceType == RENDER_DEVICE_TYPE_GL ? GLSLangUtils::SpirvVersion::GL : GLSLangUtils::SpirvVersion::GLES;
+
+        Attribs.ppCompilerOutput = GLShaderCI.ppCompilerOutput;
+        Attribs.ShaderSource     = GLSLSourceString.c_str();
+        Attribs.SourceCodeLen    = static_cast<int>(GLSLSourceString.length());
+
+        std::vector<unsigned int> SPIRV = GLSLangUtils::GLSLtoSPIRV(Attribs);
+        if (SPIRV.empty())
+            LOG_ERROR_AND_THROW("Failed to compile shader '", ShaderCI.Desc.Name, "'");
+
+        ShaderVersion GLSLVersion;
+        Bool          IsES = false;
+        GetGLSLVersion(ShaderCI, TargetGLSLCompiler::driver, DeviceType, GLShaderCI.DeviceInfo.MaxShaderVersion, GLSLVersion, IsES);
+
+        diligent_spirv_cross::CompilerGLSL::Options Options;
+        Options.es      = IsES;
+        Options.version = GLSLVersion.Major * 100 + GLSLVersion.Minor * 10;
+
+        if (UseGLAngleMultiDrawWorkaround)
+        {
+            // gl_DrawID is not supported in GLES, so compile the shader for desktop GL.
+            // This is OK as we strip the version directive and extensions and only leave the GLSL code.
+            Options.es = false;
+
+            // Use GLSL4.1 as WebGL does not support binding qualifiers.
+            Options.version                  = 410;
+            Options.enable_420pack_extension = false;
+        }
+
+        Options.separate_shader_objects = GLShaderCI.DeviceInfo.Features.SeparablePrograms;
+        // On some targets (WebGPU), uninitialized variables are banned.
+        Options.force_zero_initialized_variables = true;
+        // For opcodes where we have to perform explicit additional nan checks, very ugly code is generated.
+        Options.relax_nan_checks = true;
+
+        Options.fragment.default_float_precision = diligent_spirv_cross::CompilerGLSL::Options::Precision::DontCare;
+        Options.fragment.default_int_precision   = diligent_spirv_cross::CompilerGLSL::Options::Precision::DontCare;
+
+#    if PLATFORM_APPLE
+        // Apple does not support GL_ARB_shading_language_420pack extension
+        Options.enable_420pack_extension = false;
+#    endif
+
+        diligent_spirv_cross::CompilerGLSL Compiler{std::move(SPIRV)};
+        Compiler.set_common_options(Options);
+
+        OptimizedGLSL = Compiler.compile();
+        if (OptimizedGLSL.empty())
+            LOG_ERROR_AND_THROW("Failed to generate GLSL for shader '", ShaderCI.Desc.Name, "'");
+
+        // Remove #version directive
+        //   The version is added by BuildGLSLSourceString() in ShaderGLImpl.
+        // Remove #extension directives
+        //   The extensions are added by BuildGLSLSourceString() in ShaderGLImpl.
+        // Also remove #error directives like the following:
+        //   #ifndef GL_ARB_shader_draw_parameters
+        //   #error GL_ARB_shader_draw_parameters is not supported.
+        //   #endif
+        Parsing::StripPreprocessorDirectives(OptimizedGLSL, {{"version"}, {"extension"}, {"error"}});
+
+        if (UseGLAngleMultiDrawWorkaround)
+        {
+            PatchSourceForWebGL(OptimizedGLSL, ShaderCI.Desc.ShaderType);
+        }
+
+        AppendShaderSourceLanguageDefinition(OptimizedGLSL, (SourceLang != SHADER_SOURCE_LANGUAGE_DEFAULT) ? SourceLang : ShaderCI.SourceLanguage);
+#endif
+
+        return OptimizedGLSL;
     }
 };
 
@@ -236,31 +453,9 @@ void SerializedShaderImpl::CreateShaderGL(IReferenceCounters*     pRefCounters,
         // TODO: collect all outputs.
         ppCompilerOutput == nullptr || *ppCompilerOutput == nullptr ? ppCompilerOutput : nullptr,
     };
-    CreateShader<CompiledShaderGL>(DeviceType::OpenGL, pRefCounters, ShaderCI, GLShaderCI, m_pDevice->GetRenderDevice(RENDER_DEVICE_TYPE_GL));
 
-#if !DILIGENT_NO_GLSLANG
-    const auto* pCompiledShaderGL = GetShader<CompiledShaderGL>(DeviceObjectArchive::DeviceType::OpenGL);
-    VERIFY_EXPR(pCompiledShaderGL != nullptr);
-
-    const void* Source    = nullptr;
-    Uint64      SourceLen = 0;
-    // For OpenGL, GetBytecode returns the full GLSL source
-    pCompiledShaderGL->pShaderGL->GetBytecode(&Source, SourceLen);
-    VERIFY_EXPR(Source != nullptr && SourceLen != 0);
-
-    GLSLangUtils::GLSLtoSPIRVAttribs Attribs;
-
-    Attribs.ShaderType = ShaderCI.Desc.ShaderType;
-    VERIFY_EXPR(DeviceType == RENDER_DEVICE_TYPE_GL || DeviceType == RENDER_DEVICE_TYPE_GLES);
-    Attribs.Version = DeviceType == RENDER_DEVICE_TYPE_GL ? GLSLangUtils::SpirvVersion::GL : GLSLangUtils::SpirvVersion::GLES;
-
-    Attribs.ppCompilerOutput = ppCompilerOutput;
-    Attribs.ShaderSource     = static_cast<const char*>(Source);
-    Attribs.SourceCodeLen    = static_cast<int>(SourceLen);
-
-    if (GLSLangUtils::GLSLtoSPIRV(Attribs).empty())
-        LOG_ERROR_AND_THROW("Failed to compile shader '", ShaderCI.Desc.Name, "'");
-#endif
+    CreateShader<CompiledShaderGL>(DeviceType::OpenGL, pRefCounters, ShaderCI, GLShaderCI, m_pDevice->GetRenderDevice(DeviceType),
+                                   DeviceType, m_pDevice->GetGLProperties());
 }
 
 } // namespace Diligent

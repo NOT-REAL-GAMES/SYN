@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-2022 Diligent Graphics LLC
+ *  Copyright 2019-2024 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -231,7 +231,7 @@ GPUTestingEnvironment::GPUTestingEnvironment(const CreateInfo& EnvCI, const Swap
 #    endif
 
             auto* pFactoryD3D11 = GetEngineFactoryD3D11();
-            pFactoryD3D11->SetMessageCallback(MessageCallback);
+            pFactoryD3D11->SetMessageCallback(EnvCI.MessageCallback);
 
             EngineD3D11CreateInfo EngineCI;
             EngineCI.GraphicsAPIVersion = Version{11, 0};
@@ -273,7 +273,7 @@ GPUTestingEnvironment::GPUTestingEnvironment(const CreateInfo& EnvCI, const Swap
             }
 #    endif
             auto* pFactoryD3D12 = GetEngineFactoryD3D12();
-            pFactoryD3D12->SetMessageCallback(MessageCallback);
+            pFactoryD3D12->SetMessageCallback(EnvCI.MessageCallback);
 
             if (!pFactoryD3D12->LoadD3D12())
             {
@@ -338,7 +338,7 @@ GPUTestingEnvironment::GPUTestingEnvironment(const CreateInfo& EnvCI, const Swap
             }
 #    endif
             auto* pFactoryOpenGL = GetEngineFactoryOpenGL();
-            pFactoryOpenGL->SetMessageCallback(MessageCallback);
+            pFactoryOpenGL->SetMessageCallback(EnvCI.MessageCallback);
             EnumerateAdapters(pFactoryOpenGL, Version{},
                               [](const GraphicsAdapterInfo& AdapterInfo, Uint32 AdapterId) {
                                   return std::vector<DisplayModeAttribs>{};
@@ -374,7 +374,7 @@ GPUTestingEnvironment::GPUTestingEnvironment(const CreateInfo& EnvCI, const Swap
 #    endif
 
             auto* pFactoryVk = GetEngineFactoryVk();
-            pFactoryVk->SetMessageCallback(MessageCallback);
+            pFactoryVk->SetMessageCallback(EnvCI.MessageCallback);
 
             if (EnvCI.EnableDeviceSimulation)
                 pFactoryVk->EnableDeviceSimulation();
@@ -386,7 +386,10 @@ GPUTestingEnvironment::GPUTestingEnvironment(const CreateInfo& EnvCI, const Swap
 
             // TODO: Remove when AMD fixes vkGetPhysicalDeviceImageFormatProperties2
             std::vector<const char*> IgnoreDebugMessages = {
-                "VUID-VkImageCreateInfo-imageCreateMaxMipLevels-02251"};
+                "VUID-VkImageCreateInfo-imageCreateMaxMipLevels-02251",
+                "UNASSIGNED-CoreValidation-Shader-OutputNotConsumed",
+                "WARNING-Shader-OutputNotConsumed",
+            };
 
             EngineVkCreateInfo EngineCI;
             EngineCI.AdapterId = FindAdapter(Adapters, EnvCI.AdapterType, EnvCI.AdapterId);
@@ -421,7 +424,7 @@ GPUTestingEnvironment::GPUTestingEnvironment(const CreateInfo& EnvCI, const Swap
         case RENDER_DEVICE_TYPE_METAL:
         {
             auto* pFactoryMtl = GetEngineFactoryMtl();
-            pFactoryMtl->SetMessageCallback(MessageCallback);
+            pFactoryMtl->SetMessageCallback(EnvCI.MessageCallback);
 
             EnumerateAdapters(pFactoryMtl, Version{},
                               [](const GraphicsAdapterInfo& AdapterInfo, Uint32 AdapterId) {
@@ -564,7 +567,7 @@ GPUTestingEnvironment::GPUTestingEnvironment(const CreateInfo& EnvCI, const Swap
 #    else
         m_ArchiverFactory = Diligent::GetArchiverFactory();
 #    endif
-        m_ArchiverFactory->SetMessageCallback(MessageCallback);
+        m_ArchiverFactory->SetMessageCallback(EnvCI.MessageCallback);
     }
 #endif
 }
@@ -576,6 +579,63 @@ GPUTestingEnvironment::~GPUTestingEnvironment()
         auto* pCtx = GetDeviceContext(i);
         pCtx->Flush();
         pCtx->FinishFrame();
+
+        if (i == 0)
+        {
+            const auto& Stats       = pCtx->GetStats();
+            const auto& CmdCounters = Stats.CommandCounters;
+            LOG_INFO_MESSAGE(
+                "Device context stats"
+                "\n  Command counters",
+                "\n    SetPipelineState          ", CmdCounters.SetPipelineState,
+                "\n    CommitShaderResources     ", CmdCounters.CommitShaderResources,
+                "\n    SetVertexBuffers          ", CmdCounters.SetVertexBuffers,
+                "\n    SetIndexBuffer            ", CmdCounters.SetIndexBuffer,
+                "\n    SetRenderTargets          ", CmdCounters.SetRenderTargets,
+                "\n    SetBlendFactors           ", CmdCounters.SetBlendFactors,
+                "\n    SetStencilRef             ", CmdCounters.SetStencilRef,
+                "\n    SetViewports              ", CmdCounters.SetViewports,
+                "\n    SetScissorRects           ", CmdCounters.SetScissorRects,
+                "\n    ClearRenderTarget         ", CmdCounters.ClearRenderTarget,
+                "\n    ClearDepthStencil         ", CmdCounters.ClearDepthStencil,
+                "\n    Draw                      ", CmdCounters.Draw,
+                "\n    DrawIndexed               ", CmdCounters.DrawIndexed,
+                "\n    DrawIndirect              ", CmdCounters.DrawIndirect,
+                "\n    DrawIndexedIndirect       ", CmdCounters.DrawIndexedIndirect,
+                "\n    DispatchCompute           ", CmdCounters.DispatchCompute,
+                "\n    DispatchComputeIndirect   ", CmdCounters.DispatchComputeIndirect,
+                "\n    DispatchTile              ", CmdCounters.DispatchTile,
+                "\n    DrawMesh                  ", CmdCounters.DrawMesh,
+                "\n    DrawMeshIndirect          ", CmdCounters.DrawMeshIndirect,
+                "\n    MultiDraw                 ", CmdCounters.MultiDraw,
+                "\n    MultiDrawIndexed          ", CmdCounters.MultiDrawIndexed,
+                "\n    BuildBLAS                 ", CmdCounters.BuildBLAS,
+                "\n    BuildTLAS                 ", CmdCounters.BuildTLAS,
+                "\n    CopyBLAS                  ", CmdCounters.CopyBLAS,
+                "\n    CopyTLAS                  ", CmdCounters.CopyTLAS,
+                "\n    WriteBLASCompactedSize    ", CmdCounters.WriteBLASCompactedSize,
+                "\n    WriteTLASCompactedSize    ", CmdCounters.WriteTLASCompactedSize,
+                "\n    TraceRays                 ", CmdCounters.TraceRays,
+                "\n    TraceRaysIndirect         ", CmdCounters.TraceRaysIndirect,
+                "\n    UpdateSBT                 ", CmdCounters.UpdateSBT,
+                "\n    UpdateBuffer              ", CmdCounters.UpdateBuffer,
+                "\n    CopyBuffer                ", CmdCounters.CopyBuffer,
+                "\n    MapBuffer                 ", CmdCounters.MapBuffer,
+                "\n    UpdateTexture             ", CmdCounters.UpdateTexture,
+                "\n    CopyTexture               ", CmdCounters.CopyTexture,
+                "\n    MapTextureSubresource     ", CmdCounters.MapTextureSubresource,
+                "\n    BeginQuery                ", CmdCounters.BeginQuery,
+                "\n    GenerateMips              ", CmdCounters.GenerateMips,
+                "\n    ResolveTextureSubresource ", CmdCounters.ResolveTextureSubresource,
+                "\n    BindSparseResourceMemory  ", CmdCounters.BindSparseResourceMemory,
+                "\n  Primitives",
+                "\n    TRIANGLE_LIST             ", Stats.PrimitiveCounts[PRIMITIVE_TOPOLOGY_TRIANGLE_LIST],
+                "\n    TRIANGLE_STRIP            ", Stats.PrimitiveCounts[PRIMITIVE_TOPOLOGY_TRIANGLE_STRIP],
+                "\n    POINT_LIST                ", Stats.PrimitiveCounts[PRIMITIVE_TOPOLOGY_POINT_LIST],
+                "\n    LINE_LIST                 ", Stats.PrimitiveCounts[PRIMITIVE_TOPOLOGY_LINE_LIST],
+                "\n    LINE_STRIP                ", Stats.PrimitiveCounts[PRIMITIVE_TOPOLOGY_LINE_STRIP],
+                "\n    1_CONTROL_POINT_PATCHLIST ", Stats.PrimitiveCounts[PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST]);
+        }
     }
 }
 
@@ -829,7 +889,11 @@ GPUTestingEnvironment* GPUTestingEnvironment::Initialize(int argc, char** argv)
         }
         else if (strcmp(arg, "--mode=gl") == 0)
         {
+#if PLATFORM_EMSCRIPTEN || PLATFORM_ANDROID
+            TestEnvCI.deviceType = RENDER_DEVICE_TYPE_GLES;
+#else
             TestEnvCI.deviceType = RENDER_DEVICE_TYPE_GL;
+#endif
         }
         else if (strcmp(arg, "--mode=mtl") == 0)
         {
